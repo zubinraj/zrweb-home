@@ -21,7 +21,7 @@
             router.mapNav('photography');
             router.mapNav('contact');
             log('Welcome!', null, true);
-            return router.activate('about');
+            return router.activate('home');
         }
 
         function log(msg, data, showToast) {
