@@ -1,0 +1,19 @@
+<rss version="2.0">
+<channel>
+<title>Latest commits in WeatherWatch.git:master</title>
+<description>RSS provided by GitList</description>
+<link>http://mediaserver/gitlist/</link>
+<item>
+<title>merge branch1</title>
+<description>zubinraj authored 7318c3c in 07/07/2012 at 04:27:49</description>
+<link>http://mediaserver/gitlist/WeatherWatch.git/commit/7318c3c</link>
+<pubDate>Sat, 07 Jul 2012 04:27:49 +0000</pubDate>
+</item>
+<item>
+<title>Merge branch branch1</title>
+<description>zubinraj authored e87e303 in 07/07/2012 at 04:27:23</description>
+<link>http://mediaserver/gitlist/WeatherWatch.git/commit/e87e303</link>
+<pubDate>Sat, 07 Jul 2012 04:27:23 +0000</pubDate>
+</item>
+</channel>
+</rss>
