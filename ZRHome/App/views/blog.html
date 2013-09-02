@@ -1,7 +1,7 @@
 ﻿<section>
     <h2 data-bind="html: title"></h2>
-    <div class="row-fluid">
-        <ul class="thumbnails" data-bind="foreach: items">
+    <div class="row">
+        <ul class="list-inline" data-bind="foreach: items">
             <li>
                 <a data-bind="attr: { href: link }"><h4 data-bind="text: title"></h4></a>
                 <blockquote data-bind="text: description"></blockquote>

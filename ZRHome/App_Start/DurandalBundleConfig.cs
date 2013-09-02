@@ -17,11 +17,12 @@ namespace ZRHome {
       bundles.Add(
         new StyleBundle("~/Content/css")
           .Include("~/Content/ie10mobile.css")
-          .Include("~/Content/bootstrap.min.css")
-          .Include("~/Content/bootstrap-responsive.min.css")
+          .Include("~/Content/bootstrap/bootstrap.min.css")
+          .Include("~/Content/bootstrap/bootstrap-theme.min.css")
           .Include("~/Content/font-awesome.min.css")
 		  .Include("~/Content/durandal.css")
           .Include("~/Content/starterkit.css")
+          .Include("~/Content/site.css")
         );
     }
 
