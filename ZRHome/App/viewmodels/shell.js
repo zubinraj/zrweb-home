@@ -1,31 +1,18 @@
-﻿define(['durandal/system', 'durandal/plugins/router', 'services/logger'],
-    function (system, router, logger) {
-        var shell = {
-            activate: activate,
-            router: router
-        };
-        
-        return shell;
-
-        //#region Internal Methods
-        function activate() {
-            return boot();
+﻿define(['plugins/router', 'durandal/app'], function (router, app) {
+    return {
+        router: router,
+        search: function() {
+            //It's really easy to show a message box.
+            //You can add custom options too. Also, it returns a promise for the user's response.
+            app.showMessage('Search not yet implemented...');
+        },
+        activate: function () {
+            router.map([
+                { route: '', title:'Welcome', moduleId: 'viewmodels/welcome', nav: true },
+                { route: 'flickr', moduleId: 'viewmodels/flickr', nav: true }
+            ]).buildNavigationModel();
+            
+            return router.activate();
         }
-
-        function boot() {
-            router.mapNav('home');
-            //router.mapNav('details');
-            //router.mapNav('projects');
-            //router.mapNav('tweets');
-            router.mapNav('blog');
-            router.mapNav('photography');
-            router.mapNav('contact');
-            log('Welcome!', null, true);
-            return router.activate('home');
-        }
-
-        function log(msg, data, showToast) {
-            logger.log(msg, data, system.getModuleId(shell), showToast);
-        }
-        //#endregion
-    });
+    };
+});
