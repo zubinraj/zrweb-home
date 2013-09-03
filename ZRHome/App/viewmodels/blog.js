@@ -4,12 +4,12 @@
         items: ko.observableArray([]),
         activate: function () {
             //the router's activator calls this function and waits for it to complete before proceding
-            if (this.items().length > 0) {
+            if (this.items().length > 0) {   
                 return;
             }
 
             var that = this;
-            return http.get('http://localhost:51567/rss.xml').then(function (data) {
+            return http.get('/rss.xml').then(function (data) {
 
                 var $xml = $(data);
 

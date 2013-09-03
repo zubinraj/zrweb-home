@@ -5,7 +5,7 @@
     //See the "welcome" module for an example of function export.
 
     return {
-        title: 'Flickr',
+        title: 'Photography',
         images: ko.observableArray([]),
         activate: function () {
             //the router's activator calls this function and waits for it to complete before proceding
@@ -14,7 +14,7 @@
             }
 
             var that = this;
-            return http.jsonp('http://api.flickr.com/services/feeds/photos_public.gne', { tags: 'mount ranier', tagmode: 'any', format: 'json' }, 'jsoncallback').then(function(response) {
+            return http.jsonp('http://api.flickr.com/services/feeds/photos_public.gne', { id: '9347697@N03', tags: 'bird', tagmode: 'all', format: 'json' }, 'jsoncallback').then(function (response) {
                 that.images(response.items);
             });
         },
