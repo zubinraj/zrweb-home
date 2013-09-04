@@ -9,7 +9,7 @@
             }
 
             var that = this;
-            return http.get('/rss.xml').then(function (data) {
+            return http.get('rss.xml').then(function (data) {
 
                 var $xml = $(data);
 
