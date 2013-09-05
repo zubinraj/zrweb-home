@@ -143,13 +143,13 @@
     <Content Include="App\viewmodels\blog.js" />
     <Content Include="App\viewmodels\photos.js" />
     <Content Include="App\viewmodels\shell.js" />
-    <Content Include="App\viewmodels\about.js" />
+    <Content Include="App\viewmodels\contact.js" />
     <Content Include="App\viewmodels\welcome.js" />
     <Content Include="App\views\blog.html" />
     <Content Include="App\views\detail.html" />
     <Content Include="App\views\photos.html" />
     <Content Include="App\views\shell.html" />
-    <Content Include="App\views\about.html" />
+    <Content Include="App\views\contact.html" />
     <Content Include="App\views\welcome.html" />
     <Content Include="Content\bootstrap\bootstrap-theme.css" />
     <Content Include="Content\bootstrap\bootstrap-theme.min.css" />
