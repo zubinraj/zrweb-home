@@ -9,6 +9,7 @@
         activate: function () {
             router.map([
                 { route: '', title:'About', moduleId: 'viewmodels/about', nav: true },
+                { route: 'welcome', title: 'Welcome', moduleId: 'viewmodels/welcome', nav: true },
                 { route: 'photos', title: 'Photography', moduleId: 'viewmodels/photos', nav: true },
                 { route: 'blog', title: 'Blog', moduleId: 'viewmodels/blog', nav: true }
             ]).buildNavigationModel();
