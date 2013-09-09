@@ -1,0 +1,26 @@
+﻿<section>
+    <h2 data-bind="html: title"></h2>
+    <!--  Carousel
+        consult the Twitter Bootstrap docs at http://twitter.github.com/bootstrap/javascript.html#carousel 
+    -->
+    <div id="myCarousel" class="carousel slide" >
+        <!-- Indicators -->
+        <ol class="carousel-indicators" data-bind="{foreach: items}">
+            <li data-target="#myCarousel" data-bind="attr: {'data-slide-to':$index}, css: {'active':isactive}"  ></li>
+        </ol>
+
+        <!-- Carousel items -->
+        <div class="carousel-inner" data-bind="{foreach: items}">
+            <div class="item" data-bind="css: {'active':isactive}">
+                <img alt="" data-bind="attr: {'src': imagesrc}" />
+                <div class="carousel-caption">
+                    <p data-bind="{'text': caption}"></p>
+                </div>
+            </div>
+        </div>
+        <!-- Carousel nav -->
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+        <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div>
+
+</section>

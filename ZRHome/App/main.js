@@ -1,4 +1,6 @@
 ﻿requirejs.config({
+    //urlArgs: "version=0.1",
+    urlArgs: "bust=" + (new Date().getTime()),   // cache buster to load new version while debugging. Todo: comment out defore deployment
     paths: {
         'text': '../Scripts/text',
         'durandal': '../Scripts/durandal',
@@ -15,7 +17,7 @@ define(['durandal/system', 'durandal/app', 'durandal/viewLocator'],  function (s
     system.debug(true);
     //>>excludeEnd("build");
 
-    app.title = 'Durandal Starter Kit';
+    app.title = 'ZUBINRAJ.COM';
 
     app.configurePlugins({
         router: true,
