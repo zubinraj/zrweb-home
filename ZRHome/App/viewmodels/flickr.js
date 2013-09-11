@@ -5,7 +5,7 @@
     //See the "welcome" module for an example of function export.
 
     return {
-        title: 'My Photography',
+        title: 'Photography',
         images: ko.observableArray([]),
         activate: function () {
             //the router's activator calls this function and waits for it to complete before proceding
@@ -14,33 +14,11 @@
             }
 
             var that = this;
-            return http.get('rss.xml').then(function (data) {
-
-                var $xml = $(data);
-
-                //alert($xml);
-
-                $xml.find("item").each(function () {
-
-                    var $this = $(this),
-                        item = {
-                            title: $this.find("title").text(),
-                            link: $this.find("link").text(),
-                            description: $this.find("description").text(),
-                            pubDate: $this.find("pubDate").text(),
-                            author: $this.find("author").text(),
-                            thumbnail: $this.find("thumbnail").text()
-                        }
-
-                    //console.log(item.thumbnail);
-
-                    that.images.push(item);
-
-                });
-            })
-
+            return http.jsonp('http://api.flickr.com/services/feeds/photos_public.gne', { id: '9347697@N03', tags: 'bird', tagmode: 'all', format: 'json' }, 'jsoncallback').then(function (response) {
+                that.images(response.items);
+            });
         },
-        select: function(item) {
+        select: function (item) {
             //the app model allows easy display of modal dialogs by passing a view model
             //views are usually located by convention, but you an specify it as well with viewUrl
             item.viewUrl = 'views/detail';
