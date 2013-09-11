@@ -1,6 +1,9 @@
 ﻿<section>
-    <h2 data-bind="html:title"></h2>
-        <ul data-bind="foreach: contacts">
-                <blockquote data-bind="text: $data"></blockquote>
-        </ul>
+    <h3 data-bind="text: description"></h3>
+    <ul data-bind="foreach: items">
+        <blockquote>
+            <b data-bind="text: channel"></b><b>:&nbsp;</b>
+            <i data-bind="text: address"></i>
+        </blockquote>
+    </ul>
 </section>

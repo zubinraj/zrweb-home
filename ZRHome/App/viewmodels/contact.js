@@ -1,10 +1,10 @@
 ﻿define(function() {
     var ctor = function () {
         this.title = 'Contact';
-        this.description = '';
-        this.contacts = [
-            "twitter: @zubinraj",
-            "email: support @ zubinraj dot com"
+        this.description = 'Any questions?';
+        this.items = [
+         { channel: "twitter", address: "@zubinraj" },
+         { channel: "email", address: "support @ zubinraj dot com"}
         ];
     };
     //Note: This module exports a function. That means that you, the developer, can create multiple instances.
