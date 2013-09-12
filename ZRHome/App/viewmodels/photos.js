@@ -29,7 +29,7 @@
                             description: $this.find("description").text(),
                             pubDate: $this.find("pubDate").text(),
                             author: $this.find("author").text(),
-                            thumbnail: $this.find("thumbnail").text()
+                            thumbnail: "http://placehold.it/300x200" //$this.find("thumbnail").text()
                         }
 
                     //console.log(item.thumbnail);

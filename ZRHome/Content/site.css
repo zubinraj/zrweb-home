@@ -30,3 +30,8 @@
 .list-inline h4, h3, h2, h1 {
     color: #333333;
 }
+
+.thumbnail {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
