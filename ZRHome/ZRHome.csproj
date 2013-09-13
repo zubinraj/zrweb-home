@@ -149,6 +149,7 @@
     <Content Include="App\views\blog.html" />
     <Content Include="App\views\detail.html" />
     <Content Include="App\views\flickr.html" />
+    <Content Include="App\views\header.html" />
     <Content Include="App\views\photos.html" />
     <Content Include="App\views\shell.html" />
     <Content Include="App\views\contact.html" />

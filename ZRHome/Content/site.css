@@ -35,3 +35,37 @@
     margin-top: 5px;
     margin-bottom: 5px;
 }
+
+#options {
+    padding-bottom: 12px;
+    padding-top: 17px;
+}
+
+#options li.first a {
+    border-right: 1px solid #B2B2B2;
+    margin-right: 20px;
+    padding-right: 25px;
+}
+
+#options li a {
+    display: inline-block;
+    line-height: 15px;
+    margin-bottom: 0;
+    padding: 0 10px;
+    text-transform: uppercase;
+}
+
+#options li a {
+    color: #606060;
+}
+
+#options li a:hover {
+    color: #E54E4C;
+    text-decoration: none;
+}
+
+#options li a:active, #options li a.selected {
+    color: #E54E4C;
+    text-decoration: none;
+}
+
