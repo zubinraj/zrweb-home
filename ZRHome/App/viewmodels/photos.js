@@ -14,7 +14,7 @@
             }
 
             var that = this;
-            return http.get('rss.xml').then(function (data) {
+            return http.get('rss.xml', 'xml').then(function (data) {
 
                 var $xml = $(data);
 
@@ -22,17 +22,27 @@
 
                 $xml.find("item").each(function () {
 
+                    var _categories = '';
+                    var $cat = $(this),
+                        _cat = {
+                            cat: $cat.find("category").each(function () { _categories += " " + $(this).text(); })
+                        }
+                    //console.log(_categories);
+
                     var $this = $(this),
                         item = {
                             title: $this.find("title").text(),
                             link: $this.find("link").text(),
                             description: $this.find("description").text(),
+                            categories: _categories,
+                                //.each(function ()
+                                //{ parent.categories += " " + $(this).text(); }),
                             pubDate: $this.find("pubDate").text(),
                             author: $this.find("author").text(),
                             thumbnail: "http://placehold.it/300x200" //$this.find("thumbnail").text()
                         }
 
-                    //console.log(item.thumbnail);
+                    console.log(item.categories);
 
                     that.images.push(item);
 
