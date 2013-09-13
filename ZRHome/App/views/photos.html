@@ -1,7 +1,16 @@
 ﻿<section>
+    <div id="options">
+        <ul id="filters" class="list-inline">
+            <li class="first"><a href="javascript: void(0);">Show All</a></li>
+            <li><a href="javascript: void(0);">Portfolio</a></li>
+            <li><a href="javascript: void(0);">People</a></li>
+            <li><a href="javascript: void(0);">Places</a></li>
+            <li><a href="javascript: void(0);">Birds</a></li>
+        </ul>
+    </div>
     <div class="row">
-        <ul class="list-inline" data-bind="foreach: images">
-            <li>
+        <ul id="gallery-container"  class="list-inline" data-bind="foreach: images">
+            <li class="gallery-item" data-bind="css: categories">
                 <a href="#" class="thumbnail" data-bind="click:$parent.select">
                     <img data-bind="attr: { src: thumbnail }"/>
                     <span data-bind="text: title"></span>
