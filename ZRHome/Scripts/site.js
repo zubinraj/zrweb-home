@@ -1,19 +1,19 @@
 ﻿$(function () {
 
-    var $container = $("#gallery-container");
 
-    $container.isotope({
-        layoutMode: 'fitRows',
-        itemSelector: '.gallery-item',
-        animationEngine: 'best-available'
-        //masonry: { columnWidth: $container.width() / 3 }
-    });
+    //var $container = $("#gallery-container");
 
-    $("#filters a").click(function () {
-        var selector = $(this).attr('rel');
-        $container.isotope({ filter: selector });
-        //$container.isotope({ sortBy: 'desc' });
-    });
+    //$("#options a").click(function () {
+    //    console.log('filter clicked');
+
+    //    var selector = $(this).attr('rel');
+    //    $container.isotope({ filter: selector });
+    //    //$container.isotope({ sortBy: 'desc' });
+
+    //    return false;
+    //});
+
+
 
 });
 
