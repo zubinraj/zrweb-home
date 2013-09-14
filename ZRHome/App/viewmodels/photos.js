@@ -6,7 +6,7 @@
 
     var ctor = function () {
         
-        console.log('initializing ctor');
+        //console.log('initializing ctor');
 
         this.title = 'My Photography';
         this.images = ko.observableArray([]);
@@ -16,16 +16,16 @@
             images: this.images,
             activate: activate,
             select: select,
-            //compositionComplete: compositionComplete
+            compositionComplete: compositionComplete
         }
 
-        //function compositionComplete() {
-        //    var $container = $("#gallery-container");
+        function compositionComplete() {
+            var $container = $("#gallery-container");
 
-        //    // call relayout on isotope
-        //    $container.isotope('reLayout');
+            // call relayout on isotope
+            $container.isotope('reLayout');
 
-        //}
+        }
 
         function activate() {
 
@@ -35,7 +35,7 @@
             }
 
             // add custom bindings to handle isotope
-            //addCustomBindings();
+            addCustomBindings();
 
 
             var that = this;
@@ -59,8 +59,10 @@
                             categories: _categories,
                             pubDate: $this.find("pubDate").text(),
                             author: $this.find("author").text(),
-                            thumbnail: "http://placehold.it/300x200" //$this.find("thumbnail").text()
-                        }
+                            thumburl: "http://placehold.it/300x200", //$this.find("url").text()
+                            thumbHeight: $this.find("height").text(),
+                            thumbWidth: $this.find("width").text()
+                }
 
                     that.images.push(item);
 
@@ -73,29 +75,29 @@
 
         }
 
-        //function addCustomBindings() {
+        function addCustomBindings() {
 
-        //    ko.bindingHandlers.isotope = {
-        //        init: function (element, valueAccessor, allBindingsAccessor, viewModel, bindingContext) {
+            ko.bindingHandlers.isotope = {
+                init: function (element, valueAccessor, allBindingsAccessor, viewModel, bindingContext) {
 
-        //        },
-        //        update: function (element, valueAccessor, allBindingsAccessor, viewModel, bindingContext) {
+                },
+                update: function (element, valueAccessor, allBindingsAccessor, viewModel, bindingContext) {
 
-        //            var $el = $(element),
-        //                value = ko.utils.unwrapObservable(valueAccessor());
+                    var $el = $(element),
+                        value = ko.utils.unwrapObservable(valueAccessor());
 
-        //            if ($el.hasClass('isotope')) {
-        //                $el.isotope('reLayout');
-        //            } else {
-        //                $el.isotope({
-        //                    itemSelector: value.itemSelector
-        //                });
-        //            }
-        //        }
+                    if ($el.hasClass('isotope')) {
+                        $el.isotope('reLayout');
+                    } else {
+                        $el.isotope({
+                            itemSelector: value.itemSelector
+                        });
+                    }
+                }
 
-        //    };
+            };
 
-        //};
+        };
 
 
     }();

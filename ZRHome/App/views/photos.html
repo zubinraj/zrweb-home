@@ -9,12 +9,12 @@
         </ul>
     </div>
     <div class="row">
-        <!--<ul id="gallery-container"  class="list-inline" data-bind="foreach: images, isotope: { itemSelector: '.gallery-item' }">-->
-        <ul id="gallery-container"  class="list-inline" data-bind="foreach: images">
-            <li class="gallery-item" data-bind="css: categories">
+        <ul id="gallery-container"  class="list-inline" data-bind="foreach: images, isotope: { itemSelector: '.gallery-item' }">
+        <!--<ul id="gallery-container"  class="list-inline" data-bind="foreach: images">-->
+            <li class="gallery-item" data-bind="style: { height: thumbHeight, width: thumbWidth }">
                 <a href="#" class="thumbnail" data-bind="click:$parent.select">
-                    <img data-bind="attr: { src: thumbnail }"/>
-                    <span data-bind="text: title"></span>
+                    <img data-bind="attr: { src: thumburl }"/>
+                    <!--<span data-bind="text: title"></span>-->
                 </a>
             </li>
         </ul>
