@@ -1,22 +1,20 @@
 ﻿<section>
     <div id="options">
         <ul id="filters" class="list-inline">
-            <li class="first"><a href="javascript: void(0);">Show All</a></li>
-            <li><a href="javascript: void(0);" rel="portfolio">Portfolio</a></li>
-            <li><a href="javascript: void(0);" rel="people">People</a></li>
-            <li><a href="javascript: void(0);" rel="places">Places</a></li>
-            <li><a href="javascript: void(0);" rel="birds">Birds</a></li>
+            <li class="first"><a class="selected" data-filter="*" href="javascript: void(0);">Show All</a></li>
+            <li><a href="javascript: void(0);" data-filter=".Portfolio">Portfolio</a></li>
+            <li><a href="javascript: void(0);" data-filter=".People">People</a></li>
+            <li><a href="javascript: void(0);" data-filter=".Places">Places</a></li>
+            <li><a href="javascript: void(0);" data-filter=".bird">Birds</a></li>
         </ul>
     </div>
-    <div class="row">
-        <ul id="gallery-container"  class="list-inline" data-bind="foreach: images, isotope: { itemSelector: '.gallery-item' }">
-        <!--<ul id="gallery-container"  class="list-inline" data-bind="foreach: images">-->
-            <li class="gallery-item" data-bind="style: { height: thumbHeight, width: thumbWidth }">
-                <a href="#" class="thumbnail" data-bind="click:$parent.select">
-                    <img data-bind="attr: { src: thumburl }"/>
-                    <!--<span data-bind="text: title"></span>-->
-                </a>
-            </li>
-        </ul>
+    <div id="gallery-container"  class="list-inline" data-bind="foreach: images, isotope: { itemSelector: '.gallery-item' }">
+    <!--<ul id="gallery-container"  class="list-inline" data-bind="foreach: images">-->
+        <div class="gallery-item" data-bind="css: categories, style: { height: thumbHeight, width: thumbWidth }">
+            <a href="#" data-bind="click:$parent.select">
+                <img class="thumbnail" data-bind="attr: { src: thumburl, title: title, alt: title }"/>
+                <!--<span data-bind="text: title"></span>-->
+            </a>
+        </div>
     </div>
 </section>

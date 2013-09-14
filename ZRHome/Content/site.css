@@ -31,11 +31,6 @@
     color: #333333;
 }
 
-.thumbnail {
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
 #options {
     padding-bottom: 12px;
     padding-top: 17px;
@@ -69,3 +64,10 @@
     text-decoration: none;
 }
 
+#options li a:focus {
+    text-decoration: none;
+}
+
+.gallery-item {
+    margin: 5px;
+}

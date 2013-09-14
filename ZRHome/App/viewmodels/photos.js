@@ -25,6 +25,23 @@
             // call relayout on isotope
             $container.isotope('reLayout');
 
+
+            $("#filters a").click( function () {
+
+                var selector = $(this).attr("data-filter");
+                
+                // trigger isotope filter
+                $container.isotope({ filter: selector });
+
+
+                // set link color
+                $(this).toggleClass("selected");
+                $("#filters a").not(this).removeClass("selected"); //remove the 'selected class from all other elements
+
+                return false;
+            });
+
+
         }
 
         function activate() {
