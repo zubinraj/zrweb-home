@@ -19,20 +19,6 @@
 	<sy:updateFrequency>1</sy:updateFrequency>
 	<generator>http://wordpress.org/?v=3.6</generator>
 		<item>
-		<title>another post</title>
-		<link>http://localhost/zubinraj/photos/another-post/</link>
-		<comments>http://localhost/zubinraj/photos/another-post/#comments</comments>
-		<pubDate>Tue, 10 Sep 2013 15:07:28 +0000</pubDate>
-		<dc:creator>zubinraj</dc:creator>
-				<category><![CDATA[Uncategorized]]></category>
-
-		<guid isPermaLink="false">http://localhost/zubinraj/photos/?p=473</guid>
-		<description><![CDATA[]]></description>
-				<content:encoded><![CDATA[]]></content:encoded>
-			<wfw:commentRss>http://localhost/zubinraj/photos/another-post/feed/</wfw:commentRss>
-		<slash:comments>0</slash:comments>
-		</item>
-		<item>
 		<title>California Gull</title>
 		<link>http://localhost/zubinraj/photos/california-gull/</link>
 		<comments>http://localhost/zubinraj/photos/california-gull/#comments</comments>

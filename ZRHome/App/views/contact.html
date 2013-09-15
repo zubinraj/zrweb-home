@@ -1,9 +1,9 @@
 ﻿<section>
     <h3 data-bind="text: description"></h3>
-    <ul data-bind="foreach: items">
-        <blockquote>
+    <div data-bind="foreach: items">
+        <div class="thumbnail contacts">
             <b data-bind="text: channel"></b><b>:&nbsp;</b>
             <i data-bind="text: address"></i>
-        </blockquote>
-    </ul>
+        </div>
+    </div>
 </section>
