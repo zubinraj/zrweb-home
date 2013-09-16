@@ -12,7 +12,10 @@ namespace ZRHome {
 			.Include("~/Scripts/jquery-{version}.js")
 			.Include("~/Scripts/bootstrap.js")
 			.Include("~/Scripts/knockout-{version}.js")
-		);
+            .Include("~/Scripts/jquery.isotope.min.js")
+            .Include("~/Scripts/site.js")
+
+        );
 
       bundles.Add(
         new StyleBundle("~/Content/css")
@@ -23,6 +26,7 @@ namespace ZRHome {
 		  .Include("~/Content/durandal.css")
           .Include("~/Content/starterkit.css")
           .Include("~/Content/site.css")
+          .Include("~/Content/isotope.css")
         );
     }
 

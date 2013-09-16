@@ -8,11 +8,11 @@
         },
         activate: function () {
             router.map([
-                { route: '', title:'Welcome', moduleId: 'viewmodels/welcome', nav: true },
-                { route: 'blog', title: 'Blog', moduleId: 'viewmodels/blog', nav: true },
-                { route: 'photos', title: 'Photography', moduleId: 'viewmodels/photos', nav: true },
-                { route: 'contact', title: 'Contact', moduleId: 'viewmodels/contact', nav: true }
-        ]).buildNavigationModel();
+                { route: '', title: 'Welcome', icon: 'glyphicon-home', moduleId: 'viewmodels/welcome', nav: true },
+                { route: 'blog', title: 'Blog', icon: 'glyphicon-book', moduleId: 'viewmodels/blog', nav: true },
+                { route: 'photos', title: 'Photography', icon: 'glyphicon-camera', moduleId: 'viewmodels/photos', nav: true },
+                { route: 'contact', title: 'Contact', icon: 'glyphicon-envelope', moduleId: 'viewmodels/contact', nav: true }
+            ]).buildNavigationModel();
             
             return router.activate();
 

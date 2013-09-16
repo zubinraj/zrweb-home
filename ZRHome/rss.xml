@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"
 	xmlns:content="http://purl.org/rss/1.0/modules/content/"
 	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
@@ -9,833 +9,185 @@
 	>
 
 <channel>
-	<title>Zubin&#039;s Web Log</title>
-	<atom:link href="http://www.zubinraj.com/blog/feed/" rel="self" type="application/rss+xml" />
-	<link>http://www.zubinraj.com/blog</link>
-	<description>Learnings From The Tech Wilderness</description>
-	<lastBuildDate>Sat, 15 Dec 2012 20:06:34 +0000</lastBuildDate>
+	<title>Zubin &#38; Ann Photography</title>
+	<atom:link href="http://localhost/zubinraj/photos/feed/" rel="self" type="application/rss+xml" />
+	<link>http://localhost/zubinraj/photos</link>
+	<description>through the looking glass</description>
+	<lastBuildDate>Tue, 10 Sep 2013 15:32:52 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>hourly</sy:updatePeriod>
 	<sy:updateFrequency>1</sy:updateFrequency>
-	<generator>http://wordpress.org/?v=3.5</generator>
+	<generator>http://wordpress.org/?v=3.6</generator>
 		<item>
-		<title>Change Table Prefix For Self Hosted WordPress</title>
-		<link>http://www.zubinraj.com/blog/2012/12/15/change-table-prefix-for-self-hosted-wordpress/</link>
-		<comments>http://www.zubinraj.com/blog/2012/12/15/change-table-prefix-for-self-hosted-wordpress/#comments</comments>
-		<pubDate>Sat, 15 Dec 2012 18:10:22 +0000</pubDate>
-		<dc:creator>Zubin</dc:creator>
-				<category><![CDATA[Wordpress]]></category>
-		<category><![CDATA[security]]></category>
+		<title>California Gull</title>
+		<link>http://localhost/zubinraj/photos/california-gull/</link>
+		<comments>http://localhost/zubinraj/photos/california-gull/#comments</comments>
+		<pubDate>Tue, 10 Sep 2013 14:37:35 +0000</pubDate>
+		<dc:creator>zubinraj</dc:creator>
+				<category><![CDATA[Wildlife]]></category>
+		<category><![CDATA[gull]]></category>
 
-		<guid isPermaLink="false">http://www.zubinraj.com/blog/?p=1287</guid>
-		<description><![CDATA[The default wonderful 5-minute installation of wordpress keeps the prefix of “wp_” for all its tables. Now why does anybody wants to change the default prefix? There are 2 reasons I can think of: The first and foremost is security. Since the default table prefix is world renowned, changing it will put a first level [...]]]></description>
-				<content:encoded><![CDATA[<p>The default wonderful 5-minute installation of wordpress keeps the prefix of “wp_” for all its tables. Now why does anybody wants to change the default prefix?</p>
-<p>There are 2 reasons I can think of:</p>
-<ol>
-<li>The first and foremost is security. Since the default table prefix is world renowned, changing it will put a first level of defense against any vulnerability or a malicious user trying to execute a rogue code.</li>
-<li>Each wordpress installation takes in a configuration to tell it which prefix it uses. By keeping the prefix different from each installation, you can host multiple wordpress installations in a single mySQL database (not recommended from large installations).</li>
-</ol>
-<p>Here’s the configuration in the wp-config.php that determines what prefix wordpress uses.</p>
-<pre>// Entry in config.php showing wordpress table prefix used in the installation
-$table_prefix = ‘wp_’; // Only numbers, letters, and underscores please!</pre>
-<p>There are <a href="http://wordpress.org/extend/plugins/">wordpress plugins</a> that can change the table prefix automatically, however, I prefer the manual approach so that I understand the changes that are being made.</p>
-<p>I’m putting down the steps that I did more for my own reference in the future.</p>
-<p><strong>1. Take a backup</strong></p>
-<p>Since you will be changing the table structure, backup the database. Next, take backup of the wordpress home folder. Keep both the database backup and home folder backup together in another folder. You will need these for performing a full restore later, in case something goes wrong.</p>
-<p><strong>2. Change the configuration in the wp-config.php file</strong></p>
-<pre>$table_prefix = ‘wp_’;</pre>
-<p>Change this to a prefix to your liking. I would suggest making this as random as choosing the password.</p>
-<pre>$table_prefix = ‘tr1mr1_’</pre>
-<p><strong><br />
-3. Change the wordpress tables names</strong></p>
-<p>Login to phpMyAdmin and select the wordpress database. Go to the SQL area and enter the command to rename each table. There are many tables that start with wp_, change one table at a time. Below are the list of tables found in my installation, however make sure all your tables are renamed.</p>
-<pre>Rename table wp_commentmeta to tr1mr1_commentmeta;
-Rename table wp_comments to tr1mr1_comments;
-Rename table wp_links to tr1mr1_links;
-Rename table wp_options to tr1mr1_options;
-Rename table wp_postmeta to tr1mr1_postmeta;
-Rename table wp_posts to tr1mr1_posts;
-Rename table wp_terms to tr1mr1_terms;
-Rename table wp_term_relationships to tr1mr1_term_relationships;
-Rename table wp_term_taxonomy to tr1mr1_term_taxonomy;
-Rename table wp_usermeta to tr1mr1_usermeta;
-Rename table wp_users to tr1mr1_users;</pre>
-<p><strong>4. Edit wp_options table</strong></p>
-<p>Next is to change the values in the options table. This table is called tr1mr1_options after the renaming step above.</p>
-<p>Browse the table and look for the value called ‘wp_user_role’ under ‘option_name’ column. Change ‘wp_user_roles’ to ‘tr1mr1_user_roles’.</p>
-<p><strong>5. Edit wp_user_meta table</strong></p>
-<p>Look every row under ‘meta_key’ column in the table tr1mr1_user_meta table, as it is called after the renaming.</p>
-<p>Change all keys that start with ‘wp_’ to ‘tr1mr1_’. This may be different in different installations, so make sure you cover all the rows.</p>
-<p>Here are some I found.</p>
-<pre>wp_capabilities to tr1mr1_capabilities
-wp_usersettings to tr1mr1_usersettings</pre>
-<p><strong>6. Test</strong></p>
-<p>Done! Now test the installation.</p>
-<p>If anything goes wrong, you have a backup to restore and start again. Happy blogging!</p>
-]]></content:encoded>
-			<wfw:commentRss>http://www.zubinraj.com/blog/2012/12/15/change-table-prefix-for-self-hosted-wordpress/feed/</wfw:commentRss>
-		<slash:comments>0</slash:comments>
-		</item>
-		<item>
-		<title>The curious case of 64-bit MSI</title>
-		<link>http://www.zubinraj.com/blog/2012/08/26/the-curious-case-of-64-bit-msi-2/</link>
-		<comments>http://www.zubinraj.com/blog/2012/08/26/the-curious-case-of-64-bit-msi-2/#comments</comments>
-		<pubDate>Mon, 27 Aug 2012 01:59:52 +0000</pubDate>
-		<dc:creator>Zubin</dc:creator>
-				<category><![CDATA[Programming]]></category>
-		<category><![CDATA[64bit]]></category>
-		<category><![CDATA[MSI]]></category>
-		<category><![CDATA[vs2010]]></category>
-
-		<guid isPermaLink="false">https://zubinraj.wordpress.com/?p=1213</guid>
-		<description><![CDATA[Over the past couple of years, more and more companies have rolled out the 64-bit version of their respective products, including Office and Oracle. Office has both 32-bit and 64-bit versions of their new Office 2010 platform. Similarly, Oracle has also released the 64-bit version of their client drivers in addition to the already existing [...]]]></description>
-				<content:encoded><![CDATA[<p>Over the past couple of years, more and more companies have rolled out the 64-bit version of their respective products, including Office and Oracle. Office has both 32-bit and 64-bit versions of their new Office 2010 platform. Similarly, Oracle has also released the 64-bit version of their client drivers in addition to the already existing 32-bit versions.</p>
-<p>For these 64-bit versions to work seamlessly, all the components that they depend on also has to be 64-bit. For example, Office 2010 64-bit version cannot access any add-ins or legacy COM components that are 32-bit. Similarly if there is a database connectivity to be made from Office 2010 64-bit, it requires the 64-bit version of the oracle drivers.</p>
-<p>Recently I encountered a situation where I had to convert a 32-bit .net COM component to 64-bit to be accessed from 64-bit Office. The COM component was packaged as an MSI file which will be installed on the user machines. To me, converting this to 64-bit was a no-brainer. </p>
-<ul>
-<li>Take the setup program used to create the MSI package</li>
-<li>Change the Target Platform to 64-bit</li>
-<li>Build the MSI</li>
-<li>Deploy</li>
-</ul>
-<p>And that is exactly what I did, job done in 20 minutes! But to my surprise, the Office 64-bit refused to recognize the installed COM component. What’s going on?</p>
-<p>Digging deeper, I found that the component is getting registered in the SYSWOW64 section in the registry instead of the SYSTEM32 section. Now, if you are not familiar with the SYSWOW64, this is where Microsoft decided to put all 32-bit programs on a 64-bit machine (like Win 7) and SYSTEM32 is where all the 64-bit programs will reside (I know the naming is just confusing!).</p>
-<p>I went on to reason that if the component is getting registered in the SYSWOW64, then somehow the installation process should be running as a 32-bit process. But I did change the Target Platform to 64-bit, didn’t I? I did!</p>
-<p><a href="http://www.zubinraj.com/blog/wp-content/uploads/2012/08/target_platform_64bit.png"><img style="display:inline;" title="target_platform_64bit" alt="target_platform_64bit" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/08/target_platform_64bit_thumb.png" width="382" height="113"></a></p>
-<p>Browsing through a number of MSDN blogs and knowledge base articles with my new friend, BING, I found a <a href="http://blogs.msdn.com/b/heaths/archive/2006/02/01/64-bit-managed-custom-actions-with-visual-studio.aspx">blog post</a> where it was explained that there is a small glitch with the setup program bundled with Visual Studio 2010 and there is an additional step that needs to be done to make the MSI truly 64-bit.</p>
-<p><strong>Visual Studio 2010 Setup Program</strong></p>
-<p>If the installation program includes custom actions, Visual Studio 2010, when creating the MSI, includes an additional DLL called InstallUtilLib.dll. When this DLL is included, the setup program includes this from the 32-bit area of the .net framework instead of the 64-bit Framework64 folder. When the MSI runs, it detects that there is a dependency that is not supported on 64-bit and runs the entire process as 32-bit.</p>
-<p>Currently, nothing can be done directly from Visual Studio to correct this situation. The suggestion is to modify the MSI after it has been created.</p>
-<p><strong>Orca to the rescue</strong></p>
-<p>Orca is a program that is used to create or modify an MSI installable file. It is bundled along with the .net framework SDK, so if you have Visual Studio, it is likely that you already have it. I searched the term ‘orca’ in my program files and it threw up the Orca.msi, which then I installed.</p>
-<p>What are we modifying? We are going to open the MSI that was created by Visual Studio in Orca, replace the InstallUtilLib.dll (32-bit) that was added by default with the 64-bit version of the same DLL.</p>
-<p>First open the MSI in Orca.</p>
-<p><a href="http://www.zubinraj.com/blog/wp-content/uploads/2012/08/orca_installutillib-copy.png"><img style="display:inline;" title="orca_installutillib - Copy" alt="orca_installutillib - Copy" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/08/orca_installutillib-copy_thumb.png" width="537" height="454"></a></p>
-<p>The left hand side displays all the tables that are present in this MSI. Choose the ‘Binary’ table. On the right hand side, you will see the entry for ‘InstallUtil’. </p>
-<p>Double click on the area where it says ‘[Binary Data]’. It will open a ‘Edit Binary Stream’ dialog as shown below. Make sure the ‘Read binary from filename’ option is selected.</p>
-<p><a href="http://www.zubinraj.com/blog/wp-content/uploads/2012/08/orca_edit_binary_stream.png"><img style="display:inline;" title="orca_edit_binary_stream" alt="orca_edit_binary_stream" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/08/orca_edit_binary_stream_thumb.png" width="285" height="180"></a></p>
-<p>Click on Browse. </p>
-<p>Browse to %WINDIR%Microsoft.NETFramework64v2.0.50727 </p>
-<p>Select ‘InstallUtilLib.dll’. </p>
-<p>Click on OK button.</p>
-<p>Notice that the folder name says ‘Framework64’ (with a suffix ‘64’). The Framework folder (without the suffix ‘64’) is its 32-bit counterpart.</p>
-<p>Save the MSI file.</p>
-<p>Voila! With the 32-bit dependency removed from the MSI, the MSI now runs as a 64-bit process, registering the COM in the SYSTEM32 section and correctly so.</p>
-<p>Problem solved!</p>
-]]></content:encoded>
-			<wfw:commentRss>http://www.zubinraj.com/blog/2012/08/26/the-curious-case-of-64-bit-msi-2/feed/</wfw:commentRss>
-		<slash:comments>0</slash:comments>
-		</item>
-		<item>
-		<title>Setting Up A Git Repository</title>
-		<link>http://www.zubinraj.com/blog/2012/07/22/setting-up-a-git-repository/</link>
-		<comments>http://www.zubinraj.com/blog/2012/07/22/setting-up-a-git-repository/#comments</comments>
-		<pubDate>Mon, 23 Jul 2012 01:45:12 +0000</pubDate>
-		<dc:creator>Zubin</dc:creator>
-				<category><![CDATA[Linux]]></category>
-		<category><![CDATA[Programming]]></category>
-		<category><![CDATA[git]]></category>
-		<category><![CDATA[repository]]></category>
-
-		<guid isPermaLink="false">https://zubinraj.wordpress.com/?p=1163</guid>
-		<description><![CDATA[All the version control systems I have worked with so far like CVS, VSS and Team Foundation Server are centralized version control systems. Git, however, is a distributed version control system. Clients don’t just checkout the latest snapshot from the server, but they mirror the entire repository. So, when I decided to setup my own [...]]]></description>
-				<content:encoded><![CDATA[<p>All the version control systems I have worked with so far like CVS, VSS and Team Foundation Server are centralized version control systems. Git, however, is a distributed version control system. Clients don’t just checkout the latest snapshot from the server, but they mirror the entire repository.</p>
-<p>So, when I decided to setup my own version control system for personal use, I decided to give Git a try.</p>
-<p>Git can be installed on any computer and you have a version control system right away. However, I also wanted a remote repository on my main file server (maybe bias from working with centralized version control systems for many years!)</p>
-<p>To achieve this, Git has to be installed on the main file server (remote repository) as well as on the local computer (local repository). The good part about this setup is that the local computer does not require to be connected to the server all the time (which is usually the case with centralized version control systems). It needs to be connected only when the changes has to be pushed back to the main server (remote repository). This is different from other centralized version control systems where the clients has to be connected to do any operation like compare previous versions / branch / check-in / check-out etc.</p>
-<p><strong>Installing Git on the remote server</strong></p>
-<p>Let’s first install Git on the remote server. I use a Synology disk station that runs BusyBee Linux as my main file server.</p>
-<div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:3cc97152-64b4-47de-96f5-3e2594e1c02f" class="wlWriterEditableSmartContent" style="margin: 0; display: inline; float: none; padding: 0;">
-<pre class="lang:sh decode:true crayon-selected">DiskStation&gt; ipkg update
-
-DiskStation&gt; ipkg install git</pre>
-</div>
-<p>Instead of ipkg, use whatever package manager is available on your distribution. If you are using Synology and do not have ipkg package manager, you can install ipkg by following my earlier post <a title="Bootstrapping Synology DiskStation – Unleash The Power" href="http://www.zubinraj.com/blog/2012/07/19/bootstrapping-synology-diskstation-unleash-the-power/">Bootstrapping Synology DiskStation – Unleash The Power</a>.</p>
-<p><strong>Initiate a bare repository on the remote server</strong></p>
-<p>Now that Git is installed, initiate a bare repository. There are 2 types of repositories in Git &#8211; bare and working. Bare repository is one without a working directory. For the remote, initiate a bare repository.</p>
-<div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:9390d3c9-37c5-47f3-96e1-7ab4784150dc" class="wlWriterEditableSmartContent" style="margin: 0; display: inline; float: none; padding: 0;">
-<pre class="lang:sh decode:true">DiskStation&gt; cd /volume1/git/projects
-
-DiskStation&gt; mkdir WeatherWatch.git
-
-DiskStation&gt; cd WeatherWatch.git
-
-DiskStation&gt; git --bare init</pre>
-</div>
-<p><strong>Install Git on the local computer</strong></p>
-<p>I use a Windows 7 machine as my local. Installed the Git core for Windows from <a href="http://code.google.com/p/msysgit/downloads/list?q=full+installer+official+git">msysgit</a>. You can also find the download for Windows from <a href="http://git-scm.com/downloads">here</a>.</p>
-<p>This installs the core, a bash and a minimal GUI.</p>
-<p><a href="http://www.zubinraj.com/blog/wp-content/uploads/2012/07/image25.png"><img style="display: inline;" title="image" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/07/image_thumb9.png" alt="image" width="459" height="268" /></a></p>
-<p>Even though this is enough for most of the Git operations, I prefer to use the <a href="http://code.google.com/p/gitextensions/">Git Extensions</a> locally. Git Extensions has windows explorer integration and also integrates with Visual Studio.</p>
-<p>Initiate a new repository from Git Extensions. If you already have a source code folder, you can choose that to create a new repository and convert the existing folder as a working folder. Choose ‘Personal repository’ as we want a working folder on the local.</p>
-<p><a href="http://www.zubinraj.com/blog/wp-content/uploads/2012/07/image20.png"><img style="display: inline;" title="image" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/07/image_thumb4.png" alt="image" width="564" height="151" /></a></p>
-<p>After a few commits and branching and merging, the local repository looks like the below. It gives a good visual interpretation of what’s going on.</p>
-<p><a href="http://www.zubinraj.com/blog/wp-content/uploads/2012/07/image21.png"><img style="display: inline;" title="image" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/07/image_thumb5.png" alt="image" width="476" height="331" /></a></p>
-<p><strong>Connecting the local repository with the remote</strong></p>
-<p>Being distributed, one local repository can be linked to one or many remote repositories. In Git Extensions, go to Menu &gt; Remote &gt; Manage remote repositories &gt; New</p>
-<p>The recommended method of connecting to a remote is to use a SSH connection with public / private key authentication, without getting prompted for the password.</p>
-<p>However, I chose to use another method. My remote is on a file server that I have access to and can be accessed from Windows machines on the local network. I  created a samba share to the remote repository folder, and created a network drive mapping from my windows machine. (P: as shown in the below screenshot, points to the remote repository created above in /volume1/git ). This is not a recommended method if there are many users, but works fine in my case.</p>
-<p><a href="http://www.zubinraj.com/blog/wp-content/uploads/2012/07/image26.png"><img style="display: inline;" title="image" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/07/image_thumb10.png" alt="image" width="600" height="305" /></a></p>
-<p><strong>Push changes to the remote</strong></p>
-<p>When the changes are ready to be pushed to the remote, click on the Push button. There is a also Pull button to pull any changes other users might have done.</p>
-<p><a href="http://www.zubinraj.com/blog/wp-content/uploads/2012/07/image23.png"><img style="display: inline;" title="image" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/07/image_thumb7.png" alt="image" width="600" height="239" /></a></p>
-<p>When the changes are pushed to the remote, all the commits, branches, merges and other operations done locally are pushed to the remote repository.</p>
-<p>If another user has committed to the remote during the time you were making changes locally, Git will not let you push to the remote directly. You will need to pull the changes from the remote, merge those changes into your own repository, resolve any conflicts and then push the changes to the remote. This built-in mechanism protects one user’s changes to be overwritten by another user accidentally.</p>
-<p><strong>GitList – A beautiful web interface for the repositories</strong></p>
-<p>I tried a few web interfaces for viewing my remote repositories, but <a href="https://github.com/klaussilveira/gitlist">GitList</a> stood out from the rest by it’s minimalistic approach.</p>
-<p>It was a pretty easy installation on a PHP / Apache The below installation instructions are from the GitList author.</p>
-<ul>
-<li>Download GitList from <a href="http://gitlist.org/">gitlist.org</a> and decompress to your <code>/var/www/gitlist</code>folder, or anywhere else you want to place GitList.</li>
-<li>Rename the <code>config.ini-example</code> file to <code>config.ini</code>.</li>
-<li>Open up the <code>config.ini</code>and configure your installation. You&#8217;ll have to provide where your repositories are located and the base GitList URL (in our case, http://localhost/gitlist).</li>
-<li>Create the cache folder and give read/write permissions to your web server user:</li>
-</ul>
-<p>The options in the config.ini are simple at best.</p>
-<div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:46157761-edb9-4ec3-b8f8-3243e67fb0a5" class="wlWriterEditableSmartContent" style="margin: 0; display: inline; float: none; padding: 0;">
-<pre class="lang:php decode:true">[git]
-client = '/usr/bin/git' ; Your git executable path
-repositories = '/var/www/projects/' ; Path to your repositories
-
-; You can hide repositories from GitList, just copy this for each repository you want to hide
-; hidden[] = '/var/www/projects/BetaTest'
-
-[app]
-debug = false
-
-; If you need to specify custom filetypes for certain extensions, do this here
-[filetypes]
-; extension = type
-; dist = xml</pre>
-</div>
-<p>See few screenshots below:</p>
-<p><a href="http://www.zubinraj.com/blog/wp-content/uploads/2012/07/image16.png"><img style="display: inline;" title="image" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/07/image_thumb.png" alt="image" width="600" height="454" /></a></p>
-<p><a href="http://www.zubinraj.com/blog/wp-content/uploads/2012/07/image17.png"><img style="display: inline;" title="image" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/07/image_thumb1.png" alt="image" width="600" height="253" /></a></p>
-<p><a href="http://www.zubinraj.com/blog/wp-content/uploads/2012/07/image18.png"><img style="display: inline;" title="image" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/07/image_thumb2.png" alt="image" width="600" height="370" /></a></p>
-<p>&nbsp;</p>
-<p><strong>References</strong></p>
-<p>An excellent book on all things Git:<br />
-<a title="http://git-scm.com/book" href="http://git-scm.com/book">http://git-scm.com/book</a></p>
-<p>Git downloads:<br />
-<a title="http://git-scm.com/downloads" href="http://git-scm.com/downloads">http://git-scm.com/downloads</a></p>
-<p>List of GUI clients:<br />
-<a title="http://git-scm.com/downloads/guis" href="http://git-scm.com/downloads/guis">http://git-scm.com/downloads/guis</a></p>
-<p>GitList – web interface:<br />
-<a title="https://github.com/klaussilveira/gitlist" href="https://github.com/klaussilveira/gitlist">https://github.com/klaussilveira/gitlist</a><br />
-<a title="http://gitlist.org/" href="http://gitlist.org/">http://gitlist.org/</a></p>
-]]></content:encoded>
-			<wfw:commentRss>http://www.zubinraj.com/blog/2012/07/22/setting-up-a-git-repository/feed/</wfw:commentRss>
-		<slash:comments>0</slash:comments>
-		</item>
-		<item>
-		<title>Bootstrapping Synology DiskStation – Unleash The Power</title>
-		<link>http://www.zubinraj.com/blog/2012/07/19/bootstrapping-synology-diskstation-unleash-the-power/</link>
-		<comments>http://www.zubinraj.com/blog/2012/07/19/bootstrapping-synology-diskstation-unleash-the-power/#comments</comments>
-		<pubDate>Thu, 19 Jul 2012 21:50:07 +0000</pubDate>
-		<dc:creator>Zubin</dc:creator>
-				<category><![CDATA[Linux]]></category>
-		<category><![CDATA[ipkg]]></category>
-		<category><![CDATA[scp]]></category>
-		<category><![CDATA[synology]]></category>
-
-		<guid isPermaLink="false">https://zubinraj.wordpress.com/?p=1146</guid>
-		<description><![CDATA[Synology disk station comes locked and does not allow any modifications as it comes out of the factory, however there is a healthy community supporting the boot strapped operations. Bootstrapping is required to install additional packages on the server, other than the default packaged ones, which I should say are not any less. Let’s start! [...]]]></description>
-				<content:encoded><![CDATA[<p>Synology disk station comes locked and does not allow any modifications as it comes out of the factory, however there is a healthy community supporting the boot strapped operations. Bootstrapping is required to install additional packages on the server, other than the default packaged ones, which I should say are not any less.</p>
-<p>Let’s start!</p>
-<p>1. Bootstrapping program is dependent on the type of CPU on your disk station. See here to find your <a href="http://forum.synology.com/wiki/index.php/What_kind_of_CPU_does_my_NAS_have" target="_blank">CPU Type</a>.</p>
-<p>2. Make sure the disk station has the login over SSH enabled.</p>
-<p><img style="display: block; float: none; margin-left: auto; margin-right: auto;" title="image" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/07/image.png" alt="image" width="890" /></p>
-<p>3. Login to your disk station over SSH (I use putty) as root. Enter your admin password when prompted.</p>
-<p>4. Change to the @tmp directory.</p>
-<div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:16c58548-ec2e-4ce3-baf4-c499e7591598" class="wlWriterEditableSmartContent" style="margin: 0; display: inline; float: none; padding: 0;">
-<pre class="lang:default decode:true">DiskStation&gt; cd /volume1/@tmp</pre>
-</div>
-<p>5. Download the bootstrap file for your CPU to the @tmp directory using wget. The example below is for the CPU type ‘Marvel Kirkwood mv6281 ARM processor’. Please find out the bootstrap file for each CPU type from the page <a href="http://forum.synology.com/wiki/index.php/Overview_on_modifying_the_Synology_Server,_bootstrap,_ipkg_etc" target="_blank">Overview on modifying Synology server</a>.</p>
-<div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:1d54835c-86d7-429d-b6a1-b5cb030beb87" class="wlWriterEditableSmartContent" style="margin: 0; display: inline; float: none; padding: 0;">
-<pre class="lang:default decode:true">DiskStation&gt; wget http://ipkg.nslu2-linux.org/feeds/optware/syno-x07/cross/unstable/syno-x07-bootstrap_1.2-7_arm.xsh</pre>
-</div>
-<p>7. Change the bootstrap file permissions, so that it’s executable.</p>
-<div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:a6aae75d-f7dc-41db-853c-75cb5b8c35e7" class="wlWriterEditableSmartContent" style="margin: 0; display: inline; float: none; padding: 0;">
-<pre class="lang:default decode:true">DiskStation&gt; chmod +x syno-mvkw-bootstrap_1.2-7_arm.xsh</pre>
-</div>
-<p>8. Execute the bootstrap file</p>
-<div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:faad8a81-d0dc-4fb3-9fb1-6721a871128d" class="wlWriterEditableSmartContent" style="margin: 0; display: inline; float: none; padding: 0;">
-<pre class="lang:default decode:true">DiskStation&gt; sh syno-mvkw-bootstrap_1.2-7_arm.xsh</pre>
-</div>
-<p>9. Now, comment out the PATH and EXPORT in the .profile file and save.</p>
-<div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:664cb7b7-0e22-44ca-a57c-1d045fa80435" class="wlWriterEditableSmartContent" style="margin: 0; display: inline; float: none; padding: 0;">
-<pre class="lang:default decode:true">DiskStation&gt; vi ~/.profile
-
-#PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/syno/sbin:/usr/syno/bin:/usr/local/sbin
-#export PATH</pre>
-</div>
-<p>10. Reboot the disk station.</p>
-<div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:1a1c01b3-0efb-4901-b1fe-8d5756908965" class="wlWriterEditableSmartContent" style="margin: 0; display: inline; float: none; padding: 0;">
-<pre class="lang:default decode:true">DiskStation&gt; reboot now</pre>
-</div>
-<p>11. Login to the disk station using SSH as root.</p>
-<p>12. Update ipkg list. ipkg is the default package manager.</p>
-<div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:9bba0d17-4db3-43dd-b50b-b1a702c37c4b" class="wlWriterEditableSmartContent" style="margin: 0; display: inline; float: none; padding: 0;">
-<pre class="lang:default decode:true">DiskStation&gt; ipkg update</pre>
-</div>
-<p>13. Install coreutils</p>
-<div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:4f8d0f31-9850-4e37-a51f-f2d8314f918d" class="wlWriterEditableSmartContent" style="margin: 0; display: inline; float: none; padding: 0;">
-<pre class="lang:default decode:true">DiskStation&gt; ipkg install coreutils</pre>
-</div>
-<p>14. Check what other packages are available to install</p>
-<div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:b6b481e6-634f-49ec-967e-168e20f9fc29" class="wlWriterEditableSmartContent" style="margin: 0; display: inline; float: none; padding: 0;">
-<pre class="lang:default decode:true">DiskStation&gt; ipkg list
-
-#Search for a specific package
-
-DiskStation&gt; ipkg list | grep vim</pre>
-</div>
-<p>15. Check what packages are already installed through ipkg</p>
-<div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:28226cac-fea6-4e3a-b0c9-969589dc0dec" class="wlWriterEditableSmartContent" style="margin: 0; display: inline; float: none; padding: 0;">
-<pre class="lang:default decode:true">DiskStation&gt; ipkg list_installed</pre>
-</div>
-<p>At this point, you have all the software installed to add other packages and make any changes to configure the disk station as required.</p>
-<p>Have Fun!</p>
-<p><strong>Install SCP</strong></p>
-<p>DSM 4.0 disk stations do not have SCP installed by default. I find SCP to be the easiest for copying files to the disk station. Moreover, if you are setting up public/private key authentication for password free authentication, the arrangement works very well with SCP, allowing, say a backup program, access the disk station without having to know it’s password.</p>
-<p>1. On the disk station, change to @tmp directory</p>
-<div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:d4b4218a-35a6-45cd-89a6-72f56bc90622" class="wlWriterEditableSmartContent" style="margin: 0; display: inline; float: none; padding: 0;">
-<pre class="lang:default decode:true">DiskStation&gt; cd /volume1/@tmp</pre>
-</div>
-<p>2. Get the OpenSSH package</p>
-<div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:81fc4188-efce-4679-9a9f-9e1d83b0db74" class="wlWriterEditableSmartContent" style="margin: 0; display: inline; float: none; padding: 0;">
-<pre class="lang:default decode:true">DiskStation&gt; ipkg download openssh</pre>
-</div>
-<p>3. Un-package</p>
-<div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:f1f36b35-f0b8-4fe0-bf1d-8143786368a7" class="wlWriterEditableSmartContent" style="margin: 0; display: inline; float: none; padding: 0;">
-<pre class="lang:default decode:true">DiskStation&gt; tar -xzvf openssh_5.9p1-1_arm.ipk</pre>
-</div>
-<p>4. Inflate the tar file</p>
-<div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:35723a22-6d53-4c20-9260-4cd5f86a8555" class="wlWriterEditableSmartContent" style="margin: 0; display: inline; float: none; padding: 0;">
-<pre class="lang:default decode:true">DiskStation&gt; tar -xzvf data.tar.gz</pre>
-</div>
-<p>5. Copy the binary to the bin</p>
-<div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:cffb657e-96ff-4cb2-8553-8b43bce22120" class="wlWriterEditableSmartContent" style="margin: 0; display: inline; float: none; padding: 0;">
-<pre class="lang:default decode:true">DiskStation&gt; cp /volume1/@tmp/opt/bin/openssh-scp /bin/scp</pre>
-</div>
-<p>SCP is now installed, give it a spin!</p>
-]]></content:encoded>
-			<wfw:commentRss>http://www.zubinraj.com/blog/2012/07/19/bootstrapping-synology-diskstation-unleash-the-power/feed/</wfw:commentRss>
-		<slash:comments>1</slash:comments>
-		</item>
-		<item>
-		<title>Windows Phone 7 &amp; Windows 8 Metro Apps</title>
-		<link>http://www.zubinraj.com/blog/2012/05/10/windows-phone-7-windows-8-metro-apps/</link>
-		<comments>http://www.zubinraj.com/blog/2012/05/10/windows-phone-7-windows-8-metro-apps/#comments</comments>
-		<pubDate>Thu, 10 May 2012 05:52:09 +0000</pubDate>
-		<dc:creator>Zubin</dc:creator>
-				<category><![CDATA[Win RT]]></category>
-		<category><![CDATA[migrate]]></category>
-		<category><![CDATA[win8]]></category>
-		<category><![CDATA[windows 8 consumer preview]]></category>
-		<category><![CDATA[wp7]]></category>
-
-		<guid isPermaLink="false">https://zubinraj.wordpress.com/?p=1123</guid>
-		<description><![CDATA[Given the differences between the Silverlight on Windows Phone 7 and XAML for WinRT on Windows 8, I thought it will be interesting to see what the differences are between these two platforms. A few days back I wrote a quick and dirty application for checking weather forecasts for a given location in Windows Phone 7. It is [...]]]></description>
-				<content:encoded><![CDATA[<p>Given the differences between the Silverlight on Windows Phone 7 and XAML for WinRT on Windows 8, I thought it will be interesting to see what the differences are between these two platforms.</p>
-<p>A few days back I <a href="http://www.zubinraj.com/2012/04/28/wp7-checking-weather-forecast-using-yql/">wrote</a> a quick and dirty application for checking weather forecasts for a given location in Windows Phone 7. It is a very simple application, however I was curious if I can use the same code base for WinRT metro apps on Windows 8.</p>
-<p><strong>Namespace and Base Page</strong></p>
-<p>The Windows Phone 7 controls reside in the namespace <strong>‘Microsoft.Phone.Controls’</strong> and the controls for Windows 8 XAML metro apps reside in <strong>‘Windows.UI.Xaml.Controls’</strong>.</p>
-<p>The pages for Windows Phone 7 pages derive from PhoneApplicationPage, whereas the metro apps derive from Windows.UI.Xaml.Controls.Page.</p>
-<pre class="lang:default decode:true">// Windows Phone 7
-public partial class MainPage&amp;nbsp;: PhoneApplicationPage</pre>
-<pre class="lang:default decode:true">// Windows 8 metro app
-public sealed partial class BlankPage : Page</pre>
-<p><strong>XAML</strong></p>
-<p>The user interface controls for both Windows Phone 7 and Windows 8 metro apps are implemented in different namespaces, however they are very similar and are mostly reusable.</p>
-<p>The same XAML may conform for both platforms, however Windows 8 are slated to be used on screens that are bigger like a tablet or a PC (and sometimes much bigger like a TV screen). So the applications may be better off if the user interface design for metro apps can utilize that larger real estate.</p>
-<p>My sample application for Windows Phone 7 was using the ‘WebBrowser’ control, but I couldn’t find this control in the metro apps. However, a very similar control called ‘WebView’ is present in Windows.UI.Xaml.Controls namespace.</p>
-<p>There are some minor differences in the implementation, but I was able to replace the WebBrowser control with the WebView control without much effort.</p>
-<pre class="lang:default decode:true">&lt;WebView Name="browserControl" Height="420" /&gt;</pre>
-<p><a href="http://www.zubinraj.com/blog/wp-content/uploads/2012/05/win8_vs2011_weatherwatch_designer.png"><img style="background-image: none; float: none; padding-top: 0; padding-left: 0; margin-left: auto; display: block; padding-right: 0; margin-right: auto; border-width: 0;" title="win8_vs2011_weatherwatch_designer" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/05/win8_vs2011_weatherwatch_designer_thumb.png" alt="win8_vs2011_weatherwatch_designer" width="554" height="339" border="0" /></a></p>
-<p><strong>Windows 8 Target Screen Sizes</strong></p>
-<p><a href="http://www.zubinraj.com/blog/wp-content/uploads/2012/05/win8_vs2011_toolbox_platform_screesizes.png"><img style="background-image: none; float: left; padding-top: 0; padding-left: 0; display: inline; padding-right: 0; border-width: 0;" title="win8_vs2011_toolbox_platform_screesizes" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/05/win8_vs2011_toolbox_platform_screesizes_thumb.png" alt="win8_vs2011_toolbox_platform_screesizes" width="201" height="244" align="left" border="0" /></a></p>
-<p>Visual Studio 11 for Windows 8 also allows  designing applications for different target sizes, as the target can differ from a wide variety of screen sizes.</p>
-<p>1366&#215;768 is the minimum resolution required for all metro apps. The designer having this ability to set various screen sizes is a great boon for the developers in knowing before hand how the XAML markup will render in the supported screen sizes.</p>
-<p>&nbsp;</p>
-<p>The designer also supports setting the user interface as portrait mode.<a href="http://www.zubinraj.com/blog/wp-content/uploads/2012/05/win8_vs2011_weatherwatch_designer_portrait.png"><img style="background-image: none; float: none; padding-top: 0; padding-left: 0; margin-left: auto; display: block; padding-right: 0; margin-right: auto; border-width: 0;" title="win8_vs2011_weatherwatch_designer_portrait" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/05/win8_vs2011_weatherwatch_designer_portrait_thumb.png" alt="win8_vs2011_weatherwatch_designer_portrait" width="300" height="484" border="0" /></a></p>
-<p><strong>WebClient API is not supported</strong></p>
-<p>The sample application in Windows Phone 7 used WebClient to pull weather data from yahoo, but WebClient is not supported in WinRT. However, HTTPWebRequest class is supported in WinRT. In fact, this is the only web request API supported in WinRT. HTTPWebRequest is also available in Windows Phone 7. See my previous post about WebClient vs HTTPWebRequest in Windows Phone 7 <a href="http://www.zubinraj.com/2012/04/25/wp7-webclient-and-httpwebrequest/">here</a>.</p>
-<p><strong>The final application on WinRT</strong></p>
-<p><a href="http://www.zubinraj.com/blog/wp-content/uploads/2012/05/win8_weather_watch.png"><img style="background-image: none; float: none; padding-top: 0; padding-left: 0; margin-left: auto; display: block; padding-right: 0; margin-right: auto; border-width: 0;" title="win8_weather_watch" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/05/win8_weather_watch_thumb.png" alt="win8_weather_watch" width="554" height="313" border="0" /></a></p>
-<p>With the very limited functionality I was testing, most of the porting was smooth, except for the surprise that WebClient was not supported.</p>
-<p>As for user interface, even though most of the XAML could be reused, I think it is to the benefit of the application that it be designed specifically for the screen sizes they are targeted for.</p>
-<p>So, can applications have a common code base for both the platforms? If the applications are layered properly using the MVVM (Model-View-View Model) pattern, the ‘model’ and ‘view model’ can have a common code base, whereas the ‘view’ can benefit from being separate at least for some of the applications.</p>
-]]></content:encoded>
-			<wfw:commentRss>http://www.zubinraj.com/blog/2012/05/10/windows-phone-7-windows-8-metro-apps/feed/</wfw:commentRss>
-		<slash:comments>0</slash:comments>
-		</item>
-		<item>
-		<title>Experiments with Windows 8 Consumer Preview</title>
-		<link>http://www.zubinraj.com/blog/2012/05/03/experiments-with-windows-8-consumer-preview/</link>
-		<comments>http://www.zubinraj.com/blog/2012/05/03/experiments-with-windows-8-consumer-preview/#comments</comments>
-		<pubDate>Fri, 04 May 2012 00:19:37 +0000</pubDate>
-		<dc:creator>Zubin</dc:creator>
-				<category><![CDATA[Win RT]]></category>
-		<category><![CDATA[install]]></category>
-		<category><![CDATA[win8]]></category>
-		<category><![CDATA[windows 8 consumer preview]]></category>
-
-		<guid isPermaLink="false">https://zubinraj.wordpress.com/?p=1088</guid>
-		<description><![CDATA[I finally got a chance to install Windows 8 and take it for a test ride. Having installed the Windows 8 Developer Preview which came out last year, the Windows 8 Consumer Preview is much more stable with very few visible bugs. I followed the excellent instructions provided by lifehacker to boot Windows 8 side [...]]]></description>
-				<content:encoded><![CDATA[<p><a href="http://www.zubinraj.com/blog/wp-content/uploads/2012/05/win8_start_screen_1.png"><img title="win8_start_screen_1" style="float:right;display:inline;" alt="win8_start_screen_1" align="right" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/05/win8_start_screen_1_thumb.png" width="324" height="221"></a>I finally got a chance to install Windows 8 and take it for a test ride. Having installed the Windows 8 Developer Preview which came out last year, the Windows 8 Consumer Preview is much more stable with very few visible bugs.</p>
-<p>I followed <a href="http://lifehacker.com/5840387/how-to-dual+boot-windows-7-and-windows-8-side-by-side" target="_blank">the excellent instructions provided by lifehacker</a> to boot Windows 8 side by side with Windows 7, which is already running on my laptop. If you are not familiar with partitioning your hard disks, be very careful while trying to dual boot as choosing the incorrect partition can erase your existing installation.</p>
-<p>On the Start screen, all the applications are shown in what are called ‘Tiles’. If you are familiar with the Windows Phone interface, it looks much similar.</p>
-<p>Desktop is provided as an ‘app’, which takes the user to the much familiar PC interface that most PC users are familiar with. Desktop looks much similar to a Windows 7 screen, but ouch, where is the start button? Pressing the Windows Key on the keyboard takes the user back to the start screen with ‘Tiles’.</p>
-<p>At present there are not many apps to boast about in the marketplace, but I expect this situation to change as more and more developers start publishing their apps to the marketplace.</p>
-<p>Some applications that have already got some traction in other platforms like ‘Kindle’ and ‘Cut The Rope’ are already in the marketplace.</p>
-<p><img title="win8_store_kindle_1" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" border="0" alt="win8_store_kindle_1" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/05/win8_store_kindle_1.png" width="370" height="283"><img title="win8_cut_the_rope_game1" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" border="0" alt="win8_cut_the_rope_game1" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/05/win8_cut_the_rope_game1.png" width="370" height="283"></p>
-<p>&nbsp;</p>
-<p><strong>Corner Quick Menus</strong></p>
-<p>From a touch interface, one can slide from side, the top, bottom etc. but doing that with the mouse is not going to be very easy. As per Microsoft, one can move the mouse effortlessly to each corner of the screen and this is where some of the Windows 8 menus pop out from.</p>
-<p>Move the mouse to the bottom left corner, the start menu pops out. Click on the start menu brings the user right back to the start screen. Pressing the windows key on the keyboard also has the same effect.</p>
-<p><img title="win8_start_screen_popup_1" style="float:none;margin-left:auto;display:block;margin-right:auto;" alt="win8_start_screen_popup_1" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/05/win8_start_screen_popup_11.png" width="550" height="413"></p>
-<p>Moving the mouse to the top left corner brings out the application bar with a preview of all the running applications. This is a very quick way to switch between currently running applications. Equivalent keyboard shortcut is Windows Key + Tab.</p>
-<p><img title="win8_currently_running_applications_bar_1" style="float:none;margin-left:auto;display:block;margin-right:auto;" alt="win8_currently_running_applications_bar_1" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/05/win8_currently_running_applications_bar_11.png" width="550" height="413"></p>
-<p><strong></strong>&nbsp;</p>
-<p><strong>Windows Charms</strong></p>
-<p>Windows 8 has implemented something called ‘Windows Charms’, which is a quick menu that is available for all the applications. Move the mouse to the top right corner to access the Charm.</p>
-<p><img title="win8_start_screen_charm_bar_1" style="float:none;margin-left:auto;display:block;margin-right:auto;" alt="win8_start_screen_charm_bar_1" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/05/win8_start_screen_charm_bar_11.png" width="550" height="413"></p>
-<p>In the charm bar, there are buttons like Share and Search, which each application can utilize accordingly.</p>
-<p><strong>Keyboard friendly as it is touch friendly</strong></p>
-<p>It is primarily touted for touch interface devices, however almost all the ‘goodness’ of Windows 7 keyboard friendliness have been retained.</p>
-<p>Windows 7 users will find many of their favorite shortcut keys working on Windows 8 including the Alt+Tab combination for switching between the applications.</p>
-<p><img title="win8_alt_tab_window_switching_1" style="float:none;margin-left:auto;display:block;margin-right:auto;" alt="win8_alt_tab_window_switching_1" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/05/win8_alt_tab_window_switching_1.png" width="472" height="188"></p>
-<p>&nbsp;</p>
-<p><strong>Task Manager</strong></p>
-<p>Task Manager is greatly enhanced and now has a sporty user interface.</p>
-<p><img title="win8_taskbar_performance_1" style="float:none;margin-left:auto;display:block;margin-right:auto;" alt="win8_taskbar_performance_1" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/05/win8_taskbar_performance_11.png" width="550" height="452"></p>
-<p>A great additional feature that has been added is that now it can track CPU, memory and bandwidth usage of applications over a period of time. On mobile devices where internet usage is metered, this can come in handy to find out what applications are eating up the most bandwidth.</p>
-<p><img title="win8_taskbar_app_history_1" style="float:none;margin-left:auto;display:block;margin-right:auto;" alt="win8_taskbar_app_history_1" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/05/win8_taskbar_app_history_11.png" width="550" height="452"></p>
-<p>&nbsp;</p>
-<p><strong>Compatibility with existing hardware</strong></p>
-<p>The web installer runs a compatibility checker before installing Windows 8 to verify if the existing hardware and software is compatible. Interestingly enough, the only incompatible application that was found on my computer was the ‘Security Essentials’ anti-virus software from none other than Microsoft itself.</p>
-<p><strong>NVIDIA Drivers</strong></p>
-<p>I noticed one problem after installing the Windows 8, it was not detecting the NVIDIA graphics card. My laptop has a NVIDIA GeForce 210M. NVIDIA has released the drivers for Windows 8 32-bit and 64-bit, however some laptops like SONY VAIO require to get these drivers directly from SONY instead of NVIDIA. Installing the drivers from NVIDIA was stopping at a point where it suggests to contact the laptop manufacturer to provide the drivers. However, SONY has not released the NVIDIA drivers for their hardware yet. argh!</p>
-<p>Considering that most of the underlying stuff in Windows 8 is carried forward from Windows 7, I wanted to try installing the NVIDIA Windows 7 drivers on Windows 8. How bad can it get? The worse case scenario would be for me to re-install Windows 8.</p>
-<p>I took the gamble and installed the Windows 7 64-bit NVIDIA drivers provided by SONY and voila! it worked like a charm!</p>
-<p>(Install at your own risk)</p>
-<p><img title="win8_device_manager_nvidia_geforce_210m" style="float:none;margin-left:auto;display:block;margin-right:auto;" alt="win8_device_manager_nvidia_geforce_210m" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/05/win8_device_manager_nvidia_geforce_210m.png" width="400" height="331"></p>
-<p>&nbsp;</p>
-<p>All in all, it is a bold new endeavor and is certainly fun to use. Even though it looks very promising, it remains to be seen how well the marketplace develops which is a crucial factor in the success of Windows 8 on touch interface devices.</p>
-]]></content:encoded>
-			<wfw:commentRss>http://www.zubinraj.com/blog/2012/05/03/experiments-with-windows-8-consumer-preview/feed/</wfw:commentRss>
-		<slash:comments>0</slash:comments>
-		</item>
-		<item>
-		<title>WP7: Checking Weather Forecast Using YQL</title>
-		<link>http://www.zubinraj.com/blog/2012/04/28/wp7-checking-weather-forecast-using-yql/</link>
-		<comments>http://www.zubinraj.com/blog/2012/04/28/wp7-checking-weather-forecast-using-yql/#comments</comments>
-		<pubDate>Sun, 29 Apr 2012 04:28:34 +0000</pubDate>
-		<dc:creator>Zubin</dc:creator>
-				<category><![CDATA[Mobile]]></category>
-		<category><![CDATA[Programming]]></category>
-		<category><![CDATA[.net]]></category>
-		<category><![CDATA[c#]]></category>
-		<category><![CDATA[webclient]]></category>
-		<category><![CDATA[windows phone]]></category>
-		<category><![CDATA[yql]]></category>
-
-		<guid isPermaLink="false">https://zubinraj.wordpress.com/?p=1070</guid>
-		<description><![CDATA[I touched upon yahoo query language (YQL) interface in my last post. Today, I will show some quick practical uses of YQL and demonstrate how easy it is for the programmers to tap into this information. For today’s example, we will examine the table named ‘weather.forecast’, which is available in the YQL interface. Head over [...]]]></description>
-				<content:encoded><![CDATA[<p>I touched upon yahoo query language (YQL) interface in my <a href="http://www.zubinraj.com/2012/04/25/yql/">last post</a>. Today, I will show some quick practical uses of YQL and demonstrate how easy it is for the programmers to tap into this information.</p>
-<p>For today’s example, we will examine the table named ‘weather.forecast’, which is available in the YQL interface.</p>
-<p>Head over to the <a href="http://developer.yahoo.com/yql/console/" target="_blank">YQL Console</a> to examine the parameters to be used for ‘weather.forecast’.</p>
-<p><img style="display: inline;" title="yql_weather_forecast_1" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/04/yql_weather_forecast_1.png" alt="yql_weather_forecast_1" width="644" height="281" /></p>
-<p>As shown in the screenshot, there is one parameter named ‘location’ that is required for querying data from this table.</p>
-<pre class="lang:default decode:true">SELECT * FROM weather.forecast WHERE location="63126"</pre>
-<p>The complete URL would look like below:</p>
-<p><a title="http://query.yahooapis.com/v1/public/yql?q=%20SELECT%20*%20FROM%20weather.forecast%20WHERE%20location%3D%2263126%22%20%20&amp;diagnostics=true" href="http://query.yahooapis.com/v1/public/yql?q=%20SELECT%20*%20FROM%20weather.forecast%20WHERE%20location%3D%2263126%22%20%20&amp;diagnostics=true" target="_blank">http://query.yahooapis.com/v1/public/yql?q=%20SELECT%20*%20FROM%20weather.forecast%20WHERE%20location%3D%2263126%22%20%20&amp;diagnostics=true</a></p>
-<p><strong>Windows Phone Application</strong></p>
-<p>Create a new ‘Windows Phone Application’ project in Visual Studio.</p>
-<p><img style="display: inline;" title="New_Windows_Phone_Application" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/04/new_windows_phone_application.png" alt="New_Windows_Phone_Application" width="650" height="322" /></p>
-<p><strong>Preparing the User Interface</strong></p>
-<p>The user will provide the location for which the weather forecast is to be displayed as input.</p>
-<p>For this, I added a horizontal StackPanel with a TextBox and a Button into the MainPage.xaml.</p>
-<pre class="lang:default decode:true">&lt;TextBlock Text="Enter the zip code:" /&gt;
-&lt;StackPanel Orientation="Horizontal" Margin="0,0,0,50"&gt;
-    &lt;TextBox Name="locationTextBox" Text="" Width="300"&gt;&lt;/TextBox&gt;
-    &lt;Button Name="goButton" Content="GO" Width="100" Click="goButton_Click"&gt;&lt;/Button&gt;
-&lt;/StackPanel&gt;</pre>
-<p>For displaying the results, I used a WebBrowser control, as some of the data for ‘weather.forecast’ is returned as HTML.</p>
-<pre class="lang:default decode:true">&lt;phone:WebBrowser Name="browserControl" Height="300" Visibility="Collapsed" /&gt;</pre>
-<p>The XAML listing for the UI is here:</p>
-<pre class="lang:default decode:true">    &lt;!--LayoutRoot is the root grid where all page content is placed--&gt;
-    &lt;Grid x:Name="LayoutRoot" Background="Transparent"&gt;
-        &lt;Grid.RowDefinitions&gt;
-            &lt;RowDefinition Height="Auto"/&gt;
-            &lt;RowDefinition Height="*"/&gt;
-        &lt;/Grid.RowDefinitions&gt;
-
-        &lt;!--TitlePanel contains the name of the application and page title--&gt;
-        &lt;StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28"&gt;
-            &lt;TextBlock x:Name="ApplicationTitle" Text="WEATHER WATCH" Style="{StaticResource PhoneTextNormalStyle}"/&gt;
-        &lt;/StackPanel&gt;
-
-        &lt;!--ContentPanel - place additional content here--&gt;
-        &lt;Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0"&gt;
-            &lt;StackPanel Grid.Row="0" Grid.Column="0" Orientation="Vertical" Margin="12, 0, 12, 0"&gt;
-                &lt;TextBlock Text="Enter the zip code:" /&gt;
-                &lt;StackPanel Orientation="Horizontal" Margin="0,0,0,50"&gt;
-                    &lt;TextBox Name="locationTextBox" Text="" Width="300"&gt;&lt;/TextBox&gt;
-                    &lt;Button Name="goButton" Content="GO" Width="100" Click="goButton_Click"&gt;&lt;/Button&gt;
-                &lt;/StackPanel&gt;
-
-                &lt;TextBlock Name="titleTextBlock" Text=""&gt;&lt;/TextBlock&gt;
-
-                &lt;phone:WebBrowser Name="browserControl" Height="300" Visibility="Collapsed" /&gt;
-            &lt;/StackPanel&gt;
-
-        &lt;/Grid&gt;
-    &lt;/Grid&gt;</pre>
-<p><strong>Getting data from YQL</strong></p>
-<p>The user enters the zip code for which weather forecast has to be displayed and press on ‘GO’ button.</p>
-<p>The program takes this location, construct the correct URL and make a web request to retrieve the data from the internet.</p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" title="WeatherWatch_1" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/04/weatherwatch_11.png" alt="WeatherWatch_1" /></p>
-<p>Windows Phone SDK provides two options to make a web request and get data from the internet, WebClient and HTTPWebRequest. See <a href="http://www.zubinraj.com/2012/04/25/wp7-webclient-and-httpwebrequest/">here</a> for more information.</p>
-<p>For this example, I used the WebClient API for it’s inherent simplicity as this is a post more to demonstrate the YQL than about performance.</p>
-<pre class="lang:default decode:true">public void PopulateCurrentConditions(string location)
-{
-    const string locVariable = "$$LOCATION$$";
-    string query = "http://query.yahooapis.com/v1/public/yql?q=%20SELECT%20*%20FROM%20weather.forecast%20WHERE%20location%3D%22" + locVariable + "%22%20%20&amp;diagnostics=true";
-
-    string url = query.Replace(locVariable, location);
-
-    // get the currrent conditions from YQL
-    WebClient web = new WebClient();
-    web.DownloadStringCompleted += new DownloadStringCompletedEventHandler(web_DownloadStringCompleted);
-    web.DownloadStringAsync(new Uri(url));
-
-}</pre>
-<p>Since the program did not specify a output format, JQL returns XML by default. The output format can be specified as <a href="http://en.wikipedia.org/wiki/Json" target="_blank">JSON</a> by adding  parameter to the original URL.</p>
-<p><a href="http://query.yahooapis.com/v1/public/yql?q=SELECT%20*%20FROM%20weather.forecast%20WHERE%20location%3D%2263126%22%20%20&amp;format=json&amp;diagnostics=true" target="_blank">http://query.yahooapis.com/v1/public/yql?q=SELECT%20*%20FROM%20weather.forecast%20WHERE%20location%3D%2263126%22%20%20&amp;<strong>format=json</strong>&amp;diagnostics=true</a></p>
-<p>Parsing the XML is made simpler by the XDocument class provided in the System.Xml.Linq namespace.</p>
-<pre class="lang:default decode:true">XDocument doc = XDocument.Parse(e.Result);
-XElement result = doc.Root.Element("results").Element("channel").Element("item");
-
-if (result == null) return;
-
-string title = result.Element("title").Value;
-string currentConditions = result.Element("description").Value;</pre>
-<p><strong>Displaying the results</strong></p>
-<p>WebClient returns data on the same thread, so it can directly access the UI elements. On the other hand, HTTPWebRequest returns data on a different thread and the result has to be marshaled back to the UI thread. Since data is returned on a different thread, HTTPWebRequest has the advantage of not locking up the UI thread when it is processing.</p>
-<pre class="lang:default decode:true">// Update the UI elements
-// Since the WebClient returns on the same thread, it can access the UI elements directly
-titleTextBlock.Text = title;
-browserControl.NavigateToString(currentConditions);</pre>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" title="WeatherWatch_2" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/04/weatherwatch_21.png" alt="WeatherWatch_2" /></p>
-<p>The complete MainPage.xaml.cs code behind:</p>
-<pre class="lang:default decode:true crayon-selected">using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Animation;
-using System.Windows.Shapes;
-using Microsoft.Phone.Controls;
-using System.Xml;
-using System.Xml.Linq;
-
-namespace WeatherWatch
-{
-    public partial class MainPage : PhoneApplicationPage
-    {
-        // Constructor
-        public MainPage()
-        {
-            InitializeComponent();
-        }
-
-        private void goButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (locationTextBox.Text.Length == 0) return;
-
-            browserControl.Visibility = System.Windows.Visibility.Visible;
-            browserControl.NavigateToString("Loading...");
-
-            PopulateCurrentConditions(locationTextBox.Text);
-        }
-
-        public void PopulateCurrentConditions(string location)
-        {
-            const string locVariable = "$$LOCATION$$";
-            string query = "http://query.yahooapis.com/v1/public/yql?q=%20SELECT%20*%20FROM%20weather.forecast%20WHERE%20location%3D%22" + locVariable + "%22%20%20&amp;diagnostics=true";
-
-            string url = query.Replace(locVariable, location);
-
-            // get the currrent conditions from YQL
-            WebClient web = new WebClient();
-            web.DownloadStringCompleted += new DownloadStringCompletedEventHandler(web_DownloadStringCompleted);
-            web.DownloadStringAsync(new Uri(url));
-
-        }
-
-        void web_DownloadStringCompleted(object sender, DownloadStringCompletedEventArgs e)
-        {
-            XDocument doc = XDocument.Parse(e.Result);
-            XElement result = doc.Root.Element("results").Element("channel").Element("item");
-
-            if (result == null) return;
-
-            string title = result.Element("title").Value;
-            string currentConditions = result.Element("description").Value;
-
-            // Update the UI elements
-            // Since the WebClient returns on the same thread, it can access the UI elements directly
-            titleTextBlock.Text = title;
-            browserControl.NavigateToString(currentConditions);
-
-        }
-
-    }
-}</pre>
-]]></content:encoded>
-			<wfw:commentRss>http://www.zubinraj.com/blog/2012/04/28/wp7-checking-weather-forecast-using-yql/feed/</wfw:commentRss>
-		<slash:comments>0</slash:comments>
-		</item>
-		<item>
-		<title>YQL</title>
-		<link>http://www.zubinraj.com/blog/2012/04/25/yql/</link>
-		<comments>http://www.zubinraj.com/blog/2012/04/25/yql/#comments</comments>
-		<pubDate>Thu, 26 Apr 2012 04:45:00 +0000</pubDate>
-		<dc:creator>Zubin</dc:creator>
-				<category><![CDATA[Programming]]></category>
-		<category><![CDATA[api]]></category>
-		<category><![CDATA[yahoo query language]]></category>
-
-		<guid isPermaLink="false">https://zubinraj.wordpress.com/?p=1028</guid>
-		<description><![CDATA[YQL or Yahoo Query Language allows developers to query, join and filter data from multiple data sources on the web who have made their data available through the YQL interface. Since YQL is an expressive SQL like language, developers familiar with the SQL interface should feel comfortable with the interface. YQL provides the developers a [...]]]></description>
-				<content:encoded><![CDATA[<p>YQL or Yahoo Query Language allows developers to query, join and filter data from multiple data sources on the web who have made their data available through the YQL interface. Since YQL is an expressive SQL like language, developers familiar with the SQL interface should feel comfortable with the interface.</p>
-<p>YQL provides the developers a consistent way to access online services which are otherwise dispersed across a range of formats. It hides the implementation of the various data sources on the web and make it easier to query the data.</p>
-<p>YQL is both a service and a language. The service is through which external web services can make their data available for developers to consume through the yahoo query ‘language’.</p>
-<p><strong>Understanding the language of YQL</strong></p>
-<p>If you are familiar with the SQL, you will feel at home with YQL. This language allows developers to use SQL syntax to extract data from the service. It can return the results in either XML format or in <a href="http://en.wikipedia.org/wiki/Json" target="_blank">JSON</a> format.</p>
-<p>Yahoo has provided a <a href="http://developer.yahoo.com/yql/console/" target="_blank">YQL Console</a> for developers to test their queries.</p>
-<p>For example, if the application wants to search from YouTube and display a list of results, the developer can use a simple query like below and get the information from the web service.</p>
-<div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:705f3fa6-a94e-4bab-a14f-82ffe2d0891c" class="wlWriterEditableSmartContent" style="margin: 0; display: inline; float: none; padding: 0;">
-<pre class="lang:default decode:true"> SELECT * FROM youtube.search WHERE query="soccer ronaldo"</pre>
-</div>
-<p>The output of the above query in XML format is below. Adding &#8216;limit 1&#8242; will limit the output to the top 1 result.</p>
-<div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:e0176e3b-7d8b-433b-a92e-13a046c65aa9" class="wlWriterEditableSmartContent" style="margin: 0; display: inline; float: none; padding: 0;">
-<pre class="lang:default decode:true">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;query xmlns:yahoo="http://www.yahooapis.com/v1/base.rng"
-    yahoo:count="1" yahoo:created="2012-04-26T03:29:10Z" yahoo:lang="en-US"&gt;
-    &lt;diagnostics&gt;
-        &lt;publiclyCallable&gt;true&lt;/publiclyCallable&gt;
-        &lt;url execution-start-time="21" execution-stop-time="25"
-            execution-time="4" proxy="DEFAULT"&gt;&lt;![CDATA[http://www.datatables.org/youtube/youtube.search.xml]]&gt;&lt;/url&gt;
-        &lt;url execution-start-time="179" execution-stop-time="238"
-            execution-time="59" proxy="DEFAULT"&gt;&lt;![CDATA[http://gdata.youtube.com/feeds/api/videos?q=soccer%20ronaldo]]&gt;&lt;/url&gt;
-        &lt;javascript execution-time="376" instructions-used="972223" table-name="youtube.search"/&gt;
-        &lt;user-time&gt;406&lt;/user-time&gt;
-        &lt;service-time&gt;63&lt;/service-time&gt;
-        &lt;build-version&gt;26856&lt;/build-version&gt;
-    &lt;/diagnostics&gt; 
-    &lt;results&gt;
-        &lt;video&gt;
-            &lt;id&gt;tlYDcv6l95c&lt;/id&gt;
-            &lt;url&gt;http://www.youtube.com/watch?v=tlYDcv6l95c&amp;amp;feature=youtube_gdata_player&lt;/url&gt;
-            &lt;title&gt;Ronaldo Penalty Miss || Real Madrid vs Bayern Munich (1-3) CL Semi Final ||26.04.12||&lt;/title&gt;
-            &lt;content&gt;Real Madrid vs Bayern Munich Penalties 1-3 Bayern Wins&lt;/content&gt;
-            &lt;author&gt;elly produxion&lt;/author&gt;
-            &lt;duration&gt;18&lt;/duration&gt;
-            &lt;comment_count&gt;4&lt;/comment_count&gt;
-            &lt;categories&gt;
-                &lt;category&gt;Sports&lt;/category&gt;
-            &lt;/categories&gt;
-            &lt;tags&gt;
-                &lt;tag&gt;penalty&lt;/tag&gt;
-                &lt;tag&gt;miss&lt;/tag&gt;
-                &lt;tag&gt;ronaldo&lt;/tag&gt;
-                &lt;tag&gt;real&lt;/tag&gt;
-                &lt;tag&gt;madrid&lt;/tag&gt;
-                &lt;tag&gt;vs&lt;/tag&gt;
-                &lt;tag&gt;bayern&lt;/tag&gt;
-                &lt;tag&gt;munich&lt;/tag&gt;
-                &lt;tag&gt;munchen&lt;/tag&gt;
-                &lt;tag&gt;all&lt;/tag&gt;
-                &lt;tag&gt;goals&lt;/tag&gt;
-                &lt;tag&gt;highlights&lt;/tag&gt;
-                &lt;tag&gt;Goal&lt;/tag&gt;
-                &lt;tag&gt;football&lt;/tag&gt;
-                &lt;tag&gt;Soccer&lt;/tag&gt;
-            &lt;/tags&gt;
-            &lt;thumbnails&gt;
-                &lt;thumbnail height="90" time="00:00:09" width="120"&gt;http://i.ytimg.com/vi/tlYDcv6l95c/default.jpg&lt;/thumbnail&gt;
-                &lt;thumbnail height="180" time="" width="320"&gt;http://i.ytimg.com/vi/tlYDcv6l95c/mqdefault.jpg&lt;/thumbnail&gt;
-                &lt;thumbnail height="360" time="" width="480"&gt;http://i.ytimg.com/vi/tlYDcv6l95c/hqdefault.jpg&lt;/thumbnail&gt;
-                &lt;thumbnail height="90" time="00:00:04.500" width="120"&gt;http://i.ytimg.com/vi/tlYDcv6l95c/1.jpg&lt;/thumbnail&gt;
-                &lt;thumbnail height="90" time="00:00:09" width="120"&gt;http://i.ytimg.com/vi/tlYDcv6l95c/2.jpg&lt;/thumbnail&gt;
-                &lt;thumbnail height="90" time="00:00:13.500" width="120"&gt;http://i.ytimg.com/vi/tlYDcv6l95c/3.jpg&lt;/thumbnail&gt;
-            &lt;/thumbnails&gt;
-            &lt;files&gt;
-                &lt;file type="application/x-shockwave-flash"&gt;http://www.youtube.com/v/tlYDcv6l95c?version=3&amp;amp;f=videos&amp;amp;app=youtube_gdata&lt;/file&gt;
-                &lt;file type="video/3gpp"&gt;rtsp://v3.cache6.c.youtube.com/CiILENy73wIaGQmX96X-cgNWthMYDSANFEgGUgZ2aWRlb3MM/0/0/0/video.3gp&lt;/file&gt;
-                &lt;file type="video/3gpp"&gt;rtsp://v3.cache4.c.youtube.com/CiILENy73wIaGQmX96X-cgNWthMYESARFEgGUgZ2aWRlb3MM/0/0/0/video.3gp&lt;/file&gt;
-            &lt;/files&gt;
-        &lt;/video&gt;
-    &lt;/results&gt;
-&lt;/query&gt;</pre>
-</div>
-<p>Similar to SQL, YQL also let the developer query for individual columns. The developer can limit what is returned from the service by specifying the data that should be returned as in the below example.</p>
-<div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:92513467-5027-4e3a-8325-6b105ea7ceb8" class="wlWriterEditableSmartContent" style="margin: 0; display: inline; float: none; padding: 0;">
-<pre class="lang:default decode:true"> SELECT id, url, title, content FROM youtube.search WHERE query="soccer ronaldo"  limit 1</pre>
-</div>
-<p>Which returns just those 4 columns that are requested.</p>
-<div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:645eb4b8-c4d7-4514-b532-fbff08ed7dcb" class="wlWriterEditableSmartContent" style="margin: 0; display: inline; float: none; padding: 0;">
-<pre class="lang:default decode:true crayon-selected">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;query xmlns:yahoo="http://www.yahooapis.com/v1/base.rng"
-    yahoo:count="1" yahoo:created="2012-04-26T03:36:52Z" yahoo:lang="en-US"&gt;
-    &lt;diagnostics&gt;
-        &lt;publiclyCallable&gt;true&lt;/publiclyCallable&gt;
-        &lt;url execution-start-time="22" execution-stop-time="26"
-            execution-time="4" proxy="DEFAULT"&gt;&lt;![CDATA[http://www.datatables.org/youtube/youtube.search.xml]]&gt;&lt;/url&gt;
-        &lt;url execution-start-time="139" execution-stop-time="188"
-            execution-time="49" proxy="DEFAULT"&gt;&lt;![CDATA[http://gdata.youtube.com/feeds/api/videos?q=soccer%20ronaldo]]&gt;&lt;/url&gt;
-        &lt;javascript execution-time="341" instructions-used="972223" table-name="youtube.search"/&gt;
-        &lt;user-time&gt;371&lt;/user-time&gt;
-        &lt;service-time&gt;53&lt;/service-time&gt;
-        &lt;build-version&gt;26856&lt;/build-version&gt;
-    &lt;/diagnostics&gt; 
-    &lt;results&gt;
-        &lt;video&gt;
-            &lt;id&gt;tlYDcv6l95c&lt;/id&gt;
-            &lt;url&gt;http://www.youtube.com/watch?v=tlYDcv6l95c&amp;amp;feature=youtube_gdata_player&lt;/url&gt;
-            &lt;title&gt;Ronaldo Penalty Miss || Real Madrid vs Bayern Munich (1-3) CL Semi Final ||26.04.12||&lt;/title&gt;
-            &lt;content&gt;Real Madrid vs Bayern Munich Penalties 1-3 Bayern Wins&lt;/content&gt;
-        &lt;/video&gt;
-    &lt;/results&gt;
-&lt;/query&gt;</pre>
-</div>
-<p><strong>Using the YQL Service</strong></p>
-<p>Let’s look at the usage of these services. Let us say, for example, an application wants to list out the current popular music charts.</p>
-<p>Head over to the <a href="http://developer.yahoo.com/yql/console/" target="_blank">YQL Console</a> and put your query as below:</p>
-<div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:8706a8ef-fa2a-44ff-8b47-6b6fb5d57ef4" class="wlWriterEditableSmartContent" style="margin: 0; display: inline; float: none; padding: 0;">
-<pre class="lang:default decode:true">SELECT * FROM music.artist.popular limit 5</pre>
-</div>
-<p><img style="display: inline;" title="yql_1" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/04/yql_1.png" alt="yql_1" width="500" height="127" /></p>
-<p>Click on TEST button. The console will show the output in the format that you selected, either XML or in JSON format.</p>
-<p><img style="display: inline;" title="yql_2" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/04/yql_2.png" alt="yql_2" width="550" height="273" /></p>
-<p>Once you are satisfied with the results, head to the bottom area of the console to grab the complete URL.</p>
-<p><img style="display: inline;" title="yql_3" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/04/yql_3.png" alt="yql_3" width="550" height="54" /></p>
-<p>The resulting query:</p>
-<p><a title="http://query.yahooapis.com/v1/public/yql?q=%20SELECT%20*%20FROM%20music.artist.popular%20limit%205&amp;diagnostics=true" href="http://query.yahooapis.com/v1/public/yql?q=%20SELECT%20*%20FROM%20music.artist.popular%20limit%205&amp;diagnostics=true" target="_blank">http://query.yahooapis.com/v1/public/yql?q=%20SELECT%20*%20FROM%20music.artist.popular%20limit%205&amp;diagnostics=true</a></p>
-<p>The application can post this query to get the response and the response being in XML or JSON consistently across the web services makes this interface very luring to use.</p>
-<p><strong>Other Useful Links</strong></p>
-<p>Complete YQL Documentation<br />
-<a title="http://developer.yahoo.com/yql/docs/" href="http://developer.yahoo.com/yql/docs/" target="_blank">http://developer.yahoo.com/yql/docs/</a></p>
-<p>YQL Screencast from the Yahoo! Developer Network<br />
-<a title="http://developer.yahoo.com/yos/screencasts/yql_screencast.html" href="http://developer.yahoo.com/yos/screencasts/yql_screencast.html" target="_blank">http://developer.yahoo.com/yos/screencasts/yql_screencast.html</a></p>
-]]></content:encoded>
-			<wfw:commentRss>http://www.zubinraj.com/blog/2012/04/25/yql/feed/</wfw:commentRss>
-		<slash:comments>0</slash:comments>
-		</item>
-		<item>
-		<title>WP7: WebClient and HTTPWebRequest</title>
-		<link>http://www.zubinraj.com/blog/2012/04/25/wp7-webclient-and-httpwebrequest/</link>
-		<comments>http://www.zubinraj.com/blog/2012/04/25/wp7-webclient-and-httpwebrequest/#comments</comments>
-		<pubDate>Wed, 25 Apr 2012 07:10:47 +0000</pubDate>
-		<dc:creator>Zubin</dc:creator>
-				<category><![CDATA[Mobile]]></category>
-		<category><![CDATA[Programming]]></category>
-		<category><![CDATA[.net]]></category>
-		<category><![CDATA[c#]]></category>
-		<category><![CDATA[httpwebrequest]]></category>
-		<category><![CDATA[webclient]]></category>
-		<category><![CDATA[windows phone]]></category>
-
-		<guid isPermaLink="false">https://zubinraj.wordpress.com/?p=1012</guid>
-		<description><![CDATA[Windows Phone 7 SDK has provided two classes for consuming resources from the web. WebClient and HTTPWebRequest. HTTPWebRequest HTTPWebRequest is a low level API for web requests. Unlike WebClient, it allows to tinker some of the HTTP aspects like cookies and user agent. One major advantage of HTTPWebRequest is that it returns on another thread, [...]]]></description>
-				<content:encoded><![CDATA[<p>Windows Phone 7 SDK has provided two classes for consuming resources from the web. WebClient and HTTPWebRequest.</p>
-<p><strong>HTTPWebRequest</strong></p>
-<p>HTTPWebRequest is a low level API for web requests. Unlike WebClient, it allows to tinker some of the HTTP aspects like cookies and user agent.</p>
-<p>One major advantage of HTTPWebRequest is that it returns on another thread, which comes in handy for large web requests. It will not lock up the UI thread allowing the UI to remain responsive during the request. Since the response is returned on another thread the program should marshal the response back to the UI thread.</p>
-<p>HTTPWebRequest is created by the static method HTTPWebRequest.Create().</p>
-<div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:44188542-21e7-4afd-b302-aa723a034f74" class="wlWriterEditableSmartContent" style="margin: 0; display: inline; float: none; padding: 0;">
-<pre class="lang:default decode:true">WebRequest request = HttpWebRequest.Create(url);
-
-request.BeginGetResponse(new AsyncCallback(GetResponseConpleted), request);</pre>
-</div>
-<p>Call the EndGetResponse() to get the WebResponse, which will contain the stream to read the response.</p>
-<div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:4777839d-9524-4f91-9711-0ff4c38952f1" class="wlWriterEditableSmartContent" style="margin: 0; display: inline; float: none; padding: 0;">
-<pre class="lang:default decode:true">private void GetResponseConpleted(IAsyncResult result)
-{
-    WebRequest request = (WebRequest)result.AsyncState;
-
-    WebResponse response = request.EndGetResponse(result);
-
-    string data = "";
-
-    // Get the response stream from the response object
-    using (Stream stream = response.GetResponseStream())
-    {
-        StreamReader reader = new StreamReader(stream);
-
-        data = reader.ReadToEnd();
-    }
-
-}</pre>
-</div>
-<p><strong>WebClient</strong></p>
-<p>WebClient is a higher level abstraction of the web request. It wraps the HTTPWebRequest to provide a more easier API to make web requests.</p>
-<p>WebClient has a built in mechanism to report progress of the request in percentage. WebClient runs on the same thread, so programs don’t have to use the dispatcher to pass data back to the UI thread.</p>
-<p>However, since the WebClient runs on the UI thread, it can make the UI unresponsive if the program makes a long running web request.</p>
-<div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:1cfb46ad-720d-4e95-aa1e-928f8410de46" class="wlWriterEditableSmartContent" style="margin: 0; display: inline; float: none; padding: 0;">
-<pre class="lang:default decode:true crayon-selected">{
-    WebClient client = new WebClient();
-
-    // Supports reporting the progress of the request.
-    client.DownloadProgressChanged += (s, ev) =&gt; progressTextBlock.Text = ev.ProgressPercentage.ToString("p");
-
-    // Get the response. Runs on the same thread, so doea not require marshaling.
-    client.DownloadStringCompleted += (s, ev) =&gt; responseTextBlock.Text = ev.Result;
-
-    client.DownloadStringAsync(new Uri("http://webUrl"));
-}</pre>
-</div>
-<p>&nbsp;</p>
-<p>I think there is a place for using both the classes. Being aware of these differences helps to choose the best one for a given situation.</p>
-]]></content:encoded>
-			<wfw:commentRss>http://www.zubinraj.com/blog/2012/04/25/wp7-webclient-and-httpwebrequest/feed/</wfw:commentRss>
-		<slash:comments>0</slash:comments>
-		</item>
-		<item>
-		<title>Source Code Highlighting in Windows Live Writer</title>
-		<link>http://www.zubinraj.com/blog/2012/04/24/source-code-highlighting-in-windows-live-writer/</link>
-		<comments>http://www.zubinraj.com/blog/2012/04/24/source-code-highlighting-in-windows-live-writer/#comments</comments>
-		<pubDate>Tue, 24 Apr 2012 09:57:46 +0000</pubDate>
-		<dc:creator>Zubin</dc:creator>
-				<category><![CDATA[Wordpress]]></category>
-		<category><![CDATA[Syntax Highlighting]]></category>
-		<category><![CDATA[Windows Live Writer]]></category>
-
-		<guid isPermaLink="false">https://zubinraj.wordpress.com/?p=983</guid>
-		<description><![CDATA[When I first started posting code to the site, it took me a while to format it correctly, until I realized there are many plugins available for automatically doing this. When I was using a self hosted WordPress site, I could install plugins or insert a custom css to format the code block like I [...]]]></description>
-				<content:encoded><![CDATA[<p>When I first started posting code to the site, it took me a while to format it correctly, until I realized there are many plugins available for automatically doing this. When I was using a self hosted WordPress site, I could install plugins or insert a custom css to format the code block like I want, but I soon found out that was not the case for WordPress.com sites as there is no control to install new plugins or change the CSS.</p>
-<p>However WordPress.com supports a short code for highlighting sourcecode.</p>
-<p>A quick search for Windows Live Writer plugins that support this short code turned up many. I tried a few of the code highlighters and finally settled on the one posted by Rich Hewlett called <a href="http://richhewlett.com/wlwsourcecodeplugin/" target="_blank">WLW Code Plugin</a>.</p>
-<p>A C# code would look like below:</p>
-<pre class="lang:default decode:true">public void OnPropertyChanged(string propertyName)
-{
-    if (this.PropertyChanged != null)
-    {
-        PropertyChangedEventArgs args = new PropertyChangedEventArgs(propertyName);
-        this.PropertyChanged(this, args);
-    }
-}</pre>
-<p><strong>UPDATE: I have now stopped using this plugin as I prefer the plugins that use the &#8216;&lt;pre&gt;&#8217; tag which is more standard and backward compatible.</strong></p>
+		<guid isPermaLink="false">http://localhost/zubinraj/photos/?p=466</guid>
+		<description><![CDATA[Seen at Seaworld, California &#160;]]></description>
+				<content:encoded><![CDATA[<p>Seen at Seaworld, California</p>
+<p><a href="http://localhost/zubinraj/photos/wp-content/uploads/2013/09/California_Gull-1758.jpg"><img class="alignnone size-large wp-image-467" alt="California_Gull-1758" src="http://localhost/zubinraj/photos/wp-content/uploads/2013/09/California_Gull-1758-1024x767.jpg" width="625" height="468" /></a></p>
 <p>&nbsp;</p>
 ]]></content:encoded>
-			<wfw:commentRss>http://www.zubinraj.com/blog/2012/04/24/source-code-highlighting-in-windows-live-writer/feed/</wfw:commentRss>
+			<wfw:commentRss>http://localhost/zubinraj/photos/california-gull/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
-		</item>
+	<thumbnail><url>http://localhost/zubinraj/photos/wp-content/uploads/2013/09/California_Gull-1758-300x224.jpg</url></thumbnail>	</item>
+		<item>
+		<title>Picturesque Estes Park Colorado</title>
+		<link>http://localhost/zubinraj/photos/picturesque-estes-park-colorado/</link>
+		<comments>http://localhost/zubinraj/photos/picturesque-estes-park-colorado/#comments</comments>
+		<pubDate>Sun, 30 Dec 2012 04:17:30 +0000</pubDate>
+		<dc:creator>zubinraj</dc:creator>
+				<category><![CDATA[Places]]></category>
+		<category><![CDATA[Portfolio]]></category>
+		<category><![CDATA[colorado]]></category>
+		<category><![CDATA[reflection]]></category>
+		<category><![CDATA[scenic]]></category>
+		<category><![CDATA[waterfront]]></category>
+
+		<guid isPermaLink="false">http://www.zubinraj.com/photos/?p=424</guid>
+		<description><![CDATA[]]></description>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-425" title="Estes_Park_Colorado-6802" src="http://localhost/zubinraj/photos/wp-content/uploads/2012/12/Estes_Park_Colorado-68021.jpg" alt="" width="1280" height="627" /></p>
+]]></content:encoded>
+			<wfw:commentRss>http://localhost/zubinraj/photos/picturesque-estes-park-colorado/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<thumbnail><url>http://localhost/zubinraj/photos/wp-content/uploads/2012/12/Estes_Park_Colorado-68021-300x146.jpg</url></thumbnail>	</item>
+		<item>
+		<title>Baby Downy Woodpecker Close Up</title>
+		<link>http://localhost/zubinraj/photos/baby-downy-woodpecker-close-up/</link>
+		<comments>http://localhost/zubinraj/photos/baby-downy-woodpecker-close-up/#comments</comments>
+		<pubDate>Sun, 30 Dec 2012 04:11:31 +0000</pubDate>
+		<dc:creator>zubinraj</dc:creator>
+				<category><![CDATA[Portfolio]]></category>
+		<category><![CDATA[Wildlife]]></category>
+		<category><![CDATA[bird]]></category>
+		<category><![CDATA[minnesota]]></category>
+		<category><![CDATA[woodpecker]]></category>
+
+		<guid isPermaLink="false">http://www.zubinraj.com/photos/?p=420</guid>
+		<description><![CDATA[]]></description>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-421" title="Downy_Woodpecker-1535" src="http://localhost/zubinraj/photos/wp-content/uploads/2012/12/Downy_Woodpecker-15351.jpg" alt="" width="1280" height="893" /></p>
+]]></content:encoded>
+			<wfw:commentRss>http://localhost/zubinraj/photos/baby-downy-woodpecker-close-up/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<thumbnail><url>http://localhost/zubinraj/photos/wp-content/uploads/2012/12/Downy_Woodpecker-15351-300x209.jpg</url></thumbnail>	</item>
+		<item>
+		<title>Canada Goose Not So Happy Being Clicked</title>
+		<link>http://localhost/zubinraj/photos/canada-goose-not-so-happy-being-clicked/</link>
+		<comments>http://localhost/zubinraj/photos/canada-goose-not-so-happy-being-clicked/#comments</comments>
+		<pubDate>Sun, 30 Dec 2012 04:09:55 +0000</pubDate>
+		<dc:creator>zubinraj</dc:creator>
+				<category><![CDATA[Portfolio]]></category>
+		<category><![CDATA[Wildlife]]></category>
+		<category><![CDATA[bird]]></category>
+		<category><![CDATA[goose]]></category>
+		<category><![CDATA[minnesota]]></category>
+
+		<guid isPermaLink="false">http://www.zubinraj.com/photos/?p=417</guid>
+		<description><![CDATA[]]></description>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-418" title="Canada_Goose-6907" src="http://localhost/zubinraj/photos/wp-content/uploads/2012/12/Canada_Goose-69071.jpg" alt="" width="999" height="1280" /></p>
+]]></content:encoded>
+			<wfw:commentRss>http://localhost/zubinraj/photos/canada-goose-not-so-happy-being-clicked/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<thumbnail><url>http://localhost/zubinraj/photos/wp-content/uploads/2012/12/Canada_Goose-69071-234x300.jpg</url></thumbnail>	</item>
+		<item>
+		<title>Tree Swallow Feeding Young In Flight</title>
+		<link>http://localhost/zubinraj/photos/tree-swallow-feeding-young-in-flight/</link>
+		<comments>http://localhost/zubinraj/photos/tree-swallow-feeding-young-in-flight/#comments</comments>
+		<pubDate>Sun, 30 Dec 2012 04:02:17 +0000</pubDate>
+		<dc:creator>zubinraj</dc:creator>
+				<category><![CDATA[Portfolio]]></category>
+		<category><![CDATA[Wildlife]]></category>
+		<category><![CDATA[bird]]></category>
+		<category><![CDATA[flight]]></category>
+		<category><![CDATA[minnesota]]></category>
+		<category><![CDATA[swallow]]></category>
+
+		<guid isPermaLink="false">http://www.zubinraj.com/photos/?p=410</guid>
+		<description><![CDATA[]]></description>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-411" title="Tree_Swallow-1270" src="http://localhost/zubinraj/photos/wp-content/uploads/2012/12/Tree_Swallow-12701.jpg" alt="" width="1280" height="770" /><img class="aligncenter size-full wp-image-412" title="Tree_Swallow-1271" src="http://localhost/zubinraj/photos/wp-content/uploads/2012/12/Tree_Swallow-12711.jpg" alt="" width="1280" height="918" /></p>
+]]></content:encoded>
+			<wfw:commentRss>http://localhost/zubinraj/photos/tree-swallow-feeding-young-in-flight/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<thumbnail><url>http://localhost/zubinraj/photos/wp-content/uploads/2012/12/Tree_Swallow-12701-300x180.jpg</url></thumbnail>	</item>
+		<item>
+		<title>Long Necked Flamingo</title>
+		<link>http://localhost/zubinraj/photos/long-necked-flamingo/</link>
+		<comments>http://localhost/zubinraj/photos/long-necked-flamingo/#comments</comments>
+		<pubDate>Sun, 30 Dec 2012 03:57:48 +0000</pubDate>
+		<dc:creator>zubinraj</dc:creator>
+				<category><![CDATA[Portfolio]]></category>
+		<category><![CDATA[Wildlife]]></category>
+		<category><![CDATA[bird]]></category>
+		<category><![CDATA[flamingo]]></category>
+		<category><![CDATA[missouri]]></category>
+
+		<guid isPermaLink="false">http://www.zubinraj.com/photos/?p=407</guid>
+		<description><![CDATA[]]></description>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-408" title="Flamingo_STL_Zoo-1777" src="http://localhost/zubinraj/photos/wp-content/uploads/2012/12/Flamingo_STL_Zoo-17771.jpg" alt="" width="857" height="1280" /></p>
+]]></content:encoded>
+			<wfw:commentRss>http://localhost/zubinraj/photos/long-necked-flamingo/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<thumbnail><url>http://localhost/zubinraj/photos/wp-content/uploads/2012/12/Flamingo_STL_Zoo-17771-200x300.jpg</url></thumbnail>	</item>
+		<item>
+		<title>Ruby Throated Hummingbird In Flight</title>
+		<link>http://localhost/zubinraj/photos/ruby-throated-hummingbird-in-flight/</link>
+		<comments>http://localhost/zubinraj/photos/ruby-throated-hummingbird-in-flight/#comments</comments>
+		<pubDate>Sun, 30 Dec 2012 03:55:45 +0000</pubDate>
+		<dc:creator>zubinraj</dc:creator>
+				<category><![CDATA[Portfolio]]></category>
+		<category><![CDATA[Wildlife]]></category>
+		<category><![CDATA[bird]]></category>
+		<category><![CDATA[hummingbird]]></category>
+		<category><![CDATA[minnesota]]></category>
+
+		<guid isPermaLink="false">http://www.zubinraj.com/photos/?p=404</guid>
+		<description><![CDATA[]]></description>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-405" title="Ruby_Throated_Hummingbird-4595" src="http://localhost/zubinraj/photos/wp-content/uploads/2012/12/Ruby_Throated_Hummingbird-45951.jpg" alt="" width="1280" height="939" /></p>
+]]></content:encoded>
+			<wfw:commentRss>http://localhost/zubinraj/photos/ruby-throated-hummingbird-in-flight/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<thumbnail><url>http://localhost/zubinraj/photos/wp-content/uploads/2012/12/Ruby_Throated_Hummingbird-45951-300x220.jpg</url></thumbnail>	</item>
+		<item>
+		<title>Rainbow On A Cloudy Day</title>
+		<link>http://localhost/zubinraj/photos/rainbow-on-a-cloudy-day/</link>
+		<comments>http://localhost/zubinraj/photos/rainbow-on-a-cloudy-day/#comments</comments>
+		<pubDate>Sun, 30 Dec 2012 03:53:18 +0000</pubDate>
+		<dc:creator>zubinraj</dc:creator>
+				<category><![CDATA[Places]]></category>
+		<category><![CDATA[Portfolio]]></category>
+		<category><![CDATA[minnesota]]></category>
+		<category><![CDATA[rainbow]]></category>
+
+		<guid isPermaLink="false">http://www.zubinraj.com/photos/?p=401</guid>
+		<description><![CDATA[]]></description>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-402" title="Rainnbow_On_A_Cloudy_Day-3775" src="http://localhost/zubinraj/photos/wp-content/uploads/2012/12/Rainnbow_On_A_Cloudy_Day-37751.jpg" alt="" width="857" height="1280" /></p>
+]]></content:encoded>
+			<wfw:commentRss>http://localhost/zubinraj/photos/rainbow-on-a-cloudy-day/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<thumbnail><url>http://localhost/zubinraj/photos/wp-content/uploads/2012/12/Rainnbow_On_A_Cloudy_Day-37751-200x300.jpg</url></thumbnail>	</item>
+		<item>
+		<title>Housefinch In Breeding Plumage</title>
+		<link>http://localhost/zubinraj/photos/housefinch-in-breeding-plumage/</link>
+		<comments>http://localhost/zubinraj/photos/housefinch-in-breeding-plumage/#comments</comments>
+		<pubDate>Sun, 30 Dec 2012 03:46:11 +0000</pubDate>
+		<dc:creator>zubinraj</dc:creator>
+				<category><![CDATA[Portfolio]]></category>
+		<category><![CDATA[Wildlife]]></category>
+		<category><![CDATA[bird]]></category>
+		<category><![CDATA[finch]]></category>
+		<category><![CDATA[minnesota]]></category>
+
+		<guid isPermaLink="false">http://www.zubinraj.com/photos/?p=393</guid>
+		<description><![CDATA[]]></description>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-394" title="House_Finch-4143" src="http://localhost/zubinraj/photos/wp-content/uploads/2012/12/House_Finch-41431.jpg" alt="" width="1280" height="857" /></p>
+]]></content:encoded>
+			<wfw:commentRss>http://localhost/zubinraj/photos/housefinch-in-breeding-plumage/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<thumbnail><url>http://localhost/zubinraj/photos/wp-content/uploads/2012/12/House_Finch-41431-300x200.jpg</url></thumbnail>	</item>
 	</channel>
 </rss>

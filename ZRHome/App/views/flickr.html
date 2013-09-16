@@ -1,0 +1,13 @@
+﻿<section>
+    <div class="row">
+        <ul class="list-inline" data-bind="foreach: images">
+            <li>
+                <a href="#" class="thumbnail" data-bind="click: $parent.select">
+                    <img style="width: 260px; height: 180px;" data-bind="attr: { src: media.m }"/>
+                    <span data-bind="text: title"></span>
+                    <span data-bind="text: tags"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
