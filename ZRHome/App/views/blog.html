@@ -9,7 +9,7 @@
         </ul>
     </div>
 
-    <div id="blog-container" data-bind="foreach: items">
+    <div id="blog-container" data-bind="foreach: items, isotope: { itemSelector: '.blog-item' }">
         <div class="blog-item" data-bind="css: categories">
             <a data-bind="attr: { href: link }">
                 <h3 data-bind="text: title"></h3>

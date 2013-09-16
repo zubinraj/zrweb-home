@@ -15,7 +15,7 @@
             title: this.title,
             images: this.images, 
             activate: activate,
-            select: select,
+            //select: select,
             compositionComplete: compositionComplete
         }
 
@@ -88,9 +88,9 @@
 
         }
 
-        function select(item) {
+        //function select(item) {
 
-        }
+        //}
 
         function addCustomBindings() {
 

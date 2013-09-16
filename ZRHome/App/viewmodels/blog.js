@@ -43,6 +43,9 @@
                 return;
             }
 
+            // add custom bindings to handle isotope
+            addCustomBindings();
+
             var that = this;
             return http.get('rss_b.xml').then(function (data) {
 
@@ -72,6 +75,31 @@
                 });
             })
         }
+
+        function addCustomBindings() {
+
+            ko.bindingHandlers.isotope = {
+                init: function (element, valueAccessor, allBindingsAccessor, viewModel, bindingContext) {
+
+                },
+                update: function (element, valueAccessor, allBindingsAccessor, viewModel, bindingContext) {
+
+                    var $el = $(element),
+                        value = ko.utils.unwrapObservable(valueAccessor());
+
+                    if ($el.hasClass('isotope')) {
+                        $el.isotope('reLayout');
+                    } else {
+                        $el.isotope({
+                            itemSelector: value.itemSelector
+                        });
+                    }
+                }
+
+            };
+
+        };
+
 
     }();
 
