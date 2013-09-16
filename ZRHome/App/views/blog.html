@@ -1,14 +1,23 @@
-﻿<section>
-    <ul class="list-inline" data-bind="foreach: items">
-        <li>
+﻿<section id="blog">
+
+    <div class="options">
+        <ul class="filters list-inline">
+            <li class="first"><a class="selected" data-filter="*" href="javascript: void(0);">Show All</a></li>
+            <li><a href="javascript: void(0);" data-filter=".programming">Programming</a></li>
+            <li><a href="javascript: void(0);" data-filter=".mobile">Mobile</a></li>
+            <li><a href="javascript: void(0);" data-filter=".linux">Linux</a></li>
+        </ul>
+    </div>
+
+    <div id="blog-container" data-bind="foreach: items">
+        <div class="blog-item" data-bind="css: categories">
             <a data-bind="attr: { href: link }">
                 <h3 data-bind="text: title"></h3>
             </a>
-            <blockquote>
-                <p data-bind="text: description"></p>
-                <small><a data-bind="    attr: { href: link }">Read More</a></small>
-            </blockquote>
+            <p data-bind="text: description"></p>
+            <small><a data-bind="attr: { href: link }">Read More</a></small>
                 
-        </li>
-    </ul>
+        </div>
+    </div>
+
 </section>

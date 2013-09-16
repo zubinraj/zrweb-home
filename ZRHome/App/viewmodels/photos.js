@@ -13,30 +13,30 @@
 
         return {
             title: this.title,
-            images: this.images,
+            images: this.images, 
             activate: activate,
             select: select,
             compositionComplete: compositionComplete
         }
 
         function compositionComplete() {
-            var $container = $("#gallery-container");
+            var $galleryContainer = $("#gallery-container");
 
             // call relayout on isotope
-            $container.isotope('reLayout');
+            $galleryContainer.isotope('reLayout');
 
 
-            $("#filters a").click( function () {
+            $("#gallery .filters a").click( function () {
 
                 var selector = $(this).attr("data-filter");
                 
                 // trigger isotope filter
-                $container.isotope({ filter: selector });
+                $galleryContainer.isotope({ filter: selector });
 
 
                 // set link color
                 $(this).toggleClass("selected");
-                $("#filters a").not(this).removeClass("selected"); //remove the 'selected class from all other elements
+                $("#gallery .filters a").not(this).removeClass("selected"); //remove the 'selected class from all other elements
 
                 return false;
             });
@@ -65,7 +65,7 @@
                     var _categories = '';
                     var $cat = $(this),
                         _cat = {
-                            cat: $cat.find("category").each(function () { _categories += " " + $(this).text(); })
+                            cat: $cat.find("category").each(function () { _categories += " " + $(this).text().toLowerCase(); })
                         }
 
                     var $this = $(this),
@@ -76,7 +76,7 @@
                             categories: _categories,
                             pubDate: $this.find("pubDate").text(),
                             author: $this.find("author").text(),
-                            thumburl: "http://placehold.it/300x200", //$this.find("url").text()
+                            thumburl: "300x200.gif", //$this.find("url").text()
                             thumbHeight: $this.find("height").text(),
                             thumbWidth: $this.find("width").text()
                 }
@@ -119,14 +119,6 @@
 
     }();
 
-    //console.log('creating new instance');
-    //var instance = new ctor();
-
-    //console.log('before binding');
-    //ko.applyBindings(ctor);
-    //console.log('after binding');
-
-    //console.log('return instance');
     return ctor;
 
 
