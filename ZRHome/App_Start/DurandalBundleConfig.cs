@@ -10,9 +10,10 @@ namespace ZRHome {
 	  bundles.Add(
 		new ScriptBundle("~/Scripts/vendor.js")
 			.Include("~/Scripts/jquery-{version}.js")
-			.Include("~/Scripts/bootstrap.js")
+			.Include("~/Scripts/bootstrap.min.js")
 			.Include("~/Scripts/knockout-{version}.js")
             .Include("~/Scripts/jquery.isotope.min.js")
+            .Include("~/Scripts/toastr.min.js")
             .Include("~/Scripts/site.js")
 
         );
@@ -27,6 +28,7 @@ namespace ZRHome {
           .Include("~/Content/starterkit.css")
           .Include("~/Content/site.css")
           .Include("~/Content/isotope.css")
+          .Include("~/Content/toastr.min.css")
         );
     }
 
