@@ -142,6 +142,7 @@
     <Content Include="App\main.js" />
     <Content Include="App\services\logger.js" />
     <Content Include="App\viewmodels\blog.js" />
+    <Content Include="App\viewmodels\error.js" />
     <Content Include="App\viewmodels\flickr.js" />
     <Content Include="App\viewmodels\photos.js" />
     <Content Include="App\viewmodels\shell.js" />
@@ -149,6 +150,7 @@
     <Content Include="App\viewmodels\welcome.js" />
     <Content Include="App\views\blog.html" />
     <Content Include="App\views\detail.html" />
+    <Content Include="App\views\error.html" />
     <Content Include="App\views\flickr.html" />
     <Content Include="App\views\footer.html" />
     <Content Include="App\views\header.html" />
