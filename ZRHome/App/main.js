@@ -17,7 +17,7 @@ define(['durandal/system', 'durandal/app', 'durandal/viewLocator', 'services/log
     system.debug(true);
     //>>excludeEnd("build");
 
-    app.title = 'ZUBINRAJ.COM';
+    app.title = 'test';
 
     app.configurePlugins({
         router: true,

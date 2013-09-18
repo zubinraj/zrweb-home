@@ -144,6 +144,7 @@
     <Content Include="App\viewmodels\blog.js" />
     <Content Include="App\viewmodels\error.js" />
     <Content Include="App\viewmodels\flickr.js" />
+    <Content Include="App\viewmodels\license.js" />
     <Content Include="App\viewmodels\photos.js" />
     <Content Include="App\viewmodels\shell.js" />
     <Content Include="App\viewmodels\contact.js" />
@@ -154,6 +155,7 @@
     <Content Include="App\views\flickr.html" />
     <Content Include="App\views\footer.html" />
     <Content Include="App\views\header.html" />
+    <Content Include="App\views\license.html" />
     <Content Include="App\views\photos.html" />
     <Content Include="App\views\shell.html" />
     <Content Include="App\views\contact.html" />

@@ -1,0 +1,22 @@
+﻿<h2 data-bind="text: title"></h2>
+
+<p data-bind="html: description"></p>
+
+<div class="pull-left" style="width: 200px;">
+    <ul data-bind="foreach: terms">
+        <li data-bind="text: term"></li>
+    </ul>
+</div>
+
+<div class="clearfix"> <p data-bind="html: creativeCommons"></p></div>
+
+<p>If any section of this website mentions it's own licensing terms, that will override the terms mentioned here.</p>
+
+<h2 data-bind="text: thirdPartyHeading"></h2>
+<table class="table table-striped table-hover" data-bind="foreach: thirdPartyItems">
+    <tr> 
+        <td data-bind="text: library"></td>
+        <td data-bind="text: license"></td>
+        <td><a data-bind="attr: { href: url }, text: url" target="_blank"></a></td>
+    </tr>
+</table>
