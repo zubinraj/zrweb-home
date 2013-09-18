@@ -1,7 +1,9 @@
 ﻿    <div class="bs-footer">
         <small><i>
-            <p>Copyright © 2013 by Zubin Raj. A Mangachalil Connections Website.</p>
-            <p>Built using <a href="http://durandaljs.com/">Durandal JS</a>, <a href="http://knockoutjs.com/">Knockout JS</a> and <a href="http://getbootstrap.com/">Twitter Bootstrap</a>.</p>
-            <p>Follow me on <a href="https://github.com/zubinraj/">GitHub</a> | <a href="https://twitter.com/zubinraj">Twitter</a></p>
+            <p data-bind="html: copyright"></p>
+            <span data-bind="foreach: footerItems">
+                <p data-bind="html: item"></p>
+            </span>
         </i></small>
+        <div class="clearfix"> <p data-bind="html: creativeCommons"></p></div>
     </div>

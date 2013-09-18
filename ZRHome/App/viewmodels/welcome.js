@@ -1,43 +1,48 @@
-﻿define(['plugins/http', 'durandal/app', 'knockout'], function (http, app, ko) {
+﻿define(['plugins/http', 'durandal/app', 'knockout', 'services/logger'], function (http, app, ko) {
 
-    return {
+    var ctor = {
         title: 'Welcome',
         items: ko.observableArray([]),
-        activate: function () {
-            //the router's activator calls this function and waits for it to complete before proceding
+        activate: activate
+    }
 
-            // Set the data for the carousal
-            var item = {
-                isactive: 1,
-                imagesrc: "http://placehold.it/1200x480",
-                caption: "caption 1"
-            }
+    return ctor;
 
-            this.items.push(item);
+    function activate () {
+        //the router's activator calls this function and waits for it to complete before proceding
 
-            var item = {
-                isactive: 0,
-                imagesrc: "http://placehold.it/1200x480",
-                caption: "caption 2"
-            }
+        // Set the data for the carousal
+        var item = {
+            isactive: 1,
+            imagesrc: "http://placehold.it/1200x480",
+            caption: "caption 1"
+        }
 
-            this.items.push(item);
+        this.items.push(item);
 
-            var item = {
-                isactive: 0,
-                imagesrc: "http://placehold.it/1200x480",
-                caption: "caption 3"
-            }
+        var item = {
+            isactive: 0,
+            imagesrc: "http://placehold.it/1200x480",
+            caption: "caption 2"
+        }
 
-            this.items.push(item);
+        this.items.push(item);
 
-            // activate carousal    
-            $('.carousel').carousel({
-                interval: 2000
-            });
+        var item = {
+            isactive: 0,
+            imagesrc: "http://placehold.it/1200x480",
+            caption: "caption 3"
+        }
+
+        this.items.push(item);
+
+        // activate carousal    
+        $('.carousel').carousel({
+            interval: 2000
+        });
 
             
-        }
-    };
+    }
+
 });
 

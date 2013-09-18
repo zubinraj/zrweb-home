@@ -1,16 +1,20 @@
-﻿define(function() {
-    var ctor = function () {
-        this.title = 'Contact';
-        this.description = 'Any questions?';
-        this.items = [
-         { channel: "twitter", address: "@zubinraj" },
-         { channel: "email", address: "support @ zubinraj dot com"}
-        ];
-    };
-    //Note: This module exports a function. That means that you, the developer, can create multiple instances.
-    //This pattern is also recognized by Durandal so that it can create instances on demand.
-    //If you wish to create a singleton, you should export an object instead of a function.
-    //See the "flickr" module for an example of object export.
+﻿define(['services/logger'], function (logger) {
+    var ctor = {
+        title: 'Contact',
+        contactHeading: 'Any questions?',
+        contactItems: [
+            { channel: 'email', text: 'support @ zubinraj dot com', url: '' },
+            { channel: 'twitter', text: '@zubinraj', url: 'https://twitter.com/zubinraj' },
+            { channel: 'github', text: 'https://github.com/zubinraj/', url: 'https://github.com/zubinraj/' },
+        ],
+        licenseHeading: 'License',
+        licenseText: 'See <a href="#license/">here</a> for more information.',
+        activate: activate
+    }
 
     return ctor;
+
+    function activate() {
+
+    }
 });
