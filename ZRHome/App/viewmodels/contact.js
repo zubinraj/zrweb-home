@@ -9,6 +9,7 @@
         ],
         licenseHeading: 'License',
         licenseText: 'See <a href="#license/">here</a> for more information.',
+        disclaimerText: 'Disclaimer: The opinions expressed herein are my own personal opinions and do not represent my employer’s view in any way.',
         activate: activate
     }
 
