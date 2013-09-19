@@ -8,7 +8,7 @@ namespace ZRHome {
       AddDefaultIgnorePatterns(bundles.IgnoreList);
 
 	  bundles.Add(
-		new ScriptBundle("~/Scripts/vendor")
+		new ScriptBundle("~/Scripts/js")
 			.Include("~/Scripts/jquery-{version}.js")
 			.Include("~/Scripts/bootstrap.js")
 			.Include("~/Scripts/knockout-{version}.js")
@@ -16,6 +16,11 @@ namespace ZRHome {
             .Include("~/Scripts/toastr.js")
             .Include("~/Scripts/jquery.lazyload.js")
             //.Include("~/Scripts/site.js")
+            .Include("~/Scripts/jquery.fancybox.js")
+            .Include("~/Scripts/jquery.fancybox-buttons.js")
+            .Include("~/Scripts/jquery.fancybox-media.js")
+            .Include("~/Scripts/jquery.fancybox-thumbs.js")
+
 
         );
 
@@ -32,7 +37,10 @@ namespace ZRHome {
           .Include("~/Content/site.css")
           .Include("~/Content/isotope.css")
           .Include("~/Content/toastr.css")
-        );
+          .Include("~/Content/jquery.fancybox.css")
+          .Include("~/Content/jquery.fancybox-buttons.css")
+          .Include("~/Content/jquery.fancybox-thumbs.css")
+);
     }
 
     public static void AddDefaultIgnorePatterns(IgnoreList ignoreList) {

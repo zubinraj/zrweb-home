@@ -11,7 +11,7 @@
     <div id="gallery-container"  class="list-inline" data-bind="foreach: images, isotope: { itemSelector: '.gallery-item' }">
     <!--<ul id="gallery-container"  class="list-inline" data-bind="foreach: images">-->
         <div class="gallery-item" data-bind="css: categories, style: { height: thumbHeight, width: thumbWidth }">
-            <a href="#" data-bind="click:$parent.select">
+            <a class="fancybox-thumb" rel="gallery" data-bind="attr: { href: thumbUrl }">
                 <img class="lazy" src="Content/Images/grey.gif" data-bind="attr: { 'data-original': thumbUrl, title: title, alt: title, height: thumbHeight, width: thumbWidth }"/>
                 <!--<span data-bind="text: title"></span>-->
             </a>
