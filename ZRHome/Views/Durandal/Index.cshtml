@@ -31,7 +31,19 @@
             @Html.Partial("_splash")
         </div>
         
-        @Scripts.Render("~/Scripts/vendor.js")
-        <script type="text/javascript" src="~/Scripts/require.js" data-main="@Scripts.Url("~/App/main")"></script>
+        @Scripts.Render("~/Scripts/vendor")
+
+        @*commented out*@
+        @*<script type="text/javascript" src="~/Scripts/require.js" data-main="@Scripts.Url("~/App/main")"></script>*@
+
+        @if (HttpContext.Current.IsDebuggingEnabled)
+        {
+            <script type="text/javascript" src="~/Scripts/require.js" data-main="@Scripts.Url("~/App/main")"></script>
+        }
+        else
+        {
+            <script type="text/javascript" src="~/App/main-built.js"></script>
+        }
+
     </body>
 </html>

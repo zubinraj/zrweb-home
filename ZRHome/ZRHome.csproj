@@ -139,6 +139,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App\main-built.js" />
     <Content Include="App\main.js" />
     <Content Include="App\services\logger.js" />
     <Content Include="App\viewmodels\blog.js" />
@@ -209,7 +210,9 @@
     <None Include="Scripts\jquery-2.0.3.intellisense.js" />
     <Content Include="Scripts\jquery-2.0.3.js" />
     <Content Include="Scripts\jquery-2.0.3.min.js" />
+    <Content Include="Scripts\jquery.isotope.js" />
     <Content Include="Scripts\jquery.isotope.min.js" />
+    <Content Include="Scripts\jquery.lazyload.js" />
     <Content Include="Scripts\jquery.lazyload.min.js" />
     <Content Include="Scripts\knockout-2.3.0.debug.js" />
     <Content Include="Scripts\knockout-2.3.0.js" />
@@ -285,6 +288,10 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.                                                                                      
        Other similar extension points exist, see Microsoft.Common.targets.                                                                                                                
   <Target Name="BeforeBuild">                                                                                                                                                             
