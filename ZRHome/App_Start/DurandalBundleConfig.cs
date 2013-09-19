@@ -22,8 +22,10 @@ namespace ZRHome {
       bundles.Add(
         new StyleBundle("~/Content/css")
           .Include("~/Content/ie10mobile.css")
-          .Include("~/Content/bootstrap/bootstrap.css")
-          .Include("~/Content/bootstrap/bootstrap-theme.css")
+          // Commented by ZR: Ignore bootstrap.css as it has relative path issues while bundling 
+          // This is included in index.cshtml
+          //.Include("~/Content/bootstrap/bootstrap.css")       
+          //.Include("~/Content/bootstrap/bootstrap-theme.css")
           .Include("~/Content/font-awesome.css")
 		  .Include("~/Content/durandal.css")
           .Include("~/Content/starterkit.css")
@@ -43,6 +45,7 @@ namespace ZRHome {
       ignoreList.Ignore("*.debug.js", OptimizationMode.WhenEnabled);
       ignoreList.Ignore("*.min.js", OptimizationMode.WhenDisabled);
       ignoreList.Ignore("*.min.css", OptimizationMode.WhenDisabled);
+
     }
   }
 }
