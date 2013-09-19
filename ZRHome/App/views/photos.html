@@ -12,7 +12,7 @@
     <!--<ul id="gallery-container"  class="list-inline" data-bind="foreach: images">-->
         <div class="gallery-item" data-bind="css: categories, style: { height: thumbHeight, width: thumbWidth }">
             <a href="#" data-bind="click:$parent.select">
-                <img class="thumbnail" data-bind="attr: { src: thumburl, title: title, alt: title }"/>
+                <img class="lazy" src="Content/Images/grey.gif" data-bind="attr: { 'data-original': thumbUrl, title: title, alt: title, height: thumbHeight, width: thumbWidth }"/>
                 <!--<span data-bind="text: title"></span>-->
             </a>
         </div>

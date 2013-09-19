@@ -8,27 +8,30 @@ namespace ZRHome {
       AddDefaultIgnorePatterns(bundles.IgnoreList);
 
 	  bundles.Add(
-		new ScriptBundle("~/Scripts/vendor.js")
+		new ScriptBundle("~/Scripts/vendor")
 			.Include("~/Scripts/jquery-{version}.js")
-			.Include("~/Scripts/bootstrap.min.js")
+			.Include("~/Scripts/bootstrap.js")
 			.Include("~/Scripts/knockout-{version}.js")
-            .Include("~/Scripts/jquery.isotope.min.js")
-            .Include("~/Scripts/toastr.min.js")
-            .Include("~/Scripts/site.js")
+            .Include("~/Scripts/jquery.isotope.js")
+            .Include("~/Scripts/toastr.js")
+            .Include("~/Scripts/jquery.lazyload.js")
+            //.Include("~/Scripts/site.js")
 
         );
 
       bundles.Add(
         new StyleBundle("~/Content/css")
           .Include("~/Content/ie10mobile.css")
-          .Include("~/Content/bootstrap/bootstrap.min.css")
-          .Include("~/Content/bootstrap/bootstrap-theme.min.css")
-          .Include("~/Content/font-awesome.min.css")
+          // Commented by ZR: Ignore bootstrap.css as it has relative path issues while bundling 
+          // This is included in index.cshtml
+          //.Include("~/Content/bootstrap/bootstrap.css")       
+          //.Include("~/Content/bootstrap/bootstrap-theme.css")
+          .Include("~/Content/font-awesome.css")
 		  .Include("~/Content/durandal.css")
           .Include("~/Content/starterkit.css")
           .Include("~/Content/site.css")
           .Include("~/Content/isotope.css")
-          .Include("~/Content/toastr.min.css")
+          .Include("~/Content/toastr.css")
         );
     }
 
@@ -40,8 +43,9 @@ namespace ZRHome {
       ignoreList.Ignore("*.intellisense.js");
       ignoreList.Ignore("*-vsdoc.js");
       ignoreList.Ignore("*.debug.js", OptimizationMode.WhenEnabled);
-      //ignoreList.Ignore("*.min.js", OptimizationMode.WhenDisabled);
-      //ignoreList.Ignore("*.min.css", OptimizationMode.WhenDisabled);
+      ignoreList.Ignore("*.min.js", OptimizationMode.WhenDisabled);
+      ignoreList.Ignore("*.min.css", OptimizationMode.WhenDisabled);
+
     }
   }
 }
