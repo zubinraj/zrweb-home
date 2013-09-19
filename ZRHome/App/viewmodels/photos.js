@@ -16,6 +16,11 @@
         // call relayout on isotope
         $galleryContainer.isotope('reLayout');
 
+        // initialize lazy load
+        $("img.lazy").lazyload({
+            effect: "fadeIn"
+        });
+
 
         $("#gallery .filters a").click( function () {
 
@@ -67,7 +72,7 @@
                         categories: _categories,
                         pubDate: $this.find("pubDate").text(),
                         author: $this.find("author").text(),
-                        thumburl: "300x200.gif", //$this.find("url").text()
+                        thumbUrl: "300x200.gif",   //$this.find("url").text(), 
                         thumbHeight: $this.find("height").text(),
                         thumbWidth: $this.find("width").text()
                     }
@@ -86,9 +91,9 @@
     function addCustomBindings() {
 
         ko.bindingHandlers.isotope = {
-            init: function (element, valueAccessor, allBindingsAccessor, viewModel, bindingContext) {
+            //init: function (element, valueAccessor, allBindingsAccessor, viewModel, bindingContext) {
 
-            },
+            //},
             update: function (element, valueAccessor, allBindingsAccessor, viewModel, bindingContext) {
 
                 var $el = $(element),

@@ -14,6 +14,7 @@ namespace ZRHome {
 			.Include("~/Scripts/knockout-{version}.js")
             .Include("~/Scripts/jquery.isotope.min.js")
             .Include("~/Scripts/toastr.min.js")
+            .Include("~/Scripts/jquery.lazyload.min.js")
             .Include("~/Scripts/site.js")
 
         );
