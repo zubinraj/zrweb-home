@@ -9,17 +9,17 @@ namespace ZRHome {
 
 	  bundles.Add(
 		new ScriptBundle("~/Scripts/js")
-			.Include("~/Scripts/jquery-{version}.js")
-			.Include("~/Scripts/bootstrap.js")
-			.Include("~/Scripts/knockout-{version}.js")
-            .Include("~/Scripts/jquery.isotope.js")
-            .Include("~/Scripts/toastr.js")
-            .Include("~/Scripts/jquery.lazyload.js")
-            //.Include("~/Scripts/site.js")
-            .Include("~/Scripts/jquery.fancybox.js")
-            .Include("~/Scripts/jquery.fancybox-buttons.js")
-            .Include("~/Scripts/jquery.fancybox-media.js")
-            .Include("~/Scripts/jquery.fancybox-thumbs.js")
+			//.Include("~/Scripts/jquery-{version}.js")
+			//.Include("~/Scripts/bootstrap.js")
+			//.Include("~/Scripts/knockout-{version}.js")
+            //.Include("~/Scripts/jquery.isotope.js")
+            //.Include("~/Scripts/toastr.js")
+            //.Include("~/Scripts/jquery.lazyload.js")
+            ////.Include("~/Scripts/site.js")
+            //.Include("~/Scripts/jquery.fancybox.js")
+            //.Include("~/Scripts/jquery.fancybox-buttons.js")
+            //.Include("~/Scripts/jquery.fancybox-media.js")
+            //.Include("~/Scripts/jquery.fancybox-thumbs.js")
 
 
         );
@@ -31,15 +31,15 @@ namespace ZRHome {
           // This is included in index.cshtml
           //.Include("~/Content/bootstrap/bootstrap.css")       
           //.Include("~/Content/bootstrap/bootstrap-theme.css")
-          .Include("~/Content/font-awesome.css")
+          //.Include("~/Content/font-awesome.css")
 		  .Include("~/Content/durandal.css")
           .Include("~/Content/starterkit.css")
           .Include("~/Content/site.css")
           .Include("~/Content/isotope.css")
-          .Include("~/Content/toastr.css")
-          .Include("~/Content/jquery.fancybox.css")
-          .Include("~/Content/jquery.fancybox-buttons.css")
-          .Include("~/Content/jquery.fancybox-thumbs.css")
+          //.Include("~/Content/toastr.css")
+          //.Include("~/Content/jquery.fancybox.css")
+          //.Include("~/Content/jquery.fancybox-buttons.css")
+          //.Include("~/Content/jquery.fancybox-thumbs.css")
 );
     }
 
