@@ -80,6 +80,9 @@
                         cat: $cat.find("category").each(function () { _categories += " " + $(this).text().toLowerCase(); })
                     }
 
+                var $thumb = $(this).find("thumb");
+                var $original = $(this).find("original");
+
                 var $this = $(this),
                     item = {
                         title: $this.find("title").text(),
@@ -88,9 +91,12 @@
                         categories: _categories,
                         pubDate: $this.find("pubDate").text(),
                         author: $this.find("author").text(),
-                        thumbUrl: "300x200.gif",   //$this.find("url").text(), 
-                        thumbHeight: $this.find("height").text(),
-                        thumbWidth: $this.find("width").text()
+                        thumbUrl: $thumb.text(), 
+                        thumbHeight: $thumb.attr("height"),
+                        thumbWidth: $thumb.attr("width"),
+                        originalUrl: $original.text(),
+                        originalHeight: $original.attr("height"),
+                        originalWidth: $original.attr("width")
                     }
 
                 that.images.push(item);
