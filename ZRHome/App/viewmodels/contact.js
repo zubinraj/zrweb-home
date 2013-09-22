@@ -1,7 +1,7 @@
 ﻿define(['services/logger'], function (logger) {
     var ctor = {
         title: 'Contact',
-        contactHeading: 'Any questions?',
+        contactHeading: 'Contact',
         contactItems: [
             { channel: 'email', text: 'support @ zubinraj dot com', url: '' },
             { channel: 'twitter', text: '@zubinraj', url: 'https://twitter.com/zubinraj' },

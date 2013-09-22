@@ -1,7 +1,7 @@
 ﻿define(['plugins/http', 'knockout', 'services/logger'], function (http, ko, logger) {
 
     var ctor = {
-        title: 'Blog',
+        title: 'Zubin\'s Web Log',
         items: ko.observableArray([]),
         activate: activate,
         compositionComplete: compositionComplete
@@ -44,33 +44,42 @@
         addCustomBindings();
 
         var that = this;
-        return http.get('rss_b.xml').then(function (data) {
+        $.ajax({
+            url: 'rss_b.xml',
+            success: function (data) {
 
-            var $xml = $(data);
+                var $xml = $(data);
 
 
-            $xml.find("item").each(function () {
+                $xml.find("item").each(function () {
 
-                var _categories = '';
-                var $cat = $(this),
-                    _cat = {
-                        cat: $cat.find("category").each(function () { _categories += " " + $(this).text().toLowerCase(); })
-                    }
+                    var _categories = '';
+                    var $cat = $(this),
+                        _cat = {
+                            cat: $cat.find("category").each(function () { _categories += " " + $(this).text().toLowerCase(); })
+                        }
 
-                var $this = $(this),
-                    item = {
-                        title: $this.find("title").text(),
-                        link: $this.find("link").text(),
-                        description: $this.find("description").text(),
-                        pubDate: $this.find("pubDate").text(),
-                        author: $this.find("author").text(),
-                        categories: _categories
-                    }
+                    var $this = $(this),
+                        item = {
+                            title: $this.find("title").text(),
+                            link: $this.find("link").text(),
+                            description: $this.find("description").text(),
+                            pubDate: $this.find("pubDate").text(),
+                            author: $this.find("author").text(),
+                            categories: _categories
+                        }
 
-                that.items.push(item);
+                    that.items.push(item);
 
-            });
-        })
+                    return;
+                });
+            },
+            error: function () {
+                logger.logError('Data didn\'t load as expected. Please try again.', null, null, true);
+
+                return;
+            }
+        });
     }
 
     function addCustomBindings() {

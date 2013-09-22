@@ -1,7 +1,7 @@
 ﻿define(['plugins/http', 'knockout', 'services/logger'], function (http, ko, logger) {
     
     var ctor = {
-        title: 'Photography',
+        title: 'Ann & Zubin Photography',
         images: ko.observableArray([]),
         activate: activate,
         //select: select,
@@ -22,20 +22,18 @@
         });
 
         // initialize fancybox
-        $(document).ready(function () {
-            $(".fancybox-thumb").fancybox({
-                prevEffect: 'none',
-                nextEffect: 'none',
-                helpers: {
-                    title: {
-                        type: 'outside'
-                    },
-                    thumbs: {
-                        width: 50,
-                        height: 50
-                    }
+        $(".fancybox-thumb").fancybox({
+            prevEffect: 'none',
+            nextEffect: 'none',
+            helpers: {
+                title: {
+                    type: 'outside'
+                },
+                thumbs: {
+                    width: 50,
+                    height: 50
                 }
-            });
+            }
         });
 
         $("#gallery .filters a").click( function () {
@@ -66,42 +64,51 @@
         // add custom bindings to handle isotope
         addCustomBindings();
 
-
         var that = this;
-        return http.get('rss.xml', 'xml').then(function (data) {
+        $.ajax({
+            url: 'rss.xml',
+            success: function (data) {
 
-            var $xml = $(data);
+                var $xml = $(data);
 
-            $xml.find("item").each(function () {
+                $xml.find("item").each(function () {
 
-                var _categories = '';
-                var $cat = $(this),
-                    _cat = {
-                        cat: $cat.find("category").each(function () { _categories += " " + $(this).text().toLowerCase(); })
-                    }
+                    var _categories = '';
+                    var $cat = $(this),
+                        _cat = {
+                            cat: $cat.find("category").each(function () { _categories += " " + $(this).text().toLowerCase(); })
+                        }
 
-                var $thumb = $(this).find("thumb");
-                var $original = $(this).find("original");
+                    var $thumb = $(this).find("thumb");
+                    var $original = $(this).find("original");
 
-                var $this = $(this),
-                    item = {
-                        title: $this.find("title").text(),
-                        link: $this.find("link").text(),
-                        description: $this.find("description").text(),
-                        categories: _categories,
-                        pubDate: $this.find("pubDate").text(),
-                        author: $this.find("author").text(),
-                        thumbUrl: $thumb.text(), 
-                        thumbHeight: $thumb.attr("height"),
-                        thumbWidth: $thumb.attr("width"),
-                        originalUrl: $original.text(),
-                        originalHeight: $original.attr("height"),
-                        originalWidth: $original.attr("width")
-                    }
+                    var $this = $(this),
+                        item = {
+                            title: $this.find("title").text(),
+                            link: $this.find("link").text(),
+                            description: $this.find("description").text(),
+                            categories: _categories,
+                            pubDate: $this.find("pubDate").text(),
+                            author: $this.find("author").text(),
+                            thumbUrl: $thumb.text(), 
+                            thumbHeight: $thumb.attr("height"),
+                            thumbWidth: $thumb.attr("width"),
+                            originalUrl: $original.text(),
+                            originalHeight: $original.attr("height"),
+                            originalWidth: $original.attr("width")
+                        }
 
-                that.images.push(item);
+                    that.images.push(item);
 
-            });
+                    return;
+
+                });
+            },
+            error: function () {
+                logger.logError('Data didn\'t load as expected. Please try again.', null, null, true);
+
+                return;
+            }
         });
 
     }

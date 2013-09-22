@@ -81,3 +81,20 @@
     margin: 25px;
 }
 
+.widget {
+    background-color: #F9F9F9;
+    border: 1px solid #E5E5E5;
+    border-radius: 4px 4px 4px 4px;
+    margin: 0 0 20px;
+    padding: 20px;
+}
+
+.widget h4, h3, h2, h1 {
+    margin-top: 0px;   /*zeroing this out as there is already padding for the widget*/
+}
+
+@media (max-width: 991px) {    /*991 is as per bootstrap media definition*/
+    section {
+        margin-top: 20px;
+    }
+}

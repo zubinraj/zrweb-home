@@ -14,8 +14,9 @@
             }
 
             var that = this;
-            return http.jsonp('http://api.flickr.com/services/feeds/photos_public.gne', { id: '9347697@N03', tags: 'bird', tagmode: 'all', format: 'json' }, 'jsoncallback').then(function (response) {
+            http.jsonp('http://api.flickr.com/services/feeds/photos_public.gne', { id: '9347697@N03', tags: 'bird', tagmode: 'all', format: 'json' }, 'jsoncallback').then(function (response) {
                 that.images(response.items);
+                return;
             });
         },
         select: function (item) {

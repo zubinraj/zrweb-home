@@ -23,6 +23,7 @@
             { route: '', title: 'Welcome', icon: 'glyphicon-home', moduleId: 'viewmodels/welcome', nav: true },
             { route: 'blog', title: 'Blog', icon: 'glyphicon-book', moduleId: 'viewmodels/blog', nav: true },
             { route: 'photos', title: 'Photography', icon: 'glyphicon-camera', moduleId: 'viewmodels/photos', nav: true },
+            //{ route: 'flickr', title: 'Flickr', icon: 'glyphicon-camera', moduleId: 'viewmodels/flickr', nav: true },
             { route: 'contact', title: 'Contact', icon: 'glyphicon-envelope', moduleId: 'viewmodels/contact', nav: true },
             { route: 'license', title: 'License', icon: '', moduleId: 'viewmodels/license', nav: false },
             { route: 'error', title: 'Error', icon: '', moduleId: 'viewmodels/error', nav: false },
