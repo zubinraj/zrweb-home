@@ -16,20 +16,19 @@
         <link rel="apple-touch-icon" href="~/Content/images/icon.png"/>
         
 
-        @*Add bootstrap here instead of bundling as it has issues with relative path when bundled.*@
-        @Styles.Render("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css")
-        @Styles.Render("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css")
-
-@*        @Styles.Render("//cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.min.css")
-
-        @Styles.Render("//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css")
-        @Styles.Render("//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-buttons.css")
-        @Styles.Render("//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-thumbs.css")
-        
-        @Styles.Render("//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css")*@
+        @if (HttpContext.Current.IsDebuggingEnabled)
+        {
+            @Styles.Render("~/Content/bootstrap/bootstrap.min.css")
+            @Styles.Render("~/Content/bootstrap/bootstrap-theme.min.css")
+        }
+        else
+        {
+            @Styles.Render("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css")
+            @Styles.Render("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css")
+        }
 
         @Styles.Render("~/Content/css")
-        
+
         <script type="text/javascript">
             if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
                 var msViewportStyle = document.createElement("style");
@@ -46,31 +45,18 @@
 
         @Scripts.Render("~/Scripts/js")
 
-        @Scripts.Render("//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js")
-        
-@*        @Scripts.Render("//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js")
-        @Scripts.Render("//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js")
-        @Scripts.Render("//cdnjs.cloudflare.com/ajax/libs/knockout/2.3.0/knockout-min.js")
-        @Scripts.Render("//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/1.5.25/jquery.isotope.min.js")
-        @Scripts.Render("//cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.0/js/toastr.min.js")
-        @Scripts.Render("//cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.0/jquery.lazyload.min.js")
-       
-        @Scripts.Render("//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js")
-        @Scripts.Render("//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-buttons.js")
-        @Scripts.Render("//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-media.js")
-        @Scripts.Render("//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-thumbs.js")*@
-        
-        
 
-        @*commented out*@
-        @*<script type="text/javascript" src="~/Scripts/require.js" data-main="@Scripts.Url("~/App/main")"></script>*@
-
+        @*Add bootstrap here instead of bundling as it has issues with relative path when bundled.*@
         @if (HttpContext.Current.IsDebuggingEnabled)
         {
+            @Scripts.Render("~/Scripts/bootstrap.min.js")
+            
             <script type="text/javascript" src="~/Scripts/require.js" data-main="@Scripts.Url("~/App/main")"></script>
         }
         else
         {
+            @Scripts.Render("//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js")
+
             <script type="text/javascript" src="~/App/main-built.js"></script>
         }
 

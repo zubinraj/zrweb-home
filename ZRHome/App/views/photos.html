@@ -1,5 +1,5 @@
 ﻿<section id="gallery">
-    <h2 data-bind="text: title"></h2>
+    <!--<h2 data-bind="text: title"></h2>-->
     <div class="options">
         <ul class="filters list-inline">
             <li class="first"><a class="selected" data-filter="*" href="javascript: void(0);">Show All</a></li>
@@ -9,8 +9,8 @@
             <li><a href="javascript: void(0);" data-filter=".bird">Birds</a></li>
         </ul>
     </div>
+    <!--<div id="spinner"><i class="icon-spinner icon-2x icon-spin"></i></div>-->
     <div id="gallery-container"  class="list-inline" data-bind="foreach: images, isotope: { itemSelector: '.gallery-item' }">
-    <!--<ul id="gallery-container"  class="list-inline" data-bind="foreach: images">-->
         <div class="gallery-item" data-bind="css: categories, style: { height: thumbHeight, width: thumbWidth }">
             <a class="fancybox-thumb" rel="gallery" data-bind="attr: { href: originalUrl }">
                 <img class="lazy" src="./Content/images/grey.gif" data-bind="attr: { 'data-original': thumbUrl, title: title, alt: title, height: thumbHeight, width: thumbWidth }"/>

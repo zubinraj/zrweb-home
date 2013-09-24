@@ -5,38 +5,44 @@
             <p>some text here</p>
         </div>
     </div>
-    <div class="row show-grid">
-        <div class="col-sm-4">
-            <div class="widget" data-bind="foreach: widget1">
-                <div>
-                    <h3 data-bind="text: title"></h3>
-                </div>
-                <!--<p><img class="img img-thumbnail" data-bind="attr: { src: thumbUrl }" /></p>-->
-                <p data-bind="html: description"></p>
-                <ul class="list-unstyled" data-bind="foreach: technologies">
-                    <li><i class="glyphicon glyphicon-ok" style="color:green"></i>&nbsp;<span data-bind="text: item"></span></li>
-                </ul>
+    <div class="col-sm-4">
+        <div class="widget" data-bind="with: developerWidget">
+            <div>
+                <h3 data-bind="text: title"></h3>
             </div>
+            <!--<p><img class="img img-thumbnail" data-bind="attr: { src: thumbUrl }" /></p>-->
+            <p data-bind="html: description"></p>
+            <ul class="list-unstyled" data-bind="foreach: technologies">
+                <li><i class="glyphicon glyphicon-ok" style="color:green"></i>&nbsp;<span data-bind="text: item"></span></li>
+            </ul>
         </div>
-        <div class="col-sm-4">
-            <div class="widget" data-bind="foreach: widget2">
-                <div>
-                    <h3 data-bind="text: title"></h3>
-                </div>
-                <p data-bind="html: description"></p>
+        <div class="widget" data-bind="with: recentPostsWidget">
+            <div>
+                <h3 data-bind="text: title"></h3>
             </div>
+            <ul class="list-unstyled" data-bind="foreach: items">
+                <li class="list-items"><a data-bind="attr: { href: link }, text: title"></a></li>
+            </ul>
+            <div data-bind="html: footer"></div>
         </div>
-        <div class="col-sm-4">
-            <div class="widget">
-                <div>
-                    <h3>Recent Posts</h3>
-                </div>
-                <ul>
-                    <li>here</li>
-                    <li>here</li>
-                    <li>here</li>
-                </ul>
+    </div>
+    <div class="col-sm-4">
+        <div class="widget" data-bind="with: photographerWidget">
+            <div>
+                <h3 data-bind="text: title"></h3>
             </div>
+            <p data-bind="html: description"></p>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="widget" data-bind="with: recentPhotosWidget">
+            <div>
+                <h3 data-bind="text: title"></h3>
+            </div>
+            <div data-bind="foreach: images">
+                <div><a><img class="img img-thumbnail lazy" src="./Content/images/grey.gif" data-bind="attr: { 'data-original': thumbUrl }" /></a></div>
+            </div>
+            <div data-bind="html: footer"></div>
         </div>
     </div>
     <!--  Carousel
@@ -60,22 +66,6 @@
         <!-- Carousel nav -->
 <!--        <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
         <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-    </div>-->
-<!--    <div class="container">
-        <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-                <p>some text here</p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-                <p>some text here</p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-                <p>some text here</p>
-            </div>
-        </div>
     </div>-->
 
 </section>

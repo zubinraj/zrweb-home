@@ -1,8 +1,8 @@
-﻿define(['plugins/http', 'knockout', 'services/logger'], function (http, ko, logger) {
+﻿define(['plugins/http', 'knockout', 'services/logger', 'services/blogstream'], function (http, ko, logger, blogstream) {
 
     var ctor = {
         title: 'Zubin\'s Web Log',
-        items: ko.observableArray([]),
+        items: blogstream.stream(),  //ko.observableArray([]),
         activate: activate,
         compositionComplete: compositionComplete
     }
@@ -36,50 +36,14 @@
 
     function activate () {
         //the router's activator calls this function and waits for it to complete before proceding
-        if (this.items().length > 0) {   
-            return;
-        }
+        //if (this.items().length > 0) {   
+        //    return;
+        //}
 
         // add custom bindings to handle isotope
         addCustomBindings();
 
-        var that = this;
-        $.ajax({
-            url: 'rss_b.xml',
-            success: function (data) {
-
-                var $xml = $(data);
-
-
-                $xml.find("item").each(function () {
-
-                    var _categories = '';
-                    var $cat = $(this),
-                        _cat = {
-                            cat: $cat.find("category").each(function () { _categories += " " + $(this).text().toLowerCase(); })
-                        }
-
-                    var $this = $(this),
-                        item = {
-                            title: $this.find("title").text(),
-                            link: $this.find("link").text(),
-                            description: $this.find("description").text(),
-                            pubDate: $this.find("pubDate").text(),
-                            author: $this.find("author").text(),
-                            categories: _categories
-                        }
-
-                    that.items.push(item);
-
-                    return;
-                });
-            },
-            error: function () {
-                logger.logError('Data didn\'t load as expected. Please try again.', null, null, true);
-
-                return;
-            }
-        });
+        blogstream.load('rss_b.xml');
     }
 
     function addCustomBindings() {
