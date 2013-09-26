@@ -87,7 +87,8 @@
 
                 if ($el.hasClass('isotope')) {
                     $el.isotope('reLayout');
-                } else {
+                }
+                else {
                     $el.isotope({
                         itemSelector: value.itemSelector
                     });

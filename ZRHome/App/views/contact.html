@@ -1,21 +1,19 @@
 ﻿<section>
-    <div>
-        <h2 data-bind="text: contactHeading"></h2>
-        <table class="table table-striped table-hover" data-bind="foreach: contactItems">
-            <tr>
-                <td data-bind="text: channel"></td>
-                <td><a data-bind="enable: url.length > 0, attr: { href: url }, text: text"></a></td>
-            </tr>
-        </table>
-    </div>
+    <h2 data-bind="text: title"></h2>
+    <table class="table table-striped table-hover" data-bind="foreach: channels">
+        <tr>
+            <td data-bind="text: channel"></td>
+            <td><a data-bind="enable: url.length > 0, attr: { href: url }, text: text"></a></td>
+        </tr>
+    </table>
 
-    <div>
-        <h2 data-bind="text: licenseHeading"></h2>
-        <p data-bind="html: licenseText"></p>
+    <div data-bind="with: license">
+        <h2 data-bind="text: heading"></h2>
+        <p data-bind="html: description"></p>
     </div>
     
-    <div>
-        <h2 data-bind="text: disclaimerHeading"></h2>
-        <p data-bind="html: disclaimerText"></p>
+    <div data-bind="with: disclaimer">
+        <h2 data-bind="text: heading"></h2>
+        <p data-bind="html: description"></p>
     </div>    
 </section>
