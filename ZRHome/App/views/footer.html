@@ -1,9 +1,9 @@
-﻿    <div class="bs-footer">
-        <small><i>
+﻿    <div class="bs-footer" data-bind="with: footer">
+        <small class="text-muted">
             <p data-bind="html: copyright"></p>
-            <span data-bind="foreach: footerItems">
-                <p data-bind="html: item"></p>
+            <span data-bind="foreach: lines">
+                <p data-bind="html: line"></p>
             </span>
-        </i></small>
+        </small>
         <div class="clearfix"> <p data-bind="html: creativeCommons"></p></div>
     </div>
