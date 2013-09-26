@@ -10,36 +10,18 @@
 
 <channel>
 	<title>Zubin &#38; Ann Photography</title>
-	<atom:link href="http://localhost/zubinraj/photos/feed/" rel="self" type="application/rss+xml" />
-	<link>http://localhost/zubinraj/photos</link>
+	<atom:link href="http://www.zubinraj.com/photos/feed/" rel="self" type="application/rss+xml" />
+	<link>http://www.zubinraj.com/photos</link>
 	<description>through the looking glass</description>
-	<lastBuildDate>Tue, 10 Sep 2013 15:32:52 +0000</lastBuildDate>
+	<lastBuildDate>Sun, 20 Jan 2013 12:41:46 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>hourly</sy:updatePeriod>
 	<sy:updateFrequency>1</sy:updateFrequency>
 	<generator>http://wordpress.org/?v=3.6</generator>
 		<item>
-		<title>California Gull</title>
-		<link>http://localhost/zubinraj/photos/california-gull/</link>
-		<comments>http://localhost/zubinraj/photos/california-gull/#comments</comments>
-		<pubDate>Tue, 10 Sep 2013 14:37:35 +0000</pubDate>
-		<dc:creator>zubinraj</dc:creator>
-				<category><![CDATA[Wildlife]]></category>
-		<category><![CDATA[gull]]></category>
-
-		<guid isPermaLink="false">http://localhost/zubinraj/photos/?p=466</guid>
-		<description><![CDATA[Seen at Seaworld, California &#160;]]></description>
-				<content:encoded><![CDATA[<p>Seen at Seaworld, California</p>
-<p><a href="http://localhost/zubinraj/photos/wp-content/uploads/2013/09/California_Gull-1758.jpg"><img class="alignnone size-large wp-image-467" alt="California_Gull-1758" src="http://localhost/zubinraj/photos/wp-content/uploads/2013/09/California_Gull-1758-1024x767.jpg" width="625" height="468" /></a></p>
-<p>&nbsp;</p>
-]]></content:encoded>
-			<wfw:commentRss>http://localhost/zubinraj/photos/california-gull/feed/</wfw:commentRss>
-		<slash:comments>0</slash:comments>
-	<image><thumb width="300" height="224">http://localhost/zubinraj/photos/wp-content/uploads/2012/12/California_Gull-1758-300x224.jpg</thumb><original width="1280" height="959">http://localhost/zubinraj/photos/wp-content/uploads/2012/12/California_Gull-1758.jpg</original></image>	</item>
-		<item>
 		<title>Picturesque Estes Park Colorado</title>
-		<link>http://localhost/zubinraj/photos/picturesque-estes-park-colorado/</link>
-		<comments>http://localhost/zubinraj/photos/picturesque-estes-park-colorado/#comments</comments>
+		<link>http://www.zubinraj.com/photos/picturesque-estes-park-colorado/</link>
+		<comments>http://www.zubinraj.com/photos/picturesque-estes-park-colorado/#comments</comments>
 		<pubDate>Sun, 30 Dec 2012 04:17:30 +0000</pubDate>
 		<dc:creator>zubinraj</dc:creator>
 				<category><![CDATA[Places]]></category>
@@ -51,15 +33,15 @@
 
 		<guid isPermaLink="false">http://www.zubinraj.com/photos/?p=424</guid>
 		<description><![CDATA[]]></description>
-				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-425" title="Estes_Park_Colorado-6802" src="http://localhost/zubinraj/photos/wp-content/uploads/2012/12/Estes_Park_Colorado-68021.jpg" alt="" width="1280" height="627" /></p>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-425" title="Estes_Park_Colorado-6802" src="http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Estes_Park_Colorado-6802.jpg" alt="" width="1280" height="627" /></p>
 ]]></content:encoded>
-			<wfw:commentRss>http://localhost/zubinraj/photos/picturesque-estes-park-colorado/feed/</wfw:commentRss>
+			<wfw:commentRss>http://www.zubinraj.com/photos/picturesque-estes-park-colorado/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
-	<image><thumb width="300" height="146">http://localhost/zubinraj/photos/wp-content/uploads/2012/12/Estes_Park_Colorado-6802-300x146.jpg</thumb><original width="1280" height="627">http://localhost/zubinraj/photos/wp-content/uploads/2012/12/Estes_Park_Colorado-6802.jpg</original></image>	</item>
+	<image><thumb width="300" height="146">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Estes_Park_Colorado-6802-300x146.jpg</thumb><original width="1280" height="627">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Estes_Park_Colorado-6802.jpg</original></image>	</item>
 		<item>
 		<title>Baby Downy Woodpecker Close Up</title>
-		<link>http://localhost/zubinraj/photos/baby-downy-woodpecker-close-up/</link>
-		<comments>http://localhost/zubinraj/photos/baby-downy-woodpecker-close-up/#comments</comments>
+		<link>http://www.zubinraj.com/photos/baby-downy-woodpecker-close-up/</link>
+		<comments>http://www.zubinraj.com/photos/baby-downy-woodpecker-close-up/#comments</comments>
 		<pubDate>Sun, 30 Dec 2012 04:11:31 +0000</pubDate>
 		<dc:creator>zubinraj</dc:creator>
 				<category><![CDATA[Portfolio]]></category>
@@ -70,15 +52,15 @@
 
 		<guid isPermaLink="false">http://www.zubinraj.com/photos/?p=420</guid>
 		<description><![CDATA[]]></description>
-				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-421" title="Downy_Woodpecker-1535" src="http://localhost/zubinraj/photos/wp-content/uploads/2012/12/Downy_Woodpecker-15351.jpg" alt="" width="1280" height="893" /></p>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-421" title="Downy_Woodpecker-1535" src="http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Downy_Woodpecker-1535.jpg" alt="" width="1280" height="893" /></p>
 ]]></content:encoded>
-			<wfw:commentRss>http://localhost/zubinraj/photos/baby-downy-woodpecker-close-up/feed/</wfw:commentRss>
+			<wfw:commentRss>http://www.zubinraj.com/photos/baby-downy-woodpecker-close-up/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
-	<image><thumb width="300" height="209">http://localhost/zubinraj/photos/wp-content/uploads/2012/12/Downy_Woodpecker-1535-300x209.jpg</thumb><original width="1280" height="893">http://localhost/zubinraj/photos/wp-content/uploads/2012/12/Downy_Woodpecker-1535.jpg</original></image>	</item>
+	<image><thumb width="300" height="209">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Downy_Woodpecker-1535-300x209.jpg</thumb><original width="1280" height="893">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Downy_Woodpecker-1535.jpg</original></image>	</item>
 		<item>
 		<title>Canada Goose Not So Happy Being Clicked</title>
-		<link>http://localhost/zubinraj/photos/canada-goose-not-so-happy-being-clicked/</link>
-		<comments>http://localhost/zubinraj/photos/canada-goose-not-so-happy-being-clicked/#comments</comments>
+		<link>http://www.zubinraj.com/photos/canada-goose-not-so-happy-being-clicked/</link>
+		<comments>http://www.zubinraj.com/photos/canada-goose-not-so-happy-being-clicked/#comments</comments>
 		<pubDate>Sun, 30 Dec 2012 04:09:55 +0000</pubDate>
 		<dc:creator>zubinraj</dc:creator>
 				<category><![CDATA[Portfolio]]></category>
@@ -89,15 +71,15 @@
 
 		<guid isPermaLink="false">http://www.zubinraj.com/photos/?p=417</guid>
 		<description><![CDATA[]]></description>
-				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-418" title="Canada_Goose-6907" src="http://localhost/zubinraj/photos/wp-content/uploads/2012/12/Canada_Goose-69071.jpg" alt="" width="999" height="1280" /></p>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-418" title="Canada_Goose-6907" src="http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Canada_Goose-6907.jpg" alt="" width="999" height="1280" /></p>
 ]]></content:encoded>
-			<wfw:commentRss>http://localhost/zubinraj/photos/canada-goose-not-so-happy-being-clicked/feed/</wfw:commentRss>
+			<wfw:commentRss>http://www.zubinraj.com/photos/canada-goose-not-so-happy-being-clicked/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
-	<image><thumb width="234" height="300">http://localhost/zubinraj/photos/wp-content/uploads/2012/12/Canada_Goose-6907-300x384.jpg</thumb><original width="999" height="1280">http://localhost/zubinraj/photos/wp-content/uploads/2012/12/Canada_Goose-6907.jpg</original></image>	</item>
+	<image><thumb width="300" height="384">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Canada_Goose-6907-300x384.jpg</thumb><original width="999" height="1280">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Canada_Goose-6907.jpg</original></image>	</item>
 		<item>
 		<title>Tree Swallow Feeding Young In Flight</title>
-		<link>http://localhost/zubinraj/photos/tree-swallow-feeding-young-in-flight/</link>
-		<comments>http://localhost/zubinraj/photos/tree-swallow-feeding-young-in-flight/#comments</comments>
+		<link>http://www.zubinraj.com/photos/tree-swallow-feeding-young-in-flight/</link>
+		<comments>http://www.zubinraj.com/photos/tree-swallow-feeding-young-in-flight/#comments</comments>
 		<pubDate>Sun, 30 Dec 2012 04:02:17 +0000</pubDate>
 		<dc:creator>zubinraj</dc:creator>
 				<category><![CDATA[Portfolio]]></category>
@@ -109,15 +91,15 @@
 
 		<guid isPermaLink="false">http://www.zubinraj.com/photos/?p=410</guid>
 		<description><![CDATA[]]></description>
-				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-411" title="Tree_Swallow-1270" src="http://localhost/zubinraj/photos/wp-content/uploads/2012/12/Tree_Swallow-12701.jpg" alt="" width="1280" height="770" /><img class="aligncenter size-full wp-image-412" title="Tree_Swallow-1271" src="http://localhost/zubinraj/photos/wp-content/uploads/2012/12/Tree_Swallow-12711.jpg" alt="" width="1280" height="918" /></p>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-411" title="Tree_Swallow-1270" src="http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Tree_Swallow-1270.jpg" alt="" width="1280" height="770" /><img class="aligncenter size-full wp-image-412" title="Tree_Swallow-1271" src="http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Tree_Swallow-1271.jpg" alt="" width="1280" height="918" /></p>
 ]]></content:encoded>
-			<wfw:commentRss>http://localhost/zubinraj/photos/tree-swallow-feeding-young-in-flight/feed/</wfw:commentRss>
+			<wfw:commentRss>http://www.zubinraj.com/photos/tree-swallow-feeding-young-in-flight/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
-	<image><thumb width="300" height="180">http://localhost/zubinraj/photos/wp-content/uploads/2012/12/Tree_Swallow-1270-300x180.jpg</thumb><original width="1280" height="770">http://localhost/zubinraj/photos/wp-content/uploads/2012/12/Tree_Swallow-1270.jpg</original></image>	</item>
+	<image><thumb width="300" height="180">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Tree_Swallow-1270-300x180.jpg</thumb><original width="1280" height="770">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Tree_Swallow-1270.jpg</original></image>	</item>
 		<item>
 		<title>Long Necked Flamingo</title>
-		<link>http://localhost/zubinraj/photos/long-necked-flamingo/</link>
-		<comments>http://localhost/zubinraj/photos/long-necked-flamingo/#comments</comments>
+		<link>http://www.zubinraj.com/photos/long-necked-flamingo/</link>
+		<comments>http://www.zubinraj.com/photos/long-necked-flamingo/#comments</comments>
 		<pubDate>Sun, 30 Dec 2012 03:57:48 +0000</pubDate>
 		<dc:creator>zubinraj</dc:creator>
 				<category><![CDATA[Portfolio]]></category>
@@ -128,15 +110,15 @@
 
 		<guid isPermaLink="false">http://www.zubinraj.com/photos/?p=407</guid>
 		<description><![CDATA[]]></description>
-				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-408" title="Flamingo_STL_Zoo-1777" src="http://localhost/zubinraj/photos/wp-content/uploads/2012/12/Flamingo_STL_Zoo-17771.jpg" alt="" width="857" height="1280" /></p>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-408" title="Flamingo_STL_Zoo-1777" src="http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Flamingo_STL_Zoo-1777.jpg" alt="" width="857" height="1280" /></p>
 ]]></content:encoded>
-			<wfw:commentRss>http://localhost/zubinraj/photos/long-necked-flamingo/feed/</wfw:commentRss>
+			<wfw:commentRss>http://www.zubinraj.com/photos/long-necked-flamingo/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
-	<image><thumb width="200" height="300">http://localhost/zubinraj/photos/wp-content/uploads/2012/12/Flamingo_STL_Zoo-1777-300x448.jpg</thumb><original width="857" height="1280">http://localhost/zubinraj/photos/wp-content/uploads/2012/12/Flamingo_STL_Zoo-1777.jpg</original></image>	</item>
+	<image><thumb width="300" height="448">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Flamingo_STL_Zoo-1777-300x448.jpg</thumb><original width="857" height="1280">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Flamingo_STL_Zoo-1777.jpg</original></image>	</item>
 		<item>
 		<title>Ruby Throated Hummingbird In Flight</title>
-		<link>http://localhost/zubinraj/photos/ruby-throated-hummingbird-in-flight/</link>
-		<comments>http://localhost/zubinraj/photos/ruby-throated-hummingbird-in-flight/#comments</comments>
+		<link>http://www.zubinraj.com/photos/ruby-throated-hummingbird-in-flight/</link>
+		<comments>http://www.zubinraj.com/photos/ruby-throated-hummingbird-in-flight/#comments</comments>
 		<pubDate>Sun, 30 Dec 2012 03:55:45 +0000</pubDate>
 		<dc:creator>zubinraj</dc:creator>
 				<category><![CDATA[Portfolio]]></category>
@@ -147,15 +129,15 @@
 
 		<guid isPermaLink="false">http://www.zubinraj.com/photos/?p=404</guid>
 		<description><![CDATA[]]></description>
-				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-405" title="Ruby_Throated_Hummingbird-4595" src="http://localhost/zubinraj/photos/wp-content/uploads/2012/12/Ruby_Throated_Hummingbird-45951.jpg" alt="" width="1280" height="939" /></p>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-405" title="Ruby_Throated_Hummingbird-4595" src="http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Ruby_Throated_Hummingbird-4595.jpg" alt="" width="1280" height="939" /></p>
 ]]></content:encoded>
-			<wfw:commentRss>http://localhost/zubinraj/photos/ruby-throated-hummingbird-in-flight/feed/</wfw:commentRss>
+			<wfw:commentRss>http://www.zubinraj.com/photos/ruby-throated-hummingbird-in-flight/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
-	<image><thumb width="300" height="220">http://localhost/zubinraj/photos/wp-content/uploads/2012/12/Ruby_Throated_Hummingbird-4595-300x220.jpg</thumb><original width="1280" height="939">http://localhost/zubinraj/photos/wp-content/uploads/2012/12/Ruby_Throated_Hummingbird-4595.jpg</original></image>	</item>
+	<image><thumb width="300" height="220">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Ruby_Throated_Hummingbird-4595-300x220.jpg</thumb><original width="1280" height="939">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Ruby_Throated_Hummingbird-4595.jpg</original></image>	</item>
 		<item>
 		<title>Rainbow On A Cloudy Day</title>
-		<link>http://localhost/zubinraj/photos/rainbow-on-a-cloudy-day/</link>
-		<comments>http://localhost/zubinraj/photos/rainbow-on-a-cloudy-day/#comments</comments>
+		<link>http://www.zubinraj.com/photos/rainbow-on-a-cloudy-day/</link>
+		<comments>http://www.zubinraj.com/photos/rainbow-on-a-cloudy-day/#comments</comments>
 		<pubDate>Sun, 30 Dec 2012 03:53:18 +0000</pubDate>
 		<dc:creator>zubinraj</dc:creator>
 				<category><![CDATA[Places]]></category>
@@ -165,15 +147,15 @@
 
 		<guid isPermaLink="false">http://www.zubinraj.com/photos/?p=401</guid>
 		<description><![CDATA[]]></description>
-				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-402" title="Rainnbow_On_A_Cloudy_Day-3775" src="http://localhost/zubinraj/photos/wp-content/uploads/2012/12/Rainnbow_On_A_Cloudy_Day-37751.jpg" alt="" width="857" height="1280" /></p>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-402" title="Rainnbow_On_A_Cloudy_Day-3775" src="http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Rainnbow_On_A_Cloudy_Day-3775.jpg" alt="" width="857" height="1280" /></p>
 ]]></content:encoded>
-			<wfw:commentRss>http://localhost/zubinraj/photos/rainbow-on-a-cloudy-day/feed/</wfw:commentRss>
+			<wfw:commentRss>http://www.zubinraj.com/photos/rainbow-on-a-cloudy-day/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
-	<image><thumb width="200" height="300">http://localhost/zubinraj/photos/wp-content/uploads/2012/12/Rainnbow_On_A_Cloudy_Day-3775-300x448.jpg</thumb><original width="857" height="1280">http://localhost/zubinraj/photos/wp-content/uploads/2012/12/Rainnbow_On_A_Cloudy_Day-3775.jpg</original></image>	</item>
+	<image><thumb width="300" height="448">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Rainnbow_On_A_Cloudy_Day-3775-300x448.jpg</thumb><original width="857" height="1280">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Rainnbow_On_A_Cloudy_Day-3775.jpg</original></image>	</item>
 		<item>
 		<title>Housefinch In Breeding Plumage</title>
-		<link>http://localhost/zubinraj/photos/housefinch-in-breeding-plumage/</link>
-		<comments>http://localhost/zubinraj/photos/housefinch-in-breeding-plumage/#comments</comments>
+		<link>http://www.zubinraj.com/photos/housefinch-in-breeding-plumage/</link>
+		<comments>http://www.zubinraj.com/photos/housefinch-in-breeding-plumage/#comments</comments>
 		<pubDate>Sun, 30 Dec 2012 03:46:11 +0000</pubDate>
 		<dc:creator>zubinraj</dc:creator>
 				<category><![CDATA[Portfolio]]></category>
@@ -184,10 +166,589 @@
 
 		<guid isPermaLink="false">http://www.zubinraj.com/photos/?p=393</guid>
 		<description><![CDATA[]]></description>
-				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-394" title="House_Finch-4143" src="http://localhost/zubinraj/photos/wp-content/uploads/2012/12/House_Finch-41431.jpg" alt="" width="1280" height="857" /></p>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-394" title="House_Finch-4143" src="http://www.zubinraj.com/photos/wp-content/uploads/2012/12/House_Finch-4143.jpg" alt="" width="1280" height="857" /></p>
 ]]></content:encoded>
-			<wfw:commentRss>http://localhost/zubinraj/photos/housefinch-in-breeding-plumage/feed/</wfw:commentRss>
+			<wfw:commentRss>http://www.zubinraj.com/photos/housefinch-in-breeding-plumage/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
-	<image><thumb width="300" height="200">http://localhost/zubinraj/photos/wp-content/uploads/2012/12/House_Finch-4143-300x200.jpg</thumb><original width="1280" height="857">http://localhost/zubinraj/photos/wp-content/uploads/2012/12/House_Finch-4143.jpg</original></image>	</item>
+	<image><thumb width="300" height="200">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/House_Finch-4143-300x200.jpg</thumb><original width="1280" height="857">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/House_Finch-4143.jpg</original></image>	</item>
+		<item>
+		<title>Wintry Sunrise</title>
+		<link>http://www.zubinraj.com/photos/wintry-sunrise/</link>
+		<comments>http://www.zubinraj.com/photos/wintry-sunrise/#comments</comments>
+		<pubDate>Sun, 30 Dec 2012 03:43:24 +0000</pubDate>
+		<dc:creator>zubinraj</dc:creator>
+				<category><![CDATA[Places]]></category>
+		<category><![CDATA[Portfolio]]></category>
+		<category><![CDATA[minneapolis]]></category>
+		<category><![CDATA[minnesota]]></category>
+		<category><![CDATA[sunrise]]></category>
+		<category><![CDATA[winter]]></category>
+
+		<guid isPermaLink="false">http://www.zubinraj.com/photos/?p=389</guid>
+		<description><![CDATA[]]></description>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-390" title="Winter_Sunset-6188" src="http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Winter_Sunset-6188.jpg" alt="" width="1280" height="877" /></p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.zubinraj.com/photos/wintry-sunrise/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<image><thumb width="300" height="205">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Winter_Sunset-6188-300x205.jpg</thumb><original width="1280" height="877">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Winter_Sunset-6188.jpg</original></image>	</item>
+		<item>
+		<title>Snowy Egret Resting On A Rock</title>
+		<link>http://www.zubinraj.com/photos/snowy-egret-resting-on-a-rock/</link>
+		<comments>http://www.zubinraj.com/photos/snowy-egret-resting-on-a-rock/#comments</comments>
+		<pubDate>Sun, 30 Dec 2012 03:40:41 +0000</pubDate>
+		<dc:creator>zubinraj</dc:creator>
+				<category><![CDATA[Portfolio]]></category>
+		<category><![CDATA[Wildlife]]></category>
+		<category><![CDATA[bird]]></category>
+		<category><![CDATA[california]]></category>
+		<category><![CDATA[egret]]></category>
+
+		<guid isPermaLink="false">http://www.zubinraj.com/photos/?p=385</guid>
+		<description><![CDATA[]]></description>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-386" title="Snowy_Egret-1770-2" src="http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Snowy_Egret-1770-2.jpg" alt="" width="857" height="1280" /></p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.zubinraj.com/photos/snowy-egret-resting-on-a-rock/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<image><thumb width="300" height="448">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Snowy_Egret-1770-2-300x448.jpg</thumb><original width="857" height="1280">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Snowy_Egret-1770-2.jpg</original></image>	</item>
+		<item>
+		<title>Sea Lion at SeaWorld</title>
+		<link>http://www.zubinraj.com/photos/sea-lion-in-seaworld/</link>
+		<comments>http://www.zubinraj.com/photos/sea-lion-in-seaworld/#comments</comments>
+		<pubDate>Sun, 30 Dec 2012 03:38:14 +0000</pubDate>
+		<dc:creator>zubinraj</dc:creator>
+				<category><![CDATA[Wildlife]]></category>
+		<category><![CDATA[animal]]></category>
+		<category><![CDATA[california]]></category>
+
+		<guid isPermaLink="false">http://www.zubinraj.com/photos/?p=381</guid>
+		<description><![CDATA[]]></description>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-382" title="Sea_Lion_Seaworld-1763" src="http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Sea_Lion_Seaworld-1763.jpg" alt="" width="857" height="1280" /></p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.zubinraj.com/photos/sea-lion-in-seaworld/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<image><thumb width="300" height="448">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Sea_Lion_Seaworld-1763-300x448.jpg</thumb><original width="857" height="1280">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Sea_Lion_Seaworld-1763.jpg</original></image>	</item>
+		<item>
+		<title>California Gull Up Close</title>
+		<link>http://www.zubinraj.com/photos/california-gull-up-close/</link>
+		<comments>http://www.zubinraj.com/photos/california-gull-up-close/#comments</comments>
+		<pubDate>Sun, 30 Dec 2012 03:33:26 +0000</pubDate>
+		<dc:creator>zubinraj</dc:creator>
+				<category><![CDATA[Portfolio]]></category>
+		<category><![CDATA[Wildlife]]></category>
+		<category><![CDATA[bird]]></category>
+		<category><![CDATA[california]]></category>
+		<category><![CDATA[gull]]></category>
+
+		<guid isPermaLink="false">http://www.zubinraj.com/photos/?p=376</guid>
+		<description><![CDATA[]]></description>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-377" title="California_Gull-1758" src="http://www.zubinraj.com/photos/wp-content/uploads/2012/12/California_Gull-1758.jpg" alt="" width="1280" height="959" /><img class="aligncenter size-full wp-image-378" title="California_Gull-2140" src="http://www.zubinraj.com/photos/wp-content/uploads/2012/12/California_Gull-2140.jpg" alt="" width="1280" height="1010" /></p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.zubinraj.com/photos/california-gull-up-close/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<image><thumb width="300" height="224">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/California_Gull-1758-300x224.jpg</thumb><original width="1280" height="959">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/California_Gull-1758.jpg</original></image>	</item>
+		<item>
+		<title>American Gold Finch Early Spring</title>
+		<link>http://www.zubinraj.com/photos/american-gold-finch-early-spring/</link>
+		<comments>http://www.zubinraj.com/photos/american-gold-finch-early-spring/#comments</comments>
+		<pubDate>Sun, 30 Dec 2012 02:59:43 +0000</pubDate>
+		<dc:creator>zubinraj</dc:creator>
+				<category><![CDATA[Portfolio]]></category>
+		<category><![CDATA[Wildlife]]></category>
+		<category><![CDATA[bird]]></category>
+		<category><![CDATA[finch]]></category>
+		<category><![CDATA[goldfinch]]></category>
+		<category><![CDATA[minnesota]]></category>
+
+		<guid isPermaLink="false">http://www.zubinraj.com/photos/?p=371</guid>
+		<description><![CDATA[]]></description>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-372" title="American_Goldfinch-4005" src="http://www.zubinraj.com/photos/wp-content/uploads/2012/12/American_Goldfinch-4005.jpg" alt="" width="1280" height="857" /><img class="aligncenter size-full wp-image-373" title="American_Goldfinch-4009" src="http://www.zubinraj.com/photos/wp-content/uploads/2012/12/American_Goldfinch-4009.jpg" alt="" width="1280" height="857" /></p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.zubinraj.com/photos/american-gold-finch-early-spring/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<image><thumb width="300" height="200">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/American_Goldfinch-4005-300x200.jpg</thumb><original width="1280" height="857">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/American_Goldfinch-4005.jpg</original></image>	</item>
+		<item>
+		<title>Black Capped Chickadee Perched On a Twig</title>
+		<link>http://www.zubinraj.com/photos/black-capped-chickadee-perched-on-a-twig/</link>
+		<comments>http://www.zubinraj.com/photos/black-capped-chickadee-perched-on-a-twig/#comments</comments>
+		<pubDate>Sun, 30 Dec 2012 02:56:00 +0000</pubDate>
+		<dc:creator>zubinraj</dc:creator>
+				<category><![CDATA[Portfolio]]></category>
+		<category><![CDATA[Wildlife]]></category>
+		<category><![CDATA[bird]]></category>
+		<category><![CDATA[chickadee]]></category>
+		<category><![CDATA[minnesota]]></category>
+
+		<guid isPermaLink="false">http://www.zubinraj.com/photos/?p=368</guid>
+		<description><![CDATA[]]></description>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-369" title="Black_Capped_Chickadee-3913" src="http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Black_Capped_Chickadee-3913.jpg" alt="" width="1280" height="1195" /></p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.zubinraj.com/photos/black-capped-chickadee-perched-on-a-twig/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<image><thumb width="300" height="280">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Black_Capped_Chickadee-3913-300x280.jpg</thumb><original width="1280" height="1195">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Black_Capped_Chickadee-3913.jpg</original></image>	</item>
+		<item>
+		<title>Swirling Colors</title>
+		<link>http://www.zubinraj.com/photos/swirling-colors/</link>
+		<comments>http://www.zubinraj.com/photos/swirling-colors/#comments</comments>
+		<pubDate>Sun, 23 Dec 2012 05:26:19 +0000</pubDate>
+		<dc:creator>zubinraj</dc:creator>
+				<category><![CDATA[Flora]]></category>
+		<category><![CDATA[Portfolio]]></category>
+		<category><![CDATA[flower]]></category>
+
+		<guid isPermaLink="false">http://www.zubinraj.com/photos/?p=304</guid>
+		<description><![CDATA[]]></description>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-305" title="Swirling_Colors-2109" src="http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Swirling_Colors-2109.jpg" alt="" width="1280" height="857" /></p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.zubinraj.com/photos/swirling-colors/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<image><thumb width="300" height="200">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Swirling_Colors-2109-300x200.jpg</thumb><original width="1280" height="857">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Swirling_Colors-2109.jpg</original></image>	</item>
+		<item>
+		<title>St Louis Arch At Dusk</title>
+		<link>http://www.zubinraj.com/photos/st-louis-arch-at-dusk/</link>
+		<comments>http://www.zubinraj.com/photos/st-louis-arch-at-dusk/#comments</comments>
+		<pubDate>Sun, 23 Dec 2012 05:18:46 +0000</pubDate>
+		<dc:creator>zubinraj</dc:creator>
+				<category><![CDATA[Places]]></category>
+		<category><![CDATA[Portfolio]]></category>
+		<category><![CDATA[architecture]]></category>
+		<category><![CDATA[dusk]]></category>
+		<category><![CDATA[missouri]]></category>
+		<category><![CDATA[riverfront]]></category>
+		<category><![CDATA[stlouis]]></category>
+		<category><![CDATA[usa]]></category>
+
+		<guid isPermaLink="false">http://www.zubinraj.com/photos/?p=300</guid>
+		<description><![CDATA[]]></description>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-301" title="St_Louis_Arch_At_Dusk-2363" src="http://www.zubinraj.com/photos/wp-content/uploads/2012/12/St_Louis_Arch_At_Dusk-2363.jpg" alt="" width="1280" height="857" /></p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.zubinraj.com/photos/st-louis-arch-at-dusk/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<image><thumb width="300" height="200">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/St_Louis_Arch_At_Dusk-2363-300x200.jpg</thumb><original width="1280" height="857">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/St_Louis_Arch_At_Dusk-2363.jpg</original></image>	</item>
+		<item>
+		<title>St Louis City Riverfront</title>
+		<link>http://www.zubinraj.com/photos/st-louis-city-riverfront/</link>
+		<comments>http://www.zubinraj.com/photos/st-louis-city-riverfront/#comments</comments>
+		<pubDate>Sun, 23 Dec 2012 05:15:50 +0000</pubDate>
+		<dc:creator>zubinraj</dc:creator>
+				<category><![CDATA[Places]]></category>
+		<category><![CDATA[Portfolio]]></category>
+		<category><![CDATA[dusk]]></category>
+		<category><![CDATA[missouri]]></category>
+		<category><![CDATA[riverfront]]></category>
+		<category><![CDATA[stlouis]]></category>
+		<category><![CDATA[sunset]]></category>
+		<category><![CDATA[usa]]></category>
+
+		<guid isPermaLink="false">http://www.zubinraj.com/photos/?p=296</guid>
+		<description><![CDATA[]]></description>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-297" title="St_Louis_Riverfront" src="http://www.zubinraj.com/photos/wp-content/uploads/2012/12/St_Louis_Riverfront.jpg" alt="" width="1280" height="857" /></p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.zubinraj.com/photos/st-louis-city-riverfront/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<image><thumb width="300" height="200">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/St_Louis_Riverfront-300x200.jpg</thumb><original width="1280" height="857">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/St_Louis_Riverfront.jpg</original></image>	</item>
+		<item>
+		<title>Golden Gate of Eureka Springs</title>
+		<link>http://www.zubinraj.com/photos/golden-gate-of-eureka-springs/</link>
+		<comments>http://www.zubinraj.com/photos/golden-gate-of-eureka-springs/#comments</comments>
+		<pubDate>Sun, 23 Dec 2012 05:06:56 +0000</pubDate>
+		<dc:creator>zubinraj</dc:creator>
+				<category><![CDATA[Places]]></category>
+		<category><![CDATA[Portfolio]]></category>
+		<category><![CDATA[architecture]]></category>
+		<category><![CDATA[bridge]]></category>
+		<category><![CDATA[eureka springs]]></category>
+		<category><![CDATA[missouri]]></category>
+		<category><![CDATA[usa]]></category>
+
+		<guid isPermaLink="false">http://www.zubinraj.com/photos/?p=292</guid>
+		<description><![CDATA[]]></description>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-293" title="Golden_Gate_of_Eureka_Springs-1622" src="http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Golden_Gate_of_Eureka_Springs-1622.jpg" alt="" width="1280" height="960" /></p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.zubinraj.com/photos/golden-gate-of-eureka-springs/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<image><thumb width="300" height="225">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Golden_Gate_of_Eureka_Springs-1622-300x225.jpg</thumb><original width="1280" height="960">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Golden_Gate_of_Eureka_Springs-1622.jpg</original></image>	</item>
+		<item>
+		<title>Dramatic Sky After Storm</title>
+		<link>http://www.zubinraj.com/photos/dramatic-sky-after-storm/</link>
+		<comments>http://www.zubinraj.com/photos/dramatic-sky-after-storm/#comments</comments>
+		<pubDate>Sun, 23 Dec 2012 05:03:48 +0000</pubDate>
+		<dc:creator>zubinraj</dc:creator>
+				<category><![CDATA[Places]]></category>
+		<category><![CDATA[Portfolio]]></category>
+		<category><![CDATA[clouds]]></category>
+		<category><![CDATA[missouri]]></category>
+		<category><![CDATA[rain]]></category>
+		<category><![CDATA[stlouis]]></category>
+		<category><![CDATA[sunset]]></category>
+		<category><![CDATA[usa]]></category>
+
+		<guid isPermaLink="false">http://www.zubinraj.com/photos/?p=288</guid>
+		<description><![CDATA[]]></description>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-289" title="Sky_Colors_After_Storm-1488" src="http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Sky_Colors_After_Storm-1488.jpg" alt="" width="1280" height="960" /></p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.zubinraj.com/photos/dramatic-sky-after-storm/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<image><thumb width="300" height="225">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Sky_Colors_After_Storm-1488-300x225.jpg</thumb><original width="1280" height="960">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Sky_Colors_After_Storm-1488.jpg</original></image>	</item>
+		<item>
+		<title>Stone Craft in Eureka Springs</title>
+		<link>http://www.zubinraj.com/photos/stone-craft-in-eureka-springs/</link>
+		<comments>http://www.zubinraj.com/photos/stone-craft-in-eureka-springs/#comments</comments>
+		<pubDate>Sun, 23 Dec 2012 05:01:24 +0000</pubDate>
+		<dc:creator>zubinraj</dc:creator>
+				<category><![CDATA[Places]]></category>
+		<category><![CDATA[Portfolio]]></category>
+		<category><![CDATA[eureka springs]]></category>
+		<category><![CDATA[missouri]]></category>
+		<category><![CDATA[usa]]></category>
+
+		<guid isPermaLink="false">http://www.zubinraj.com/photos/?p=285</guid>
+		<description><![CDATA[]]></description>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-286" title="Faces_Carved_In_Stone_Branson-1009" src="http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Faces_Carved_In_Stone_Branson-1009.jpg" alt="" width="1280" height="1168" /></p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.zubinraj.com/photos/stone-craft-in-eureka-springs/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<image><thumb width="300" height="273">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Faces_Carved_In_Stone_Branson-1009-300x273.jpg</thumb><original width="1280" height="1168">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Faces_Carved_In_Stone_Branson-1009.jpg</original></image>	</item>
+		<item>
+		<title>Golden Gate Bridge</title>
+		<link>http://www.zubinraj.com/photos/golden-gate-bridge/</link>
+		<comments>http://www.zubinraj.com/photos/golden-gate-bridge/#comments</comments>
+		<pubDate>Sun, 23 Dec 2012 04:59:35 +0000</pubDate>
+		<dc:creator>zubinraj</dc:creator>
+				<category><![CDATA[Places]]></category>
+		<category><![CDATA[Portfolio]]></category>
+		<category><![CDATA[architecture]]></category>
+		<category><![CDATA[bridge]]></category>
+		<category><![CDATA[california]]></category>
+		<category><![CDATA[golden gate bridge]]></category>
+		<category><![CDATA[san francisco]]></category>
+		<category><![CDATA[usa]]></category>
+
+		<guid isPermaLink="false">http://www.zubinraj.com/photos/?p=281</guid>
+		<description><![CDATA[]]></description>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-282" title="Golden_Gate_Bridge-2811" src="http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Golden_Gate_Bridge-2811.jpg" alt="" width="1280" height="857" /><img class="aligncenter size-full wp-image-283" title="Golden_Gate_Bridge-4991" src="http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Golden_Gate_Bridge-4991.jpg" alt="" width="1280" height="808" /></p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.zubinraj.com/photos/golden-gate-bridge/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<image><thumb width="300" height="200">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Golden_Gate_Bridge-2811-300x200.jpg</thumb><original width="1280" height="857">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Golden_Gate_Bridge-2811.jpg</original></image>	</item>
+		<item>
+		<title>Cardinals Baseball Game</title>
+		<link>http://www.zubinraj.com/photos/cardinals-baseball-game/</link>
+		<comments>http://www.zubinraj.com/photos/cardinals-baseball-game/#comments</comments>
+		<pubDate>Sun, 23 Dec 2012 04:54:11 +0000</pubDate>
+		<dc:creator>zubinraj</dc:creator>
+				<category><![CDATA[People]]></category>
+		<category><![CDATA[Portfolio]]></category>
+		<category><![CDATA[baseball]]></category>
+		<category><![CDATA[candid]]></category>
+		<category><![CDATA[missouri]]></category>
+		<category><![CDATA[sports]]></category>
+		<category><![CDATA[stlouis]]></category>
+		<category><![CDATA[usa]]></category>
+
+		<guid isPermaLink="false">http://www.zubinraj.com/photos/?p=277</guid>
+		<description><![CDATA[]]></description>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-278" title="Cardinals_Baseball_Game-3120" src="http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Cardinals_Baseball_Game-3120.jpg" alt="" width="1280" height="857" /></p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.zubinraj.com/photos/cardinals-baseball-game/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<image><thumb width="300" height="200">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Cardinals_Baseball_Game-3120-300x200.jpg</thumb><original width="1280" height="857">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Cardinals_Baseball_Game-3120.jpg</original></image>	</item>
+		<item>
+		<title>Balloon Glow</title>
+		<link>http://www.zubinraj.com/photos/balloon-glow/</link>
+		<comments>http://www.zubinraj.com/photos/balloon-glow/#comments</comments>
+		<pubDate>Sun, 23 Dec 2012 04:52:09 +0000</pubDate>
+		<dc:creator>zubinraj</dc:creator>
+				<category><![CDATA[Places]]></category>
+		<category><![CDATA[Portfolio]]></category>
+		<category><![CDATA[ballon glow]]></category>
+		<category><![CDATA[dusk]]></category>
+		<category><![CDATA[missouri]]></category>
+		<category><![CDATA[stlouis]]></category>
+		<category><![CDATA[usa]]></category>
+
+		<guid isPermaLink="false">http://www.zubinraj.com/photos/?p=273</guid>
+		<description><![CDATA[]]></description>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-274" title="Balloon_Glow_St_Louis-2144" src="http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Balloon_Glow_St_Louis-2144.jpg" alt="" width="1280" height="857" /><img class="aligncenter size-full wp-image-275" title="Balloon_Glow_St_Louis-2195" src="http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Balloon_Glow_St_Louis-2195.jpg" alt="" width="857" height="1280" /></p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.zubinraj.com/photos/balloon-glow/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<image><thumb width="300" height="200">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Balloon_Glow_St_Louis-2144-300x200.jpg</thumb><original width="1280" height="857">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Balloon_Glow_St_Louis-2144.jpg</original></image>	</item>
+		<item>
+		<title>Playing With Backlighting</title>
+		<link>http://www.zubinraj.com/photos/playing-with-backlighting/</link>
+		<comments>http://www.zubinraj.com/photos/playing-with-backlighting/#comments</comments>
+		<pubDate>Sun, 23 Dec 2012 04:48:43 +0000</pubDate>
+		<dc:creator>zubinraj</dc:creator>
+				<category><![CDATA[People]]></category>
+		<category><![CDATA[backlighting]]></category>
+		<category><![CDATA[portrait]]></category>
+
+		<guid isPermaLink="false">http://www.zubinraj.com/photos/?p=269</guid>
+		<description><![CDATA[]]></description>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-271" title="Backlighting_Bruin_Bear" src="http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Backlighting_Bruin_Bear.jpg" alt="" width="1280" height="857" /></p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.zubinraj.com/photos/playing-with-backlighting/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<image><thumb width="300" height="200">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Backlighting_Bruin_Bear-300x200.jpg</thumb><original width="1280" height="857">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Backlighting_Bruin_Bear.jpg</original></image>	</item>
+		<item>
+		<title>Tree Drenched in Rain</title>
+		<link>http://www.zubinraj.com/photos/tree-drenched-in-rain/</link>
+		<comments>http://www.zubinraj.com/photos/tree-drenched-in-rain/#comments</comments>
+		<pubDate>Sun, 23 Dec 2012 04:45:48 +0000</pubDate>
+		<dc:creator>zubinraj</dc:creator>
+				<category><![CDATA[Flora]]></category>
+		<category><![CDATA[Portfolio]]></category>
+		<category><![CDATA[missouri]]></category>
+		<category><![CDATA[rain]]></category>
+		<category><![CDATA[stlouis]]></category>
+		<category><![CDATA[tree]]></category>
+		<category><![CDATA[usa]]></category>
+
+		<guid isPermaLink="false">http://www.zubinraj.com/photos/?p=266</guid>
+		<description><![CDATA[]]></description>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-267" title="Drenched_Tree-1763" src="http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Drenched_Tree-1763.jpg" alt="" width="1280" height="857" /></p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.zubinraj.com/photos/tree-drenched-in-rain/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<image><thumb width="300" height="200">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Drenched_Tree-1763-300x200.jpg</thumb><original width="1280" height="857">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Drenched_Tree-1763.jpg</original></image>	</item>
+		<item>
+		<title>Helicopter over St Louis Arch</title>
+		<link>http://www.zubinraj.com/photos/helicopter-over-st-louis-arch/</link>
+		<comments>http://www.zubinraj.com/photos/helicopter-over-st-louis-arch/#comments</comments>
+		<pubDate>Sun, 23 Dec 2012 04:42:53 +0000</pubDate>
+		<dc:creator>zubinraj</dc:creator>
+				<category><![CDATA[Places]]></category>
+		<category><![CDATA[Portfolio]]></category>
+		<category><![CDATA[architecture]]></category>
+		<category><![CDATA[missouri]]></category>
+		<category><![CDATA[stlouis]]></category>
+		<category><![CDATA[usa]]></category>
+
+		<guid isPermaLink="false">http://www.zubinraj.com/photos/?p=263</guid>
+		<description><![CDATA[]]></description>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-264" title="Helicopter_Over_St_Louis_Arch_At_Dusk-2340" src="http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Helicopter_Over_St_Louis_Arch_At_Dusk-2340.jpg" alt="" width="1020" height="1280" /></p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.zubinraj.com/photos/helicopter-over-st-louis-arch/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<image><thumb width="300" height="376">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Helicopter_Over_St_Louis_Arch_At_Dusk-2340-300x376.jpg</thumb><original width="1020" height="1280">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Helicopter_Over_St_Louis_Arch_At_Dusk-2340.jpg</original></image>	</item>
+		<item>
+		<title>Sumo Wrestlers</title>
+		<link>http://www.zubinraj.com/photos/sumo-wrestlers/</link>
+		<comments>http://www.zubinraj.com/photos/sumo-wrestlers/#comments</comments>
+		<pubDate>Sun, 23 Dec 2012 02:32:54 +0000</pubDate>
+		<dc:creator>zubinraj</dc:creator>
+				<category><![CDATA[People]]></category>
+		<category><![CDATA[Portfolio]]></category>
+		<category><![CDATA[candid]]></category>
+		<category><![CDATA[missouri]]></category>
+		<category><![CDATA[stageshot]]></category>
+		<category><![CDATA[stlouis]]></category>
+		<category><![CDATA[sumo]]></category>
+		<category><![CDATA[usa]]></category>
+		<category><![CDATA[wrestling]]></category>
+
+		<guid isPermaLink="false">http://www.zubinraj.com/photos/?p=249</guid>
+		<description><![CDATA[]]></description>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-250" title="Sumo_Wrestlers_Japanese_Festival-1952" src="http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Sumo_Wrestlers_Japanese_Festival-1952.jpg" alt="" width="1280" height="857" /></p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.zubinraj.com/photos/sumo-wrestlers/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<image><thumb width="300" height="200">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Sumo_Wrestlers_Japanese_Festival-1952-300x200.jpg</thumb><original width="1280" height="857">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Sumo_Wrestlers_Japanese_Festival-1952.jpg</original></image>	</item>
+		<item>
+		<title>Snow Stormed</title>
+		<link>http://www.zubinraj.com/photos/snow-stormed/</link>
+		<comments>http://www.zubinraj.com/photos/snow-stormed/#comments</comments>
+		<pubDate>Sun, 23 Dec 2012 02:30:14 +0000</pubDate>
+		<dc:creator>zubinraj</dc:creator>
+				<category><![CDATA[Places]]></category>
+		<category><![CDATA[Portfolio]]></category>
+		<category><![CDATA[missouri]]></category>
+		<category><![CDATA[snow]]></category>
+		<category><![CDATA[stlouis]]></category>
+		<category><![CDATA[usa]]></category>
+
+		<guid isPermaLink="false">http://www.zubinraj.com/photos/?p=246</guid>
+		<description><![CDATA[]]></description>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-247" title="Snow_Stormed_Park_Bench-0663" src="http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Snow_Stormed_Park_Bench-0663.jpg" alt="" width="1280" height="960" /></p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.zubinraj.com/photos/snow-stormed/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<image><thumb width="300" height="225">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Snow_Stormed_Park_Bench-0663-300x225.jpg</thumb><original width="1280" height="960">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Snow_Stormed_Park_Bench-0663.jpg</original></image>	</item>
+		<item>
+		<title>Golden Dome in Memphis</title>
+		<link>http://www.zubinraj.com/photos/golden-dome-in-memphis/</link>
+		<comments>http://www.zubinraj.com/photos/golden-dome-in-memphis/#comments</comments>
+		<pubDate>Sun, 23 Dec 2012 02:27:08 +0000</pubDate>
+		<dc:creator>zubinraj</dc:creator>
+				<category><![CDATA[Places]]></category>
+		<category><![CDATA[Portfolio]]></category>
+		<category><![CDATA[dome]]></category>
+		<category><![CDATA[golden]]></category>
+		<category><![CDATA[memphis]]></category>
+		<category><![CDATA[stjude]]></category>
+		<category><![CDATA[tennessee]]></category>
+		<category><![CDATA[usa]]></category>
+
+		<guid isPermaLink="false">http://www.zubinraj.com/photos/?p=243</guid>
+		<description><![CDATA[]]></description>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-244" title="St_Jude_Golden_Dome_Memphis-00413" src="http://www.zubinraj.com/photos/wp-content/uploads/2012/12/St_Jude_Golden_Dome_Memphis-00413.jpg" alt="" width="1280" height="960" /></p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.zubinraj.com/photos/golden-dome-in-memphis/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<image><thumb width="300" height="225">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/St_Jude_Golden_Dome_Memphis-00413-300x225.jpg</thumb><original width="1280" height="960">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/St_Jude_Golden_Dome_Memphis-00413.jpg</original></image>	</item>
+		<item>
+		<title>Busch Stadium, Home of the Cardinals</title>
+		<link>http://www.zubinraj.com/photos/busch-stadium-home-of-the-cardinals/</link>
+		<comments>http://www.zubinraj.com/photos/busch-stadium-home-of-the-cardinals/#comments</comments>
+		<pubDate>Sun, 23 Dec 2012 02:22:57 +0000</pubDate>
+		<dc:creator>zubinraj</dc:creator>
+				<category><![CDATA[Places]]></category>
+		<category><![CDATA[Portfolio]]></category>
+		<category><![CDATA[baseball]]></category>
+		<category><![CDATA[cardinals]]></category>
+		<category><![CDATA[missouri]]></category>
+		<category><![CDATA[stlouis]]></category>
+		<category><![CDATA[usa]]></category>
+
+		<guid isPermaLink="false">http://www.zubinraj.com/photos/?p=240</guid>
+		<description><![CDATA[]]></description>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-241" title="Cardinals_Busch_Stadium_St_Louis-0435" src="http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Cardinals_Busch_Stadium_St_Louis-0435.jpg" alt="" width="1280" height="960" /></p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.zubinraj.com/photos/busch-stadium-home-of-the-cardinals/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<image><thumb width="300" height="225">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Cardinals_Busch_Stadium_St_Louis-0435-300x225.jpg</thumb><original width="1280" height="960">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Cardinals_Busch_Stadium_St_Louis-0435.jpg</original></image>	</item>
+		<item>
+		<title>Limestone Caverns, Meramec</title>
+		<link>http://www.zubinraj.com/photos/limestone-caverns-meramec/</link>
+		<comments>http://www.zubinraj.com/photos/limestone-caverns-meramec/#comments</comments>
+		<pubDate>Sun, 23 Dec 2012 02:19:46 +0000</pubDate>
+		<dc:creator>zubinraj</dc:creator>
+				<category><![CDATA[Places]]></category>
+		<category><![CDATA[cave]]></category>
+		<category><![CDATA[meramec]]></category>
+		<category><![CDATA[missouri]]></category>
+		<category><![CDATA[stlouis]]></category>
+		<category><![CDATA[usa]]></category>
+
+		<guid isPermaLink="false">http://www.zubinraj.com/photos/?p=237</guid>
+		<description><![CDATA[]]></description>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-238" title="Meramec_Limestone_Caves-00217" src="http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Meramec_Limestone_Caves-00217.jpg" alt="" width="1280" height="960" /></p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.zubinraj.com/photos/limestone-caverns-meramec/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<image><thumb width="300" height="225">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Meramec_Limestone_Caves-00217-300x225.jpg</thumb><original width="1280" height="960">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Meramec_Limestone_Caves-00217.jpg</original></image>	</item>
+		<item>
+		<title>Birth Place of Budweiser Beer</title>
+		<link>http://www.zubinraj.com/photos/birth-place-of-budweiser-beer/</link>
+		<comments>http://www.zubinraj.com/photos/birth-place-of-budweiser-beer/#comments</comments>
+		<pubDate>Sun, 23 Dec 2012 02:16:25 +0000</pubDate>
+		<dc:creator>zubinraj</dc:creator>
+				<category><![CDATA[Places]]></category>
+		<category><![CDATA[Portfolio]]></category>
+		<category><![CDATA[budweiser]]></category>
+		<category><![CDATA[missouri]]></category>
+		<category><![CDATA[stlouis]]></category>
+		<category><![CDATA[usa]]></category>
+
+		<guid isPermaLink="false">http://www.zubinraj.com/photos/?p=233</guid>
+		<description><![CDATA[]]></description>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-234" title="Budweiser_Headquarters_StLouis-00267" src="http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Budweiser_Headquarters_StLouis-00267.jpg" alt="" width="1280" height="993" /></p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.zubinraj.com/photos/birth-place-of-budweiser-beer/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<image><thumb width="300" height="232">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Budweiser_Headquarters_StLouis-00267-300x232.jpg</thumb><original width="1280" height="993">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Budweiser_Headquarters_StLouis-00267.jpg</original></image>	</item>
+		<item>
+		<title>July 4th Parade, St Louis</title>
+		<link>http://www.zubinraj.com/photos/july-4th-parade-st-louis/</link>
+		<comments>http://www.zubinraj.com/photos/july-4th-parade-st-louis/#comments</comments>
+		<pubDate>Sun, 23 Dec 2012 02:11:09 +0000</pubDate>
+		<dc:creator>zubinraj</dc:creator>
+				<category><![CDATA[People]]></category>
+		<category><![CDATA[Portfolio]]></category>
+		<category><![CDATA[July4th]]></category>
+		<category><![CDATA[missouri]]></category>
+		<category><![CDATA[stlouis]]></category>
+		<category><![CDATA[streetshot]]></category>
+		<category><![CDATA[usa]]></category>
+
+		<guid isPermaLink="false">http://www.zubinraj.com/photos/?p=227</guid>
+		<description><![CDATA[]]></description>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-228" title="Masked_Man_July_4th_Parade_St_Louis-1869" src="http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Masked_Man_July_4th_Parade_St_Louis-1869.jpg" alt="" width="857" height="1280" /><img class="aligncenter size-full wp-image-229" title="Bikers_July_4th_Parade_St_Louis-1859" src="http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Bikers_July_4th_Parade_St_Louis-1859.jpg" alt="" width="1280" height="857" /></p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.zubinraj.com/photos/july-4th-parade-st-louis/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<image><thumb width="300" height="448">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Masked_Man_July_4th_Parade_St_Louis-1869-300x448.jpg</thumb><original width="857" height="1280">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Masked_Man_July_4th_Parade_St_Louis-1869.jpg</original></image>	</item>
+		<item>
+		<title>White Flower in Masinagudi</title>
+		<link>http://www.zubinraj.com/photos/white-flower-in-masinagudi/</link>
+		<comments>http://www.zubinraj.com/photos/white-flower-in-masinagudi/#comments</comments>
+		<pubDate>Sat, 17 Dec 2011 02:37:01 +0000</pubDate>
+		<dc:creator>zubinraj</dc:creator>
+				<category><![CDATA[Flora]]></category>
+		<category><![CDATA[flower]]></category>
+
+		<guid isPermaLink="false">http://www.zubinraj.com/photos/?p=255</guid>
+		<description><![CDATA[]]></description>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-256" title="White_Rose_Masinagudi-00691" src="http://www.zubinraj.com/photos/wp-content/uploads/2012/12/White_Rose_Masinagudi-00691.jpg" alt="" width="1280" height="960" /></p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.zubinraj.com/photos/white-flower-in-masinagudi/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<image><thumb width="300" height="225">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/White_Rose_Masinagudi-00691-300x225.jpg</thumb><original width="1280" height="960">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/White_Rose_Masinagudi-00691.jpg</original></image>	</item>
+		<item>
+		<title>Young Harry Potter Fan</title>
+		<link>http://www.zubinraj.com/photos/young-harry-potter-fan/</link>
+		<comments>http://www.zubinraj.com/photos/young-harry-potter-fan/#comments</comments>
+		<pubDate>Fri, 16 Dec 2011 02:38:33 +0000</pubDate>
+		<dc:creator>zubinraj</dc:creator>
+				<category><![CDATA[People]]></category>
+		<category><![CDATA[Portfolio]]></category>
+		<category><![CDATA[candid]]></category>
+		<category><![CDATA[streetshot]]></category>
+
+		<guid isPermaLink="false">http://www.zubinraj.com/photos/?p=259</guid>
+		<description><![CDATA[]]></description>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-260" title="Young_Harry_Potter_Fan-2090" src="http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Young_Harry_Potter_Fan-2090.jpg" alt="" width="857" height="1280" /></p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.zubinraj.com/photos/young-harry-potter-fan/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<image><thumb width="300" height="448">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Young_Harry_Potter_Fan-2090-300x448.jpg</thumb><original width="857" height="1280">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Young_Harry_Potter_Fan-2090.jpg</original></image>	</item>
+		<item>
+		<title>Facing The Sun</title>
+		<link>http://www.zubinraj.com/photos/facing-the-sun/</link>
+		<comments>http://www.zubinraj.com/photos/facing-the-sun/#comments</comments>
+		<pubDate>Thu, 15 Dec 2011 03:18:46 +0000</pubDate>
+		<dc:creator>zubinraj</dc:creator>
+				<category><![CDATA[Flora]]></category>
+		<category><![CDATA[flower]]></category>
+		<category><![CDATA[sunflower]]></category>
+
+		<guid isPermaLink="false">http://www.zubinraj.com/photos/?p=221</guid>
+		<description><![CDATA[]]></description>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-222" title="Sunflower-00646" src="http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Sunflower-00646.jpg" alt="" width="614" height="998" /></p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.zubinraj.com/photos/facing-the-sun/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<image><thumb width="300" height="487">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Sunflower-00646-300x487.jpg</thumb><original width="614" height="998">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/Sunflower-00646.jpg</original></image>	</item>
+		<item>
+		<title>Falls at Athirappalli</title>
+		<link>http://www.zubinraj.com/photos/falls-at-athirappalli/</link>
+		<comments>http://www.zubinraj.com/photos/falls-at-athirappalli/#comments</comments>
+		<pubDate>Wed, 14 Dec 2011 04:38:50 +0000</pubDate>
+		<dc:creator>zubinraj</dc:creator>
+				<category><![CDATA[Places]]></category>
+		<category><![CDATA[Portfolio]]></category>
+		<category><![CDATA[athirappalli]]></category>
+		<category><![CDATA[b&w]]></category>
+		<category><![CDATA[india]]></category>
+		<category><![CDATA[kerala]]></category>
+		<category><![CDATA[waterfall]]></category>
+
+		<guid isPermaLink="false">http://www.zubinraj.com/photos/?p=194</guid>
+		<description><![CDATA[]]></description>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-219" title="WaterFall_Athirappalli-00732" src="http://www.zubinraj.com/photos/wp-content/uploads/2012/12/WaterFall_Athirappalli-00732.jpg" alt="" width="960" height="1280" /></p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.zubinraj.com/photos/falls-at-athirappalli/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<image><thumb width="300" height="400">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/WaterFall_Athirappalli-00732-300x400.jpg</thumb><original width="960" height="1280">http://www.zubinraj.com/photos/wp-content/uploads/2012/12/WaterFall_Athirappalli-00732.jpg</original></image>	</item>
 	</channel>
 </rss>
