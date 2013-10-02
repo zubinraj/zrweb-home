@@ -1,5 +1,5 @@
 ﻿requirejs.config({
-    //urlArgs: "version=0.2",
+    //urlArgs: "version=0.5",
     urlArgs: "bust=" + (new Date().getTime()),   // cache buster to load new version while debugging. Todo: comment out defore deployment
     paths: {
         'text': '../Scripts/text',
