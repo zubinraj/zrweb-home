@@ -85,8 +85,11 @@
     padding: 20px;
 }
 
-.widget h4, h3, h2, h1 {
-    margin-top: 0px !important;   /*zeroing this out as there is already padding for the widget*/
+.widget > h1, 
+.widget > h2,
+.widget > h3,
+.widget > h4 {
+    margin-top: 0px;   /*zeroing this out as there is already padding for the widget*/
 }
 
 .widget .img {
@@ -97,8 +100,24 @@
     padding-bottom: 10px;
 }
 
-@media (max-width: 991px) {    /*991 is as per bootstrap media definition*/
-    section {
-        margin-top: 20px;
-    }
+section {
+    margin-top: 20px;
+}
+
+.loading {
+    margin: 0px auto;
+    background: url('images/loading_5-1.gif') no-repeat top center;
+    text-align: center;
+    display: block;
+    /*font-size: 1em;*/
+    padding-top: 40px;
+    padding-left: 10px;
+}
+
+.loading:after {
+    content: 'LOADING..';
+}
+
+.hide {
+    display: none;
 }

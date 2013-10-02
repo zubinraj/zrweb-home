@@ -13,15 +13,18 @@
 
         return blogstream;
 
-        function _load(url) {
+        function _load(url, loader) {
 
             // check if already loaded
             if (_stream().length > 0) {
                 return;
             }
 
+            //console.log('Loading Items');
+
             $.ajax({
                 url: url,
+                dataType: 'xml',
                 success: function (data) {
 
                     var $xml = $(data);
@@ -62,6 +65,7 @@
 
                     return;
                 }
+
             });
 
         }

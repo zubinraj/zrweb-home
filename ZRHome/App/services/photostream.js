@@ -22,8 +22,11 @@
                 return;
             }
 
+            //console.log('Loading Photos');
+
             $.ajax({
                 url: url,
+                dataType: 'xml',
                 success: function (data) {
 
                     var $xml = $(data);

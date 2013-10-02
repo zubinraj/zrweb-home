@@ -1,5 +1,5 @@
 ﻿define(['services/logger'], function (logger) {
-    var ctor = {
+    var license = {
         title: 'License',
         description: 'Photos, source code and articles published on this website, that are not explicitly mentioned otherwise, are licensed under <a target="_blank" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative Commons Attribution-NonCommercial 3.0 Unported</a> license.',
         terms: [
@@ -16,6 +16,7 @@
 
         thirdParty: {
             heading: 'Third Party Licenses',
+            description: 'This website uses the following awesome libraries:',
             libraries: [
             { library: 'Durandal JS', license: 'MIT', url: 'https://raw.github.com/BlueSpire/Durandal/master/License.txt' },
             { library: 'Knockout JS', license: 'MIT', url: 'https://github.com/knockout/knockout#license' },
@@ -29,7 +30,7 @@
         activate: activate
     }
 
-    return ctor;
+    return license;
 
     function activate() {
 

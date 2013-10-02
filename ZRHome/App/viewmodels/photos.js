@@ -1,13 +1,13 @@
-﻿define(['plugins/http', 'knockout', 'services/logger', 'services/photostream'], function (http, ko, logger, photostream) {
+﻿define(['plugins/http', 'knockout', 'services/logger', 'services/photostream', 'services/common'], function (http, ko, logger, photostream, common) {
     
-    var ctor = {
+    var photos = {
         title: 'Ann & Zubin Photography',
         images: photostream.stream(),  //ko.observableArray([]),
         activate: activate,
         compositionComplete: compositionComplete
     }
 
-    return ctor;
+    return photos;
 
     function compositionComplete() {
         var $galleryContainer = $("#gallery-container");
@@ -15,25 +15,11 @@
         // call relayout on isotope
         $galleryContainer.isotope('reLayout');
 
-        // initialize lazy load
-        $("img.lazy").lazyload({
-            effect: "fadeIn"
-        });
+        // initialize lazy load library
+        common.initializeLazyLoad();
 
-        // initialize fancybox
-        $(".fancybox-thumb").fancybox({
-            prevEffect: 'none',
-            nextEffect: 'none',
-            helpers: {
-                title: {
-                    type: 'outside'
-                },
-                thumbs: {
-                    width: 50,
-                    height: 50
-                }
-            }
-        });
+        // initialize fancy box library
+        common.initializeFancyBox();
 
         $("#gallery .filters a").click( function () {
 
@@ -50,36 +36,25 @@
             return false;
         });
 
+        // hide the loader, when the rendering is complete
+        common.hideLoader();
+
     }
 
     function activate() {
 
-        //the router's activator calls this function and waits for it to complete before proceding
-        //if (this.images().length > 0) {
-        //    return;
-        //}
-
         // add custom bindings to handle isotope
         addCustomBindings();
 
-        //var that = this;
-
         // load the photos async
-        photostream.load('rss.xml');
+        photostream.load(common.photoUrl);
 
         return;
     }
 
-    //function select(item) {
-
-    //}
-
     function addCustomBindings() {
 
         ko.bindingHandlers.isotope = {
-            //init: function (element, valueAccessor, allBindingsAccessor, viewModel, bindingContext) {
-
-            //},
             update: function (element, valueAccessor, allBindingsAccessor, viewModel, bindingContext) {
 
                 var $el = $(element),

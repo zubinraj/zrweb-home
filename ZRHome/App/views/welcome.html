@@ -2,24 +2,28 @@
     <div class="jumbotron">
         <div class="container">
             <h2 data-bind="html: title"></h2>
-            <p>some text here</p>
+            <p></p>
         </div>
     </div>
     <div class="col-sm-4">
         <div class="widget" data-bind="with: developerWidget">
-            <div>
-                <h3 data-bind="text: title"></h3>
-            </div>
-            <!--<p><img class="img img-thumbnail" data-bind="attr: { src: thumbUrl }" /></p>-->
+            <h3 data-bind="text: title"></h3>
             <p data-bind="html: description"></p>
             <ul class="list-unstyled" data-bind="foreach: technologies">
+                <script src="../services/common.js"></script>
                 <li><i class="glyphicon glyphicon-ok" style="color:green"></i>&nbsp;<span data-bind="text: item"></span></li>
             </ul>
         </div>
+        <div class="widget" data-bind="with: profileWidget">
+            <h3 data-bind="text: title"></h3>
+            <ul class="list-unstyled" data-bind="foreach: items">
+                <li><i class="glyphicon glyphicon-ok" style="color:green"></i>&nbsp;<span data-bind="html: item"></span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-sm-4">
         <div class="widget" data-bind="with: recentPostsWidget">
-            <div>
-                <h3 data-bind="text: title"></h3>
-            </div>
+            <h3 data-bind="text: title"></h3>
             <ul class="list-unstyled" data-bind="foreach: items">
                 <li class="list-items"><a data-bind="attr: { href: link }, text: title"></a></li>
             </ul>
@@ -28,44 +32,16 @@
     </div>
     <div class="col-sm-4">
         <div class="widget" data-bind="with: photographerWidget">
-            <div>
-                <h3 data-bind="text: title"></h3>
-            </div>
+            <h3 data-bind="text: title"></h3>
             <p data-bind="html: description"></p>
         </div>
-    </div>
-    <div class="col-sm-4">
         <div class="widget" data-bind="with: recentPhotosWidget">
-            <div>
-                <h3 data-bind="text: title"></h3>
-            </div>
+            <h3 data-bind="text: title"></h3>
             <div data-bind="foreach: images">
-                <div><a><img class="img img-thumbnail lazy" src="./Content/images/grey.gif" data-bind="attr: { 'data-original': thumbUrl }" /></a></div>
+                <div><a><img class="img img-thumbnail lazy" src="/Content/images/grey.gif" data-bind="attr: { 'data-original': thumbUrl, alt: title, height: thumbHeight, width: thumbWidth }" /></a></div>
             </div>
             <div data-bind="html: footer"></div>
         </div>
     </div>
-    <!--  Carousel
-        consult the Twitter Bootstrap docs at http://twitter.github.com/bootstrap/javascript.html#carousel 
-    -->
-    <!--<div id="myCarousel" class="carousel slide" >-->
-        <!-- Indicators -->
-<!--        <ol class="carousel-indicators" data-bind="{foreach: items}">
-            <li data-target="#myCarousel" data-bind="attr: {'data-slide-to':$index}, css: {'active':isactive}"  ></li>
-        </ol>-->
-
-        <!-- Carousel items -->
-<!--        <div class="carousel-inner" data-bind="{foreach: items}">
-            <div class="item" data-bind="css: {'active':isactive}">
-                <img alt="" data-bind="attr: {'src': imagesrc}" />
-                <div class="carousel-caption">
-                    <p data-bind="{'text': caption}"></p>
-                </div>
-            </div>
-        </div>-->
-        <!-- Carousel nav -->
-<!--        <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-        <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-    </div>-->
 
 </section>

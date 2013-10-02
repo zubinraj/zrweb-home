@@ -7,6 +7,7 @@
 	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
 	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
 	>
+
 <channel>
 	<title>Zubin&#039;s Web Log</title>
 	<atom:link href="http://www.zubinraj.com/blog/feed/" rel="self" type="application/rss+xml" />
@@ -37,7 +38,7 @@
 <p>This another javascript layout library by the same David DeSandro who wrote Masonry. Isotope adds sorting and filtering of UI elements. It uses Masonry layouts in addition to other layouts.</p>
 <p>I found both of them to be so amazing, I whipped up a few demos to see for myself!</p>
 <p><strong>Demo: Masonry with jQuery</strong></p>
-<p>In this <a href="http://www.zubinraj.com/demo/isotope/page6.php" target="_blank">demo</a>, masonry layout is used.† Go ahead and resize the browser window to see the elements in the window automatically changing the layout to fit the screen. Usage of this appropriately will make the design fluid and gracefully fit on screens of varying sizes, as is common these days.</p>
+<p>In this <a href="http://www.zubinraj.com/demo/isotope/page6.php" target="_blank">demo</a>, masonry layout is used.¬† Go ahead and resize the browser window to see the elements in the window automatically changing the layout to fit the screen. Usage of this appropriately will make the design fluid and gracefully fit on screens of varying sizes, as is common these days.</p>
 <p><strong>Demo: Isotope with jQuery</strong></p>
 <p>In this <a href="http://www.zubinraj.com/demo/isotope/page5.php" target="_blank">demo</a>, isotope is used with masonry layout. You can see client side filtering in action here. Go ahead and click on the various categories displayed on top. Notice when you resize the window here, it behaves different from the masonry demo above. This demo uses a fixed column masonry layout, meaning, the number of columns will remain the same, but each element gets resized to fit the screen.</p>
 <p>Reference:<br />
@@ -60,7 +61,7 @@ Isotope: <a href="http://isotope.metafizzy.co/">Home</a> | <a href="https://gith
 		<guid isPermaLink="false">http://www.zubinraj.com/blog/?p=1328</guid>
 		<description><![CDATA[In singleton pattern, one instance of a class will be instantiated and no more. The same object is returned to all the clients that request for a new object of a singleton class. In traditional object oriented languages, this is achieved by making the constructor private and exposing a static public property which in turn [&#8230;]]]></description>
 				<content:encoded><![CDATA[<p>In singleton pattern, one instance of a class will be instantiated and no more. The same object is returned to all the clients that request for a new object of a singleton class. In traditional object oriented languages, this is achieved by making the constructor private and exposing a static public property which in turn returns the same instance every time.</p>
-<p>Letís see how this is done in javascript:</p>
+<p>Let‚Äôs see how this is done in javascript:</p>
 <pre>var singletonModule = (function () {
 
     // private property to hold the instance
@@ -120,9 +121,9 @@ console.log(m1.getRandom() == m2.getRandom());</pre>
 		<category><![CDATA[javascript]]></category>
 
 		<guid isPermaLink="false">http://www.zubinraj.com/blog/?p=1318</guid>
-		<description><![CDATA[Module pattern allows to emulate the concept of classes in Javascript. It allows to create private methods and variables along with their public counterparts inside the same class, thus shielding particular parts of the class from the global scope. Letís look at an example: var module = function () { var random = Math.random(); return [&#8230;]]]></description>
+		<description><![CDATA[Module pattern allows to emulate the concept of classes in Javascript. It allows to create private methods and variables along with their public counterparts inside the same class, thus shielding particular parts of the class from the global scope. Let‚Äôs look at an example: var module = function () { var random = Math.random(); return [&#8230;]]]></description>
 				<content:encoded><![CDATA[<p>Module pattern allows to emulate the concept of classes in Javascript. It allows to create private methods and variables along with their public counterparts inside the same class, thus shielding particular parts of the class from the global scope.</p>
-<p>Letís look at an example:</p>
+<p>Let‚Äôs look at an example:</p>
 <pre>        var module = function () {
 
             var random = Math.random();
@@ -145,7 +146,7 @@ console.log(m1.getRandom() == m2.getRandom());</pre>
 
         //error - can't access the private variable 'random' from outside
         console.log(m2.random);</pre>
-<p>Here, the private variable ërandomí is encapsulated and any code outside of the module canít access this variable. The functions and properties inside the ëreturn{ }í are exposed publicly and anything outside of &#8216;return{ }&#8217; are considered private.</p>
+<p>Here, the private variable ‚Äòrandom‚Äô is encapsulated and any code outside of the module can‚Äôt access this variable. The functions and properties inside the ‚Äòreturn{ }‚Äô are exposed publicly and anything outside of &#8216;return{ }&#8217; are considered private.</p>
 <p>This is can also be written as a self-contained module:</p>
 <pre>        var module = function () {
 
@@ -162,10 +163,10 @@ console.log(m1.getRandom() == m2.getRandom());</pre>
 
         // Usage:
         module.showRandom();</pre>
-<p>Notice the () at the end of the module definition? This will create an instance and return it in the global variable ëmoduleí.</p>
+<p>Notice the () at the end of the module definition? This will create an instance and return it in the global variable ‚Äòmodule‚Äô.</p>
 <p><strong>Passing arguments</strong></p>
 <p>A variation of this pattern allows to import modules and alias them locally by passing it as arguments to the anonymous function.</p>
-<p>Letís look at another example:</p>
+<p>Let‚Äôs look at another example:</p>
 <pre>        var module = function (jq) {
 
             var getValue = function (elem) {
@@ -205,24 +206,24 @@ From the excellent online book by Addy Osmani:<br />
 		<category><![CDATA[security]]></category>
 
 		<guid isPermaLink="false">http://www.zubinraj.com/blog/?p=1287</guid>
-		<description><![CDATA[The default wonderful 5-minute installation of wordpress keeps the prefix of ìwp_î for all its tables. Now why does anybody wants to change the default prefix? There are 2 reasons I can think of: The first and foremost is security. Since the default table prefix is world renowned, changing it will put a first level [&#8230;]]]></description>
-				<content:encoded><![CDATA[<p>The default wonderful 5-minute installation of wordpress keeps the prefix of ìwp_î for all its tables. Now why does anybody wants to change the default prefix?</p>
+		<description><![CDATA[The default wonderful 5-minute installation of wordpress keeps the prefix of ‚Äúwp_‚Äù for all its tables. Now why does anybody wants to change the default prefix? There are 2 reasons I can think of: The first and foremost is security. Since the default table prefix is world renowned, changing it will put a first level [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>The default wonderful 5-minute installation of wordpress keeps the prefix of ‚Äúwp_‚Äù for all its tables. Now why does anybody wants to change the default prefix?</p>
 <p>There are 2 reasons I can think of:</p>
 <ol>
 <li>The first and foremost is security. Since the default table prefix is world renowned, changing it will put a first level of defense against any vulnerability or a malicious user trying to execute a rogue code.</li>
 <li>Each wordpress installation takes in a configuration to tell it which prefix it uses. By keeping the prefix different from each installation, you can host multiple wordpress installations in a single mySQL database (not recommended from large installations).</li>
 </ol>
-<p>Hereís the configuration in the wp-config.php that determines what prefix wordpress uses.</p>
+<p>Here‚Äôs the configuration in the wp-config.php that determines what prefix wordpress uses.</p>
 <pre>// Entry in config.php showing wordpress table prefix used in the installation
-$table_prefix = ëwp_í; // Only numbers, letters, and underscores please!</pre>
+$table_prefix = ‚Äòwp_‚Äô; // Only numbers, letters, and underscores please!</pre>
 <p>There are <a href="http://wordpress.org/extend/plugins/">wordpress plugins</a> that can change the table prefix automatically, however, I prefer the manual approach so that I understand the changes that are being made.</p>
-<p>Iím putting down the steps that I did more for my own reference in the future.</p>
+<p>I‚Äôm putting down the steps that I did more for my own reference in the future.</p>
 <p><strong>1. Take a backup</strong></p>
 <p>Since you will be changing the table structure, backup the database. Next, take backup of the wordpress home folder. Keep both the database backup and home folder backup together in another folder. You will need these for performing a full restore later, in case something goes wrong.</p>
 <p><strong>2. Change the configuration in the wp-config.php file</strong></p>
-<pre>$table_prefix = ëwp_í;</pre>
+<pre>$table_prefix = ‚Äòwp_‚Äô;</pre>
 <p>Change this to a prefix to your liking. I would suggest making this as random as choosing the password.</p>
-<pre>$table_prefix = ëtr1mr1_í</pre>
+<pre>$table_prefix = ‚Äòtr1mr1_‚Äô</pre>
 <p><strong><br />
 3. Change the wordpress tables names</strong></p>
 <p>Login to phpMyAdmin and select the wordpress database. Go to the SQL area and enter the command to rename each table. There are many tables that start with wp_, change one table at a time. Below are the list of tables found in my installation, however make sure all your tables are renamed.</p>
@@ -239,10 +240,10 @@ Rename table wp_usermeta to tr1mr1_usermeta;
 Rename table wp_users to tr1mr1_users;</pre>
 <p><strong>4. Edit wp_options table</strong></p>
 <p>Next is to change the values in the options table. This table is called tr1mr1_options after the renaming step above.</p>
-<p>Browse the table and look for the value called ëwp_user_roleí under ëoption_nameí column. Change ëwp_user_rolesí to ëtr1mr1_user_rolesí.</p>
+<p>Browse the table and look for the value called ‚Äòwp_user_role‚Äô under ‚Äòoption_name‚Äô column. Change ‚Äòwp_user_roles‚Äô to ‚Äòtr1mr1_user_roles‚Äô.</p>
 <p><strong>5. Edit wp_user_meta table</strong></p>
-<p>Look every row under ëmeta_keyí column in the table tr1mr1_user_meta table, as it is called after the renaming.</p>
-<p>Change all keys that start with ëwp_í to ëtr1mr1_í. This may be different in different installations, so make sure you cover all the rows.</p>
+<p>Look every row under ‚Äòmeta_key‚Äô column in the table tr1mr1_user_meta table, as it is called after the renaming.</p>
+<p>Change all keys that start with ‚Äòwp_‚Äô to ‚Äòtr1mr1_‚Äô. This may be different in different installations, so make sure you cover all the rows.</p>
 <p>Here are some I found.</p>
 <pre>wp_capabilities to tr1mr1_capabilities
 wp_usersettings to tr1mr1_usersettings</pre>
@@ -275,27 +276,27 @@ wp_usersettings to tr1mr1_usersettings</pre>
 <li>Build the MSI</li>
 <li>Deploy</li>
 </ul>
-<p>And that is exactly what I did, job done in 20 minutes! But to my surprise, the Office 64-bit refused to recognize the installed COM component. Whatís going on?</p>
+<p>And that is exactly what I did, job done in 20 minutes! But to my surprise, the Office 64-bit refused to recognize the installed COM component. What‚Äôs going on?</p>
 <p>Digging deeper, I found that the component is getting registered in the SYSWOW64 section in the registry instead of the SYSTEM32 section. Now, if you are not familiar with the SYSWOW64, this is where Microsoft decided to put all 32-bit programs on a 64-bit machine (like Win 7) and SYSTEM32 is where all the 64-bit programs will reside (I know the naming is just confusing!).</p>
-<p>I went on to reason that if the component is getting registered in the SYSWOW64, then somehow the installation process should be running as a 32-bit process. But I did change the Target Platform to 64-bit, didnít I? I did!</p>
+<p>I went on to reason that if the component is getting registered in the SYSWOW64, then somehow the installation process should be running as a 32-bit process. But I did change the Target Platform to 64-bit, didn‚Äôt I? I did!</p>
 <p><a href="http://www.zubinraj.com/blog/wp-content/uploads/2012/08/target_platform_64bit.png"><img style="display:inline;" title="target_platform_64bit" alt="target_platform_64bit" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/08/target_platform_64bit_thumb.png" width="382" height="113"></a></p>
 <p>Browsing through a number of MSDN blogs and knowledge base articles with my new friend, BING, I found a <a href="http://blogs.msdn.com/b/heaths/archive/2006/02/01/64-bit-managed-custom-actions-with-visual-studio.aspx">blog post</a> where it was explained that there is a small glitch with the setup program bundled with Visual Studio 2010 and there is an additional step that needs to be done to make the MSI truly 64-bit.</p>
 <p><strong>Visual Studio 2010 Setup Program</strong></p>
 <p>If the installation program includes custom actions, Visual Studio 2010, when creating the MSI, includes an additional DLL called InstallUtilLib.dll. When this DLL is included, the setup program includes this from the 32-bit area of the .net framework instead of the 64-bit Framework64 folder. When the MSI runs, it detects that there is a dependency that is not supported on 64-bit and runs the entire process as 32-bit.</p>
 <p>Currently, nothing can be done directly from Visual Studio to correct this situation. The suggestion is to modify the MSI after it has been created.</p>
 <p><strong>Orca to the rescue</strong></p>
-<p>Orca is a program that is used to create or modify an MSI installable file. It is bundled along with the .net framework SDK, so if you have Visual Studio, it is likely that you already have it. I searched the term ëorcaí in my program files and it threw up the Orca.msi, which then I installed.</p>
+<p>Orca is a program that is used to create or modify an MSI installable file. It is bundled along with the .net framework SDK, so if you have Visual Studio, it is likely that you already have it. I searched the term ‚Äòorca‚Äô in my program files and it threw up the Orca.msi, which then I installed.</p>
 <p>What are we modifying? We are going to open the MSI that was created by Visual Studio in Orca, replace the InstallUtilLib.dll (32-bit) that was added by default with the 64-bit version of the same DLL.</p>
 <p>First open the MSI in Orca.</p>
 <p><a href="http://www.zubinraj.com/blog/wp-content/uploads/2012/08/orca_installutillib-copy.png"><img style="display:inline;" title="orca_installutillib - Copy" alt="orca_installutillib - Copy" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/08/orca_installutillib-copy_thumb.png" width="537" height="454"></a></p>
-<p>The left hand side displays all the tables that are present in this MSI. Choose the ëBinaryí table. On the right hand side, you will see the entry for ëInstallUtilí. </p>
-<p>Double click on the area where it says ë[Binary Data]í. It will open a ëEdit Binary Streamí dialog as shown below. Make sure the ëRead binary from filenameí option is selected.</p>
+<p>The left hand side displays all the tables that are present in this MSI. Choose the ‚ÄòBinary‚Äô table. On the right hand side, you will see the entry for ‚ÄòInstallUtil‚Äô. </p>
+<p>Double click on the area where it says ‚Äò[Binary Data]‚Äô. It will open a ‚ÄòEdit Binary Stream‚Äô dialog as shown below. Make sure the ‚ÄòRead binary from filename‚Äô option is selected.</p>
 <p><a href="http://www.zubinraj.com/blog/wp-content/uploads/2012/08/orca_edit_binary_stream.png"><img style="display:inline;" title="orca_edit_binary_stream" alt="orca_edit_binary_stream" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/08/orca_edit_binary_stream_thumb.png" width="285" height="180"></a></p>
 <p>Click on Browse. </p>
 <p>Browse to %WINDIR%Microsoft.NETFramework64v2.0.50727 </p>
-<p>Select ëInstallUtilLib.dllí. </p>
+<p>Select ‚ÄòInstallUtilLib.dll‚Äô. </p>
 <p>Click on OK button.</p>
-<p>Notice that the folder name says ëFramework64í (with a suffix ë64í). The Framework folder (without the suffix ë64í) is its 32-bit counterpart.</p>
+<p>Notice that the folder name says ‚ÄòFramework64‚Äô (with a suffix ‚Äò64‚Äô). The Framework folder (without the suffix ‚Äò64‚Äô) is its 32-bit counterpart.</p>
 <p>Save the MSI file.</p>
 <p>Voila! With the 32-bit dependency removed from the MSI, the MSI now runs as a 64-bit process, registering the COM in the SYSTEM32 section and correctly so.</p>
 <p>Problem solved!</p>
@@ -315,19 +316,19 @@ wp_usersettings to tr1mr1_usersettings</pre>
 		<category><![CDATA[repository]]></category>
 
 		<guid isPermaLink="false">https://zubinraj.wordpress.com/?p=1163</guid>
-		<description><![CDATA[All the version control systems I have worked with so far like CVS, VSS and Team Foundation Server are centralized version control systems. Git, however, is a distributed version control system. Clients donít just checkout the latest snapshot from the server, but they mirror the entire repository. So, when I decided to setup my own [&#8230;]]]></description>
-				<content:encoded><![CDATA[<p>All the version control systems I have worked with so far like CVS, VSS and Team Foundation Server are centralized version control systems. Git, however, is a distributed version control system. Clients donít just checkout the latest snapshot from the server, but they mirror the entire repository.</p>
+		<description><![CDATA[All the version control systems I have worked with so far like CVS, VSS and Team Foundation Server are centralized version control systems. Git, however, is a distributed version control system. Clients don‚Äôt just checkout the latest snapshot from the server, but they mirror the entire repository. So, when I decided to setup my own [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>All the version control systems I have worked with so far like CVS, VSS and Team Foundation Server are centralized version control systems. Git, however, is a distributed version control system. Clients don‚Äôt just checkout the latest snapshot from the server, but they mirror the entire repository.</p>
 <p>So, when I decided to setup my own version control system for personal use, I decided to give Git a try.</p>
 <p>Git can be installed on any computer and you have a version control system right away. However, I also wanted a remote repository on my main file server (maybe bias from working with centralized version control systems for many years!)</p>
 <p>To achieve this, Git has to be installed on the main file server (remote repository) as well as on the local computer (local repository). The good part about this setup is that the local computer does not require to be connected to the server all the time (which is usually the case with centralized version control systems). It needs to be connected only when the changes has to be pushed back to the main server (remote repository). This is different from other centralized version control systems where the clients has to be connected to do any operation like compare previous versions / branch / check-in / check-out etc.</p>
 <p><strong>Installing Git on the remote server</strong></p>
-<p>Letís first install Git on the remote server. I use a Synology disk station that runs BusyBee Linux as my main file server.</p>
+<p>Let‚Äôs first install Git on the remote server. I use a Synology disk station that runs BusyBee Linux as my main file server.</p>
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:3cc97152-64b4-47de-96f5-3e2594e1c02f" class="wlWriterEditableSmartContent" style="margin: 0; display: inline; float: none; padding: 0;">
 <pre class="lang:sh decode:true crayon-selected">DiskStation&gt; ipkg update
 
 DiskStation&gt; ipkg install git</pre>
 </div>
-<p>Instead of ipkg, use whatever package manager is available on your distribution. If you are using Synology and do not have ipkg package manager, you can install ipkg by following my earlier post <a title="Bootstrapping Synology DiskStation ñ Unleash The Power" href="http://www.zubinraj.com/blog/2012/07/19/bootstrapping-synology-diskstation-unleash-the-power/">Bootstrapping Synology DiskStation ñ Unleash The Power</a>.</p>
+<p>Instead of ipkg, use whatever package manager is available on your distribution. If you are using Synology and do not have ipkg package manager, you can install ipkg by following my earlier post <a title="Bootstrapping Synology DiskStation ‚Äì Unleash The Power" href="http://www.zubinraj.com/blog/2012/07/19/bootstrapping-synology-diskstation-unleash-the-power/">Bootstrapping Synology DiskStation ‚Äì Unleash The Power</a>.</p>
 <p><strong>Initiate a bare repository on the remote server</strong></p>
 <p>Now that Git is installed, initiate a bare repository. There are 2 types of repositories in Git &#8211; bare and working. Bare repository is one without a working directory. For the remote, initiate a bare repository.</p>
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:9390d3c9-37c5-47f3-96e1-7ab4784150dc" class="wlWriterEditableSmartContent" style="margin: 0; display: inline; float: none; padding: 0;">
@@ -344,22 +345,22 @@ DiskStation&gt; git --bare init</pre>
 <p>This installs the core, a bash and a minimal GUI.</p>
 <p><a href="http://www.zubinraj.com/blog/wp-content/uploads/2012/07/image25.png"><img style="display: inline;" title="image" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/07/image_thumb9.png" alt="image" width="459" height="268" /></a></p>
 <p>Even though this is enough for most of the Git operations, I prefer to use the <a href="http://code.google.com/p/gitextensions/">Git Extensions</a> locally. Git Extensions has windows explorer integration and also integrates with Visual Studio.</p>
-<p>Initiate a new repository from Git Extensions. If you already have a source code folder, you can choose that to create a new repository and convert the existing folder as a working folder. Choose ëPersonal repositoryí as we want a working folder on the local.</p>
+<p>Initiate a new repository from Git Extensions. If you already have a source code folder, you can choose that to create a new repository and convert the existing folder as a working folder. Choose ‚ÄòPersonal repository‚Äô as we want a working folder on the local.</p>
 <p><a href="http://www.zubinraj.com/blog/wp-content/uploads/2012/07/image20.png"><img style="display: inline;" title="image" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/07/image_thumb4.png" alt="image" width="564" height="151" /></a></p>
-<p>After a few commits and branching and merging, the local repository looks like the below. It gives a good visual interpretation of whatís going on.</p>
+<p>After a few commits and branching and merging, the local repository looks like the below. It gives a good visual interpretation of what‚Äôs going on.</p>
 <p><a href="http://www.zubinraj.com/blog/wp-content/uploads/2012/07/image21.png"><img style="display: inline;" title="image" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/07/image_thumb5.png" alt="image" width="476" height="331" /></a></p>
 <p><strong>Connecting the local repository with the remote</strong></p>
 <p>Being distributed, one local repository can be linked to one or many remote repositories. In Git Extensions, go to Menu &gt; Remote &gt; Manage remote repositories &gt; New</p>
 <p>The recommended method of connecting to a remote is to use a SSH connection with public / private key authentication, without getting prompted for the password.</p>
-<p>However, I chose to use another method. My remote is on a file server that I have access to and can be accessed from Windows machines on the local network. I† created a samba share to the remote repository folder, and created a network drive mapping from my windows machine. (P: as shown in the below screenshot, points to the remote repository created above in /volume1/git ). This is not a recommended method if there are many users, but works fine in my case.</p>
+<p>However, I chose to use another method. My remote is on a file server that I have access to and can be accessed from Windows machines on the local network. I¬† created a samba share to the remote repository folder, and created a network drive mapping from my windows machine. (P: as shown in the below screenshot, points to the remote repository created above in /volume1/git ). This is not a recommended method if there are many users, but works fine in my case.</p>
 <p><a href="http://www.zubinraj.com/blog/wp-content/uploads/2012/07/image26.png"><img style="display: inline;" title="image" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/07/image_thumb10.png" alt="image" width="600" height="305" /></a></p>
 <p><strong>Push changes to the remote</strong></p>
 <p>When the changes are ready to be pushed to the remote, click on the Push button. There is a also Pull button to pull any changes other users might have done.</p>
 <p><a href="http://www.zubinraj.com/blog/wp-content/uploads/2012/07/image23.png"><img style="display: inline;" title="image" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/07/image_thumb7.png" alt="image" width="600" height="239" /></a></p>
 <p>When the changes are pushed to the remote, all the commits, branches, merges and other operations done locally are pushed to the remote repository.</p>
-<p>If another user has committed to the remote during the time you were making changes locally, Git will not let you push to the remote directly. You will need to pull the changes from the remote, merge those changes into your own repository, resolve any conflicts and then push the changes to the remote. This built-in mechanism protects one userís changes to be overwritten by another user accidentally.</p>
-<p><strong>GitList ñ A beautiful web interface for the repositories</strong></p>
-<p>I tried a few web interfaces for viewing my remote repositories, but <a href="https://github.com/klaussilveira/gitlist">GitList</a> stood out from the rest by itís minimalistic approach.</p>
+<p>If another user has committed to the remote during the time you were making changes locally, Git will not let you push to the remote directly. You will need to pull the changes from the remote, merge those changes into your own repository, resolve any conflicts and then push the changes to the remote. This built-in mechanism protects one user‚Äôs changes to be overwritten by another user accidentally.</p>
+<p><strong>GitList ‚Äì A beautiful web interface for the repositories</strong></p>
+<p>I tried a few web interfaces for viewing my remote repositories, but <a href="https://github.com/klaussilveira/gitlist">GitList</a> stood out from the rest by it‚Äôs minimalistic approach.</p>
 <p>It was a pretty easy installation on a PHP / Apache The below installation instructions are from the GitList author.</p>
 <ul>
 <li>Download GitList from <a href="http://gitlist.org/">gitlist.org</a> and decompress to your <code>/var/www/gitlist</code>folder, or anywhere else you want to place GitList.</li>
@@ -396,7 +397,7 @@ debug = false
 <a title="http://git-scm.com/downloads" href="http://git-scm.com/downloads">http://git-scm.com/downloads</a></p>
 <p>List of GUI clients:<br />
 <a title="http://git-scm.com/downloads/guis" href="http://git-scm.com/downloads/guis">http://git-scm.com/downloads/guis</a></p>
-<p>GitList ñ web interface:<br />
+<p>GitList ‚Äì web interface:<br />
 <a title="https://github.com/klaussilveira/gitlist" href="https://github.com/klaussilveira/gitlist">https://github.com/klaussilveira/gitlist</a><br />
 <a title="http://gitlist.org/" href="http://gitlist.org/">http://gitlist.org/</a></p>
 ]]></content:encoded>
@@ -404,7 +405,7 @@ debug = false
 		<slash:comments>0</slash:comments>
 		</item>
 		<item>
-		<title>Bootstrapping Synology DiskStation ñ Unleash The Power</title>
+		<title>Bootstrapping Synology DiskStation ‚Äì Unleash The Power</title>
 		<link>http://www.zubinraj.com/blog/2012/07/19/bootstrapping-synology-diskstation-unleash-the-power/</link>
 		<comments>http://www.zubinraj.com/blog/2012/07/19/bootstrapping-synology-diskstation-unleash-the-power/#comments</comments>
 		<pubDate>Thu, 19 Jul 2012 21:50:07 +0000</pubDate>
@@ -415,9 +416,9 @@ debug = false
 		<category><![CDATA[synology]]></category>
 
 		<guid isPermaLink="false">https://zubinraj.wordpress.com/?p=1146</guid>
-		<description><![CDATA[Synology disk station comes locked and does not allow any modifications as it comes out of the factory, however there is a healthy community supporting the boot strapped operations. Bootstrapping is required to install additional packages on the server, other than the default packaged ones, which I should say are not any less. Letís start! [&#8230;]]]></description>
+		<description><![CDATA[Synology disk station comes locked and does not allow any modifications as it comes out of the factory, however there is a healthy community supporting the boot strapped operations. Bootstrapping is required to install additional packages on the server, other than the default packaged ones, which I should say are not any less. Let‚Äôs start! [&#8230;]]]></description>
 				<content:encoded><![CDATA[<p>Synology disk station comes locked and does not allow any modifications as it comes out of the factory, however there is a healthy community supporting the boot strapped operations. Bootstrapping is required to install additional packages on the server, other than the default packaged ones, which I should say are not any less.</p>
-<p>Letís start!</p>
+<p>Let‚Äôs start!</p>
 <p>1. Bootstrapping program is dependent on the type of CPU on your disk station. See here to find your <a href="http://forum.synology.com/wiki/index.php/What_kind_of_CPU_does_my_NAS_have" target="_blank">CPU Type</a>.</p>
 <p>2. Make sure the disk station has the login over SSH enabled.</p>
 <p><img style="display: block; float: none; margin-left: auto; margin-right: auto;" title="image" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/07/image.png" alt="image" width="890" /></p>
@@ -426,11 +427,11 @@ debug = false
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:16c58548-ec2e-4ce3-baf4-c499e7591598" class="wlWriterEditableSmartContent" style="margin: 0; display: inline; float: none; padding: 0;">
 <pre class="lang:default decode:true">DiskStation&gt; cd /volume1/@tmp</pre>
 </div>
-<p>5. Download the bootstrap file for your CPU to the @tmp directory using wget. The example below is for the CPU type ëMarvel Kirkwood mv6281 ARM processorí. Please find out the bootstrap file for each CPU type from the page <a href="http://forum.synology.com/wiki/index.php/Overview_on_modifying_the_Synology_Server,_bootstrap,_ipkg_etc" target="_blank">Overview on modifying Synology server</a>.</p>
+<p>5. Download the bootstrap file for your CPU to the @tmp directory using wget. The example below is for the CPU type ‚ÄòMarvel Kirkwood mv6281 ARM processor‚Äô. Please find out the bootstrap file for each CPU type from the page <a href="http://forum.synology.com/wiki/index.php/Overview_on_modifying_the_Synology_Server,_bootstrap,_ipkg_etc" target="_blank">Overview on modifying Synology server</a>.</p>
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:1d54835c-86d7-429d-b6a1-b5cb030beb87" class="wlWriterEditableSmartContent" style="margin: 0; display: inline; float: none; padding: 0;">
 <pre class="lang:default decode:true">DiskStation&gt; wget http://ipkg.nslu2-linux.org/feeds/optware/syno-x07/cross/unstable/syno-x07-bootstrap_1.2-7_arm.xsh</pre>
 </div>
-<p>7. Change the bootstrap file permissions, so that itís executable.</p>
+<p>7. Change the bootstrap file permissions, so that it‚Äôs executable.</p>
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:a6aae75d-f7dc-41db-853c-75cb5b8c35e7" class="wlWriterEditableSmartContent" style="margin: 0; display: inline; float: none; padding: 0;">
 <pre class="lang:default decode:true">DiskStation&gt; chmod +x syno-mvkw-bootstrap_1.2-7_arm.xsh</pre>
 </div>
@@ -473,7 +474,7 @@ DiskStation&gt; ipkg list | grep vim</pre>
 <p>At this point, you have all the software installed to add other packages and make any changes to configure the disk station as required.</p>
 <p>Have Fun!</p>
 <p><strong>Install SCP</strong></p>
-<p>DSM 4.0 disk stations do not have SCP installed by default. I find SCP to be the easiest for copying files to the disk station. Moreover, if you are setting up public/private key authentication for password free authentication, the arrangement works very well with SCP, allowing, say a backup program, access the disk station without having to know itís password.</p>
+<p>DSM 4.0 disk stations do not have SCP installed by default. I find SCP to be the easiest for copying files to the disk station. Moreover, if you are setting up public/private key authentication for password free authentication, the arrangement works very well with SCP, allowing, say a backup program, access the disk station without having to know it‚Äôs password.</p>
 <p>1. On the disk station, change to @tmp directory</p>
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:d4b4218a-35a6-45cd-89a6-72f56bc90622" class="wlWriterEditableSmartContent" style="margin: 0; display: inline; float: none; padding: 0;">
 <pre class="lang:default decode:true">DiskStation&gt; cd /volume1/@tmp</pre>
@@ -512,36 +513,36 @@ DiskStation&gt; ipkg list | grep vim</pre>
 		<category><![CDATA[wp7]]></category>
 
 		<guid isPermaLink="false">https://zubinraj.wordpress.com/?p=1123</guid>
-		<description><![CDATA[Given the differences between the Silverlight on Windows Phone 7 and XAML†for WinRT on Windows 8, I thought it will be interesting to see what the differences are between these two platforms. A few days back I wrote†a quick and dirty application for checking weather forecasts for a given location†in Windows Phone 7. It is [&#8230;]]]></description>
-				<content:encoded><![CDATA[<p>Given the differences between the Silverlight on Windows Phone 7 and XAML†for WinRT on Windows 8, I thought it will be interesting to see what the differences are between these two platforms.</p>
-<p>A few days back I <a href="http://www.zubinraj.com/2012/04/28/wp7-checking-weather-forecast-using-yql/">wrote</a>†a quick and dirty application for checking weather forecasts for a given location†in Windows Phone 7. It is a very simple application, however I was curious if I can use the same code base for WinRT metro apps on Windows 8.</p>
+		<description><![CDATA[Given the differences between the Silverlight on Windows Phone 7 and XAML¬†for WinRT on Windows 8, I thought it will be interesting to see what the differences are between these two platforms. A few days back I wrote¬†a quick and dirty application for checking weather forecasts for a given location¬†in Windows Phone 7. It is [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>Given the differences between the Silverlight on Windows Phone 7 and XAML¬†for WinRT on Windows 8, I thought it will be interesting to see what the differences are between these two platforms.</p>
+<p>A few days back I <a href="http://www.zubinraj.com/2012/04/28/wp7-checking-weather-forecast-using-yql/">wrote</a>¬†a quick and dirty application for checking weather forecasts for a given location¬†in Windows Phone 7. It is a very simple application, however I was curious if I can use the same code base for WinRT metro apps on Windows 8.</p>
 <p><strong>Namespace and Base Page</strong></p>
-<p>The Windows Phone 7 controls reside in the namespace <strong>ëMicrosoft.Phone.Controlsí</strong>†and the controls for Windows 8 XAML†metro apps reside in <strong>ëWindows.UI.Xaml.Controlsí</strong>.</p>
+<p>The Windows Phone 7 controls reside in the namespace <strong>‚ÄòMicrosoft.Phone.Controls‚Äô</strong>¬†and the controls for Windows 8 XAML¬†metro apps reside in <strong>‚ÄòWindows.UI.Xaml.Controls‚Äô</strong>.</p>
 <p>The pages for Windows Phone 7 pages derive from PhoneApplicationPage, whereas the metro apps derive from Windows.UI.Xaml.Controls.Page.</p>
 <pre class="lang:default decode:true">// Windows Phone 7
 public partial class MainPage&amp;nbsp;: PhoneApplicationPage</pre>
 <pre class="lang:default decode:true">// Windows 8 metro app
 public sealed partial class BlankPage : Page</pre>
 <p><strong>XAML</strong></p>
-<p>The user interface controls for both Windows Phone 7 and Windows 8 metro apps are implemented†in different namespaces, however they are very similar and are mostly reusable.</p>
-<p>The same XAML†may conform for both platforms, however Windows 8 are slated†to be†used on screens that are bigger like a tablet or a PC (and sometimes much bigger like a TV screen). So the applications may be†better off if the user interface design for metro apps can utilize that larger real estate.</p>
-<p>My sample application for Windows Phone 7 was using the ëWebBrowserí control, but I couldnít find this control in the metro apps. However, a very similar control called ëWebViewí is present in Windows.UI.Xaml.Controls namespace.</p>
-<p>There are some minor differences in the implementation, but I was able to replace the WebBrowser†control with the WebView control without much effort.</p>
+<p>The user interface controls for both Windows Phone 7 and Windows 8 metro apps are implemented¬†in different namespaces, however they are very similar and are mostly reusable.</p>
+<p>The same XAML¬†may conform for both platforms, however Windows 8 are slated¬†to be¬†used on screens that are bigger like a tablet or a PC (and sometimes much bigger like a TV screen). So the applications may be¬†better off if the user interface design for metro apps can utilize that larger real estate.</p>
+<p>My sample application for Windows Phone 7 was using the ‚ÄòWebBrowser‚Äô control, but I couldn‚Äôt find this control in the metro apps. However, a very similar control called ‚ÄòWebView‚Äô is present in Windows.UI.Xaml.Controls namespace.</p>
+<p>There are some minor differences in the implementation, but I was able to replace the WebBrowser¬†control with the WebView control without much effort.</p>
 <pre class="lang:default decode:true">&lt;WebView Name="browserControl" Height="420" /&gt;</pre>
 <p><a href="http://www.zubinraj.com/blog/wp-content/uploads/2012/05/win8_vs2011_weatherwatch_designer.png"><img style="background-image: none; float: none; padding-top: 0; padding-left: 0; margin-left: auto; display: block; padding-right: 0; margin-right: auto; border-width: 0;" title="win8_vs2011_weatherwatch_designer" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/05/win8_vs2011_weatherwatch_designer_thumb.png" alt="win8_vs2011_weatherwatch_designer" width="554" height="339" border="0" /></a></p>
 <p><strong>Windows 8 Target Screen Sizes</strong></p>
 <p><a href="http://www.zubinraj.com/blog/wp-content/uploads/2012/05/win8_vs2011_toolbox_platform_screesizes.png"><img style="background-image: none; float: left; padding-top: 0; padding-left: 0; display: inline; padding-right: 0; border-width: 0;" title="win8_vs2011_toolbox_platform_screesizes" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/05/win8_vs2011_toolbox_platform_screesizes_thumb.png" alt="win8_vs2011_toolbox_platform_screesizes" width="201" height="244" align="left" border="0" /></a></p>
-<p>Visual Studio 11 for Windows 8 also allows† designing applications for different target sizes, as the target can differ from a wide variety of screen sizes.</p>
-<p>1366&#215;768 is the minimum resolution required for all metro apps. The designer having this ability to set various screen sizes is a great boon for the developers in knowing before hand†how the XAML†markup will render in the supported screen sizes.</p>
+<p>Visual Studio 11 for Windows 8 also allows¬† designing applications for different target sizes, as the target can differ from a wide variety of screen sizes.</p>
+<p>1366&#215;768 is the minimum resolution required for all metro apps. The designer having this ability to set various screen sizes is a great boon for the developers in knowing before hand¬†how the XAML¬†markup will render in the supported screen sizes.</p>
 <p>&nbsp;</p>
 <p>The designer also supports setting the user interface as portrait mode.<a href="http://www.zubinraj.com/blog/wp-content/uploads/2012/05/win8_vs2011_weatherwatch_designer_portrait.png"><img style="background-image: none; float: none; padding-top: 0; padding-left: 0; margin-left: auto; display: block; padding-right: 0; margin-right: auto; border-width: 0;" title="win8_vs2011_weatherwatch_designer_portrait" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/05/win8_vs2011_weatherwatch_designer_portrait_thumb.png" alt="win8_vs2011_weatherwatch_designer_portrait" width="300" height="484" border="0" /></a></p>
 <p><strong>WebClient API is not supported</strong></p>
-<p>The sample application in Windows Phone 7 used WebClient†to pull weather data from yahoo, but WebClient†is not supported in WinRT. However, HTTPWebRequest†class is supported†in WinRT. In fact, this is the only web request API supported in WinRT. HTTPWebRequest†is also available in Windows Phone 7. See my previous†post about WebClient†vs HTTPWebRequest in Windows Phone 7 <a href="http://www.zubinraj.com/2012/04/25/wp7-webclient-and-httpwebrequest/">here</a>.</p>
-<p><strong>The final†application on WinRT</strong></p>
+<p>The sample application in Windows Phone 7 used WebClient¬†to pull weather data from yahoo, but WebClient¬†is not supported in WinRT. However, HTTPWebRequest¬†class is supported¬†in WinRT. In fact, this is the only web request API supported in WinRT. HTTPWebRequest¬†is also available in Windows Phone 7. See my previous¬†post about WebClient¬†vs HTTPWebRequest in Windows Phone 7 <a href="http://www.zubinraj.com/2012/04/25/wp7-webclient-and-httpwebrequest/">here</a>.</p>
+<p><strong>The final¬†application on WinRT</strong></p>
 <p><a href="http://www.zubinraj.com/blog/wp-content/uploads/2012/05/win8_weather_watch.png"><img style="background-image: none; float: none; padding-top: 0; padding-left: 0; margin-left: auto; display: block; padding-right: 0; margin-right: auto; border-width: 0;" title="win8_weather_watch" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/05/win8_weather_watch_thumb.png" alt="win8_weather_watch" width="554" height="313" border="0" /></a></p>
 <p>With the very limited functionality I was testing, most of the porting was smooth, except for the surprise that WebClient was not supported.</p>
-<p>As for user interface, even though most of the XAML†could be reused, I think it is to the benefit of the application that it be designed specifically for the screen sizes they are targeted for.</p>
-<p>So, can applications have a common code base for both the platforms? If the applications are layered†properly using the MVVM†(Model-View-View Model) pattern, the ëmodelí and ëview modelí can have a common code base, whereas the ëviewí can benefit from being separate at least for some of the applications.</p>
+<p>As for user interface, even though most of the XAML¬†could be reused, I think it is to the benefit of the application that it be designed specifically for the screen sizes they are targeted for.</p>
+<p>So, can applications have a common code base for both the platforms? If the applications are layered¬†properly using the MVVM¬†(Model-View-View Model) pattern, the ‚Äòmodel‚Äô and ‚Äòview model‚Äô can have a common code base, whereas the ‚Äòview‚Äô can benefit from being separate at least for some of the applications.</p>
 ]]></content:encoded>
 			<wfw:commentRss>http://www.zubinraj.com/blog/2012/05/10/windows-phone-7-windows-8-metro-apps/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
@@ -561,10 +562,10 @@ public sealed partial class BlankPage : Page</pre>
 		<description><![CDATA[I finally got a chance to install Windows 8 and take it for a test ride. Having installed the Windows 8 Developer Preview which came out last year, the Windows 8 Consumer Preview is much more stable with very few visible bugs. I followed the excellent instructions provided by lifehacker to boot Windows 8 side [&#8230;]]]></description>
 				<content:encoded><![CDATA[<p><a href="http://www.zubinraj.com/blog/wp-content/uploads/2012/05/win8_start_screen_1.png"><img title="win8_start_screen_1" style="float:right;display:inline;" alt="win8_start_screen_1" align="right" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/05/win8_start_screen_1_thumb.png" width="324" height="221"></a>I finally got a chance to install Windows 8 and take it for a test ride. Having installed the Windows 8 Developer Preview which came out last year, the Windows 8 Consumer Preview is much more stable with very few visible bugs.</p>
 <p>I followed <a href="http://lifehacker.com/5840387/how-to-dual+boot-windows-7-and-windows-8-side-by-side" target="_blank">the excellent instructions provided by lifehacker</a> to boot Windows 8 side by side with Windows 7, which is already running on my laptop. If you are not familiar with partitioning your hard disks, be very careful while trying to dual boot as choosing the incorrect partition can erase your existing installation.</p>
-<p>On the Start screen, all the applications are shown in what are called ëTilesí. If you are familiar with the Windows Phone interface, it looks much similar.</p>
-<p>Desktop is provided as an ëappí, which takes the user to the much familiar PC interface that most PC users are familiar with. Desktop looks much similar to a Windows 7 screen, but ouch, where is the start button? Pressing the Windows Key on the keyboard takes the user back to the start screen with ëTilesí.</p>
+<p>On the Start screen, all the applications are shown in what are called ‚ÄòTiles‚Äô. If you are familiar with the Windows Phone interface, it looks much similar.</p>
+<p>Desktop is provided as an ‚Äòapp‚Äô, which takes the user to the much familiar PC interface that most PC users are familiar with. Desktop looks much similar to a Windows 7 screen, but ouch, where is the start button? Pressing the Windows Key on the keyboard takes the user back to the start screen with ‚ÄòTiles‚Äô.</p>
 <p>At present there are not many apps to boast about in the marketplace, but I expect this situation to change as more and more developers start publishing their apps to the marketplace.</p>
-<p>Some applications that have already got some traction in other platforms like ëKindleí and ëCut The Ropeí are already in the marketplace.</p>
+<p>Some applications that have already got some traction in other platforms like ‚ÄòKindle‚Äô and ‚ÄòCut The Rope‚Äô are already in the marketplace.</p>
 <p><img title="win8_store_kindle_1" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" border="0" alt="win8_store_kindle_1" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/05/win8_store_kindle_1.png" width="370" height="283"><img title="win8_cut_the_rope_game1" style="background-image:none;float:none;padding-top:0;padding-left:0;margin-left:auto;display:block;padding-right:0;margin-right:auto;border-width:0;" border="0" alt="win8_cut_the_rope_game1" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/05/win8_cut_the_rope_game1.png" width="370" height="283"></p>
 <p>&nbsp;</p>
 <p><strong>Corner Quick Menus</strong></p>
@@ -575,11 +576,11 @@ public sealed partial class BlankPage : Page</pre>
 <p><img title="win8_currently_running_applications_bar_1" style="float:none;margin-left:auto;display:block;margin-right:auto;" alt="win8_currently_running_applications_bar_1" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/05/win8_currently_running_applications_bar_11.png" width="550" height="413"></p>
 <p><strong></strong>&nbsp;</p>
 <p><strong>Windows Charms</strong></p>
-<p>Windows 8 has implemented something called ëWindows Charmsí, which is a quick menu that is available for all the applications. Move the mouse to the top right corner to access the Charm.</p>
+<p>Windows 8 has implemented something called ‚ÄòWindows Charms‚Äô, which is a quick menu that is available for all the applications. Move the mouse to the top right corner to access the Charm.</p>
 <p><img title="win8_start_screen_charm_bar_1" style="float:none;margin-left:auto;display:block;margin-right:auto;" alt="win8_start_screen_charm_bar_1" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/05/win8_start_screen_charm_bar_11.png" width="550" height="413"></p>
 <p>In the charm bar, there are buttons like Share and Search, which each application can utilize accordingly.</p>
 <p><strong>Keyboard friendly as it is touch friendly</strong></p>
-<p>It is primarily touted for touch interface devices, however almost all the ëgoodnessí of Windows 7 keyboard friendliness have been retained.</p>
+<p>It is primarily touted for touch interface devices, however almost all the ‚Äògoodness‚Äô of Windows 7 keyboard friendliness have been retained.</p>
 <p>Windows 7 users will find many of their favorite shortcut keys working on Windows 8 including the Alt+Tab combination for switching between the applications.</p>
 <p><img title="win8_alt_tab_window_switching_1" style="float:none;margin-left:auto;display:block;margin-right:auto;" alt="win8_alt_tab_window_switching_1" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/05/win8_alt_tab_window_switching_1.png" width="472" height="188"></p>
 <p>&nbsp;</p>
@@ -590,7 +591,7 @@ public sealed partial class BlankPage : Page</pre>
 <p><img title="win8_taskbar_app_history_1" style="float:none;margin-left:auto;display:block;margin-right:auto;" alt="win8_taskbar_app_history_1" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/05/win8_taskbar_app_history_11.png" width="550" height="452"></p>
 <p>&nbsp;</p>
 <p><strong>Compatibility with existing hardware</strong></p>
-<p>The web installer runs a compatibility checker before installing Windows 8 to verify if the existing hardware and software is compatible. Interestingly enough, the only incompatible application that was found on my computer was the ëSecurity Essentialsí anti-virus software from none other than Microsoft itself.</p>
+<p>The web installer runs a compatibility checker before installing Windows 8 to verify if the existing hardware and software is compatible. Interestingly enough, the only incompatible application that was found on my computer was the ‚ÄòSecurity Essentials‚Äô anti-virus software from none other than Microsoft itself.</p>
 <p><strong>NVIDIA Drivers</strong></p>
 <p>I noticed one problem after installing the Windows 8, it was not detecting the NVIDIA graphics card. My laptop has a NVIDIA GeForce 210M. NVIDIA has released the drivers for Windows 8 32-bit and 64-bit, however some laptops like SONY VAIO require to get these drivers directly from SONY instead of NVIDIA. Installing the drivers from NVIDIA was stopping at a point where it suggests to contact the laptop manufacturer to provide the drivers. However, SONY has not released the NVIDIA drivers for their hardware yet. argh!</p>
 <p>Considering that most of the underlying stuff in Windows 8 is carried forward from Windows 7, I wanted to try installing the NVIDIA Windows 7 drivers on Windows 8. How bad can it get? The worse case scenario would be for me to re-install Windows 8.</p>
@@ -618,17 +619,17 @@ public sealed partial class BlankPage : Page</pre>
 		<category><![CDATA[yql]]></category>
 
 		<guid isPermaLink="false">https://zubinraj.wordpress.com/?p=1070</guid>
-		<description><![CDATA[I touched upon yahoo query language (YQL) interface in my last post. Today, I will show some quick practical uses of YQL and demonstrate how easy it is for the programmers to tap into this information. For todayís example, we will examine the table named ëweather.forecastí, which is available in the YQL interface. Head over [&#8230;]]]></description>
+		<description><![CDATA[I touched upon yahoo query language (YQL) interface in my last post. Today, I will show some quick practical uses of YQL and demonstrate how easy it is for the programmers to tap into this information. For today‚Äôs example, we will examine the table named ‚Äòweather.forecast‚Äô, which is available in the YQL interface. Head over [&#8230;]]]></description>
 				<content:encoded><![CDATA[<p>I touched upon yahoo query language (YQL) interface in my <a href="http://www.zubinraj.com/2012/04/25/yql/">last post</a>. Today, I will show some quick practical uses of YQL and demonstrate how easy it is for the programmers to tap into this information.</p>
-<p>For todayís example, we will examine the table named ëweather.forecastí, which is available in the YQL interface.</p>
-<p>Head over to the <a href="http://developer.yahoo.com/yql/console/" target="_blank">YQL Console</a> to examine the parameters to be used for ëweather.forecastí.</p>
+<p>For today‚Äôs example, we will examine the table named ‚Äòweather.forecast‚Äô, which is available in the YQL interface.</p>
+<p>Head over to the <a href="http://developer.yahoo.com/yql/console/" target="_blank">YQL Console</a> to examine the parameters to be used for ‚Äòweather.forecast‚Äô.</p>
 <p><img style="display: inline;" title="yql_weather_forecast_1" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/04/yql_weather_forecast_1.png" alt="yql_weather_forecast_1" width="644" height="281" /></p>
-<p>As shown in the screenshot, there is one parameter named ëlocationí that is required for querying data from this table.</p>
+<p>As shown in the screenshot, there is one parameter named ‚Äòlocation‚Äô that is required for querying data from this table.</p>
 <pre class="lang:default decode:true">SELECT * FROM weather.forecast WHERE location="63126"</pre>
 <p>The complete URL would look like below:</p>
 <p><a title="http://query.yahooapis.com/v1/public/yql?q=%20SELECT%20*%20FROM%20weather.forecast%20WHERE%20location%3D%2263126%22%20%20&amp;diagnostics=true" href="http://query.yahooapis.com/v1/public/yql?q=%20SELECT%20*%20FROM%20weather.forecast%20WHERE%20location%3D%2263126%22%20%20&amp;diagnostics=true" target="_blank">http://query.yahooapis.com/v1/public/yql?q=%20SELECT%20*%20FROM%20weather.forecast%20WHERE%20location%3D%2263126%22%20%20&amp;diagnostics=true</a></p>
 <p><strong>Windows Phone Application</strong></p>
-<p>Create a new ëWindows Phone Applicationí project in Visual Studio.</p>
+<p>Create a new ‚ÄòWindows Phone Application‚Äô project in Visual Studio.</p>
 <p><img style="display: inline;" title="New_Windows_Phone_Application" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/04/new_windows_phone_application.png" alt="New_Windows_Phone_Application" width="650" height="322" /></p>
 <p><strong>Preparing the User Interface</strong></p>
 <p>The user will provide the location for which the weather forecast is to be displayed as input.</p>
@@ -638,7 +639,7 @@ public sealed partial class BlankPage : Page</pre>
     &lt;TextBox Name="locationTextBox" Text="" Width="300"&gt;&lt;/TextBox&gt;
     &lt;Button Name="goButton" Content="GO" Width="100" Click="goButton_Click"&gt;&lt;/Button&gt;
 &lt;/StackPanel&gt;</pre>
-<p>For displaying the results, I used a WebBrowser control, as some of the data for ëweather.forecastí is returned as HTML.</p>
+<p>For displaying the results, I used a WebBrowser control, as some of the data for ‚Äòweather.forecast‚Äô is returned as HTML.</p>
 <pre class="lang:default decode:true">&lt;phone:WebBrowser Name="browserControl" Height="300" Visibility="Collapsed" /&gt;</pre>
 <p>The XAML listing for the UI is here:</p>
 <pre class="lang:default decode:true">    &lt;!--LayoutRoot is the root grid where all page content is placed--&gt;
@@ -670,11 +671,11 @@ public sealed partial class BlankPage : Page</pre>
         &lt;/Grid&gt;
     &lt;/Grid&gt;</pre>
 <p><strong>Getting data from YQL</strong></p>
-<p>The user enters the zip code for which weather forecast has to be displayed and press on ëGOí button.</p>
+<p>The user enters the zip code for which weather forecast has to be displayed and press on ‚ÄòGO‚Äô button.</p>
 <p>The program takes this location, construct the correct URL and make a web request to retrieve the data from the internet.</p>
 <p><img style="display: block; margin-left: auto; margin-right: auto;" title="WeatherWatch_1" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/04/weatherwatch_11.png" alt="WeatherWatch_1" /></p>
 <p>Windows Phone SDK provides two options to make a web request and get data from the internet, WebClient and HTTPWebRequest. See <a href="http://www.zubinraj.com/2012/04/25/wp7-webclient-and-httpwebrequest/">here</a> for more information.</p>
-<p>For this example, I used the WebClient API for itís inherent simplicity as this is a post more to demonstrate the YQL than about performance.</p>
+<p>For this example, I used the WebClient API for it‚Äôs inherent simplicity as this is a post more to demonstrate the YQL than about performance.</p>
 <pre class="lang:default decode:true">public void PopulateCurrentConditions(string location)
 {
     const string locVariable = "$$LOCATION$$";
@@ -688,7 +689,7 @@ public sealed partial class BlankPage : Page</pre>
     web.DownloadStringAsync(new Uri(url));
 
 }</pre>
-<p>Since the program did not specify a output format, JQL returns XML by default. The output format can be specified as <a href="http://en.wikipedia.org/wiki/Json" target="_blank">JSON</a> by adding† parameter to the original URL.</p>
+<p>Since the program did not specify a output format, JQL returns XML by default. The output format can be specified as <a href="http://en.wikipedia.org/wiki/Json" target="_blank">JSON</a> by adding¬† parameter to the original URL.</p>
 <p><a href="http://query.yahooapis.com/v1/public/yql?q=SELECT%20*%20FROM%20weather.forecast%20WHERE%20location%3D%2263126%22%20%20&amp;format=json&amp;diagnostics=true" target="_blank">http://query.yahooapis.com/v1/public/yql?q=SELECT%20*%20FROM%20weather.forecast%20WHERE%20location%3D%2263126%22%20%20&amp;<strong>format=json</strong>&amp;diagnostics=true</a></p>
 <p>Parsing the XML is made simpler by the XDocument class provided in the System.Xml.Linq namespace.</p>
 <pre class="lang:default decode:true">XDocument doc = XDocument.Parse(e.Result);
@@ -776,6 +777,527 @@ namespace WeatherWatch
 }</pre>
 ]]></content:encoded>
 			<wfw:commentRss>http://www.zubinraj.com/blog/2012/04/28/wp7-checking-weather-forecast-using-yql/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>YQL</title>
+		<link>http://www.zubinraj.com/blog/2012/04/25/yql/</link>
+		<comments>http://www.zubinraj.com/blog/2012/04/25/yql/#comments</comments>
+		<pubDate>Thu, 26 Apr 2012 04:45:00 +0000</pubDate>
+		<dc:creator>Zubin</dc:creator>
+				<category><![CDATA[Programming]]></category>
+		<category><![CDATA[api]]></category>
+		<category><![CDATA[yahoo query language]]></category>
+
+		<guid isPermaLink="false">https://zubinraj.wordpress.com/?p=1028</guid>
+		<description><![CDATA[YQL or Yahoo Query Language allows developers to query, join and filter data from multiple data sources on the web who have made their data available through the YQL interface. Since YQL is an expressive SQL like language, developers familiar with the SQL interface should feel comfortable with the interface. YQL provides the developers a [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>YQL or Yahoo Query Language allows developers to query, join and filter data from multiple data sources on the web who have made their data available through the YQL interface. Since YQL is an expressive SQL like language, developers familiar with the SQL interface should feel comfortable with the interface.</p>
+<p>YQL provides the developers a consistent way to access online services which are otherwise dispersed across a range of formats. It hides the implementation of the various data sources on the web and make it easier to query the data.</p>
+<p>YQL is both a service and a language. The service is through which external web services can make their data available for developers to consume through the yahoo query ‚Äòlanguage‚Äô.</p>
+<p><strong>Understanding the language of YQL</strong></p>
+<p>If you are familiar with the SQL, you will feel at home with YQL. This language allows developers to use SQL syntax to extract data from the service. It can return the results in either XML format or in <a href="http://en.wikipedia.org/wiki/Json" target="_blank">JSON</a> format.</p>
+<p>Yahoo has provided a <a href="http://developer.yahoo.com/yql/console/" target="_blank">YQL Console</a> for developers to test their queries.</p>
+<p>For example, if the application wants to search from YouTube and display a list of results, the developer can use a simple query like below and get the information from the web service.</p>
+<div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:705f3fa6-a94e-4bab-a14f-82ffe2d0891c" class="wlWriterEditableSmartContent" style="margin: 0; display: inline; float: none; padding: 0;">
+<pre class="lang:default decode:true"> SELECT * FROM youtube.search WHERE query="soccer ronaldo"</pre>
+</div>
+<p>The output of the above query in XML format is below. Adding &#8216;limit 1&#8242; will limit the output to the top 1 result.</p>
+<div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:e0176e3b-7d8b-433b-a92e-13a046c65aa9" class="wlWriterEditableSmartContent" style="margin: 0; display: inline; float: none; padding: 0;">
+<pre class="lang:default decode:true">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;query xmlns:yahoo="http://www.yahooapis.com/v1/base.rng"
+    yahoo:count="1" yahoo:created="2012-04-26T03:29:10Z" yahoo:lang="en-US"&gt;
+    &lt;diagnostics&gt;
+        &lt;publiclyCallable&gt;true&lt;/publiclyCallable&gt;
+        &lt;url execution-start-time="21" execution-stop-time="25"
+            execution-time="4" proxy="DEFAULT"&gt;&lt;![CDATA[http://www.datatables.org/youtube/youtube.search.xml]]&gt;&lt;/url&gt;
+        &lt;url execution-start-time="179" execution-stop-time="238"
+            execution-time="59" proxy="DEFAULT"&gt;&lt;![CDATA[http://gdata.youtube.com/feeds/api/videos?q=soccer%20ronaldo]]&gt;&lt;/url&gt;
+        &lt;javascript execution-time="376" instructions-used="972223" table-name="youtube.search"/&gt;
+        &lt;user-time&gt;406&lt;/user-time&gt;
+        &lt;service-time&gt;63&lt;/service-time&gt;
+        &lt;build-version&gt;26856&lt;/build-version&gt;
+    &lt;/diagnostics&gt; 
+    &lt;results&gt;
+        &lt;video&gt;
+            &lt;id&gt;tlYDcv6l95c&lt;/id&gt;
+            &lt;url&gt;http://www.youtube.com/watch?v=tlYDcv6l95c&amp;amp;feature=youtube_gdata_player&lt;/url&gt;
+            &lt;title&gt;Ronaldo Penalty Miss || Real Madrid vs Bayern Munich (1-3) CL Semi Final ||26.04.12||&lt;/title&gt;
+            &lt;content&gt;Real Madrid vs Bayern Munich Penalties 1-3 Bayern Wins&lt;/content&gt;
+            &lt;author&gt;elly produxion&lt;/author&gt;
+            &lt;duration&gt;18&lt;/duration&gt;
+            &lt;comment_count&gt;4&lt;/comment_count&gt;
+            &lt;categories&gt;
+                &lt;category&gt;Sports&lt;/category&gt;
+            &lt;/categories&gt;
+            &lt;tags&gt;
+                &lt;tag&gt;penalty&lt;/tag&gt;
+                &lt;tag&gt;miss&lt;/tag&gt;
+                &lt;tag&gt;ronaldo&lt;/tag&gt;
+                &lt;tag&gt;real&lt;/tag&gt;
+                &lt;tag&gt;madrid&lt;/tag&gt;
+                &lt;tag&gt;vs&lt;/tag&gt;
+                &lt;tag&gt;bayern&lt;/tag&gt;
+                &lt;tag&gt;munich&lt;/tag&gt;
+                &lt;tag&gt;munchen&lt;/tag&gt;
+                &lt;tag&gt;all&lt;/tag&gt;
+                &lt;tag&gt;goals&lt;/tag&gt;
+                &lt;tag&gt;highlights&lt;/tag&gt;
+                &lt;tag&gt;Goal&lt;/tag&gt;
+                &lt;tag&gt;football&lt;/tag&gt;
+                &lt;tag&gt;Soccer&lt;/tag&gt;
+            &lt;/tags&gt;
+            &lt;thumbnails&gt;
+                &lt;thumbnail height="90" time="00:00:09" width="120"&gt;http://i.ytimg.com/vi/tlYDcv6l95c/default.jpg&lt;/thumbnail&gt;
+                &lt;thumbnail height="180" time="" width="320"&gt;http://i.ytimg.com/vi/tlYDcv6l95c/mqdefault.jpg&lt;/thumbnail&gt;
+                &lt;thumbnail height="360" time="" width="480"&gt;http://i.ytimg.com/vi/tlYDcv6l95c/hqdefault.jpg&lt;/thumbnail&gt;
+                &lt;thumbnail height="90" time="00:00:04.500" width="120"&gt;http://i.ytimg.com/vi/tlYDcv6l95c/1.jpg&lt;/thumbnail&gt;
+                &lt;thumbnail height="90" time="00:00:09" width="120"&gt;http://i.ytimg.com/vi/tlYDcv6l95c/2.jpg&lt;/thumbnail&gt;
+                &lt;thumbnail height="90" time="00:00:13.500" width="120"&gt;http://i.ytimg.com/vi/tlYDcv6l95c/3.jpg&lt;/thumbnail&gt;
+            &lt;/thumbnails&gt;
+            &lt;files&gt;
+                &lt;file type="application/x-shockwave-flash"&gt;http://www.youtube.com/v/tlYDcv6l95c?version=3&amp;amp;f=videos&amp;amp;app=youtube_gdata&lt;/file&gt;
+                &lt;file type="video/3gpp"&gt;rtsp://v3.cache6.c.youtube.com/CiILENy73wIaGQmX96X-cgNWthMYDSANFEgGUgZ2aWRlb3MM/0/0/0/video.3gp&lt;/file&gt;
+                &lt;file type="video/3gpp"&gt;rtsp://v3.cache4.c.youtube.com/CiILENy73wIaGQmX96X-cgNWthMYESARFEgGUgZ2aWRlb3MM/0/0/0/video.3gp&lt;/file&gt;
+            &lt;/files&gt;
+        &lt;/video&gt;
+    &lt;/results&gt;
+&lt;/query&gt;</pre>
+</div>
+<p>Similar to SQL, YQL also let the developer query for individual columns. The developer can limit what is returned from the service by specifying the data that should be returned as in the below example.</p>
+<div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:92513467-5027-4e3a-8325-6b105ea7ceb8" class="wlWriterEditableSmartContent" style="margin: 0; display: inline; float: none; padding: 0;">
+<pre class="lang:default decode:true"> SELECT id, url, title, content FROM youtube.search WHERE query="soccer ronaldo"  limit 1</pre>
+</div>
+<p>Which returns just those 4 columns that are requested.</p>
+<div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:645eb4b8-c4d7-4514-b532-fbff08ed7dcb" class="wlWriterEditableSmartContent" style="margin: 0; display: inline; float: none; padding: 0;">
+<pre class="lang:default decode:true crayon-selected">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;query xmlns:yahoo="http://www.yahooapis.com/v1/base.rng"
+    yahoo:count="1" yahoo:created="2012-04-26T03:36:52Z" yahoo:lang="en-US"&gt;
+    &lt;diagnostics&gt;
+        &lt;publiclyCallable&gt;true&lt;/publiclyCallable&gt;
+        &lt;url execution-start-time="22" execution-stop-time="26"
+            execution-time="4" proxy="DEFAULT"&gt;&lt;![CDATA[http://www.datatables.org/youtube/youtube.search.xml]]&gt;&lt;/url&gt;
+        &lt;url execution-start-time="139" execution-stop-time="188"
+            execution-time="49" proxy="DEFAULT"&gt;&lt;![CDATA[http://gdata.youtube.com/feeds/api/videos?q=soccer%20ronaldo]]&gt;&lt;/url&gt;
+        &lt;javascript execution-time="341" instructions-used="972223" table-name="youtube.search"/&gt;
+        &lt;user-time&gt;371&lt;/user-time&gt;
+        &lt;service-time&gt;53&lt;/service-time&gt;
+        &lt;build-version&gt;26856&lt;/build-version&gt;
+    &lt;/diagnostics&gt; 
+    &lt;results&gt;
+        &lt;video&gt;
+            &lt;id&gt;tlYDcv6l95c&lt;/id&gt;
+            &lt;url&gt;http://www.youtube.com/watch?v=tlYDcv6l95c&amp;amp;feature=youtube_gdata_player&lt;/url&gt;
+            &lt;title&gt;Ronaldo Penalty Miss || Real Madrid vs Bayern Munich (1-3) CL Semi Final ||26.04.12||&lt;/title&gt;
+            &lt;content&gt;Real Madrid vs Bayern Munich Penalties 1-3 Bayern Wins&lt;/content&gt;
+        &lt;/video&gt;
+    &lt;/results&gt;
+&lt;/query&gt;</pre>
+</div>
+<p><strong>Using the YQL Service</strong></p>
+<p>Let‚Äôs look at the usage of these services. Let us say, for example, an application wants to list out the current popular music charts.</p>
+<p>Head over to the <a href="http://developer.yahoo.com/yql/console/" target="_blank">YQL Console</a> and put your query as below:</p>
+<div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:8706a8ef-fa2a-44ff-8b47-6b6fb5d57ef4" class="wlWriterEditableSmartContent" style="margin: 0; display: inline; float: none; padding: 0;">
+<pre class="lang:default decode:true">SELECT * FROM music.artist.popular limit 5</pre>
+</div>
+<p><img style="display: inline;" title="yql_1" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/04/yql_1.png" alt="yql_1" width="500" height="127" /></p>
+<p>Click on TEST button. The console will show the output in the format that you selected, either XML or in JSON format.</p>
+<p><img style="display: inline;" title="yql_2" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/04/yql_2.png" alt="yql_2" width="550" height="273" /></p>
+<p>Once you are satisfied with the results, head to the bottom area of the console to grab the complete URL.</p>
+<p><img style="display: inline;" title="yql_3" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/04/yql_3.png" alt="yql_3" width="550" height="54" /></p>
+<p>The resulting query:</p>
+<p><a title="http://query.yahooapis.com/v1/public/yql?q=%20SELECT%20*%20FROM%20music.artist.popular%20limit%205&amp;diagnostics=true" href="http://query.yahooapis.com/v1/public/yql?q=%20SELECT%20*%20FROM%20music.artist.popular%20limit%205&amp;diagnostics=true" target="_blank">http://query.yahooapis.com/v1/public/yql?q=%20SELECT%20*%20FROM%20music.artist.popular%20limit%205&amp;diagnostics=true</a></p>
+<p>The application can post this query to get the response and the response being in XML or JSON consistently across the web services makes this interface very luring to use.</p>
+<p><strong>Other Useful Links</strong></p>
+<p>Complete YQL Documentation<br />
+<a title="http://developer.yahoo.com/yql/docs/" href="http://developer.yahoo.com/yql/docs/" target="_blank">http://developer.yahoo.com/yql/docs/</a></p>
+<p>YQL Screencast from the Yahoo! Developer Network<br />
+<a title="http://developer.yahoo.com/yos/screencasts/yql_screencast.html" href="http://developer.yahoo.com/yos/screencasts/yql_screencast.html" target="_blank">http://developer.yahoo.com/yos/screencasts/yql_screencast.html</a></p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.zubinraj.com/blog/2012/04/25/yql/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>WP7: WebClient and HTTPWebRequest</title>
+		<link>http://www.zubinraj.com/blog/2012/04/25/wp7-webclient-and-httpwebrequest/</link>
+		<comments>http://www.zubinraj.com/blog/2012/04/25/wp7-webclient-and-httpwebrequest/#comments</comments>
+		<pubDate>Wed, 25 Apr 2012 07:10:47 +0000</pubDate>
+		<dc:creator>Zubin</dc:creator>
+				<category><![CDATA[Mobile]]></category>
+		<category><![CDATA[Programming]]></category>
+		<category><![CDATA[.net]]></category>
+		<category><![CDATA[c#]]></category>
+		<category><![CDATA[httpwebrequest]]></category>
+		<category><![CDATA[webclient]]></category>
+		<category><![CDATA[windows phone]]></category>
+
+		<guid isPermaLink="false">https://zubinraj.wordpress.com/?p=1012</guid>
+		<description><![CDATA[Windows Phone 7 SDK has provided two classes for consuming resources from the web. WebClient and HTTPWebRequest. HTTPWebRequest HTTPWebRequest is a low level API for web requests. Unlike WebClient, it allows to tinker some of the HTTP aspects like cookies and user agent. One major advantage of HTTPWebRequest is that it returns on another thread, [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>Windows Phone 7 SDK has provided two classes for consuming resources from the web. WebClient and HTTPWebRequest.</p>
+<p><strong>HTTPWebRequest</strong></p>
+<p>HTTPWebRequest is a low level API for web requests. Unlike WebClient, it allows to tinker some of the HTTP aspects like cookies and user agent.</p>
+<p>One major advantage of HTTPWebRequest is that it returns on another thread, which comes in handy for large web requests. It will not lock up the UI thread allowing the UI to remain responsive during the request. Since the response is returned on another thread the program should marshal the response back to the UI thread.</p>
+<p>HTTPWebRequest is created by the static method HTTPWebRequest.Create().</p>
+<div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:44188542-21e7-4afd-b302-aa723a034f74" class="wlWriterEditableSmartContent" style="margin: 0; display: inline; float: none; padding: 0;">
+<pre class="lang:default decode:true">WebRequest request = HttpWebRequest.Create(url);
+
+request.BeginGetResponse(new AsyncCallback(GetResponseConpleted), request);</pre>
+</div>
+<p>Call the EndGetResponse() to get the WebResponse, which will contain the stream to read the response.</p>
+<div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:4777839d-9524-4f91-9711-0ff4c38952f1" class="wlWriterEditableSmartContent" style="margin: 0; display: inline; float: none; padding: 0;">
+<pre class="lang:default decode:true">private void GetResponseConpleted(IAsyncResult result)
+{
+    WebRequest request = (WebRequest)result.AsyncState;
+
+    WebResponse response = request.EndGetResponse(result);
+
+    string data = "";
+
+    // Get the response stream from the response object
+    using (Stream stream = response.GetResponseStream())
+    {
+        StreamReader reader = new StreamReader(stream);
+
+        data = reader.ReadToEnd();
+    }
+
+}</pre>
+</div>
+<p><strong>WebClient</strong></p>
+<p>WebClient is a higher level abstraction of the web request. It wraps the HTTPWebRequest to provide a more easier API to make web requests.</p>
+<p>WebClient has a built in mechanism to report progress of the request in percentage. WebClient runs on the same thread, so programs don‚Äôt have to use the dispatcher to pass data back to the UI thread.</p>
+<p>However, since the WebClient runs on the UI thread, it can make the UI unresponsive if the program makes a long running web request.</p>
+<div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:1cfb46ad-720d-4e95-aa1e-928f8410de46" class="wlWriterEditableSmartContent" style="margin: 0; display: inline; float: none; padding: 0;">
+<pre class="lang:default decode:true crayon-selected">{
+    WebClient client = new WebClient();
+
+    // Supports reporting the progress of the request.
+    client.DownloadProgressChanged += (s, ev) =&gt; progressTextBlock.Text = ev.ProgressPercentage.ToString("p");
+
+    // Get the response. Runs on the same thread, so doea not require marshaling.
+    client.DownloadStringCompleted += (s, ev) =&gt; responseTextBlock.Text = ev.Result;
+
+    client.DownloadStringAsync(new Uri("http://webUrl"));
+}</pre>
+</div>
+<p>&nbsp;</p>
+<p>I think there is a place for using both the classes. Being aware of these differences helps to choose the best one for a given situation.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.zubinraj.com/blog/2012/04/25/wp7-webclient-and-httpwebrequest/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Source Code Highlighting in Windows Live Writer</title>
+		<link>http://www.zubinraj.com/blog/2012/04/24/source-code-highlighting-in-windows-live-writer/</link>
+		<comments>http://www.zubinraj.com/blog/2012/04/24/source-code-highlighting-in-windows-live-writer/#comments</comments>
+		<pubDate>Tue, 24 Apr 2012 09:57:46 +0000</pubDate>
+		<dc:creator>Zubin</dc:creator>
+				<category><![CDATA[Wordpress]]></category>
+		<category><![CDATA[Syntax Highlighting]]></category>
+		<category><![CDATA[Windows Live Writer]]></category>
+
+		<guid isPermaLink="false">https://zubinraj.wordpress.com/?p=983</guid>
+		<description><![CDATA[When I first started posting code to the site, it took me a while to format it correctly, until I realized there are many plugins available for automatically doing this. When I was using a self hosted WordPress site, I could install plugins or insert a custom css to format the code block like I [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>When I first started posting code to the site, it took me a while to format it correctly, until I realized there are many plugins available for automatically doing this. When I was using a self hosted WordPress site, I could install plugins or insert a custom css to format the code block like I want, but I soon found out that was not the case for WordPress.com sites as there is no control to install new plugins or change the CSS.</p>
+<p>However WordPress.com supports a short code for highlighting sourcecode.</p>
+<p>A quick search for Windows Live Writer plugins that support this short code turned up many. I tried a few of the code highlighters and finally settled on the one posted by Rich Hewlett called <a href="http://richhewlett.com/wlwsourcecodeplugin/" target="_blank">WLW Code Plugin</a>.</p>
+<p>A C# code would look like below:</p>
+<pre class="lang:default decode:true">public void OnPropertyChanged(string propertyName)
+{
+    if (this.PropertyChanged != null)
+    {
+        PropertyChangedEventArgs args = new PropertyChangedEventArgs(propertyName);
+        this.PropertyChanged(this, args);
+    }
+}</pre>
+<p><strong>UPDATE: I have now stopped using this plugin as I prefer the plugins that use the &#8216;&lt;pre&gt;&#8217; tag which is more standard and backward compatible.</strong></p>
+<p>&nbsp;</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.zubinraj.com/blog/2012/04/24/source-code-highlighting-in-windows-live-writer/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Windows Phone 7: Navigation</title>
+		<link>http://www.zubinraj.com/blog/2012/04/24/windows-phone-7-navigation/</link>
+		<comments>http://www.zubinraj.com/blog/2012/04/24/windows-phone-7-navigation/#comments</comments>
+		<pubDate>Tue, 24 Apr 2012 05:04:29 +0000</pubDate>
+		<dc:creator>Zubin</dc:creator>
+				<category><![CDATA[Mobile]]></category>
+		<category><![CDATA[Programming]]></category>
+		<category><![CDATA[.net]]></category>
+		<category><![CDATA[c#]]></category>
+		<category><![CDATA[navigation]]></category>
+		<category><![CDATA[wp7]]></category>
+
+		<guid isPermaLink="false">https://zubinraj.wordpress.com/?p=938</guid>
+		<description><![CDATA[Web developers will find themselves in familiar territory with the navigation in Windows Phone 7. NavigationService Class Navigate to another page: NavigationService.Navigate(new Uri("NewPage.xaml", UriKind.Relative)); Navigate to another page (with parameters): NavigationService.Navigate(new Uri("NewPage.xaml" + "?ID=" + "15", UriKind.Relative)); NavigationContext Class If a parameter was passed to the destination page using query string, NavigationContext class allows to [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>Web developers will find themselves in familiar territory with the navigation in Windows Phone 7.</p>
+<p><strong>NavigationService Class</strong></p>
+<p>Navigate to another page:</p>
+<pre class="lang:default decode:true">NavigationService.Navigate(new Uri("NewPage.xaml", UriKind.Relative));</pre>
+<p>Navigate to another page (with parameters):</p>
+<pre class="lang:default decode:true">NavigationService.Navigate(new Uri("NewPage.xaml" + "?ID=" + "15", UriKind.Relative));</pre>
+<p><strong>NavigationContext Class</strong></p>
+<p>If a parameter was passed to the destination page using query string, NavigationContext class allows to read the query string as follows</p>
+<pre class="lang:default decode:true">string ID;
+NavigationContext.QueryString.TryGetValue("ID", out ID);</pre>
+<p><strong>Navigation History</strong></p>
+<p>Navigation history is exposed as a read-only enumeration through the property called NavigationServices.BackStack,</p>
+<p>There are additional methods exposed for going back and forward one step at a time. It is a good practice to check for the CanGoBack and CanGoForward property before calling the navigation methods to make sure there is more in the history to go back or forward.</p>
+<pre class="lang:default decode:true crayon-selected">if (NavigationService.CanGoBack)
+{
+NavigationService.GoBack();
+}
+
+if (NavigationService.CanGoForward)
+{
+NavigationService.GoForward();
+}</pre>
+]]></content:encoded>
+			<wfw:commentRss>http://www.zubinraj.com/blog/2012/04/24/windows-phone-7-navigation/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>A Free and Effective Anti-Virus Software</title>
+		<link>http://www.zubinraj.com/blog/2011/05/30/a-free-and-effective-anti-virus-software/</link>
+		<comments>http://www.zubinraj.com/blog/2011/05/30/a-free-and-effective-anti-virus-software/#comments</comments>
+		<pubDate>Mon, 30 May 2011 15:28:53 +0000</pubDate>
+		<dc:creator>Zubin</dc:creator>
+				<category><![CDATA[Editorial]]></category>
+		<category><![CDATA[anti virus]]></category>
+		<category><![CDATA[microsoft security essentials]]></category>
+
+		<guid isPermaLink="false">http://mangachalil.dyndns.org/public/831/a-free-and-effective-anti-virus-software/</guid>
+		<description><![CDATA[‚ÄòMicrosoft Security Essentials‚Äô has been around for quite some time in different names (Microsoft Defender being its previous incarnation). Now it is available for free from the Microsoft site. Microsoft is not probably the best when it comes to protecting the computer from viruses, at least traditionally. Norton and McAfee dominates this space. When we [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>‚ÄòMicrosoft Security Essentials‚Äô has been around for quite some time in different names (Microsoft Defender being its previous incarnation). Now it is available for free from the Microsoft site.</p>
+<p>Microsoft is not probably the best when it comes to protecting the computer from viruses, at least traditionally. Norton and McAfee dominates this space.</p>
+<p>When we migrated our operating system to Windows 7 last year, I decided to give Microsoft Essentials a try for a few months.</p>
+<p>I downloaded it from <a href="http://www.microsoft.com/en-us/security_essentials/default.aspx" target="_blank">here</a> or click on the below image to go directly to the download page.</p>
+<p><a href="http://www.microsoft.com/en-us/security_essentials/default.aspx" target="_blank"><img style="background-image:none;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;margin-right:auto;padding-top:0;border:0;" title="security_essentials" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/04/security_essentials1.png" alt="security_essentials" width="244" height="101" border="0" /></a></p>
+<p>The installation is quite smooth. It is better not to have other anti-virus / anti-spyware programs active when you install this. If you have other anti-virus programs installed, disable it before you install this.</p>
+<p>I like its clean look. There are not too many options to mess around with, which makes it easy to use in my opinion. There really is nothing much to do from the user once it is installed.</p>
+<p><img style="background-image:none;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;margin-right:auto;padding-top:0;border-width:0;" title="security_essentials_main" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/04/security_essentials_main.jpg" alt="security_essentials_main" width="440" height="310" border="0" /></p>
+<p>&nbsp;</p>
+<p>The virus definitions are updated online automatically. The virus definitions appear to be updated very frequently, I see it getting updated every day or so, which I think makes it effective.</p>
+<p><img style="background-image:none;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;margin-right:auto;padding-top:0;border-width:0;" title="security_essentials_settings" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/04/security_essentials_settings.jpg" alt="security_essentials_settings" width="440" height="310" border="0" /></p>
+<p>&nbsp;</p>
+<p>See the settings page in the screenshot above. I like the fact that the CPU usage can be limited during a scheduled scan. This really helps when a scheduled scan is kicked off when you are in the midst of doing something else and the scan eats up most of the CPU-cycles which in-turn slows you down. By limiting the CPU usage to 50% or even less, your activities on the computer will not be hindered when a scheduled scan kicks off.</p>
+<p>I have used it for more than an year now and am very satisfied with it. Again, you really cannot rate an anti-virus unless it gets hit by a virus and see how effectively it handles that virus. But the fact that I have not been hit by a virus so far makes this anti-virus effective for me at least until now.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.zubinraj.com/blog/2011/05/30/a-free-and-effective-anti-virus-software/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Internet Explorer 9: A better browser than earlier</title>
+		<link>http://www.zubinraj.com/blog/2011/03/26/internet-explorer-9-a-better-browser-than-earlier/</link>
+		<comments>http://www.zubinraj.com/blog/2011/03/26/internet-explorer-9-a-better-browser-than-earlier/#comments</comments>
+		<pubDate>Sat, 26 Mar 2011 21:53:00 +0000</pubDate>
+		<dc:creator>Zubin</dc:creator>
+				<category><![CDATA[Editorial]]></category>
+		<category><![CDATA[browser]]></category>
+		<category><![CDATA[ie9]]></category>
+		<category><![CDATA[internet explorer]]></category>
+
+		<guid isPermaLink="false">http://mangachalil.dyndns.org/public/709/internet-explorer-9-a-better-browser-than-earlier/</guid>
+		<description><![CDATA[It was not long before IE6 ruled the landscape and had complete market domination. IE6 did not follow the web standards and developers were having a difficult time developing web applications that work seamlessly on IE6 and Firefox. But then came along Chrome, which tilted the balance towards web browsers that followed the web standards [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p><img style="background-image:none;padding-left:0;padding-right:0;display:inline;float:left;padding-top:0;border-width:0;" title="ie9" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/04/ie9.png" alt="ie9" width="244" height="184" align="left" border="0" />It was not long before IE6 ruled the landscape and had complete market domination. IE6 did not follow the web standards and developers were having a difficult time developing web applications that work seamlessly on IE6 and Firefox. But then came along Chrome, which tilted the balance towards web browsers that followed the web standards like Firefox.</p>
+<p>Microsoft quickly went to damage control mode and released IE7 where they fixed some bugs. IE8 was released by Microsoft in quick succession which fixed more compliance violations, but not all. Then came IE9 where they follow most of the standards and added support for newer standards like <a href="http://www.w3.org/TR/html5-diff/" target="_blank">HTML 5.0 specification</a>.</p>
+<p><img style="background-image:none;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;margin-right:auto;padding-top:0;border-width:0;" title="ie9_features" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/04/ie9_features2.png" alt="ie9_features" width="470" height="326" border="0" /></p>
+<p>Even though I use Firefox exclusively, I recently installed IE9 on my Windows 7.0 computer to see how it fared.</p>
+<p>The installation was very easy. It was a one click install.</p>
+<p><img style="background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;" title="ie9_installing" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/04/ie9_installing.jpg" alt="ie9_installing" width="298" height="129" border="0" /></p>
+<p>As with most Microsoft installations it required a restart at the end.</p>
+<p><img style="background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;" title="ie9_restart" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/04/ie9_restart2.jpg" alt="ie9_restart" width="300" height="108" border="0" /></p>
+<p>Being a web developer myself, I have to deal with different web browsers and different versions all the time. IE9 amazed me, it fared almost on par with Firefox on user experience, if not a tad better.</p>
+<p>The user interface is very minimalistic like Chrome and now Firefox 4.0. See a screenshot below. It is much easier to use than any of its predecessors. A good job done by Microsoft.<strong></strong></p>
+<p><strong>Browser Wars</strong></p>
+<p>All the 3 major browsers, IE9, Firefox 4 and Chrome are has done very good and is improving with every version (I left out Safari explicitly, as I have never used it on a Windows machine.).</p>
+<p>Here&#8217;s a benchmark study conducted by CNET recently with these 3 browsers:</p>
+<table style="border:solid 1px;">
+<tbody>
+<tr>
+<th></th>
+<th>Chrome 10</th>
+<th>IE9</th>
+<th>Firefox 4</th>
+</tr>
+<tr>
+<td>SunSpider 0.9.1 (ms)</td>
+<td>336.20</td>
+<td>250.60</td>
+<td>292.37</td>
+</tr>
+<tr>
+<td>Kraken (ms)</td>
+<td>8,806.30</td>
+<td>15,606.77</td>
+<td>7265.13</td>
+</tr>
+<tr>
+<td>V8 v6 (higher is better)</td>
+<td>5,173.67</td>
+<td>2,235.33</td>
+<td>3540.33</td>
+</tr>
+<tr>
+<td>JSGamebench 0.3* (higher is better)</td>
+<td>322.00</td>
+<td>1,156.00</td>
+<td>1,482.00</td>
+</tr>
+<tr>
+<td>Boot time (s)</td>
+<td>26.22</td>
+<td>21.86</td>
+<td>17.80</td>
+</tr>
+<tr>
+<td>Memory (kb)</td>
+<td>390,532</td>
+<td>205,616</td>
+<td>148,020</td>
+</tr>
+</tbody>
+</table>
+<p>Credit: Chart by Seth Rosenblatt/CNET</p>
+<p><a href="http://download.cnet.com/8301-2007_4-20047314-12.html" target="_blank">See the full report here.</a></p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.zubinraj.com/blog/2011/03/26/internet-explorer-9-a-better-browser-than-earlier/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>The Social Networking Bubble</title>
+		<link>http://www.zubinraj.com/blog/2011/03/25/the-social-networking-bubble/</link>
+		<comments>http://www.zubinraj.com/blog/2011/03/25/the-social-networking-bubble/#comments</comments>
+		<pubDate>Sat, 26 Mar 2011 02:48:03 +0000</pubDate>
+		<dc:creator>Zubin</dc:creator>
+				<category><![CDATA[Editorial]]></category>
+		<category><![CDATA[bubble]]></category>
+		<category><![CDATA[facebook]]></category>
+		<category><![CDATA[social networking]]></category>
+		<category><![CDATA[twitter]]></category>
+
+		<guid isPermaLink="false">http://mangachalil.dyndns.org/public/697/the-social-networking-bubble/</guid>
+		<description><![CDATA[If you are in the habit of reading the technology page of your newspaper (aka. online newspapers), you might have noticed the bulge in reporting of new online services or sites, especially that relates with social networking. There is also a growing number of these companies trying to cash in by going public through the [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p><img style="background-image:none;margin:2px 0 5px 20px;padding-left:0;padding-right:0;display:inline;float:right;padding-top:0;border-width:0;" title="facebook_zuckerberg" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/04/facebook_zuckerberg.jpg" alt="facebook_zuckerberg" width="244" height="184" align="right" border="0" />If you are in the habit of reading the technology page of your newspaper (aka. online newspapers), you might have noticed the bulge in reporting of new online services or sites, especially that relates with social networking. There is also a growing number of these companies trying to cash in by going public through the IPO (Initial Public Offering) route.</p>
+<p>It appears as though a repeat of 1999, when every startup was an e-commerce company trying to sell ‚Äòsomething‚Äô on the internet. The only difference now is that every startup is a social networking company trying to collect personal data from the users.</p>
+<p><img style="background-image:none;margin:2px 0 5px 10px;padding-left:0;padding-right:0;display:inline;float:right;padding-top:0;border-width:0;" title="twitter" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/04/twitter1.jpg" alt="twitter" width="173" height="169" align="right" border="0" />I do not disagree with the fact that the social networking space holds enormous potential. If you look at how much of an individual‚Äôs personal data is held by companies like Facebook and Google, it is quite staggering.</p>
+<p>However, I do think that the stock price valuations that they get is way disproportionate to how much money they can make in the future with these data. To me it feels like an exact repeat of 1999, but instead of e-commerce space, it is the social networking space that is heating up this time.</p>
+<p>See the current valuations of some social networking sites:<img style="background-image:none;margin:2px 0 5px 10px;padding-left:0;padding-right:0;display:inline;float:right;padding-top:0;border-width:0;" title="Picture courtesy of Color.com" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/04/color_app_iphone.png" alt="color_app_iphone" width="197" height="389" align="right" border="0" /></p>
+<p><a href="http://kara.allthingsd.com/20110210/exclusive-facebook-exploring-tender-offer-for-1-billion-of-employee-shares-at-60-billion-valuation/?mod=ATD_search" target="_blank">Facebook &#8211; $60 Billion</a></p>
+<p><a href="http://kara.allthingsd.com/20101215/exclusive-twitter-raises-200-million-at-3-7-billion-valuation-adds-mccue-and-rosenblatt-to-board/?mod=ATD_search" target="_blank">Twitter &#8211; $4 Billion</a></p>
+<p><a href="http://gigaom.com/2011/01/28/so-how-much-is-quora-worth/" target="_blank">Quora &#8211; $86 Million</a> (a question and answer company)</p>
+<p><a href="http://color.com/" target="_blank">Color.com ‚Äì $41 Million</a></p>
+<p><a href="http://www.groupon.com/" target="_blank">Groupon (online coupon company)</a></p>
+<p><a href="http://www.zynga.com/" target="_blank">Zynga</a> (Creates games like Farmville and Cityville for Facebook, who are valued more than Electronics Arts, who used to be the leading game developers for the PC.)</p>
+<p>There are many more in this list which does not warrant the high stock price valuation that they are currently enjoying. However, only time will tell which companies will survive a social networking bust.</p>
+<p><strong>Update (28-Mar-2011):</strong><br />
+Here&#8217;s another story that came out yesterday in NY Times. <a href="http://dealbook.nytimes.com/2011/03/27/is-it-a-new-tech-bubble-lets-see-if-it-pops/?partner=rss&amp;emc=rss" target="_blank">Investing Like It‚Äôs 1999. </a></p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.zubinraj.com/blog/2011/03/25/the-social-networking-bubble/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>AT&amp;T, AT&amp;T, what have you done?</title>
+		<link>http://www.zubinraj.com/blog/2011/03/21/att-att-what-have-you-done/</link>
+		<comments>http://www.zubinraj.com/blog/2011/03/21/att-att-what-have-you-done/#comments</comments>
+		<pubDate>Tue, 22 Mar 2011 03:39:14 +0000</pubDate>
+		<dc:creator>Zubin</dc:creator>
+				<category><![CDATA[Editorial]]></category>
+		<category><![CDATA[att]]></category>
+		<category><![CDATA[deals]]></category>
+		<category><![CDATA[gsm]]></category>
+		<category><![CDATA[t-mobile]]></category>
+
+		<guid isPermaLink="false">http://mangachalil.dyndns.org/public/669/att-att-what-have-you-done/</guid>
+		<description><![CDATA[T-Mobile cannot be classified as one of the best cellular providers in US, nor it had the best coverage in the country. However, it was one of the only 2 service providers which offered GSM mobile services, the other 3 major providers being CDMA players. AT&#38;T has struck a deal with T-Mobile to buy them [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>T-Mobile cannot be classified as one of the best cellular providers in US, nor it had the best coverage in the country. However, it was one of the only 2 service providers which offered <a href="http://en.wikipedia.org/wiki/GSM" target="_blank">GSM</a> mobile services, the other 3 major providers being <a href="http://en.wikipedia.org/wiki/CDMA" target="_blank">CDMA</a> players.</p>
+<p><a href="http://www.nytimes.com/2011/03/22/technology/22phone.html?_r=1&amp;hp" target="_blank">AT&amp;T has struck a deal with T-Mobile to buy them for $39 Billion</a>. By agreeing to buy T-Mobile, who is currently an innovative, low cost carrier, AT&amp;T will be eliminating their only competitor running on a network with the same technology as theirs. With all the providers moving to the 4G network, how much of this will have a positive impact on AT&amp;T remains to be seen.</p>
+<p>T-Mobile had very aggressive pricing, which AT&amp;T was forced to match all this while. With this deal, AT&amp;T will have a monopoly in the GSM arena. It will be the consumers who will be paying the price if this deal goes through.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.zubinraj.com/blog/2011/03/21/att-att-what-have-you-done/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Setting up a RAID 1 NAS For Your Home</title>
+		<link>http://www.zubinraj.com/blog/2011/01/23/setting-up-a-raid-1-nas/</link>
+		<comments>http://www.zubinraj.com/blog/2011/01/23/setting-up-a-raid-1-nas/#comments</comments>
+		<pubDate>Sun, 23 Jan 2011 14:31:29 +0000</pubDate>
+		<dc:creator>Zubin</dc:creator>
+				<category><![CDATA[Linux]]></category>
+		<category><![CDATA[NAS]]></category>
+		<category><![CDATA[raid]]></category>
+		<category><![CDATA[storage]]></category>
+		<category><![CDATA[synology]]></category>
+
+		<guid isPermaLink="false">http://mangachalil.dyndns.org/public/?p=100</guid>
+		<description><![CDATA[There are different levels of RAID, like RAID 0 through 5. "RAID 1" is a setting where there are 2 hard disks in the RAID array. Data on one hard disk is replicated exactly on the other one.]]></description>
+				<content:encoded><![CDATA[<h5><strong>What is RAID?</strong></h5>
+<p>RAID is a &#8220;Redundant Array of Independent Disks&#8221; and as its name suggests, it is an array of hard disks connected together so that data can be replicated automatically without the user having to do it manually.</p>
+<h5><strong>Why redundancy?</strong></h5>
+<p>Storage devices are not always very reliable. Hard disk failure is still one of the common causes of data loss. Redundancy increases reliability by replicating the data across multiple disks.</p>
+<h5>There are two types of reliability</h5>
+<ul>
+<li>Reliability of the data being safe.</li>
+<li>Reliability of data being available when you need it. The availability of data is the amount of time when the data is &#8220;online&#8221;.</li>
+</ul>
+<p>Data backed up on a DVD or an external hard disk satisfies the first type of reliability, that it is being kept safe, but not the second one as it is not &#8220;online&#8221;.</p>
+<p>This is where RAID comes into picture. RAID being a redundant array of disks, data will always be stored on more than one disk (except for RAID 0).</p>
+<p>If one disk fails, the RAID controller will automatically start pulling data from the other disk. So that means, even if one disk fails, the data is still &#8220;online&#8221;. When the faulty disk is replaced with the new one, the RAID controller will automatically start replicating the data to the new disk.</p>
+<h5><strong>Did you say RAID 1?</strong></h5>
+<p>There are different levels of RAID, like RAID 0 through 5. &#8220;RAID 1&#8243; is a setting where there are 2 hard disks in the RAID array. Data on one hard disk is replicated exactly on the other one. This is probably not the best of the RAID arrays, however, for a home setting I think this would more than suffice.</p>
+<h5><strong>Do we need a RAID server in a home setting?</strong></h5>
+<p>The quick answer would be no. But if you are like me who has a ton of photos accumulated over the past many years and plenty of home videos of family, friends and kids and really care about all those data not getting lost, a RAID will give that additional layer of protection to your data.</p>
+<h5><strong>Can RAIDs fail too?</strong></h5>
+<p>Of course it can! If you have a 2 disk RAID array and if both the disks goes bad (like a power surge), or if there is a hardware failure on your RAID controller, then all the data will be gone. Even if you have a RAID, you will still need a good backup strategy. A RAID cannot replace a good backup strategy, but can only complement it.</p>
+<h5><strong>What is NAS?</strong></h5>
+<p>NAS or a Network Attached Storage is a device that can connect to your network, in this case your home network. Multiple computers and devices in your home can access all the files stored in the NAS.</p>
+<h5><strong>Can&#8217;t you connect your storage device directly to your computer?</strong></h5>
+<p>Well, yes. However, it will be limited to just one computer. I wanted a solution where all the computers at home can access all the files on the storage device. Network Attached Storage is what makes this possible. Your storage device is directly connected to your home network through the router. All your computers are also connected to the home network through the router, which in turn can connect to the storage device.</p>
+<h5><strong>Hardware Setup</strong></h5>
+<p>After evaluating a lot of RAID systems, I finally decided on a <a href="http://www.synology.com/enu/products/DS210j/index.php" target="_blank">Synology DS210j</a>. This has 2 drive bays in it and allows wither RAID 0 or a RAID 1 setup.</p>
+<p>It turned out that setting this up was the easiest part. The model that I bought¬†does not come bundled with hard disks. So I bought 2 x 1TB hard disks separately and installed it. It supports a maximum of 4TB. The installation of the hard disks was a breeze. Remove couple of screws, slide the hard disks in the slot one at a time and then put the screws back on.</p>
+<p>Then I connected this to my router through an ethernet cable, connected the power supply and switched it on.</p>
+<p>In a RAID 1 setting, 2TB of storage space would give me effective storage of 1TB, as the rest will be used for redundancy.</p>
+<h5><strong>Software Setup</strong></h5>
+<p>Synology&#8217;s management user interface¬†is just incredible. It is web based,¬†very user friendly and ajax supported. Multi-tasking is also supported in the management web page.</p>
+<p>See the¬†control panel, shown in Figure A, to get a glimpse of what features are being supported on this device. It has its own embedded Web Server running on php and a MySql database. It also supports dynamic DNS notifications. It has a lot of other nicer features like a Media Server, iTunes Server, Audio Station, Photo Station, Download Station and a Surveillance Station.</p>
+<p style="text-align:center;"><img class="aligncenter" title="synology_control_panel_1" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/04/synology_control_panel_1.jpg" alt="" width="815" height="489" /></p>
+<p style="text-align:center;">Figure A</p>
+<p>I connected to the Synolgy&#8217;s managemet software, which I installed on my computer. It allows me to manage the device including the hard disks, the RAID configuration and other network settings.</p>
+<p>To start with, I formatted both the hard disks on RAID1 configuration. Configured the network to use DHCP. Created users and groups and assigned permissions to each of them.</p>
+<p>Then I moved all the data from my computer / external hard drives / CDs / DVDs¬† etc. The copying out is not all that fast as I&#8217;m connecting to this device from my computer over a wireless connection. However, when I connected my computer over ethernet, the file transfer was reasonably fast.</p>
+<p>Please see a sample screenshot of the management user interface below in Figure B.</p>
+<p style="text-align:center;"><img class="aligncenter size-full wp-image-163" title="synology_control_panel" src="http://www.zubinraj.com/blog/wp-content/uploads/2012/04/synology_control_panel.jpg" alt="" width="465" height="279" /><br />
+Figure B</p>
+<p>I&#8217;m very glad that all my scattered data is now stored in a central location. All my computers including our xbox media center can access all the photos, videos and other data anytime and anywhere in the house.</p>
+<p>I love it!</p>
+<h5><strong>Footnotes:</strong></h5>
+<p>You can find out more about RAID in this wiki:</p>
+<p>http://en.wikipedia.org/wiki/RAID</p>
+<p>You can find more about NAS in this wiki:</p>
+<p>http://en.wikipedia.org/wiki/Network-attached_storage</p>
+<p>Synology link:</p>
+<p>http://www.synology.com/enu/products/DS210j/index.php</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.zubinraj.com/blog/2011/01/23/setting-up-a-raid-1-nas/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Welcome!</title>
+		<link>http://www.zubinraj.com/blog/2011/01/20/new-website-launched/</link>
+		<comments>http://www.zubinraj.com/blog/2011/01/20/new-website-launched/#comments</comments>
+		<pubDate>Thu, 20 Jan 2011 16:00:59 +0000</pubDate>
+		<dc:creator>Zubin</dc:creator>
+				<category><![CDATA[Editorial]]></category>
+		<category><![CDATA[new website]]></category>
+		<category><![CDATA[welcome]]></category>
+
+		<guid isPermaLink="false">http://mangachalil.dyndns.org/public/?p=13</guid>
+		<description><![CDATA[Welcome to Zubin&#8217;s Web Logs. I hope you enjoy reading through it and thanks for visiting!]]></description>
+				<content:encoded><![CDATA[<p>Welcome to Zubin&#8217;s Web Logs.</p>
+<p>I hope you enjoy reading through it and thanks for visiting!</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.zubinraj.com/blog/2011/01/20/new-website-launched/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
 		</item>
 	</channel>

@@ -9,11 +9,13 @@
             <li><a href="javascript: void(0);" data-filter=".portfolio">Portfolio</a></li>
         </ul>
     </div>
-    <!--<div id="spinner"><i class="icon-spinner icon-2x icon-spin"></i></div>-->
+
+    <div class="loading"></div>
+
     <div id="gallery-container"  class="list-inline" data-bind="foreach: images, isotope: { itemSelector: '.gallery-item' }">
         <div class="gallery-item" data-bind="css: categories, style: { height: thumbHeight, width: thumbWidth }">
             <a class="fancybox-thumb" rel="gallery" data-bind="attr: { href: originalUrl }">
-                <img class="lazy" src="./Content/images/grey.gif" data-bind="attr: { 'data-original': thumbUrl, title: title, alt: title, height: thumbHeight, width: thumbWidth }"/>
+                <img class="lazy" src="/Content/images/grey.gif" data-bind="attr: { 'data-original': thumbUrl, title: title, alt: title, height: thumbHeight, width: thumbWidth }"/>
                 <!--<span data-bind="text: title"></span>-->
             </a>
         </div>

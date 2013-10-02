@@ -143,11 +143,11 @@
     <Content Include="App\main-built.js" />
     <Content Include="App\main.js" />
     <Content Include="App\services\blogstream.js" />
+    <Content Include="App\services\common.js" />
     <Content Include="App\services\logger.js" />
     <Content Include="App\services\photostream.js" />
     <Content Include="App\viewmodels\blog.js" />
     <Content Include="App\viewmodels\error.js" />
-    <Content Include="App\viewmodels\flickr.js" />
     <Content Include="App\viewmodels\license.js" />
     <Content Include="App\viewmodels\photos.js" />
     <Content Include="App\viewmodels\shell.js" />
@@ -187,6 +187,7 @@
     <Content Include="Content\images\icon.png" />
     <Content Include="Content\images\ios-startup-image-landscape.png" />
     <Content Include="Content\images\ios-startup-image-portrait.png" />
+    <Content Include="Content\images\loading_5-1.gif" />
     <Content Include="Content\isotope.css" />
     <Content Include="Content\jquery.fancybox-buttons.css" />
     <Content Include="Content\jquery.fancybox-thumbs.css" />
@@ -251,9 +252,7 @@
     <Content Include="weyland-config.js" />
     <Content Include="Scripts\jquery-2.0.3.min.map" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
@@ -262,9 +261,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Durandal\_splash.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="readme.md" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\font\fontawesome-webfont.woff" />

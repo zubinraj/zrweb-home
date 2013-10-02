@@ -1,13 +1,13 @@
-﻿define(['plugins/http', 'knockout', 'services/logger', 'services/blogstream'], function (http, ko, logger, blogstream) {
+﻿define(['plugins/http', 'knockout', 'services/logger', 'services/blogstream', 'services/common'], function (http, ko, logger, blogstream, common) {
 
-    var ctor = {
+    var blog = {
         title: 'Zubin\'s Web Log',
         items: blogstream.stream(),  //ko.observableArray([]),
         activate: activate,
         compositionComplete: compositionComplete
     }
 
-    return ctor;
+    return blog;
 
     function compositionComplete() {
         var $blogContainer = $("#blog-container");
@@ -31,19 +31,17 @@
             return false;
         });
 
+        // hide the loader, when the rendering is complete
+        common.hideLoader();
 
     }
 
     function activate () {
-        //the router's activator calls this function and waits for it to complete before proceding
-        //if (this.items().length > 0) {   
-        //    return;
-        //}
-
         // add custom bindings to handle isotope
         addCustomBindings();
 
-        blogstream.load('rss_b.xml');
+        // load the blog
+        blogstream.load(common.blogUrl, '#loader');
     }
 
     function addCustomBindings() {

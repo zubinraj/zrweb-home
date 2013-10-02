@@ -33,9 +33,9 @@ namespace ZRHome {
             // This is included in index.cshtml
             //.Include("~/Content/bootstrap/bootstrap.css")       
             //.Include("~/Content/bootstrap/bootstrap-theme.css")
-          .Include("~/Content/font-awesome.css")
+            //.Include("~/Content/font-awesome.css")
 		  .Include("~/Content/durandal.css")
-          .Include("~/Content/starterkit.css")
+          //.Include("~/Content/starterkit.css")
           .Include("~/Content/site.css")
           .Include("~/Content/isotope.css")
           .Include("~/Content/toastr.css")

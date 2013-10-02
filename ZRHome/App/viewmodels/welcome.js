@@ -1,7 +1,7 @@
-﻿define(['plugins/http', 'durandal/app', 'knockout', 'services/logger', 'services/photostream', 'services/blogstream'],
-    function (http, app, ko, logger, photostream, blogstream) {
+﻿define(['plugins/http', 'durandal/app', 'knockout', 'services/logger', 'services/photostream', 'services/blogstream', 'services/common'],
+    function (http, app, ko, logger, photostream, blogstream, common) {
 
-    var ctor = {
+    var welcome = {
         title: 'Welcome!',
         developerWidget: {
             title: 'Web Developer',
@@ -30,19 +30,31 @@
             items: blogstream.partialStream(),
             footer: '<a href="#blog">more</a>..'
         },
+        profileWidget: {
+            title: 'Profile',
+            items: [
+                { item: 'Solution Architect at <a href="http://www.wipro.com">Wipro</a>' },
+                { item: 'Passionate about computer programming' },
+                { item: 'Love reading books' },
+                { item: 'Enjoy outdoor activites' },
+                { item: 'Bird photography enthusiast' }
+
+        ]
+        },
         activate: activate,
         compositionComplete: compositionComplete
     }
 
-    return ctor;
+    return welcome;
 
     function activate () {
         //the router's activator calls this function and waits for it to complete before proceding
 
-        // load photostream to show thumbnails
-        photostream.load('rss.xml');
+        // load blogstream to show blog posts
+        blogstream.load(common.blogUrl);
 
-        blogstream.load('rss_b.xml');
+        // load photostream to show thumbnails
+        photostream.load(common.photoUrl);
 
         return;
 
@@ -50,44 +62,9 @@
 
     function compositionComplete() {
 
-        // initialize lazy load
-        $("img.lazy").lazyload({
-            effect: "fadeIn"
-        });
+        // initialize lazy load library
+        common.initializeLazyLoad();
 
-    }
-
-    function initializeCarousal() {
-
-        // Set the data for the carousal
-        //var item = {
-        //    isactive: 1,
-        //    imagesrc: "http://placehold.it/1200x400",
-        //    caption: "caption 1"
-        //}
-
-        //this.items.push(item);
-
-        //var item = {
-        //    isactive: 0,
-        //    imagesrc: "http://placehold.it/1200x400",
-        //    caption: "caption 2"
-        //}
-
-        //this.items.push(item);
-
-        //var item = {
-        //    isactive: 0,
-        //    imagesrc: "http://placehold.it/1200x400",
-        //    caption: "caption 3"
-        //}
-
-        //this.items.push(item);
-
-        //// activate carousal    
-        //$('.carousel').carousel({
-        //    interval: 2000
-        //});
     }
 
 });

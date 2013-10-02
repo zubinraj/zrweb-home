@@ -1,5 +1,5 @@
 ﻿define(['services/logger'], function (logger) {
-    var ctor = {
+    var contact = {
         title: 'Contact',
         channels: [
             { channel: 'email', text: 'support @ zubinraj dot com', url: '' },
@@ -17,7 +17,7 @@
         activate: activate
     }
 
-    return ctor;
+    return contact;
 
     function activate() {
 
