@@ -5,13 +5,13 @@
 
         var _partialStream = ko.observableArray([]);
 
-        var blogstream = {
+        return {
             stream: _stream,
             partialStream: _partialStream,
             load: _load
         };
 
-        return blogstream;
+        //return blogstream;
 
         function _load(url, loader) {
 
@@ -20,53 +20,51 @@
                 return;
             }
 
-            //console.log('Loading Items');
+            // clear
+            _stream.removeAll();
+            _partialStream.removeAll();
 
-            $.ajax({
-                url: url,
-                dataType: 'xml',
-                success: function (data) {
+            // load
+            return $.ajax(url)
+            .done(_success)
+            .fail();
 
-                    var $xml = $(data);
+        }
+            
+        function _success(data) {
+            var $xml = $(data);
 
+            $xml.find("item").each(function () {
 
-                    $xml.find("item").each(function () {
-
-                        var _categories = '';
-                        var $cat = $(this),
-                            _cat = {
-                                cat: $cat.find("category").each(function () { _categories += " " + $(this).text().toLowerCase(); })
-                            }
-
-                        var $this = $(this),
-                            item = {
-                                title: $this.find("title").text(),
-                                link: $this.find("link").text(),
-                                description: $this.find("description").text(),
-                                pubDate: $this.find("pubDate").text(),
-                                author: $this.find("author").text(),
-                                categories: _categories
-                            }
-
-                        _stream().push(item);
-
-                    });
-
-                    // copy few elements to partial stream
-                    for (var i = 0; (i < 10) && (i < _stream().length) ; i++) {
-                        _partialStream().push(_stream()[i]);
+                var _categories = '';
+                var $cat = $(this),
+                    _cat = {
+                        cat: $cat.find("category").each(function () { _categories += " " + $(this).text().toLowerCase(); })
                     }
 
-                    return;
+                var $this = $(this),
+                    item = {
+                        title: $this.find("title").text(),
+                        link: $this.find("link").text(),
+                        description: $this.find("description").text(),
+                        pubDate: $this.find("pubDate").text(),
+                        author: $this.find("author").text(),
+                        categories: _categories
+                    }
 
-                },
-                error: function () {
-                    logger.logError('Data didn\'t load as expected. Please try again.', null, null, true);
-
-                    return;
-                }
+                _stream().push(item);
 
             });
+
+            console.log('Blog: Stream count: ' + _stream().length);
+
+            // copy few elements to partial stream
+            for (var i = 0; (i < 10) && (i < _stream().length) ; i++) {
+                _partialStream().push(_stream()[i]);
+            }
+            console.log('Blog: Partial stream count: ' + _partialStream().length);
+
+            //return true;
 
         }
 

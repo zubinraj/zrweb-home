@@ -2,9 +2,13 @@
     function (system, app, ko, logger) {
 
         return {
-            blogUrl: 'rss_b.xml',
-            photoUrl: 'rss.xml',
-            initializeLazyLoad:  function () {
+            //blogUrl: '/blog/feed/', 
+            //photoUrl: '/photos/feed/',
+            blogUrl: '/rss_b.xml',
+            photoUrl: '/rss.xml',
+            blogPartialStreamCount: 10,
+            photosPartialStreamCount: 3,
+            initializeLazyLoad: function () {
                 // initialize lazy load
                 $("img.lazy").lazyload({
                     effect: "fadeIn"

@@ -100,8 +100,15 @@
     padding-bottom: 10px;
 }
 
-section {
-    margin-top: 20px;
+@media (max-width: 991px) { /*991 is as per bootstrap media definition*/
+                            /* to adjust for the fixed nav on top */
+    .page-host {
+        top: 20px;
+    }
+
+    .navbar-fixed-top {
+        margin-bottom: 0;
+    }
 }
 
 .loading {

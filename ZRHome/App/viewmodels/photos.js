@@ -1,11 +1,13 @@
 ﻿define(['plugins/http', 'knockout', 'services/logger', 'services/photostream', 'services/common'], function (http, ko, logger, photostream, common) {
     
+    var _images = ko.observableArray([]);
+
     var photos = {
         title: 'Ann & Zubin Photography',
-        images: photostream.stream(),  //ko.observableArray([]),
+        images: _images,  //ko.observableArray([]),
         activate: activate,
         compositionComplete: compositionComplete
-    }
+    };
 
     return photos;
 
@@ -46,10 +48,15 @@
         // add custom bindings to handle isotope
         addCustomBindings();
 
-        // load the photos async
-        photostream.load(common.photoUrl);
+        return $.when (
+            // load the photos async
+            photostream.load(common.photoUrl)
+        )
+        .done (function() { 
+            console.log('Data loaded successfully');
 
-        return;
+            _images(photostream.stream());
+        });
     }
 
     function addCustomBindings() {

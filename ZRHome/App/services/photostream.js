@@ -5,13 +5,13 @@
 
         var _partialStream = ko.observableArray([]);
 
-        var photostream = {
+        return {
             stream: _stream,
             partialStream: _partialStream,
             load: _load
         };
 
-        return photostream;
+        //return photostream;
 
 
 
@@ -22,60 +22,62 @@
                 return;
             }
 
-            //console.log('Loading Photos');
+            // clear
+            _stream.removeAll();
+            _partialStream.removeAll();
 
-            $.ajax({
-                url: url,
-                dataType: 'xml',
-                success: function (data) {
+            // load
+            $.ajax(url)
+            .done(_success)
+            .fail();
 
-                    var $xml = $(data);
+            function _success (data) {
 
-                    $xml.find("item").each(function () {
+                var $xml = $(data);
 
-                        var _categories = '';
-                        var $cat = $(this),
-                            _cat = {
-                                cat: $cat.find("category").each(function () { _categories += " " + $(this).text().toLowerCase(); })
-                            }
+                $xml.find("item").each(function () {
 
-                        var $thumb = $(this).find("thumb");
-                        var $original = $(this).find("original");
+                    var _categories = '';
+                    var $cat = $(this),
+                        _cat = {
+                            cat: $cat.find("category").each(function () { _categories += " " + $(this).text().toLowerCase(); })
+                        }
 
-                        var $this = $(this),
-                            item = {
-                                title: $this.find("title").text(),
-                                link: $this.find("link").text(),
-                                description: $this.find("description").text(),
-                                categories: _categories,
-                                pubDate: $this.find("pubDate").text(),
-                                author: $this.find("author").text(),
-                                thumbUrl: $thumb.text(),
-                                thumbHeight: $thumb.attr("height"),
-                                thumbWidth: $thumb.attr("width"),
-                                originalUrl: $original.text(),
-                                originalHeight: $original.attr("height"),
-                                originalWidth: $original.attr("width")
-                            }
+                    var $thumb = $(this).find("thumb");
+                    var $original = $(this).find("original");
 
-                        _stream().push(item);
+                    var $this = $(this),
+                        item = {
+                            title: $this.find("title").text(),
+                            link: $this.find("link").text(),
+                            description: $this.find("description").text(),
+                            categories: _categories,
+                            pubDate: $this.find("pubDate").text(),
+                            author: $this.find("author").text(),
+                            thumbUrl: $thumb.text(),
+                            thumbHeight: $thumb.attr("height"),
+                            thumbWidth: $thumb.attr("width"),
+                            originalUrl: $original.text(),
+                            originalHeight: $original.attr("height"),
+                            originalWidth: $original.attr("width")
+                        }
 
-                    });
+                    _stream().push(item);
 
-                    // copy few elements to partial stream
-                    for (var i = 0; (i < 3) && (i < _stream().length); i++) {
-                        _partialStream().push(_stream()[i]);
-                    }
+                });
 
-                    return;
+                console.log('Photos: Stream count: ' + _stream().length);
 
-                },
-                error: function () {
-                    logger.logError('Data didn\'t load as expected. Please try again.', null, null, true);
-
-                    return;
+                // copy few elements to partial stream
+                for (var i = 0; (i < 3) && (i < _stream().length); i++) {
+                    _partialStream().push(_stream()[i]);
                 }
-            });
+                console.log('Photos: Partial stream count: ' + _partialStream().length);
+
+                return true;
+
+            }
+            
         }
 
     });

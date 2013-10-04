@@ -1,4 +1,5 @@
 ﻿define(['services/logger'], function (logger) {
+
     var license = {
         title: 'License',
         description: 'Photos, source code and articles published on this website, that are not explicitly mentioned otherwise, are licensed under <a target="_blank" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative Commons Attribution-NonCommercial 3.0 Unported</a> license.',
@@ -28,7 +29,7 @@
             ],
         },
         activate: activate
-    }
+    };
 
     return license;
 

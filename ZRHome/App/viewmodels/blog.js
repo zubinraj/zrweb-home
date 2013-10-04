@@ -1,11 +1,13 @@
 ﻿define(['plugins/http', 'knockout', 'services/logger', 'services/blogstream', 'services/common'], function (http, ko, logger, blogstream, common) {
 
+    var _items = ko.observableArray([]);
+
     var blog = {
         title: 'Zubin\'s Web Log',
-        items: blogstream.stream(),  //ko.observableArray([]),
+        items: _items,  
         activate: activate,
         compositionComplete: compositionComplete
-    }
+    };
 
     return blog;
 
@@ -40,8 +42,26 @@
         // add custom bindings to handle isotope
         addCustomBindings();
 
-        // load the blog
-        blogstream.load(common.blogUrl, '#loader');
+        return $.when(
+            // load the blog
+            blogstream.load(common.blogUrl, '#loader')
+        )
+        .then (function() {
+            console.log('Data loaded successfully');
+
+            _items(blogstream.stream());
+
+        });
+
+    }
+
+    function dataLoadSuccess() {
+        console.log('success');
+        console.log(blogstream.stream().length);
+    }
+
+    function dataLoadFailed() {
+        console.log('failed');
     }
 
     function addCustomBindings() {

@@ -1,4 +1,5 @@
 ﻿define(['services/logger'], function (logger) {
+
     var contact = {
         title: 'Contact',
         channels: [
@@ -13,13 +14,9 @@
         disclaimer: {
             heading: 'Disclaimer',
             description: 'Any source code and opinions provided in this website is provided "as-is" and does not have any warranty or support. However, if you have a question, you can always contact me through the aforementioned channels. The opinions expressed herein are my own personal opinions and do not represent my employer’s view in any way.'
-        },
-        activate: activate
-    }
+        }
+    };
 
     return contact;
 
-    function activate() {
-
-    }
 });
