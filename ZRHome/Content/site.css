@@ -100,6 +100,11 @@
     padding-bottom: 10px;
 }
 
+.page-host {
+    position: relative;
+    top: 40px;
+}
+
 @media (max-width: 991px) { /*991 is as per bootstrap media definition*/
                             /* to adjust for the fixed nav on top */
     .page-host {
@@ -128,3 +133,4 @@
 .hide {
     display: none;
 }
+
