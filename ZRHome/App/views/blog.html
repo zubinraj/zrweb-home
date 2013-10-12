@@ -10,10 +10,10 @@
         </ul>
     </div>
 
-    <div class="loading"></div>
+    <span id="blog-loading" class="loading"></span>
 
-    <div id="blog-container" data-bind="foreach: items, isotope: { itemSelector: '.blog-item' }">
-        <div class="blog-item" data-bind="css: categories">
+    <div id="blog-container" data-bind="foreach: items">
+        <div class="blog-item" data-bind="css: categories, isotope: { container: '#blog-container', itemSelector: '.blog-item' }">
             <a data-bind="attr: { href: link }">
                 <h3 data-bind="text: title"></h3>
             </a>

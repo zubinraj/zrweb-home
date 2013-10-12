@@ -44,29 +44,38 @@
             ]
         },
         activate: activate,
+        attached: attached,
         compositionComplete: compositionComplete
     };
 
     return welcome;
 
-    function activate () {
-        //the router's activator calls this function and waits for it to complete before proceding
+    function attached() {
 
-        return $.when (
+        $.when(
             // load blogstream to show blog posts
-            blogstream.load(common.blogUrl),
+            blogstream.load(common.blogUrl)
+        )
+        .then(function () {
+            _items(blogstream.partialStream());
 
+            $("#welcome-blog-loading").hide();
+        });
+
+        $.when(
             // load photostream to show thumbnails
             photostream.load(common.photoUrl)
         )
-        .then (function() {
-
-            _items(blogstream.partialStream());
-
+        .then(function () {
             _images(photostream.partialStream());
 
+            $("#welcome-photos-loading").hide();
         });
 
+    }
+
+    function activate () {
+        //the router's activator calls this function and waits for it to complete before proceding
 
     }
 

@@ -15,14 +15,15 @@
     return shell;
 
     function activate () {
-        log('Welcome!', null, true);
+        logger.log('Welcome!', null, true);
 
         router.on('router:route:not-found', function (fragment) {
-            logError('Page not found', fragment, true);
+            //logger.logError('Page not found', fragment, true);
+            router.navigate('#error/404');
         });
 
         //router.handleInvalidRoute = function (route, params) {
-        //    router.navigateTo('#error');
+        //    router.navigateTo('#error/404');
         //};
 
         router.map([
@@ -38,14 +39,6 @@
 
         return router.activate();
 
-    }
-
-    function log(msg, data, showToast) {
-        logger.log(msg, data, system.getModuleId(shell), showToast);
-    }
-
-    function logError(msg, data, showToast) {
-        logger.logError(msg, data, system.getModuleId(shell), showToast);
     }
 
 });

@@ -24,6 +24,7 @@
     <div class="col-sm-4">
         <div class="widget" data-bind="with: recentPostsWidget">
             <h3 data-bind="text: title"></h3>
+            <span id="welcome-blog-loading" class="loading"></span>
             <ul class="list-unstyled" data-bind="foreach: items">
                 <li class="list-items"><a data-bind="attr: { href: link }, text: title"></a></li>
             </ul>
@@ -37,6 +38,7 @@
         </div>
         <div class="widget" data-bind="with: recentPhotosWidget">
             <h3 data-bind="text: title"></h3>
+            <span id="welcome-photos-loading" class="loading"></span>
             <div data-bind="foreach: images">
                 <div><a><img class="img img-thumbnail lazy" src="/Content/images/grey.gif" data-bind="attr: { 'data-original': thumbUrl, alt: title, height: thumbHeight, width: thumbWidth }" /></a></div>
             </div>

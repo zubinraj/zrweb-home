@@ -5,13 +5,13 @@
 
         var _partialStream = ko.observableArray([]);
 
-        return {
+        var photostream = {
             stream: _stream,
             partialStream: _partialStream,
             load: _load
         };
 
-        //return photostream;
+        return photostream;
 
 
 
@@ -26,10 +26,17 @@
             _stream.removeAll();
             _partialStream.removeAll();
 
+            var options = {
+                url: url,
+                type: 'GET',
+                async: true,
+                dataType: "xml",
+            };
+
             // load
-            $.ajax(url)
+            return $.ajax(options)
             .done(_success)
-            .fail();
+            .fail(_fail);
 
             function _success (data) {
 
@@ -66,18 +73,17 @@
 
                 });
 
-                console.log('Photos: Stream count: ' + _stream().length);
-
                 // copy few elements to partial stream
                 for (var i = 0; (i < 3) && (i < _stream().length); i++) {
                     _partialStream().push(_stream()[i]);
                 }
-                console.log('Photos: Partial stream count: ' + _partialStream().length);
-
-                return true;
 
             }
-            
+
+            function _fail() {
+                logger.logError('Data didn\'t load as expected. Please try again.', null, true);
+            }
+
         }
 
     });

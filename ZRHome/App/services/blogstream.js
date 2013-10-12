@@ -5,15 +5,15 @@
 
         var _partialStream = ko.observableArray([]);
 
-        return {
+        var blogstream = {
             stream: _stream,
             partialStream: _partialStream,
             load: _load
         };
 
-        //return blogstream;
+        return blogstream;
 
-        function _load(url, loader) {
+        function _load(url) {
 
             // check if already loaded
             if (_stream().length > 0) {
@@ -24,10 +24,17 @@
             _stream.removeAll();
             _partialStream.removeAll();
 
+            var options = {
+                url: url,
+                type: 'GET',
+                async: true,
+                dataType: "xml",
+            };
+
             // load
-            return $.ajax(url)
+            return $.ajax(options)
             .done(_success)
-            .fail();
+            .fail(_fail);
 
         }
             
@@ -56,16 +63,15 @@
 
             });
 
-            console.log('Blog: Stream count: ' + _stream().length);
-
             // copy few elements to partial stream
             for (var i = 0; (i < 10) && (i < _stream().length) ; i++) {
                 _partialStream().push(_stream()[i]);
             }
-            console.log('Blog: Partial stream count: ' + _partialStream().length);
 
-            //return true;
+        }
 
+        function _fail() {
+            logger.logError('Data didn\'t load as expected. Please try again.', null, true);
         }
 
     });

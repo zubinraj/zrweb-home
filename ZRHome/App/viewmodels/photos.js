@@ -4,24 +4,41 @@
 
     var photos = {
         title: 'Ann & Zubin Photography',
-        images: _images,  //ko.observableArray([]),
-        activate: activate,
+        images: _images,
         compositionComplete: compositionComplete
     };
 
     return photos;
 
     function compositionComplete() {
+
+        // add custom bindings to handle isotope
+        addCustomBindings();
+
+        // get the data async
+        $.when(
+            // load the photos async
+            photostream.load(common.photoUrl)
+        )
+        .done(function () {
+            logger.log("loaded", null, true);
+
+            _images(photostream.stream());
+
+
+            // hide the image once the data is loaded
+            $("#photos-loading").hide();
+
+            // initialize lazy load library
+            common.initializeLazyLoad();
+
+            // initialize fancy box library
+            common.initializeFancyBox();
+
+        });
+
         var $galleryContainer = $("#gallery-container");
 
-        // call relayout on isotope
-        $galleryContainer.isotope('reLayout');
-
-        // initialize lazy load library
-        common.initializeLazyLoad();
-
-        // initialize fancy box library
-        common.initializeFancyBox();
 
         $("#gallery .filters a").click( function () {
 
@@ -38,43 +55,27 @@
             return false;
         });
 
-        // hide the loader, when the rendering is complete
-        common.hideLoader();
-
-    }
-
-    function activate() {
-
-        // add custom bindings to handle isotope
-        addCustomBindings();
-
-        return $.when (
-            // load the photos async
-            photostream.load(common.photoUrl)
-        )
-        .done (function() { 
-            console.log('Data loaded successfully');
-
-            _images(photostream.stream());
-        });
     }
 
     function addCustomBindings() {
 
         ko.bindingHandlers.isotope = {
+            init: function (element, valueAccessor, allBindingsAccessor, viewModel, bindingContext) {
+
+            },
             update: function (element, valueAccessor, allBindingsAccessor, viewModel, bindingContext) {
 
-                var $el = $(element),
-                    value = ko.utils.unwrapObservable(valueAccessor());
+                var $el = $(element);
+                var value = ko.utils.unwrapObservable(valueAccessor());
 
-                if ($el.hasClass('isotope')) {
-                    $el.isotope('reLayout');
-                }
-                else {
-                    $el.isotope({
-                        itemSelector: value.itemSelector
-                    });
-                }
+                var $container = $(value.container);
+
+                $container.isotope({
+                    itemSelector: value.itemSelector
+                });
+
+                $container.isotope('appended', $el);
+
             }
 
         };
