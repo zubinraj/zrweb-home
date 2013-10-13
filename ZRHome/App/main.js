@@ -1,6 +1,6 @@
 ﻿requirejs.config({
-    //urlArgs: "version=0.7",
-    urlArgs: "bust=" + (new Date().getTime()),   // cache buster to load new version while debugging. Todo: comment out defore deployment
+    urlArgs: "version=0.9",
+    //urlArgs: "bust=" + (new Date().getTime()),   // cache buster to load new version while debugging. Todo: comment out defore deployment
     paths: {
         'text': '../Scripts/text',
         'durandal': '../Scripts/durandal',
@@ -14,7 +14,7 @@ define('knockout', ko);
 
 define(['durandal/system', 'durandal/app', 'durandal/viewLocator', 'services/logger'], function (system, app, viewLocator, logger) {
     //>>excludeStart("build", true);
-    system.debug(true);
+    system.debug(false);
     //>>excludeEnd("build");
 
     app.title = 'ZUBINRAJ.COM';
