@@ -44,7 +44,6 @@
             ]
         },
         activate: activate,
-        attached: attached,
         compositionComplete: compositionComplete
     };
 
@@ -52,25 +51,26 @@
 
     function attached() {
 
-        $.when(
-            // load blogstream to show blog posts
-            blogstream.load(common.blogUrl)
-        )
-        .then(function () {
-            _items(blogstream.partialStream());
+        //$.when(
+        //    // load blogstream to show blog posts
+        //    blogstream.load(common.blogUrl)
+        //)
+        //.then(function () {
+        //    _items(blogstream.partialStream());
 
-            $("#welcome-blog-loading").hide();
-        });
+        //    $("#welcome-blog-loading").hide();
+        //});
 
-        $.when(
-            // load photostream to show thumbnails
-            photostream.load(common.photoUrl)
-        )
-        .then(function () {
-            _images(photostream.partialStream());
+        //$.when(
+        //    // load photostream to show thumbnails
+        //    photostream.load(common.photoUrl)
+        //)
+        //.then(function () {
+        //    _images(photostream.partialStream());
 
-            $("#welcome-photos-loading").hide();
-        });
+        //    $("#welcome-photos-loading").hide();
+        //});
+
 
     }
 
@@ -81,9 +81,39 @@
 
     function compositionComplete() {
 
+        blogstream.load(common.blogUrl, blogdone, blogfail);
+
+        photostream.load(common.photoUrl, photosdone, photosfail);
+
+    }
+
+    function blogdone () {
+        //load blogstream to show blog posts
+        _items(blogstream.partialStream());
+
+        $("#welcome-blog-loading").hide();
+    }
+
+    function photosdone() {
+        _images(photostream.partialStream());
+
+        $("#welcome-photos-loading").hide();
+
         // initialize lazy load library
         common.initializeLazyLoad();
 
+    }
+
+    function blogfail () {
+        logger.logError('Data didn\'t load as expected. Please try again.', null, true);
+
+        $("#welcome-blog-loading").hide();
+    }
+
+    function photosfail() {
+        logger.logError('Data didn\'t load as expected. Please try again.', null, true);
+
+        $("#welcome-photos-loading").hide();
     }
 
 });

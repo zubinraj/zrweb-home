@@ -16,16 +16,21 @@
         // add custom bindings to handle isotope
         addCustomBindings();
 
-        $.when(
-            // load the blog
-            blogstream.load(common.blogUrl)
-        )
-        .then(function () {
-            _items(blogstream.stream());
+        //$.when(
+        //    // load the blog
+        //    blogstream.load(common.blogUrl)
+        //)
+        //.then(function () {
+        //    _items(blogstream.stream());
 
-            $("#blog-loading").hide();
+        //})
+        //.always(function() {
+        //    $("#blog-loading").hide();
 
-        });
+        //});
+
+        blogstream.load(common.blogUrl, done, fail);
+
 
         var $blogContainer = $("#blog-container");
 
@@ -43,6 +48,21 @@
             return false;
         });
 
+    }
+
+    function done() {
+        //logger.log('Data loaded, Yo!', null, true);
+
+        _items(blogstream.stream());
+
+        $("#blog-loading").hide();
+
+    }
+
+    function fail() {
+        logger.logError('Data didn\'t load as expected. Please try again.', null, true);
+
+        $("#blog-loading").hide();
     }
 
     function addCustomBindings() {

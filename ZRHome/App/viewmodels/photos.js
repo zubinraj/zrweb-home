@@ -16,26 +16,28 @@
         addCustomBindings();
 
         // get the data async
-        $.when(
-            // load the photos async
-            photostream.load(common.photoUrl)
-        )
-        .done(function () {
-            logger.log("loaded", null, true);
+        //$.when(
+        //    // load the photos async
+        //    photostream.load(common.photoUrl)
+        //)
+        //.done(function () {
+        //    //logger.log("loaded", null, true);
 
-            _images(photostream.stream());
+        //    _images(photostream.stream());
 
 
-            // hide the image once the data is loaded
-            $("#photos-loading").hide();
+        //    // hide the image once the data is loaded
+        //    $("#photos-loading").hide();
 
-            // initialize lazy load library
-            common.initializeLazyLoad();
+        //    // initialize lazy load library
+        //    common.initializeLazyLoad();
 
-            // initialize fancy box library
-            common.initializeFancyBox();
+        //    // initialize fancy box library
+        //    common.initializeFancyBox();
 
-        });
+        //});
+
+        photostream.load(common.photoUrl, done, fail);
 
         var $galleryContainer = $("#gallery-container");
 
@@ -55,6 +57,29 @@
             return false;
         });
 
+    }
+
+    function done() {
+        //logger.log('Data loaded, Yo!', null, true);
+
+        _images(photostream.stream());
+
+        // hide the image once the data is loaded
+        $("#photos-loading").hide();
+
+        // initialize lazy load library
+        common.initializeLazyLoad();
+
+        // initialize fancy box library
+        common.initializeFancyBox();
+
+    }
+
+    function fail() {
+        logger.logError('Data didn\'t load as expected. Please try again.', null, true);
+
+        // hide the image once the data is loaded
+        $("#photos-loading").hide();
     }
 
     function addCustomBindings() {

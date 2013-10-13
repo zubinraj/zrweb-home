@@ -15,10 +15,11 @@
 
 
 
-        function _load(url) {
+        function _load(url, done, fail) {
 
             // check if already loaded
             if (_stream().length > 0) {
+                done();
                 return;
             }
 
@@ -34,11 +35,8 @@
             };
 
             // load
-            return $.ajax(options)
-            .done(_success)
-            .fail(_fail);
-
-            function _success (data) {
+            $.ajax(options)
+            .done(function (data) {
 
                 var $xml = $(data);
 
@@ -74,16 +72,16 @@
                 });
 
                 // copy few elements to partial stream
-                for (var i = 0; (i < 3) && (i < _stream().length); i++) {
+                for (var i = 0; (i < 3) && (i < _stream().length) ; i++) {
                     _partialStream().push(_stream()[i]);
                 }
 
-            }
+                done();
 
-            function _fail() {
-                logger.logError('Data didn\'t load as expected. Please try again.', null, true);
-            }
-
+            })
+            .fail(function () {
+                fail();
+            });
         }
 
     });
