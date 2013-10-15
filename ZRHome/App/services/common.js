@@ -18,16 +18,22 @@
             initializeFancyBox: function () {
                 // initialize fancybox
                 $(".fancybox-thumb").fancybox({
-                    prevEffect: 'none',
+                    prevEffect: 'none',  // fade, elastic, none
                     nextEffect: 'none',
                     helpers: {
                         title: {
-                            type: 'outside'
-                        },
-                        thumbs: {
-                            width: 50,
-                            height: 50
-                        }
+                            type: 'inside'
+                        }  //,
+                        //thumbs: {
+                        //    width: 50,
+                        //    height: 50
+                        //}
+                    },
+                    beforeShow: function () {
+                        /* Disable right click */
+                        $.fancybox.wrap.bind("contextmenu", function (e) {
+                            return false; 
+                        });
                     }
                 });
             }
