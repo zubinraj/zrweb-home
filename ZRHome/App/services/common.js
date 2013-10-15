@@ -11,7 +11,8 @@
             initializeLazyLoad: function () {
                 // initialize lazy load
                 $("img.lazy").lazyload({
-                    effect: "fadeIn"
+                    effect: "fadeIn",
+                    failure_limit: Math.max($('img').length - 1, 0)  // patch 2 of 2: triggers image load after an isotope filter is applied
                 });
             },
             initializeFancyBox: function () {

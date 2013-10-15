@@ -96,7 +96,11 @@
                 var $container = $(value.container);
 
                 $container.isotope({
-                    itemSelector: value.itemSelector
+                    itemSelector: value.itemSelector,
+                    onLayout: function () {
+                        //$("img:in-viewport").trigger("appear");   
+                        $(window).trigger("scroll");  // patch 1 of 2: triggers image load after an isotope filter is applied
+                    }
                 });
 
                 $container.isotope('appended', $el);
