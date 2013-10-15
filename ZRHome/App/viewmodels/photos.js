@@ -15,28 +15,7 @@
         // add custom bindings to handle isotope
         addCustomBindings();
 
-        // get the data async
-        //$.when(
-        //    // load the photos async
-        //    photostream.load(common.photoUrl)
-        //)
-        //.done(function () {
-        //    //logger.log("loaded", null, true);
-
-        //    _images(photostream.stream());
-
-
-        //    // hide the image once the data is loaded
-        //    $("#photos-loading").hide();
-
-        //    // initialize lazy load library
-        //    common.initializeLazyLoad();
-
-        //    // initialize fancy box library
-        //    common.initializeFancyBox();
-
-        //});
-
+        // load data async
         photostream.load(common.photoUrl, done, fail);
 
         var $galleryContainer = $("#gallery-container");

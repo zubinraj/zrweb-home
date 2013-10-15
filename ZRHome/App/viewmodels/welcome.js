@@ -49,31 +49,6 @@
 
     return welcome;
 
-    function attached() {
-
-        //$.when(
-        //    // load blogstream to show blog posts
-        //    blogstream.load(common.blogUrl)
-        //)
-        //.then(function () {
-        //    _items(blogstream.partialStream());
-
-        //    $("#welcome-blog-loading").hide();
-        //});
-
-        //$.when(
-        //    // load photostream to show thumbnails
-        //    photostream.load(common.photoUrl)
-        //)
-        //.then(function () {
-        //    _images(photostream.partialStream());
-
-        //    $("#welcome-photos-loading").hide();
-        //});
-
-
-    }
-
     function activate () {
         //the router's activator calls this function and waits for it to complete before proceding
 
@@ -81,6 +56,7 @@
 
     function compositionComplete() {
 
+        // load data async
         blogstream.load(common.blogUrl, blogdone, blogfail);
 
         photostream.load(common.photoUrl, photosdone, photosfail);

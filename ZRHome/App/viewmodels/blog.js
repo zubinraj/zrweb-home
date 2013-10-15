@@ -16,19 +16,7 @@
         // add custom bindings to handle isotope
         addCustomBindings();
 
-        //$.when(
-        //    // load the blog
-        //    blogstream.load(common.blogUrl)
-        //)
-        //.then(function () {
-        //    _items(blogstream.stream());
-
-        //})
-        //.always(function() {
-        //    $("#blog-loading").hide();
-
-        //});
-
+        // load data async
         blogstream.load(common.blogUrl, done, fail);
 
 
@@ -51,8 +39,6 @@
     }
 
     function done() {
-        //logger.log('Data loaded, Yo!', null, true);
-
         _items(blogstream.stream());
 
         $("#blog-loading").hide();
