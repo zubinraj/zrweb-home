@@ -35,7 +35,7 @@
         profileWidget: {
             title: 'Profile',
             items: [
-                { item: 'Solution Architect at <a href="http://www.wipro.com">Wipro</a>' },
+                { item: 'Solution Architect at <a target="_blank" href="http://www.wipro.com">Wipro</a>' },
                 { item: 'Programmer by profession' },
                 { item: 'Love reading books' },
                 { item: 'Enjoy outdoor activites' },
