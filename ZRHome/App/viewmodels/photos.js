@@ -47,7 +47,15 @@
             var selector = $(this).attr("data-filter");
                 
             // trigger isotope filter
-            $galleryContainer.isotope({ filter: selector });
+            $galleryContainer.isotope({ filter: selector }, function () {
+                // patch for filtering fancyboxy images when isotope filter is applied
+                if (selector == "*") {
+                    $(".fancybox-thumb").attr("data-fancybox-group", "gallery");
+                } else {
+                    $(selector).find(".fancybox-thumb").attr("data-fancybox-group", selector);
+                }
+            });
+            
 
 
             // set link color
