@@ -9,7 +9,8 @@
             ],
             creativeCommons: '<a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="/Content/images/cc_attribution_nocommercial_88x31.png" /></a>'
         },
-        activate: activate
+        activate: activate,
+        compositionComplete: compositionComplete
     };
 
     return shell;
@@ -39,6 +40,14 @@
 
         return router.activate();
 
+    }
+    
+    function compositionComplete() {
+
+        // patch to collapse the bootstrap menu after clicked for smaller devices
+        $('.nav li a').on('click', function () {
+            $('.navbar-collapse').collapse('hide');
+        })
     }
 
 });
