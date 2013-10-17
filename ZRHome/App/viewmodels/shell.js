@@ -1,18 +1,5 @@
 ﻿define(['durandal/system', 'plugins/router', 'services/logger'], function (system, router, logger) {
 
-    // initialize google analytics
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-21501791-3']);
-    _gaq.push(['_setDomainName', 'zubinraj.com']);
-    _gaq.push(['_trackPageview']);
-
-    (function () {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-
-
     var shell = {
         router: router,
         footer: {
@@ -34,7 +21,7 @@
 
         // Report page trnasition to analytics client
         router.on('router:navigation:complete', function (instance, instruction, router) {
-            _gaq.push(['_trackPageview', location.pathname + location.search + location.hash]);
+            window._gaq.push(['_trackPageview', location.pathname + location.search + location.hash]);
         });
 
         router.on('router:route:not-found', function (fragment) {
