@@ -9,20 +9,22 @@ namespace ZRHome {
 
 	  bundles.Add(
 		new ScriptBundle("~/Scripts/js")
-			.Include("~/Scripts/jquery-{version}.js")
-              // Commented by ZR: Ignore bootstrap.css as it has relative path issues while bundling 
-              // This is included in index.cshtml
-              //.Include("~/Scripts/bootstrap.js")
-			.Include("~/Scripts/knockout-{version}.js")
+            // Moved this to Index.cshtml to add jquery version conditionally
+			//.Include("~/Scripts/jquery-{version}.js")
+
+            // Commented by ZR: Ignore bootstrap.css as it has relative path issues while bundling 
+            // This is included in index.cshtml
+            //.Include("~/Scripts/bootstrap.js")
+			
+            .Include("~/Scripts/knockout-{version}.js")
             .Include("~/Scripts/jquery.isotope.js")
             .Include("~/Scripts/toastr.js")
             .Include("~/Scripts/jquery.lazyload.js")
-            ////.Include("~/Scripts/site.js")
+            //.Include("~/Scripts/site.js")
             .Include("~/Scripts/jquery.fancybox.js")
             .Include("~/Scripts/jquery.fancybox-buttons.js")
             .Include("~/Scripts/jquery.fancybox-media.js")
             .Include("~/Scripts/jquery.fancybox-thumbs.js")
-
 
         );
 

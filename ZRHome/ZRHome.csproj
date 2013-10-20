@@ -221,7 +221,10 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
     <None Include="Properties\PublishProfiles\localhost.pubxml" />
     <None Include="Properties\PublishProfiles\staging.pubxml" />
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
     <None Include="Scripts\jquery-2.0.3.intellisense.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\jquery-2.0.3.js" />
     <Content Include="Scripts\jquery-2.0.3.min.js" />
     <Content Include="Scripts\jquery.fancybox-buttons.js" />

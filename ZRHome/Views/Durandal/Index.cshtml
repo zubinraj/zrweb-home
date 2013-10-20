@@ -56,6 +56,14 @@
             @Html.Partial("_splash")
         </div>
 
+        @*JQuery 2.0 does not support versions prior to IE9 *@
+        <!--[if lt IE 9]>
+            @Scripts.Render("~/Scripts/jquery-1.9.1.min.js")
+        <![endif]-->
+        <!--[if gte IE 9]><!-->
+            @Scripts.Render("~/Scripts/jquery-2.0.3.min.js")
+        <!--<![endif]-->
+
         @Scripts.Render("~/Scripts/js")
 
 
