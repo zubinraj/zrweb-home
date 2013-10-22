@@ -20,7 +20,7 @@
         },
         photographerWidget: {
             title: 'Photographer',
-            description: 'A hobbyist photographer, I enjoy taking pictures of birds in their natural surroundings. I\'m joined by my wife Ann Zubin, who is a photography enthusiast herself. Take a look at <a href="#photos">Ann & Zubin Photography</a> and let us know what you think.'
+            description: 'A hobbyist photographer, I enjoy taking pictures of birds in their natural surroundings. I\'m joined by my wife Ann Zubin, who is a photography enthusiast herself. Take a look at <a href="#photos">Zubin & Ann Photography</a> and let us know what you think.'
         },
         recentPhotosWidget: {
             title: 'Recent Photos',
