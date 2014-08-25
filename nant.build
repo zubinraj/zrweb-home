@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+
+<project name="NantBuildTemplateASPNET" default="run" basedir="." xmlns="http://nant.sf.net/release/0.92/nant.xsd">
+
+  <property name="version" value="${arg.version}"/>
+  
+  <property name="configuration" value="release"/>
+  <property name="msbuild" value="${framework::get-framework-directory(framework::get-target-framework())}\MSBuild.exe" />
+
+  <property name="releaseBaseFolder" value="${arg.location}"/>
+  
+  <!-- release folder for the current version-->
+  <property name="releaseFolder" value="${releaseBaseFolder}\$release-${version}"/>
+
+  <property name="tempFolder" value="${releaseBaseFolder}\$temp-${version}"/>
+
+  <property name="webProjectFolderName" value="ZRHome"/>
+  <property name="webProjectName" value="ZRHome.csproj"/>
+
+  <target name="run" depends="clean, build, copy" />
+  
+  <target name="clean" description="Clean existing binaries">
+    <call target="clean.temp" />
+    <call target="clean.release" />
+  </target>
+
+  <target name="clean.release" description="Delete previously compiled binaries from the release folder.">
+      <delete>
+          <fileset basedir="${releaseFolder}">
+              <include name="**/*" />
+          </fileset>
+      </delete>
+  </target>
+
+  <target name="clean.temp" description="Delete previously compiled binaries from the target folder.">
+    <delete>
+      <fileset basedir="${tempFolder}">
+        <include name="\**" />
+      </fileset>
+    </delete>
+  </target>
+
+  <target name="build" description="Build all application targets" depends="clean.temp">
+    <mkdir dir="${tempFolder}"/>
+    <call target="build.proj.main" />
+  </target>
+
+  <!-- Builds the main project-->
+  <target name="build.proj.main">
+    <exec program="${msbuild}" commandline='"${webProjectFolderName}\${webProjectName}" /v:n /nologo /t:Build /p:Configuration=${configuration};OutDir="${tempFolder}"' />
+  </target>
+
+  <target name="copy" description="Copies the final build from temp folder to the build target">
+    <mkdir dir="${releaseFolder}"/>
+    
+    <copy todir="${releaseFolder}" overwrite="true" includeemptydirs="true">
+      <fileset basedir="${tempFolder}\_PublishedWebsites\${webProjectFolderName}">
+        <include name="**/*"/>
+      </fileset>
+    </copy>
+
+    <!-- clean up after copying to final destination-->
+    <call target="clean.temp" />
+
+  </target>
+
+
+</project>
+
