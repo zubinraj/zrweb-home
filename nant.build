@@ -10,7 +10,7 @@
   <property name="releaseBaseFolder" value="${arg.location}"/>
   
   <!-- release folder for the current version-->
-  <property name="releaseFolder" value="${releaseBaseFolder}\release-${version}"/>
+  <property name="releaseFolder" value="${releaseBaseFolder}\${version}"/>
 
   <property name="tempFolder" value="${releaseBaseFolder}\temp-${version}"/>
 
