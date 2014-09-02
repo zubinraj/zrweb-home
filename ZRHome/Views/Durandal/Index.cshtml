@@ -18,13 +18,13 @@
 
         @if (HttpContext.Current.IsDebuggingEnabled)
         {
-            @Styles.Render("~/Content/bootstrap/bootstrap.min.css")
-            @Styles.Render("~/Content/bootstrap/bootstrap-theme.min.css")
+            @Styles.Render("~/Content/bootstrap.min.css")
+            @Styles.Render("~/Content/bootstrap-theme.min.css")
         }
         else
         {
-            @Styles.Render("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css")
-            @Styles.Render("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css")
+            @Styles.Render("//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css")
+            @Styles.Render("//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css")
         }
 
         @Styles.Render("~/Content/css")
@@ -61,7 +61,7 @@
             @Scripts.Render("~/Scripts/jquery-1.9.1.min.js")
         <![endif]-->
         <!--[if gte IE 9]><!-->
-            @Scripts.Render("~/Scripts/jquery-2.0.3.min.js")
+            @Scripts.Render("~/Scripts/jquery-2.1.1.min.js")
         <!--<![endif]-->
 
         @Scripts.Render("~/Scripts/js")
@@ -76,9 +76,9 @@
         }
         else
         {
-            @Scripts.Render("//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js")
+            @Scripts.Render("//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js")
 
-            <script type="text/javascript" src="~/App/main-built.js"></script>
+            <script type="text/javascript" src="~/App/main.js"></script>
         }
 
     </body>
