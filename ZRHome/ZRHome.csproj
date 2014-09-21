@@ -145,6 +145,7 @@
     <Content Include="App\services\common.js" />
     <Content Include="App\services\logger.js" />
     <Content Include="App\services\photostream.js" />
+    <Content Include="App\main-built.js" />
     <Content Include="App\viewmodels\blog.js" />
     <Content Include="App\viewmodels\error.js" />
     <Content Include="App\viewmodels\license.js" />
