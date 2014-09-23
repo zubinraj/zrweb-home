@@ -2,68 +2,79 @@
 
 <project name="NantBuildTemplateASPNET" default="run" basedir="." xmlns="http://nant.sf.net/release/0.92/nant.xsd">
 
-  <property name="version" value="${arg.version}"/>
-  
   <property name="configuration" value="release"/>
   <property name="msbuild" value="${framework::get-framework-directory(framework::get-target-framework())}\MSBuild.exe" />
 
-  <property name="releaseBaseFolder" value="${arg.location}"/>
-  
-  <!-- release folder for the current version-->
-  <property name="releaseFolder" value="${releaseBaseFolder}\${version}"/>
 
-  <property name="tempFolder" value="${releaseBaseFolder}\temp-${version}"/>
+  <property name="baseFolder" value="${project::get-base-directory()}"/>
 
-  <property name="webProjectFolderName" value="ZRHome"/>
-  <property name="webProjectName" value="ZRHome.csproj"/>
+  <property name="buildFolder" value="${baseFolder}\..\build"/>
 
-  <target name="run" depends="clean, build, copy" />
-  
-  <target name="clean" description="Clean existing binaries">
-    <call target="clean.temp" />
-    <call target="clean.release" />
+  <!-- This is the destination git repository used to hold successful builds -->
+  <property name="gitRepository" value="D:\Projects\ZRWEB\zrweb-home\release"/>
+
+  <property name="webProjectName" value="ZRHome"/>
+
+  <property name="solutionFileName" value="ZRHome.sln"/>
+
+  <target name="run" depends="rebuild, addToGit" />
+
+  <target name="rebuild" depends="clean, build" />
+
+  <target name="clean" description="Clean build folder">
+    <delete dir="${buildFolder}" />
   </target>
 
-  <target name="clean.release" description="Delete previously compiled binaries from the release folder.">
-      <delete>
-          <fileset basedir="${releaseFolder}">
-              <include name="**/*" />
-          </fileset>
-      </delete>
+  <target name="build" description="Build the project">
+    <exec program="${msbuild}" commandline='"${solutionFileName}" /v:n /nologo /t:Build /p:Configuration=${configuration};OutDir="${buildFolder}"' />
   </target>
 
-  <target name="clean.temp" description="Delete previously compiled binaries from the target folder.">
+  <!-- Add to target git -->
+  <target name="addToGit" description="Add the output of the build to the release git repository">
+
+    <!-- remove all existing content from the existing working folder of the target git -->
     <delete>
-      <fileset basedir="${tempFolder}">
-        <include name="\**" />
+      <fileset basedir="${gitRepository}">
+        <include name="**/*" />
+        <exclude name=".git" />
+        <exclude name=".git/**" />
       </fileset>
     </delete>
-  </target>
 
-  <target name="build" description="Build all application targets" depends="clean.temp">
-    <mkdir dir="${tempFolder}"/>
-    <call target="build.proj.main" />
-  </target>
-
-  <!-- Builds the main project-->
-  <target name="build.proj.main">
-    <exec program="${msbuild}" commandline='"${webProjectFolderName}\${webProjectName}" /v:n /nologo /t:Build /p:Configuration=${configuration};OutDir="${tempFolder}"' />
-  </target>
-
-  <target name="copy" description="Copies the final build from temp folder to the build target">
-    <mkdir dir="${releaseFolder}"/>
-    
-    <copy todir="${releaseFolder}" overwrite="true" includeemptydirs="true">
-      <fileset basedir="${tempFolder}\_PublishedWebsites\${webProjectFolderName}">
+    <!-- copy fresh build to the target git -->
+    <copy todir="${gitRepository}" overwrite="true" includeemptydirs="true">
+      <fileset basedir="${buildFolder}\_PublishedWebsites\${webProjectName}">
         <include name="**/*"/>
       </fileset>
     </copy>
 
-    <!-- clean up after copying to final destination-->
-    <call target="clean.temp" />
+    <!-- Write timestamp of build into a file. Useful for reference but also ensures there is always
+       a change to commit. This way if commit fails we know there was actually an error.
+       (git commit fails if the index is empty)
+   -->
+    <tstamp />
+    <echo message="NAnt build successful at ${tstamp.now}" file="${gitRepository}/build.log" append="false"/>
+
+    <!-- check if the target is a git repo -->
+    <if test="${not directory::exists(gitRepository + '/.git')}" >
+      <fail message="Git repository for build output is not initalised!"/>
+    </if>
+
+    <!-- Stage files -->
+    <exec append="true" workingdir="${gitRepository}" program="git">
+      <arg value="add" />
+      <arg path="${gitRepository}/." />
+    </exec>
+
+    <!-- Commit files -->
+    <exec append="true" workingdir="${gitRepository}" program="git">
+      <arg line="commit" />
+      <arg value="-a" />
+      <arg value="-m" />
+      <arg value="Successful build: ${tstamp.now}" />
+    </exec>
 
   </target>
 
 
 </project>
-
