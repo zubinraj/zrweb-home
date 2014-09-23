@@ -71,7 +71,7 @@
       <arg line="commit" />
       <arg value="-a" />
       <arg value="-m" />
-      <arg value="Successful build: ${tstamp.now}, version: ${build.number}" />
+      <arg value="v${build.number}, Teamcity build completed: ${tstamp.now}," />
     </exec>
 
   </target>
