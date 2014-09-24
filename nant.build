@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+
+<project name="NantBuildTemplateASPNET" default="run" basedir="." xmlns="http://nant.sf.net/release/0.92/nant.xsd">
+
+  <property name="configuration" value="release"/>
+  <property name="msbuild" value="${framework::get-framework-directory(framework::get-target-framework())}\MSBuild.exe" />
+
+
+  <property name="baseFolder" value="${project::get-base-directory()}"/>
+
+  <property name="buildFolder" value="${baseFolder}\..\build"/>
+
+  <!-- This is the destination git repository used to hold successful builds -->
+  <property name="gitRepository" value="D:\Projects\ZRWEB\zrweb-home\release"/>
+
+  <property name="webProjectName" value="ZRHome"/>
+
+  <property name="solutionFileName" value="ZRHome.sln"/>
+
+  <target name="run" depends="rebuild, addToGit" />
+
+  <target name="rebuild" depends="clean, build" />
+
+  <target name="clean" description="Clean build folder">
+    <delete dir="${buildFolder}" />
+  </target>
+
+  <target name="build" description="Build the project">
+    <exec program="${msbuild}" commandline='"${solutionFileName}" /v:n /nologo /t:Build /p:Configuration=${configuration};OutDir="${buildFolder}"' />
+  </target>
+
+  <!-- Add to target git -->
+  <target name="addToGit" description="Add the output of the build to the release git repository">
+
+    <!-- remove all existing content from the existing working folder of the target git -->
+    <delete>
+      <fileset basedir="${gitRepository}">
+        <include name="**/*" />
+        <exclude name=".git" />
+        <exclude name=".git/**" />
+      </fileset>
+    </delete>
+
+    <!-- copy fresh build to the target git -->
+    <copy todir="${gitRepository}" overwrite="true" includeemptydirs="true">
+      <fileset basedir="${buildFolder}\_PublishedWebsites\${webProjectName}">
+        <include name="**/*"/>
+      </fileset>
+    </copy>
+
+    <!-- Write timestamp of build into a file. Useful for reference but also ensures there is always
+       a change to commit. This way if commit fails we know there was actually an error.
+       (git commit fails if the index is empty)
+   -->
+    <tstamp />
+    <echo message="NAnt build successful at ${tstamp.now}, version: ${build.number}" file="${gitRepository}/build.log" append="false"/>
+
+    <!-- check if the target is a git repo -->
+    <if test="${not directory::exists(gitRepository + '/.git')}" >
+      <fail message="Git repository for build output is not initalised!"/>
+    </if>
+
+    <!-- Stage files -->
+    <exec append="true" workingdir="${gitRepository}" program="git">
+      <arg value="add" />
+      <arg path="${gitRepository}/." />
+    </exec>
+
+    <!-- Commit files -->
+    <exec append="true" workingdir="${gitRepository}" program="git">
+      <arg line="commit" />
+      <arg value="-a" />
+      <arg value="-m" />
+      <arg value="v${build.number}, Teamcity build completed: ${tstamp.now}," />
+    </exec>
+
+  </target>
+
+
+</project>
