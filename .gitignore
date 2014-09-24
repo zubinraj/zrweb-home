@@ -15,6 +15,7 @@ build/
 [Bb]in/
 [Oo]bj/
 [Pp]ackages/
+[Pp]ublish[Pp]rofiles/
 
 # Enable "build/" folder in the NuGet Packages folder since NuGet packages use it for MSBuild targets
 !packages/*/build/
@@ -118,6 +119,7 @@ ClientBin/
 *.[Pp]ublish.xml
 *.pfx
 *.publishsettings
+*.pubxml
 
 # RIA/Silverlight projects
 Generated_Code/

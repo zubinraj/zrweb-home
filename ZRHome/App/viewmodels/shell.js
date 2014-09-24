@@ -19,9 +19,12 @@
     function activate () {
         logger.log('Welcome!', null, true);
 
-        // Report page trnasition to analytics client
+        // Report page transition to analytics client
         router.on('router:navigation:complete', function (instance, instruction, router) {
-            window._gaq.push(['_trackPageview', location.pathname + location.search + location.hash]);
+            if (window._gaq) {
+                //logger.log('Analytics is on', null, true);
+                window._gaq.push(['_trackPageview', location.pathname + location.search + location.hash]);
+            }
         });
 
         router.on('router:route:not-found', function (fragment) {
