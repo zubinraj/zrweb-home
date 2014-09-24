@@ -1,4 +1,4 @@
 ZRWeb-Home
 ==========
 
-Repository for the website hosted at <a href="zubinraj.com">zubinraj.com</a>. Nothing interesting here.
+Repository for the website hosted at <a href="http://zubinraj.com">zubinraj.com</a>. Nothing interesting here.
