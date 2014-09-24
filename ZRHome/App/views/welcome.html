@@ -6,6 +6,12 @@
         </div>
     </div>
     <div class="col-sm-4">
+        <div class="widget" data-bind="with: profileWidget">
+            <h3 data-bind="text: title"></h3>
+            <ul class="list-unstyled" data-bind="foreach: items">
+                <li><i class="glyphicon glyphicon-ok" style="color:green"></i>&nbsp;<span data-bind="html: item"></span></li>
+            </ul>
+        </div>
         <div class="widget" data-bind="with: developerWidget">
             <h3 data-bind="text: title"></h3>
             <p data-bind="html: description"></p>
@@ -13,11 +19,9 @@
                 <li><i class="glyphicon glyphicon-ok" style="color:green"></i>&nbsp;<span data-bind="text: item"></span></li>
             </ul>
         </div>
-        <div class="widget" data-bind="with: profileWidget">
+        <div class="widget" data-bind="with: photographerWidget">
             <h3 data-bind="text: title"></h3>
-            <ul class="list-unstyled" data-bind="foreach: items">
-                <li><i class="glyphicon glyphicon-ok" style="color:green"></i>&nbsp;<span data-bind="html: item"></span></li>
-            </ul>
+            <p data-bind="html: description"></p>
         </div>
     </div>
     <div class="col-sm-4">
@@ -31,10 +35,6 @@
         </div>
     </div>
     <div class="col-sm-4">
-        <div class="widget" data-bind="with: photographerWidget">
-            <h3 data-bind="text: title"></h3>
-            <p data-bind="html: description"></p>
-        </div>
         <div class="widget" data-bind="with: recentPhotosWidget">
             <h3 data-bind="text: title"></h3>
             <span id="welcome-photos-loading" class="loading"></span>
