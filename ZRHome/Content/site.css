@@ -130,4 +130,32 @@
     content: 'LOADING..';
 }
 
+/* Ribbon date */
+
+.ribbon {
+    color: #eee;
+    cursor: default;
+    display: inline-block;
+    text-align: center;
+    width: 35px;
+    margin-right: 25px;
+}
+
+.ribbon .top {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 1px 1px 0 0;
+    font-size: 11px;
+    padding: 4px 0;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.ribbon .bottom {
+    font-size: 17px;
+    padding: 5px 0;
+}
+.ribbon .ribbon-piece {
+    background-color: rgba(102, 102, 102, 1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
 

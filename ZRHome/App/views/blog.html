@@ -16,12 +16,18 @@
 
     <div id="blog-container" data-bind="foreach: items">
         <div class="blog-item" data-bind="css: categories, isotope: { container: '#blog-container', itemSelector: '.blog-item' }">
-            <a data-bind="attr: { href: link }">
-                <h3 data-bind="html: title"></h3>
-            </a>
-            <p data-bind="html: description"></p>
-            <small><a data-bind="attr: { href: link }">Read More</a></small>
-                
+            <div>
+            <div class="ribbon pull-left">
+                <div class="top ribbon-piece" data-bind="text:pubMonth"></div>
+                <div class="bottom ribbon-piece" data-bind="text:pubDay"></div>
+            </div>
+                <a data-bind="attr: { href: link }">
+                    <h3 data-bind="html: title"></h3>
+                </a>
+
+                <p data-bind="html: description"></p>
+                <small><a data-bind="attr: { href: link }">Read More</a></small>
+            </div>        
         </div>
     </div>
 

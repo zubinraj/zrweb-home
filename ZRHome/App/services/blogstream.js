@@ -51,7 +51,10 @@
                             title: $this.find("title").text(),
                             link: $this.find("link").text(),
                             description: $this.find("description").text(),
-                            pubDate: $this.find("pubDate").text(),
+                            //pubDate: $this.find("pubDate").text(),
+                            pubDay: $this.find("pubDate").text().substring(5, 7),
+                            pubMonth: $this.find("pubDate").text().substring(8,11),
+                            //pubYear: $this.find("pubDate").text().substring(12,17),
                             author: $this.find("author").text(),
                             categories: _categories
                         }
@@ -61,7 +64,7 @@
                 });
 
                 // copy few elements to partial stream
-                for (var i = 0; (i < 10) && (i < _stream().length) ; i++) {
+                for (var i = 0; (i < 15) && (i < _stream().length) ; i++) {
                     _partialStream().push(_stream()[i]);
                 }
 
