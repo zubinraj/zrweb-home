@@ -4,8 +4,6 @@
         return {
             blogUrl: '/blog/feed/',
             photoUrl: '/photos/feed/',
-            //blogUrl: '/rss_b.xml',
-            //photoUrl: '/rss.xml',
             blogPartialStreamCount: 10,
             photosPartialStreamCount: 3,
             initializeLazyLoad: function () {
