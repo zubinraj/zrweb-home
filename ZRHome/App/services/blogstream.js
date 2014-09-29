@@ -54,7 +54,7 @@
                             //pubDate: $this.find("pubDate").text(),
                             pubDay: $this.find("pubDate").text().substring(5, 7),
                             pubMonth: $this.find("pubDate").text().substring(8,11),
-                            //pubYear: $this.find("pubDate").text().substring(12,17),
+                            pubYear: $this.find("pubDate").text().substring(12,17),
                             author: $this.find("author").text(),
                             categories: _categories
                         }
