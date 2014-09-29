@@ -44,6 +44,16 @@
             return false;
         });
 
+        $("#gallery .filters-collapsed").change(function () {
+
+            var selector = $(this).val();
+
+            // trigger isotope filter
+            $galleryContainer.isotope({ filter: selector });
+
+            return false;
+        });
+
     }
 
     function done() {
