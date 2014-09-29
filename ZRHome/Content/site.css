@@ -105,14 +105,29 @@
     top: 40px;
 }
 
-@media (max-width: 991px) { /*991 is as per bootstrap media definition*/
-                            /* to adjust for the fixed nav on top */
+.filters-collapsed {
+    display: none;
+}
+
+/* responsive section */
+/* 768px is as per bootstrap media definition*/
+@media screen and (max-width: 768px) {  
+
+    /* to adjust for the fixed nav on top */
     .page-host {
         top: 20px;
     }
 
     .navbar-fixed-top {
         margin-bottom: 0;
+    }
+
+    .filters {
+        display: none;
+    }
+
+    .filters-collapsed {
+        display: block;
     }
 }
 

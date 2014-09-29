@@ -36,6 +36,16 @@
             return false;
         });
 
+        $("#blog .filters-collapsed").change(function () {
+
+            var selector = $(this).val();
+
+            // trigger isotope filter
+            $blogContainer.isotope({ filter: selector });
+
+            return false;
+        });
+
     }
 
     function done() {
