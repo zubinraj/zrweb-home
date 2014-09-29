@@ -3,7 +3,7 @@
     var contact = {
         title: 'Contact',
         channels: [
-            { channel: 'email', text: 'support @ zubinraj dot com', url: '' },
+            { channel: 'email', text: 'contact @ zubinraj . com', url: '' },
             { channel: 'twitter', text: '@zubinraj', url: 'https://twitter.com/zubinraj' },
             { channel: 'github', text: 'https://github.com/zubinraj/', url: 'https://github.com/zubinraj/' }
         ],
