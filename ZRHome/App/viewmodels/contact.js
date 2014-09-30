@@ -9,7 +9,7 @@
         ],
         license: {
             heading: 'License',
-            description: 'Photos, source code and articles published on this website, that are not explicitly mentioned otherwise, are licensed under <a  target="_blank" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative Commons Attribution-NonCommercial 3.0 Unported</a> license. See <a href="#license/">here</a> for more information and details about <a href="#license/">third party licenses</a> used in this website.'
+            description: 'See <a href="#license/">here</a> for license information and details about <a href="#license/">third party licenses</a> used in this website.'
         },
         disclaimer: {
             heading: 'Disclaimer',

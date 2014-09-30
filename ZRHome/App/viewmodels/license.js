@@ -8,13 +8,12 @@
             { term: 'Non-Commercial' }
         ],
         creativeCommons: '<a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="./Content/images/cc_attribution_nocommercial_88x31.png" /></a>',
-        termsOverride: 'If any section of this website mentions it\'s own licensing terms, that will override the terms mentioned here.',
-
-        commercial: {
-            heading: 'Commercial',
-            description: 'If you want a higher quality photo published on this website for commercial use, please <a href="#contact">contact me</a>.'
-        },
-
+        additionalTerms: [
+            { term: 'If any section of this website mentions it\'s own licensing terms, that will override the terms mentioned here.' }
+        ],
+        
+        info: 'If you would like to have a higher quality version of any photo published on this website, please <a href="#contact">contact me</a>.',
+        
         thirdParty: {
             heading: 'Third Party Licenses',
             description: 'This website uses the following awesome libraries:',
