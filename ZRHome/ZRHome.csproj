@@ -171,6 +171,7 @@
     <Content Include="Content\ie10mobile.css" />
     <Content Include="Content\images\blank.gif" />
     <Content Include="Content\images\cc_attribution_nocommercial_88x31.png" />
+    <Content Include="Content\images\dots.gif" />
     <Content Include="Content\images\fancybox_buttons.png" />
     <Content Include="Content\images\fancybox_loading%402x.gif" />
     <Content Include="Content\images\fancybox_loading.gif" />

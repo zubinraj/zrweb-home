@@ -133,16 +133,16 @@
 
 .loading {
     margin: 0px auto;
-    background: url('images/loading_5-1.gif') no-repeat top center;
+    margin-top: 20px;
+    height:30px;
+    background: url('images/dots.gif') no-repeat top center;
     text-align: center;
     display: block;
     /*font-size: 1em;*/
-    padding-top: 40px;
-    padding-left: 10px;
 }
 
 .loading:after {
-    content: 'LOADING..';
+    /*content: 'LOADING..'; */
 }
 
 /* Ribbon date */
