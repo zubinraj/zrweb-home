@@ -55,10 +55,17 @@
     <tstamp />
     <echo message="NAnt build successful at ${tstamp.now}, version: ${build.number}" file="${gitRepository}/build.log" append="false"/>
 
-    <!-- check if the target is a git repo -->
+    <!-- Check if the target is a git repo -->
     <if test="${not directory::exists(gitRepository + '/.git')}" >
       <fail message="Git repository for build output is not initalised!"/>
     </if>
+
+    <!-- Check out master branch -->
+    <echo message="Check out master branch"/>
+    <exec append="true" workingdir="${gitRepository}" program="git">
+      <arg line="checkout" />
+      <arg value="master"/>
+    </exec>
 
     <!-- Stage files -->
     <exec append="true" workingdir="${gitRepository}" program="git">
@@ -67,6 +74,7 @@
     </exec>
 
     <!-- Commit files -->
+    <echo message="Commit files to git repo"/>
     <exec append="true" workingdir="${gitRepository}" program="git">
       <arg line="commit" />
       <arg value="-a" />
