@@ -1,32 +1,31 @@
 ﻿    <section id="welcome">
-    <div class="jumbotron">
-        <div class="container">
-            <h2 data-bind="html: title"></h2>
-            <p></p>
-        </div>
-    </div>
     <div class="col-sm-4">
         <div class="widget" data-bind="with: profileWidget">
             <h3 data-bind="text: title"></h3>
+            <p data-bind="html: description"></p>
             <ul class="list-unstyled" data-bind="foreach: items">
-                <li><i class="glyphicon glyphicon-ok" style="color:green"></i>&nbsp;<span data-bind="html: item"></span></li>
+                <li><i class="glyphicon glyphicon-ok"></i>&nbsp;<span data-bind="html: item"></span></li>
             </ul>
         </div>
         <div class="widget" data-bind="with: developerWidget">
             <h3 data-bind="text: title"></h3>
             <p data-bind="html: description"></p>
-            <ul class="list-unstyled" data-bind="foreach: technologies">
-                <li><i class="glyphicon glyphicon-ok" style="color:green"></i>&nbsp;<span data-bind="text: item"></span></li>
+            <ul class="list-unstyled" data-bind="foreach: items">
+                <li><i class="glyphicon glyphicon-ok"></i>&nbsp;<span data-bind="text: item"></span></li>
             </ul>
         </div>
         <div class="widget" data-bind="with: photographerWidget">
             <h3 data-bind="text: title"></h3>
             <p data-bind="html: description"></p>
+            <ul class="list-unstyled" data-bind="foreach: items">
+                <li><i class="glyphicon glyphicon-ok"></i>&nbsp;<span data-bind="text: item"></span></li>
+            </ul>
         </div>
     </div>
     <div class="col-sm-4">
         <div class="widget" data-bind="with: recentPostsWidget">
-            <h3 data-bind="text: title"></h3>
+            <h3 class="pull-left" data-bind="text: title"></h3>
+            <span class="pull-right more" data-bind="html: moreLink"></span> <span class="clearfix"></span>
             <span id="welcome-blog-loading" class="loading"></span>
             <ul class="list-unstyled" data-bind="foreach: items">
                 <li class="list-items">
@@ -43,9 +42,10 @@
     </div>
     <div class="col-sm-4">
         <div class="widget" data-bind="with: recentPhotosWidget">
-            <h3 data-bind="text: title"></h3>
+            <h3 class="pull-left" data-bind="text: title"></h3>
+            <span class="pull-right more" data-bind="html: moreLink"></span> <span class="clearfix"></span>
             <span id="welcome-photos-loading" class="loading"></span>
-            <div data-bind="foreach: images">
+            <div data-bind="foreach: items">
                 <div><a><img class="img img-thumbnail lazy" src="/Content/images/grey.gif" data-bind="attr: { 'data-original': thumbUrl, alt: title, height: thumbHeight, width: thumbWidth }" /></a></div>
             </div>
             <div data-bind="html: footer"></div>

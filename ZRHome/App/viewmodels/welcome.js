@@ -1,6 +1,6 @@
 ﻿define(['plugins/http', 'durandal/app', 'knockout', 'services/logger', 'services/photostream', 'services/blogstream', 'services/common'], function (http, app, ko, logger, photostream, blogstream, common) {
 
-    var _items = ko.observableArray([]);
+    var _blogItems = ko.observableArray([]);
     var _images = ko.observableArray([]);
 
     var welcome = {
@@ -8,8 +8,7 @@
         developerWidget: {
             title: 'Web Developer',
             description: 'A programmer, primarily developing web applications at work and for fun. I love working on the latest and the greatest frameworks and technologies. Here ae some that have grabbed my fancy recently.',
-            thumbUrl: './Content/images/oneszeroes.jpg',
-            technologies: [
+            items: [
                 { item: 'ASP.Net MVC' },
                 { item: 'Durandal JS' },
                 { item: 'Knockout JS' },
@@ -20,28 +19,35 @@
         },
         photographerWidget: {
             title: 'Photographer',
-            description: 'A hobbyist photographer, I enjoy taking pictures of birds in their natural surroundings. I\'m joined by my wife Ann Zubin, who is a photography enthusiast herself. Take a look at <a href="#photos">Zubin & Ann Photography</a> and let us know what you think.'
-        },
-        recentPhotosWidget: {
-            title: 'Recent Photos',
-            images: _images,
-            footer: '<a href="#photos">more</a>..'
-        },
-        recentPostsWidget: {
-            title: 'Recent Posts',
-            items: _items,
-            footer: '<a href="#blog">more</a>..'
+            description: 'An amateur photographer myself, I\'m joined by my wife, Ann, who is a bird enthusiast. We enjoy taking pictures of birds in their natural surroundings. Take a look at some of our <a href="#photos">photos</a>.',
+            items: [
+                { item: 'Enjoy outdoor activites' },
+                { item: 'Bird photography enthusiast' },
+                { item: 'Amateur photographer' }
+            ]
         },
         profileWidget: {
             title: 'Profile',
+            description: '',
             items: [
-                { item: 'Solution Architect at <a target="_blank" href="http://www.wipro.com">Wipro</a>' },
                 { item: 'Programmer by profession' },
                 { item: 'Love reading books' },
                 { item: 'Enjoy outdoor activites' },
                 { item: 'Bird photography enthusiast' }
 
             ]
+        },
+        recentPhotosWidget: {
+            title: 'Recent Photos',
+            moreLink: '<a href="#photos">see all..</a>',
+            items: _images,
+            footer: ''
+        },
+        recentPostsWidget: {
+            title: 'Recent Posts',
+            moreLink: '<a href="#blog">see all..</a>',
+            items: _blogItems,
+            footer: ''
         },
         activate: activate,
         compositionComplete: compositionComplete
@@ -65,7 +71,7 @@
 
     function blogdone () {
         //load blogstream to show blog posts
-        _items(blogstream.partialStream());
+        _blogItems(blogstream.partialStream());
 
         $("#welcome-blog-loading").hide();
     }
