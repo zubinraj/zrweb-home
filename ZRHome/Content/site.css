@@ -2,29 +2,46 @@
     padding-top: 40px;
 }
 
+.navbar {
+    background-image: linear-gradient(#54b4eb, #2fa4e7 60%, #1d9ce5);
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #178acc;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+    filter: none;
+}
+.navbar-default {
+    background-color: #2fa4e7;
+    border-color: #1995dc;
+}
+
 .navbar-default .navbar-brand {
-    color: forestgreen;
+    color: #ffffff;
 }
 
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-    color: darkgreen;
-}
-
-.navbar-default .navbar-nav > li > a {
-    color: forestgreen;
+    color: #ffffff;
 }
 
 .navbar-default .navbar-nav > li > a:hover, 
 .navbar-default .navbar-nav > li > a:focus {
-    color: darkgreen;
+    color: #ffffff;
+    background-color: #178acc;
+
 }
 
 .navbar-default .navbar-nav > .active > a, 
 .navbar-default .navbar-nav > .active > a:hover, 
 .navbar-default .navbar-nav > .active > a:focus {
-    color: darkgreen;
+    color: #ffffff;
+    background-color: #178acc;
+    background-image: none;
 }
+
+.navbar-default .navbar-nav > li > a {
+    color: #ffffff;
+}
+
 
 .bs-callout {
     border-left: 5px solid #EEEEEE;
@@ -144,28 +161,6 @@
     display: none;
 }
 
-/* responsive section */
-/* 768px is as per bootstrap media definition*/
-@media screen and (max-width: 768px) {  
-
-    /* to adjust for the fixed nav on top */
-    .page-host {
-        top: 20px;
-    }
-
-    .navbar-fixed-top {
-        margin-bottom: 0;
-    }
-
-    .filters {
-        display: none;
-    }
-
-    .filters-collapsed {
-        display: block;
-    }
-}
-
 .loading {
     margin: 0px auto;
     margin-top: 20px;
@@ -214,4 +209,27 @@
     font-size: 70%;
     text-transform: uppercase;
     color: grey;
+}
+
+/* responsive section */
+/* 768px is as per bootstrap media definition*/
+@media screen and (max-width: 768px) {  
+
+    /* to adjust for the fixed nav on top */
+    .page-host {
+        top: 20px;
+    }
+
+    .navbar-fixed-top {
+        margin-bottom: 0;
+    }
+
+    .filters {
+        display: none;
+    }
+
+    .filters-collapsed {
+        display: block;
+    }
+
 }

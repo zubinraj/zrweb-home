@@ -7,19 +7,18 @@
         title: 'Welcome!',
         developerWidget: {
             title: 'Web Developer',
-            description: 'A programmer, primarily developing web applications at work and for fun. I love working on the latest and the greatest frameworks and technologies. Here ae some that have grabbed my fancy recently.',
+            description: 'A programmer, primarily developing web applications at work and for fun. I love working on the latest and the greatest technologies. Some that have grabbed my fancy recently are:',
             items: [
-                { item: 'ASP.Net MVC' },
-                { item: 'Durandal JS' },
+                { item: 'Raspberry Pi' },
+                { item: 'ASP.Net MVC / WebAPI' },
                 { item: 'Knockout JS' },
-                { item: 'Single Page Applications' },
-                { item: 'PHP' },
-                { item: 'Wordpress Plugins' }
+                { item: 'Single Page Applications'   },
+                { item: 'PHP' }
             ]
         },
         photographerWidget: {
             title: 'Photographer',
-            description: 'An amateur photographer myself, I\'m joined by my wife, Ann, who is a bird enthusiast. We enjoy taking pictures of birds in their natural surroundings. Take a look at some of our <a href="#photos">photos</a>.',
+            description: 'An amateur photographer myself, I\'m joined by my wife, Ann, who is a birding enthusiast. We enjoy taking pictures of birds in their natural surroundings. Take a look at some of our <a href="#photos">photos</a>.',
             items: [
                 { item: 'Enjoy outdoor activites' },
                 { item: 'Bird photography enthusiast' },
