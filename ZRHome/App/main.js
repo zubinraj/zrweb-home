@@ -28,8 +28,8 @@ define(['durandal/system', 'durandal/app', 'durandal/viewLocator', 'services/log
     app.start().then(function() {
 
         // toastr options
-        toastr.options.positionClass = 'toast-bottom-right';
-        toastr.options.backgroundpositionClass = 'toast-bottom-right';
+        //toastr.options.positionClass = 'toast-bottom-right';
+        //toastr.options.backgroundpositionClass = 'toast-bottom-right';
 
         //Replace 'viewmodels' in the moduleId with 'views' to locate the view.
         //Look for partial views in a 'views' folder in the root.

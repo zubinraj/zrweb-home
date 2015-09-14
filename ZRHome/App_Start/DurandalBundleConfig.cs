@@ -16,7 +16,7 @@ namespace ZRHome {
 			
             .Include("~/Scripts/knockout-{version}.js")
             .Include("~/Scripts/jquery.isotope.js")
-            .Include("~/Scripts/toastr.js")
+            //.Include("~/Scripts/toastr.js")
             .Include("~/Scripts/jquery.lazyload.js")
             .Include("~/Scripts/jquery.fancybox.js")
             .Include("~/Scripts/jquery.fancybox-buttons.js")
@@ -33,7 +33,7 @@ namespace ZRHome {
 		  .Include("~/Content/durandal.css")
           .Include("~/Content/site.css")
           .Include("~/Content/isotope.css")
-          .Include("~/Content/toastr.css")
+          //.Include("~/Content/toastr.css")
           .Include("~/Content/jquery.fancybox.css")
           .Include("~/Content/jquery.fancybox-buttons.css")
           .Include("~/Content/jquery.fancybox-thumbs.css")

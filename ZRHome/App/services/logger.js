@@ -24,9 +24,9 @@
 
             if (showToast) {
                 if (toastType === 'error') {
-                    toastr.error(message);
+                    //toastr.error(message);
                 } else {
-                    toastr.info(message);
+                    //toastr.info(message);
                 }
 
             }
