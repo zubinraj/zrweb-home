@@ -23,6 +23,7 @@
         <div class="gallery-item" data-bind="css: categories, style: { height: thumbHeight, width: thumbWidth }, isotope: { container: '#gallery-container', itemSelector: '.gallery-item' }">
             <a class="fancybox-thumb" data-fancybox-group="gallery" data-bind="attr: { href: originalUrl }">
                 <img class="lazy" src="/Content/images/grey.gif" data-bind="attr: { 'data-original': thumbUrl, title: title, alt: title, height: thumbHeight, width: thumbWidth }"/>
+                <span class='overlay-caption' data-bind="text: title"></span>
                 <!--<span data-bind="text: title"></span>-->
             </a>
         </div>

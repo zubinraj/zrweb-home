@@ -46,7 +46,12 @@
             <span class="pull-right more" data-bind="html: moreLink"></span> <span class="clearfix"></span>
             <span id="welcome-photos-loading" class="loading"></span>
             <div data-bind="foreach: items">
-                <div><a><img class="img img-thumbnail lazy" src="/Content/images/grey.gif" data-bind="attr: { 'data-original': thumbUrl, alt: title, height: thumbHeight, width: thumbWidth }" /></a></div>
+                <div class="img-wrapper">
+                    <a href="/#photos">
+                        <img class="lazy" src="/Content/images/grey.gif" data-bind="attr: { 'data-original': thumbUrl, title: title, alt: title, height: thumbHeight, width: thumbWidth }" />
+                        <span class='overlay-caption' data-bind="text: title"></span>
+                    </a>
+                </div>
             </div>
             <div data-bind="html: footer"></div>
         </div>

@@ -135,9 +135,9 @@
     margin-top: 0px;   /*zeroing this out as there is already padding for the widget*/
 }
 
-.widget .img {
+/*.widget .img {
     margin-bottom: 10px;
-}
+}*/
 
 .widget .list-items {
     padding-bottom: 10px;
@@ -150,6 +150,12 @@
 .widget .more {
     text-align: right;
     padding-top: 3px;
+}
+
+.img-wrapper {
+    position: relative;
+    margin: 5px;
+    padding: 0px;
 }
 
 .page-host {
@@ -210,6 +216,22 @@
     text-transform: uppercase;
     color: grey;
 }
+
+.overlay-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        /*height: 30%;*/
+        opacity: 0.5;
+        /*filter:alpha(opacity=50);*/   /*ie transparency*/
+        color:#fff; 
+        background-color:black;  
+        font-family: 'tahoma';  
+        text-align: center;
+        padding: 5px 10px;
+}
+
 
 /* responsive section */
 /* 768px is as per bootstrap media definition*/
