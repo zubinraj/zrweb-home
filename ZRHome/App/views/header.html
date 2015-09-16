@@ -1,29 +1,43 @@
 ﻿    <nav class="navbar navbar-fixed-top navbar-default" role="navigation">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
 
-            <a class="navbar-brand" data-bind="attr: { href: router.navigationModel()[0].hash }">
-                <!--<i class="glyphicon glyphicon-leaf"></i>-->
-                <span>ZUBINRAJ.COM</span>
-            </a>
-        </div>
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-            <ul class="nav navbar-nav" data-bind="foreach: router.navigationModel">
-                <li data-bind="css: { active: isActive }">
-                    <a data-bind="attr: { href: hash }">
-                        <i class="glyphicon" data-bind="css: icon"></i>
-                        <span data-bind="text: title"></span>
-                    </a>
-                </li>
-            </ul>
-        
-            <div class="loader pull-right" data-bind="css: { active: router.isNavigating }">
-                <i class="icon-spinner icon-2x icon-spin"></i>
+                <a class="navbar-brand" data-bind="attr: { href: router.navigationModel()[0].hash }">
+                    <!--<i class="glyphicon glyphicon-leaf"></i>-->
+                    <span>ZUBINRAJ.COM</span>
+                </a>
             </div>
-        </div>        
-    </nav>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav" data-bind="foreach: router.navigationModel">
+                    <li data-bind="css: { active: isActive }">
+                        <a data-bind="attr: { href: hash }">
+                            <i class="glyphicon" data-bind="css: icon"></i>
+                            <span data-bind="text: title"></span>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right navbar-social">
+                    <li>
+                        <a class="navbar-link" href="https://twitter.com/zubinraj">
+                            <img class="twitter-follow" src="/Content/images/TwitterLogo_white-sm.png" target="_blank" />
+                            Twitter
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navbar-link" href="https://github.com/zubinraj">
+                            <img class="" src="/Content/images/GitHub-Mark-Light-32px.png" target="_blank" />
+                            GitHub
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+</nav>

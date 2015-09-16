@@ -23,6 +23,12 @@
     color: #ffffff;
 }
 
+.nav > li > a:hover, 
+.nav > li > a:focus {
+    color: #ffffff;
+    background-color: #178acc;
+}
+
 .navbar-default .navbar-nav > li > a:hover, 
 .navbar-default .navbar-nav > li > a:focus {
     color: #ffffff;
@@ -40,6 +46,10 @@
 
 .navbar-default .navbar-nav > li > a {
     color: #ffffff;
+}
+
+.navbar-social > li > a > img {
+    height: 18px;
 }
 
 
@@ -154,7 +164,7 @@
 
 .img-wrapper {
     position: relative;
-    margin: 5px;
+    margin: 10px 5px 10px 5px;
     padding: 0px;
 }
 
@@ -233,6 +243,7 @@
 }
 
 
+
 /* responsive section */
 /* 768px is as per bootstrap media definition*/
 @media screen and (max-width: 768px) {  
@@ -255,3 +266,4 @@
     }
 
 }
+/* end of responsive section */
