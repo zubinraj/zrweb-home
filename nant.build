@@ -1,5 +1,19 @@
 <?xml version="1.0"?>
 
+<!--
+
+Folder structure mapping
+  
+   |-build
+   |-release
+   |-source
+        |- Nant script (this)
+        |- Solution file (.sln)
+        |- Project folder
+                 |- Project file (.csproj)
+  
+-->
+
 <project name="NantBuildTemplateASPNET" default="run" basedir="." xmlns="http://nant.sf.net/release/0.92/nant.xsd">
 
   <property name="configuration" value="release"/>
@@ -11,7 +25,7 @@
   <property name="buildFolder" value="${baseFolder}\..\build"/>
 
   <!-- This is the destination git repository used to hold successful builds -->
-  <property name="gitRepository" value="D:\Projects\ZRWEB\zrweb-home\release"/>
+  <property name="gitRepository" value="${baseFolder}\..\release"/>
 
   <property name="webProjectName" value="ZRHome"/>
 
@@ -26,7 +40,7 @@
   </target>
 
   <target name="build" description="Build the project">
-    <exec program="${msbuild}" commandline='"${solutionFileName}" /v:n /nologo /t:Build /p:Configuration=${configuration};OutDir="${buildFolder}"' />
+    <exec program="${msbuild}" commandline='"${solutionFileName}" /v:n /nologo /t:Build /property:VisualStudioVersion=14.0;Configuration=${configuration};OutDir="${buildFolder}"' />
   </target>
 
   <!-- Add to target git -->
