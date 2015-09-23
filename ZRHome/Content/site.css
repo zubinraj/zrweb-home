@@ -263,6 +263,7 @@
 
     .filters-collapsed {
         display: block;
+        text-transform: uppercase;
     }
 
 }

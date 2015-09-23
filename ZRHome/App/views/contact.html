@@ -7,6 +7,11 @@
         </tr>
     </table>
 
+    <div data-bind="with: source">
+        <h2 data-bind="text: heading"></h2>
+        <p data-bind="html: description"></p>
+    </div>
+
     <div data-bind="with: license">
         <h2 data-bind="text: heading"></h2>
         <p data-bind="html: description"></p>

@@ -7,6 +7,10 @@
             { channel: 'twitter', text: '@zubinraj', url: 'https://twitter.com/zubinraj' },
             { channel: 'github', text: 'https://github.com/zubinraj/', url: 'https://github.com/zubinraj/' }
         ],
+        source: {
+            heading: 'Source Code',
+            description: 'The source code of this site is published on <a href="https://github.com/zubinraj/zrweb-home">Github</a>. Please feel free to use it as a template for your own personal websites.'
+        },
         license: {
             heading: 'License',
             description: 'See <a href="#license/">here</a> for license information and details about <a href="#license/">third party licenses</a> used in this website.'
