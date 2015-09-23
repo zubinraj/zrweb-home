@@ -1,5 +1,5 @@
 ﻿requirejs.config({
-    urlArgs: "__teamcity_build_ver_placeholder__",
+    urlArgs: "_teamcity_build_ver_placeholder_",
     //urlArgs: "bust=" + (new Date().getTime()),   // cache buster to load new version while debugging. Todo: comment out defore deployment
     paths: {
         'text': '../Scripts/text',
